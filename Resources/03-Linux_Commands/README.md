@@ -729,7 +729,7 @@ du -ah
 du -sh
 ```
 
-## DIRECTORY NAVIGATION
+## 15 - DIRECTORY NAVIGATION
 
 #### To go up one level of the directory tree.  (Change into the parent directory.)
 
