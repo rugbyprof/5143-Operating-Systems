@@ -3,7 +3,9 @@
 | Folder | Title | Description | Due |
 |-----|-----|-----|-----|
 | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01">01-A01</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01"> Assignment 1 </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01"> Getting Started</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01"> 01-13-2021 (Saturday @ 12:00 p.m.)</a> |
+| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01">02-P01</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01"> Shell Project </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01"> Implementation of a basic shell.</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01"> Multiple Dates</a> |
 
+Items without a due date or if the due date is ~~lined through~~, consider it not assigned.
 ### File Legend
 
 | Folder Name | Description |
@@ -13,4 +15,4 @@
 |xx-**P**xx | This is a ***Program***. Where it must be compiled, run error free, commented, and correct. |
 |xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
 
-<sup>Last Updated: 2021-01-12 (Tue @ 02:03)</sup>
+<sup>Last Updated: 2021-01-13 (Wed @ 13:49)</sup>
