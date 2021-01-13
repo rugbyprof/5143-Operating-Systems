@@ -115,7 +115,7 @@ Whilst this is safe it also involves unnecessary typing every time you want to r
 
 Indenting is not required but it does make your code easier to read and make it harder to make simple errors.
 
-===========================================================================
+-----
 
 # Bash Scripting: Variables
 
@@ -338,7 +338,7 @@ reference, yes I know.)
 - `variable=$( command )`: Save the output of a command into a variable
 - `export var1`: Make the variable var1 available to child processes.
 
-========================================================================================
+-----
 
 # Bash Scripting: Input
 
@@ -500,7 +500,7 @@ Ultimately you should think about 3 factors when deciding how users will supply 
 - **Usability**: Your choice of input methods will have an impact on how useable your script is.
 
 
-===================================================================================================================
+-----
 
 # Bash Scripting: Arithmetic
 
@@ -677,8 +677,7 @@ echo ${#b} # 4
 - **Arithmetic**: There are several ways in which to do arithmetic in Bash scripts. Double parentheses is the preferred method.
 - **Formatting**: When doing arithmetic, the presence or absence of spaces (and quotes) is often important.
 
-
-===================================================================================================================
+-----
 
 # Bash Scripting: If Statements
 
@@ -1003,7 +1002,7 @@ esac
 
 
 
-===================================================================================================================
+-----
 
 # Bash Scripting: Loops
 
@@ -1286,6 +1285,6 @@ echo Bye
 - `select do done`: Display a simple menu system for selecting items from a list.
 
 
-===================================================================================================================
+-----
 
 Source: http://ryanstutorials.net/bash-scripting-tutorial/
