@@ -2,9 +2,9 @@
 
 | Folder | Title | Description | Due |
 |-----|-----|-----|-----|
-| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-BashScripting">01-BashScripting</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-BashScripting"> Bash Scripting </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-BashScripting"> An introduction to bash.</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-BashScripting">N/A</a> |
-| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-PythonThreading">02-PythonThreading</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-PythonThreading"> Python Threading </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-PythonThreading"> Creating Threads with Python</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-PythonThreading">N/A</a> |
-| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-Linux_Commands">03-Linux_Commands</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-Linux_Commands"> Linux Commands </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-Linux_Commands"> Basic command info</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-Linux_Commands">N/A</a> |
+| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-Linux_Commands">01-Linux_Commands</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-Linux_Commands"> Linux Commands </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-Linux_Commands"> Basic command info</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/01-Linux_Commands">N/A</a> |
+| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-BashScripting">02-BashScripting</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-BashScripting"> Bash Scripting </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-BashScripting"> An introduction to bash.</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/02-BashScripting">N/A</a> |
+| <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-PythonThreading">03-PythonThreading</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-PythonThreading"> Python Threading </a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-PythonThreading"> Creating Threads with Python</a> | <a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/03-PythonThreading">N/A</a> |
 
 Items without a due date or if the due date is ~~lined through~~, consider it not assigned.
 ### File Legend
@@ -16,4 +16,4 @@ Items without a due date or if the due date is ~~lined through~~, consider it no
 |xx-**P**xx | This is a ***Program***. Where it must be compiled, run error free, commented, and correct. |
 |xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
 
-<sup>Last Updated: 2021-01-13 (Wed @ 13:49)</sup>
+<sup>Last Updated: 2021-01-13 (Wed @ 13:56)</sup>
