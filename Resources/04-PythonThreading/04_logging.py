@@ -23,11 +23,12 @@ def f3():
     time.sleep(3)
     logging.debug('Exiting')
 
+if __name__ == '__main__':
 
-t1 = threading.Thread(target=f1) # use default name
-t2 = threading.Thread(name='f2', target=f2)
-t3 = threading.Thread(name='f3', target=f3)
+    t1 = threading.Thread(target=f1) # use default name
+    t2 = threading.Thread(name='f2', target=f2)
+    t3 = threading.Thread(name='f3', target=f3)
 
-t1.start()
-t2.start()
-t3.start()
+    t1.start()
+    t2.start()
+    t3.start()

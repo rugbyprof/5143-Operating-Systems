@@ -2,13 +2,13 @@ import threading
 import time
 import logging
 import random
-import Queue
+import queue
 
 logging.basicConfig(level=logging.DEBUG,
                     format='(%(threadName)-9s) %(message)s',)
 
 BUF_SIZE = 10
-q = Queue.Queue(BUF_SIZE)
+q = queue.Queue(BUF_SIZE)
 
 class ProducerThread(threading.Thread):
     def __init__(self, group=None, target=None, name=None,

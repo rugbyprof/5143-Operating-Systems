@@ -1,10 +1,12 @@
+#!/usr/local/bin/python3
+
 """
 Basic thread example
 """
 import threading
 
 def f():
-    print 'thread function'
+    print('thread function')
     return
 
 if __name__ == '__main__':

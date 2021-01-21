@@ -36,12 +36,12 @@ if __name__ == '__main__':
     logging.debug('waiting before canceling %s', t2.getName())
     time.sleep(2)
     logging.debug('canceling %s', t2.getName())
-    print 'before cancel t2.is_alive() = ', t2.is_alive()
+    print('before cancel t2.is_alive() = ', t2.is_alive())
     t2.cancel()
     # The second timer(t2) is never run because it is canceled before 
     # its wake-up.
     time.sleep(2)
-    print 'after cancel t2.is_alive() = ', t2.is_alive()
+    print('after cancel t2.is_alive() = ', t2.is_alive())
 
     t1.join()
     t2.join()

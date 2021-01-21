@@ -5,7 +5,7 @@ Threading.thread expects a tuple, and the trailing comma is intentional
 import threading
 
 def f(id):
-    print 'thread function %s' %(id)
+    print(f'thread function {id}')
     return
 
 if __name__ == '__main__':

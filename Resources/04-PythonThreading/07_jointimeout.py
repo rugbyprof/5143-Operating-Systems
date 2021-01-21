@@ -1,6 +1,6 @@
 """
 By default, join() blocks indefinitely. In our sample, join() blocks 
-the calling thread (main thread) until the threads (d / t) whose join() 
+the calling thread (main thread) until the threads (d / n) whose join() 
 method is called is terminated - either normally or through an unhandled 
 exception - or until the optional timeout occurs.
 
@@ -27,14 +27,14 @@ def d():
 
 if __name__ == '__main__':
 
-    t = threading.Thread(name='non-daemon', target=n)
+    n = threading.Thread(name='non-daemon', target=n)
     d = threading.Thread(name='daemon', target=d)
     d.setDaemon(True)
 
     d.start()
-    t.start()
+    n.start()
 
     # Try 3.0 and 7.0 to see the difference
     d.join(3.0)
-    print 'd.isAlive()', d.isAlive()
-    t.join()
+    print('d.isAlive()', d.isAlive())
+    n.join()

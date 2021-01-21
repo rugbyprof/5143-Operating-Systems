@@ -24,13 +24,13 @@ logging.basicConfig(level=logging.DEBUG,
 def wait_for_event(e):
     logging.debug('wait_for_event starting')
     event_is_set = e.wait()
-    logging.debug('event set: %s', event_is_set)
+    logging.debug(f'event set: {event_is_set}')
 
 def wait_for_event_timeout(e, t):
     while not e.isSet():
         logging.debug('wait_for_event_timeout starting')
         event_is_set = e.wait(t)
-        logging.debug('event set: %s', event_is_set)
+        logging.debug(f'event set: {event_is_set}')
         if event_is_set:
             logging.debug('processing event')
         else:
