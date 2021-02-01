@@ -30,13 +30,13 @@ def d():
 
 if __name__ == '__main__':
 
-	t = threading.Thread(name='non-daemon', target=n)
+	a = threading.Thread(name='non-daemon', target=n)
 
-	d = threading.Thread(name='daemon', target=d)
-	d.setDaemon(True)
+	b = threading.Thread(name='daemon', target=d)
+	b.setDaemon(True)
 
-	d.start()
-	t.start()
+	b.start()
+	a.start()
 
-	d.join()
-	t.join()
+	b.join()
+	a.join()

@@ -26,7 +26,7 @@ logging.basicConfig(level=logging.DEBUG,
 
 def n():
     logging.debug('Starting')
-    time.sleep(5) 
+    time.sleep(2) 
     logging.debug('Exiting')
     logg("n")
 
@@ -44,8 +44,8 @@ def d():
 if __name__ == '__main__':
 
     t = threading.Thread(name='non-daemon', target=n)
-    d = threading.Thread(name='daemon', target=d, daemon=True)
-    #d.setDaemon(True)
+    d = threading.Thread(name='daemon', target=d) # , daemon=True
+    d.setDaemon(True)
  
     d.start()
     t.start()
