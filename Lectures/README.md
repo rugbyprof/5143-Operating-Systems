@@ -1,10 +1,9 @@
 ## Lectures
 
-| Folder | Title | Description | Due | Filename |
+| Folder | Title | Description | Due | Past Due |
 |-----|-----|-----|-----|-----|
-| None | None | None | None | None |
+| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">01-Lecture</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">False</a>*** |
 
-Items without a due date or if the due date is ~~lined through~~, consider it not assigned.
 ### File Legend
 
 | Folder Name | Description |
@@ -14,4 +13,4 @@ Items without a due date or if the due date is ~~lined through~~, consider it no
 |xx-**P**xx | This is a ***Program***. Where it must be compiled, run error free, commented, and correct. |
 |xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
 
-<sup>Last Updated: 2021-01-13 (Wed @ 14:28)</sup>
+<sup>Last Updated: 2021-03-01 (Mon @ 09:40)</sup>
