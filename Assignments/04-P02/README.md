@@ -149,7 +149,7 @@ The consumer will maintain the following behaviors:
 **Max Connections**
 
 - Two threads max.
-- First two clients (one producer, one consumer) are successful.
+- First two clients (two producers) are successful.
 - Third client is rejected. 
 
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_6.png" width="300">
