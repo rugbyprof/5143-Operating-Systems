@@ -92,8 +92,10 @@ The consumer will maintain the following behaviors:
 
 ### Deliverables:
 
-- Presentations in class ...
-- More to come.
+- A copy of your client need be provided to everyone in class.
+- Everyone should bring a laptop to run clients.
+- On due date we will all run multiple instances of the client to see the overall behavior of your producer consumer system.
+- Remember the coordinator should keep readable meaningful log files showing clearly all activity. We should be able to run `tail -f` to watch the logged data get appended. 
 
 
 Sources: 
