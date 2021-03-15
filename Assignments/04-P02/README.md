@@ -18,12 +18,14 @@ One algorithm for a single user producer-consumer uses a single flag bit. The fl
 
 ### System "Liveness"
 
-Your system much fullfill the liveness property. 
+Your system must fulfill the liveness property. 
 
 Several forms of **liveness** are recognized. The following ones are defined in terms of a multi-process system that has a critical section, protected by some mutual exclusion (mutex) device. All processes are assumed to correctly use the mutex; progress is defined as finishing execution of the critical section.
 
 - Freedom from **deadlock** is a form of liveness, although a weak one. Consider a system with multiple processes and a single critical section, protected by some mutual exclusion device. Such a system is said to be deadlock-free if, when a group of processes is competing for access to the critical section at some point in time, then some process eventually makes progress at a later point in time. That process need not belong to the aforementioned group; it might have gained access at an earlier or even later moment.
+
 - Freedom from **starvation** (or "finite bypass") is a stronger liveness guarantee than deadlock-freedom. It states that all processes vying for access to the critical region eventually make progress. `Any starvation-free system is also deadlock-free`.
+
 - Stronger still is the requirement of **bounded bypass**. This means that, if `n` processes are competing for access to the critical region, then each process makes progress after being bypassed at most `f(n)` times by other processes for some function `f` <sup>[1]</sup>.
   
 ### Assignment
@@ -89,6 +91,68 @@ The consumer will maintain the following behaviors:
 - Once it consumes a stock price, it will go back to sleep for **`tc`** time.
 
 
+## Examples
+
+**Successful Consumer Request**
+
+- Client makes a request. 
+- Items in the buffer. 
+- Item returned.
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_1.png" width="300">
+
+-----
+
+**Failed Consumer Request**
+
+- Client makes a request. 
+- Buffer is empty. 
+- Rejected request.
+- Just keep trying until successful. 
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_2.png" width="300">
+
+-----
+
+**Failed Producer Request**
+
+- Producer sends a stock. 
+- Buffer is full. 
+- Rejected request.
+- Keep sending this stock until successful.
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_3.png" width="300">
+
+-----
+
+**Successful Producer Request**
+
+- Producer sends a stock. 
+- Buffer has room. 
+- Successful response.
+- Move on to generating a new stock.
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_4.png" width="300">
+
+-----
+
+**Max Connections**
+
+- Two threads max.
+- First two clients (one producer, one consumer) are successful.
+- Third client is rejected. 
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_5.png" width="300">
+
+-----
+
+**Max Connections**
+
+- Two threads max.
+- First two clients (one producer, one consumer) are successful.
+- Third client is rejected. 
+
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/consumer_producer_6.png" width="300">
 
 ### Deliverables:
 
