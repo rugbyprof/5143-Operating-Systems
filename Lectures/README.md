@@ -1,8 +1,8 @@
 ## Lectures
 
-| Folder | Title | Description | Due | Past Due |
-|-----|-----|-----|-----|-----|
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">01-Lecture</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">False</a>*** |
+| Folder | Title | Description | Due | Still Available |
+|:------|:------|:------|:------|:-----:|
+| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">01-Lecture</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">N/A</a>*** | <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/traffic_light_blank_side.png" width="40"> |
 
 ### File Legend
 
@@ -13,4 +13,4 @@
 |xx-**P**xx | This is a ***Program***. Where it must be compiled, run error free, commented, and correct. |
 |xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
 
-<sup>Last Updated: 2021-03-01 (Mon @ 09:40)</sup>
+<sup>Last Updated: 2021-03-17 (Wed @ 14:16)</sup>
