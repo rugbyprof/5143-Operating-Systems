@@ -1,5 +1,5 @@
 ## Cpu Scheduling - Simulation
-#### Due: 03-31-2021 (Wednesday @ 2:30 p.m.)
+#### Due: 04-07-2021 (Wednesday @ 2:30 p.m.)
 
 
 ### Job State
