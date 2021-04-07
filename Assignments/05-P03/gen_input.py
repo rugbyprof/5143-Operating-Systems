@@ -51,7 +51,7 @@ def generate_file(**kwargs):
 
 
     
-    for time in range(nj):
+    while process_id < nj:
         #print(f"time:{time}")
         jobs = random.randint(minat,maxat)        # num jobs at this time
         #print(f"jobs:{jobs}")
@@ -69,6 +69,7 @@ def generate_file(**kwargs):
             b = random.randint(mincpu,maxcpu)
             fp.write(str(b)+'\n')
             process_id += 1
+        time += 1
         #fp.write('\n')
     fp.close()
 
