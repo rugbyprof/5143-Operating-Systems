@@ -69,6 +69,7 @@ Priority scheduling is a more general case of SJF, in which each job is assigned
   
 - The description of a simulated process includes the following information:
   - Arrival time (t<sub>a</sub>) of the process
+  - Process ID
   - Number of CPU bursts (N)
   - CPU burst durations (c<sub>i</sub>, i = 1, 2, ..., N), 
   - I/O burst durations (d<sub>j</sub>, j = 1, 2, ..., N-1)
