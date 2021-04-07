@@ -69,6 +69,8 @@ def generate_file(**kwargs):
             b = random.randint(mincpu,maxcpu)
             fp.write(str(b)+'\n')
             process_id += 1
+            if process_id >= nj:
+                break
         time += 1
         #fp.write('\n')
     fp.close()
