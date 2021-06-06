@@ -41,8 +41,8 @@ def generate_file(**kwargs):
     nj = kwargs.get('nj',100)
     mincpu = kwargs.get('mincpu',3)
     maxcpu = kwargs.get('maxcpu',8)
-    minio = kwargs.get('minio',5)
-    maxio = kwargs.get('maxio',15)
+    minio = kwargs.get('minio',10)
+    maxio = kwargs.get('maxio',40)
     minb = kwargs.get('minb',5)
     maxb = kwargs.get('maxb',8)   
     minat = kwargs.get('minat',1)
@@ -59,7 +59,10 @@ def generate_file(**kwargs):
             fp.write(str(time)+' ')              
             cpub = random.randint(minb,maxb-1)  # num cpu bursts
             fp.write(f"{process_id} ")
+            priority = random.randint(1,5)
+            fp.write(f"{priority} ")
             fp.write(f"{cpub} ")
+
             #print(f"burst:{cpub}")
             for burst in range(cpub-1):
                 b = random.randint(mincpu,maxcpu)
