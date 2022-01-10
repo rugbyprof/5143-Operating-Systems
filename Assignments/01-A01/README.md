@@ -1,5 +1,5 @@
 ## Assignment 1 - Getting Started
-#### Due: 01-13-2021 (Saturday @ 12:00 p.m.)
+#### Due: 01-12-2022 (Saturday @ 12:00 p.m.)
 
 ## Getting Setup
 
@@ -10,7 +10,7 @@ If you have had me before, and this seems **TL;DR** make sure you:
 1. Are on my slack channel: https://griffin-courses.slack.com
 2. Create your repo for this class
 3. Add yourself to the class roster
-4. Make sure your image is on your github repo and changed in your slack profile.
+4. Make sure your image is on your Github repo and changed in your slack profile.
 
 ### Team Chat
 
@@ -42,7 +42,7 @@ So, **NO email!** Unless I specifically ask. Slack is your communication conduit
 
 1. I **highly** recommend installing slack on your mobile device as well as your own computer. I often upload help, or code suggestions on Slack in the evening or on weekends. Having slack on your mobile device will give you the best chance of getting the `alert` or notification that something was done.
 2. **The students that monitor our slack channel and participate in discussions almost alway do better. I've used slack since it was established almost 10 years ago and I can say with a high level of confidence that students who participate on Slack to better in the course.**
-3. **YOU WILL** update your profile so your avatar in chats shows either an image of you, or an avatar that ends up on your github repo's main page.
+3. **YOU WILL** update your profile so your avatar in chats shows either an image of you, or an avatar that ends up on your Github repo's main page.
 
 Now that we have our communication client set up, we probably need to start getting the actual programming environment ready! We will be doing many things from the command line this semester. Windows is not known for it's command line prowess, so we need to give it some assistance. 
 
@@ -51,7 +51,7 @@ Now that we have our communication client set up, we probably need to start gett
 
 <img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/vscode.svg.png" width="175">
 
-Vscode is a lightweight editor that will also let us compile and run C++ programs. I like it much more than Visual Studio because we do not need all of what Visual Studio offers. VsCode is a more straight forward way to running C++ programs, and I think you will benefit from using it. VsCode is NOT a compiler. What does this mean? When you use Visual Studio you are using an IDE (Integrated Development Environment). The `integrated` means that many components are "integrated" within the "environment": editor, compiler, linker, library managament, debugger, team support, version control and much more. It's the kitchen sink of writing programs, but we really only need an editor and compiler (with a couple of helper tools).  Vscode has debug capabilities which I will touch on during the semester.
+Vscode is a lightweight editor that will also let us compile and run C++ programs. I like it much more than Visual Studio because we do not need all of what Visual Studio offers. VsCode is a more straight forward way to running C++ programs, and I think you will benefit from using it. VsCode is NOT a compiler. What does this mean? When you use Visual Studio you are using an IDE (Integrated Development Environment). The `integrated` means that many components are "integrated" within the "environment": editor, compiler, linker, library management, debugger, team support, version control and much more. It's the kitchen sink of writing programs, but we really only need an editor and compiler (with a couple of helper tools).  Vscode has debug capabilities which I will touch on during the semester.
 
 To instal VsCode, go here:
 - https://code.visualstudio.com/
@@ -63,13 +63,13 @@ To add C++ support go here (don't worry about `Remote Development`)
 
 ---
 
-<img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/github.svg" width="175">
+<img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/Github.svg" width="175">
 
-In addition to our team chat and code editor, we will be using `version control` software to organize all of our code. WHAT?!?! **Version Control**?? Please trust me when I say you will be better for using some kind of version control. In this case we will use `git` (the version control sofwtare) in conjunction with `github` a web site that makes your programs publicly viewable. There is a bit of a learning curve, but you will thank me for it. 
+In addition to our team chat and code editor, we will be using `version control` software to organize all of our code. WHAT?!?! **Version Control**?? Please trust me when I say you will be better for using some kind of version control. In this case we will use `git` (the version control software) in conjunction with `Github` a web site that makes your programs publicly viewable. There is a bit of a learning curve, but you will thank me for it. 
 
 #### What is Git?
 
-Don't let the following definitions scare you. We will use `git` and `github` at a very basic (simple) level. 
+Don't let the following definitions scare you. We will use `git` and `Github` at a very basic (simple) level. 
 
 However lets define it: 
 
@@ -82,14 +82,14 @@ So, `Git` is **distributed revision control system** (version control). This is 
 
 Remember though: `Git != Github`, Git does version control, but has commands built in to `push` your code to a repository on another computer. This other computer that we will use is `Github`. 
 
-#### Why github for this course?
+#### Why Github for this course?
 
-I use github as a homebase for all assignments, lectures, and resources. It's basically our courses homepage. That is why I use it. When you push your code to github, you are placing your code in a central location irregardless of what computer your working on. If you do some work in the lab, you can `push` your changes to github. If you go home, you can `pull` your changes to your home machine and continue working. If you only work on a single machine, like a laptop, then github can be your "backup" copy. 
+I use Github as a home-base for all assignments, lectures, and resources. It's basically our courses homepage. That is why I use it. When you push your code to Github, you are placing your code in a central location irregardless of what computer your working on. If you do some work in the lab, you can `push` your changes to Github. If you go home, you can `pull` your changes to your home machine and continue working. If you only work on a single machine, like a laptop, then Github can be your "backup" copy. 
 
 #### Create a Github account.
 
 - You won't need this tutorial, but just in case:
-   - https://www.wikihow.com/Create-an-Account-on-GitHub
+   - https://www.wikihow.com/Create-an-Account-on-Github
 
 - When you create a Github account, you must choose a `username`.
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
@@ -100,7 +100,7 @@ I use github as a homebase for all assignments, lectures, and resources. It's ba
 
 #### Edit the README.md 
 
-- Edit the readme file on github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But an easily identifiable picture of you.
+- Edit the readme file on Github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But an easily identifiable picture of you.
 - Your readme should include:
     - Your first and last name
     - Your email address
@@ -110,7 +110,7 @@ I use github as a homebase for all assignments, lectures, and resources. It's ba
 
 ***Example README.md***
 
-If you're not familiar with `markdown` you can go [here](https://guides.github.com/features/mastering-markdown/) to get an idea of what it can do for you. It's basically a simple syntax that you can use to format files. Use the template below to get your `README` started:
+If you're not familiar with `markdown` you can go [here](https://guides.Github.com/features/mastering-markdown/) to get an idea of what it can do for you. It's basically a simple syntax that you can use to format files. Use the template below to get your `README` started:
 
 ```md
 ## Albert Einstein
@@ -129,7 +129,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.github.c
 
 ### Assignments Folder
 
-- Create an `Assignments` folder inside your github repository
+- Create an `Assignments` folder inside your Github repository
 - In the `Assignments` folder, create a `README.md` file that has the following in it:
 
 ```md
@@ -140,7 +140,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.github.c
 |        |        |             |
 ```
 
-- This will be a table in the root of your folder that will eventually hold a link to each assignment uploaded to github.
+- This will be a table in the root of your folder that will eventually hold a link to each assignment uploaded to Github.
 
 ### Class Roster
 ---
@@ -149,7 +149,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.github.c
 
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1ic1EtBi9x6ey8lWAEL7NbQQvU-Ez-RLW2hPTekghc0g/edit?usp=sharing)
+- Here is a link to our class roster on google docs: ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1oLIa6TvbNEwIcdtKgl7Yi2ltXpuQjh4yniXOZD28dmE/edit?usp=sharing)
 
 - Update the roster by adding your information to it. 
 
@@ -157,11 +157,11 @@ Add:
 
 1. If your first and last name are not present, add them along with an email address.
 2. If your email on my roster is incorrect, or you use a different one, then change it.
-3. Add your github username<sup>*</sup>
+3. Add your Github username<sup>*</sup>
 4. Add a link to your 5143-OS repository<sup>*</sup>
 
-*Your repository name and your github username are NOT the same thing.
-*I should be able to click your repo link, and your github repository (along with your README file ... images and all ... should proudly be displayed).
+*Your repository name and your Github username are NOT the same thing.
+*I should be able to click your repo link, and your Github repository (along with your README file ... images and all ... should proudly be displayed).
 
 ### Rules for emailing me:
 ---
@@ -180,4 +180,4 @@ Sources:
 - <sub>[1] http://en.wikipedia.org/wiki/Git_(software)</sub>
 - <sub>[2] https://slack.com</sub>
 - <sub>[4] https://code.visualstudio.com/</sub>
-- <sub>[5] https://git-for-windows.github.io/</sub>
+- <sub>[5] https://git-for-windows.Github.io/</sub>
