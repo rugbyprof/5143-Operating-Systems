@@ -16,7 +16,7 @@ If you have had me before, and this seems **TL;DR** make sure you:
 
 ---
 
-<img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/slack_icon.png" width="175">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/slack_icon.png" width="100">
 
 
 The first step in doing well in any of my courses is establishing a base of communication. Why? Not everything can be done while we are in class. 
@@ -49,7 +49,7 @@ Now that we have our communication client set up, we probably need to start gett
 ### VsCode (NOT Visual Studio)
 ---
 
-<img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/vscode.svg.png" width="175">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/vscode_icon.png" width="100">
 
 Vscode is a lightweight editor that will also let us compile and run C++ programs. I like it much more than Visual Studio because we do not need all of what Visual Studio offers. VsCode is a more straight forward way to running C++ programs, and I think you will benefit from using it. VsCode is NOT a compiler. What does this mean? When you use Visual Studio you are using an IDE (Integrated Development Environment). The `integrated` means that many components are "integrated" within the "environment": editor, compiler, linker, library management, debugger, team support, version control and much more. It's the kitchen sink of writing programs, but we really only need an editor and compiler (with a couple of helper tools).  Vscode has debug capabilities which I will touch on during the semester.
 
@@ -63,7 +63,7 @@ To add C++ support go here (don't worry about `Remote Development`)
 
 ---
 
-<img src="http://cs.mwsu.edu/~griffin/zcloud/zcloud-files/Github.svg" width="175">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/github_icon_2022.png" width="100">
 
 In addition to our team chat and code editor, we will be using `version control` software to organize all of our code. WHAT?!?! **Version Control**?? Please trust me when I say you will be better for using some kind of version control. In this case we will use `git` (the version control software) in conjunction with `Github` a web site that makes your programs publicly viewable. There is a bit of a learning curve, but you will thank me for it. 
 
@@ -125,7 +125,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 
 ***will result in*** (avatar not included in example)
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_out.png" width="300">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_out.png" width="400">
 
 ### Assignments Folder
 
@@ -145,7 +145,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 ### Class Roster
 ---
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/google-sheets.png" width="150"> 
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/google-sheets.png" width="100"> 
 
 #### Update the Class Roster:
 
