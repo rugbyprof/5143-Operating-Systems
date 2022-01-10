@@ -70,13 +70,13 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 ## Grading
 
-| Categories                |       |  \|   | Grade |          |
-| :------------------------ | :---: | :---: | :---: | :------: |
-| Midterm                   |  20%  |  \|   |   A   |  89-100  |
-| Projects <sup>**1**</sup> |  45%  |  \|   |   B   |  79-88   |
-| Presentations             |  15%  |  \|   |   C   |  69-78   |
-| Final<sup>**1**</sup>     |  20%  |  \|   |   D   |  59-68   |
-|                           |       |  \|   |   F   | below 59 |
+| Categories            |       |  \|   | Grade |          |
+| :-------------------- | :---: | :---: | :---: | :------: |
+| Midterm               |  20%  |  \|   |   A   |  89-100  |
+| Projects              |  45%  |  \|   |   B   |  79-88   |
+| Presentations         |  15%  |  \|   |   C   |  69-78   |
+| Final<sup>**1**</sup> |  20%  |  \|   |   D   |  59-68   |
+|                       |       |  \|   |   F   | below 59 |
 >**1**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
 
 ### Projects
