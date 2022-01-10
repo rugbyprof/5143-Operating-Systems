@@ -83,9 +83,12 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 - Projects will be written in C++ and Python depending on the project. 
 - I don't teach the traditional OS course using slides and a linear progression through a text book. Instead I try to create projects that require a basic understanding of the underlying concept in order to implement the project. 
-- Each project must run without error (some exceptions allowed). If they do not run, they will not be graded. Correctness is a different matter. Your projects will be graded by the class and myself during your presentation of your project implementation.
+- Each project must run without error (some exceptions allowed). If they do not run, they will not be graded. Correctness is a different matter. 
+- The majority of each project will be graded by the class and myself during your class presentation. I will review code and other components separately.
 - Some projects can be done in groups. I will dictate the max size of each group. If I dictate a max size of 3, don't ask for 4. If you are that worried about a friend, then make 2 groups of 2. 
-- Please read the *Academic Misconduct Policy & Procedures* below. Different cultures have differing opinions on what constitutes academic dishonesty, but we will be abiding by MSU's policy on academic dishonesty and plagiarism. 
+- Occasionally some students prefer to work alone. And although this was my preferred method in grad school, I may insist that you join a group. 
+- Each group member will also fill out a performance evaluation on their team members. Sadly there are occasions when a group member does nothing. I want to give you the tools to let me know.
+- Please read the *Academic Misconduct Policy & Procedures* below. Different cultures and countries have differing opinions on what constitutes academic dishonesty. To avoid any confusion, we will be abiding by MSU's policy on academic dishonesty and plagiarism. 
 
 ### Presentations
 
