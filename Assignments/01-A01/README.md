@@ -1,5 +1,5 @@
 ## Assignment 1 - Getting Started
-#### Due: 01-12-2022 (Saturday @ 12:00 p.m.)
+#### Due: 01-12-2022 (Wednesday @ 2:30 p.m.)
 
 ## Getting Setup
 
