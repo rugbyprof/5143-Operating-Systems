@@ -115,18 +115,20 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 ```md
 ## Albert Einstein
 #### Repo: 5143 Operating Systems Repo
-#### Email: albert.einstein@yahoo.com
+#### Email: albert.einstein@relativity.travel
 #### Website: https://en.wikipedia.org/wiki/Albert_Einstein
 #### Image:
-![Albert Einstein](https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein.png)
+![Albert Einstein](https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_200px.png)
 #### Avatar:
 ![Avatar](https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_avatar.png)
 ```
+***will result in***
 
-***will result in*** (avatar not included in example)
+-----
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_out.png" width="400">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_5143.png" width="600">
 
+-----
 ### Assignments Folder
 
 - Create an `Assignments` folder inside your Github repository
