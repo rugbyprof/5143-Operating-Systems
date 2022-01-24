@@ -87,6 +87,7 @@ class CommandHelper(object):
             c.join()
         
     def exists(self, cmd):
+        print(self.commands)
         return cmd in self.commands
 
 
@@ -96,16 +97,21 @@ if __name__ == '__main__':
 
     while True:
         # get input from terminal (use input if raw_input doesn't work)
-        command_input = input('% ')
+        cmd = input()
+
+        #print(type(command_input))
 
         # remove command from params (very over simplified)
-        command_input = command_input.split()
+        #command_input = command_input.split()
 
         # params are all but first position in list
-        params = command_input[1:]
+        #params = command_input[1:]
 
         # pull actual command from list
-        cmd = command_input[0]
+        #cmd = command_input[0]
+
+        params = []
+        
 
         # if command exists in our shell
         if ch.exists(cmd):
