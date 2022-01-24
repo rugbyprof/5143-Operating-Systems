@@ -1,5 +1,15 @@
 #!/usr/local/bin/python3
+"""
+This file gives and idea of how to parse commands from the command prompt and
+the invoke the proper command function with parameters. 
 
+The functions are examples only that call the built in commands, which is not
+acceptable for your project. Again, this file is just an example of parsing a 
+command and calling the correct function with params.
+
+It may give you a little insight into organizing your shell code as well.
+
+"""
 import threading
 import sys
 from subprocess import call  # FOR DEMO PURPOSES ONLY!
@@ -34,18 +44,6 @@ def pwd(**kwargs):
         params = []
     command.extend(params)
     call(command)
-
-# def cat(files=[]):
-#     if(len(files) == 0):
-#         return
-#     else:
-#         allofit = ""
-#         for f in files:
-#             file_object = open(f, "r") 
-#             data = f.read()
-#             allofit += data
-#     return allofit
-
 
 def exit(**kwargs):
     sys.exit()
@@ -95,8 +93,6 @@ class CommandHelper(object):
 if __name__ == '__main__':
 
     ch = CommandHelper()
-    
-    print(cat.__doc__)
 
     while True:
         # get input from terminal (use input if raw_input doesn't work)
@@ -113,6 +109,6 @@ if __name__ == '__main__':
 
         # if command exists in our shell
         if ch.exists(cmd):
-            ch.invoke(cmd=cmd, params=params,thread=True)
+            ch.invoke(cmd=cmd, params=params,thread=False)
         else:
             print("Error: command %s doesn't exist." % (cmd))

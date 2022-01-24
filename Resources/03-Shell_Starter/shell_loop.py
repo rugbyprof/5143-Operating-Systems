@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 """
-Simple shell loop starter
+This file is about using getch to capture input and handle certain keys 
+when the are pushed. The 'command_helper.py' was about parsing and calling functions.
+This file is about capturing the user input so that you can mimic shell behavior.
 
-The "Getch" code is directly pasted into this file so that everything is in one 
-place and not split into multiple files. 
-
-The only other function I left was a "print_cmd" function since printing the command
-required 3 lines of code every time. Otherwise, all the code is inline (besides getch)
-
+I'll discuss more in class.
 """
 import os
 import sys
@@ -92,35 +89,35 @@ if __name__ == '__main__':
             
             if direction in 'A':            # up arrow pressed
                 # get the PREVIOUS command from your history (if there is one)
-                # prints out '↑' then erases it (just to show something)
-                cmd += '↑'
+                # prints out 'up' then erases it (just to show something)
+                cmd += u"\u2191"
                 print_cmd(cmd)
                 sleep(0.3)
-                cmd = cmd[:-1]
+                #cmd = cmd[:-1]
                 
             if direction in 'B':            # down arrow pressed
                 # get the NEXT command from history (if there is one)
-                # prints out '↓' then erases it (just to show something)
-                cmd += '↓'
+                # prints out 'down' then erases it (just to show something)
+                cmd += u"\u2193"
                 print_cmd(cmd)
                 sleep(0.3)
-                cmd = cmd[:-1]
+                #cmd = cmd[:-1]
             
-            if direction in 'C':            # left arrow pressed    
-                # move the cursor to the LEFT on your command prompt line
-                # prints out '←' then erases it (just to show something)
-                cmd += '←'
+            if direction in 'C':            # right arrow pressed    
+                # move the cursor to the right on your command prompt line
+                # prints out 'right' then erases it (just to show something)
+                cmd += u"\u2192"
                 print_cmd(cmd)
                 sleep(0.3)
-                cmd = cmd[:-1]
+                #cmd = cmd[:-1]
 
-            if direction in 'D':            # right arrow pressed
-                # moves the cursor to the RIGHT on your command prompt line
-                # prints out '→' then erases it (just to show something)
-                cmd += '→'
+            if direction in 'D':            # left arrow pressed
+                # moves the cursor to the left on your command prompt line
+                # prints out 'left' then erases it (just to show something)
+                cmd += u"\u2190"
                 print_cmd(cmd)
                 sleep(0.3)
-                cmd = cmd[:-1]
+                #cmd = cmd[:-1]
             
             print_cmd(cmd)                  # print the command (again)
 
