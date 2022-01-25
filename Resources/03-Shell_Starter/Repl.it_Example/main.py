@@ -1,8 +1,9 @@
 import os
 import sys
+import readline
 
 
-def ls(**kwargs):
+def Ls(**kwargs):
     """Incorrect ls implementation as an example of how to pass params
         to this function and how to process flags and params
 
@@ -34,11 +35,11 @@ def ls(**kwargs):
     return listing
 
 
-def cat():
+def Cat():
     pass
 
 
-def pwd():
+def Pwd():
     pass
 
 
@@ -53,9 +54,9 @@ def executeCommand(**kwargs):
     flags = kwargs.get("flags", None)
 
     commands = {}
-    commands["ls"] = ls
-    commands["cat"] = cat
-    commands["pwd"] = pwd
+    commands["ls"] = Ls
+    commands["cat"] = Cat
+    commands["pwd"] = Pwd
 
     result = commands[cmd](params=params, flags=flags)
 
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     flags = None
     params = None
 
-    buffer = input()  # read input
+    buffer = input(":")  # read input
     buffer = buffer.strip()  # clean off whitespace front and back
     buffer = buffer.split()  # split on spaces
 
