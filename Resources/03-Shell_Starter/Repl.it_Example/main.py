@@ -3,7 +3,7 @@ import sys
 import readline
 
 
-def Ls(**kwargs):
+def ls(**kwargs):
     """Incorrect ls implementation as an example of how to pass params
         to this function and how to process flags and params
 
@@ -35,11 +35,11 @@ def Ls(**kwargs):
     return listing
 
 
-def Cat():
+def cat():
     pass
 
 
-def Pwd():
+def pwd():
     pass
 
 
@@ -54,9 +54,9 @@ def executeCommand(**kwargs):
     flags = kwargs.get("flags", None)
 
     commands = {}
-    commands["ls"] = Ls
-    commands["cat"] = Cat
-    commands["pwd"] = Pwd
+    commands["ls"] = ls
+    commands["cat"] = cat
+    commands["pwd"] = pwd
 
     result = commands[cmd](params=params, flags=flags)
 
@@ -66,6 +66,9 @@ def executeCommand(**kwargs):
 if __name__ == "__main__":
     """Assumes a command is of the following format:
     cmd -flags param1 param2 ... paramN
+    Try:
+        `ls -lah data images`
+        The `-lah` is ignored, however it is put into the flag variable
     """
     cmd = None
     flags = None
