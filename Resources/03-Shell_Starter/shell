@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+
 """
 This file gives and idea of how to parse commands from the command prompt and
 the invoke the proper command function with parameters. 
@@ -14,22 +15,21 @@ import threading
 import sys
 from subprocess import call  # FOR DEMO PURPOSES ONLY!
 
+
 def cat(**kwargs):
-    """ Concatenate files and send to std out
-    """
+    """Concatenate files and send to std out"""
     command = ["cat"]
-    if 'params' in kwargs:
-        params = kwargs['params']
+    if "params" in kwargs:
+        params = kwargs["params"]
     command.extend(params)
     call(command)
 
 
 def ls(**kwargs):
-    """Directory listing. 
-    """
+    """Directory listing."""
     command = ["ls"]
-    if 'params' in kwargs:
-        params = kwargs['params']
+    if "params" in kwargs:
+        params = kwargs["params"]
     else:
         params = []
     command.extend(params)
@@ -38,12 +38,13 @@ def ls(**kwargs):
 
 def pwd(**kwargs):
     command = ["pwd"]
-    if 'params' in kwargs:
-        params = kwargs['params']
+    if "params" in kwargs:
+        params = kwargs["params"]
     else:
         params = []
     command.extend(params)
     call(command)
+
 
 def exit(**kwargs):
     sys.exit()
@@ -52,24 +53,24 @@ def exit(**kwargs):
 class CommandHelper(object):
     def __init__(self):
         self.commands = {}
-        self.commands['ls'] = ls
-        self.commands['cat'] = cat
-        self.commands['pwd'] = pwd
-        self.commands['exit'] = exit
+        self.commands["ls"] = ls
+        self.commands["cat"] = cat
+        self.commands["pwd"] = pwd
+        self.commands["exit"] = exit
 
     def invoke(self, **kwargs):
-        if 'cmd' in kwargs:
-            cmd = kwargs['cmd']
+        if "cmd" in kwargs:
+            cmd = kwargs["cmd"]
         else:
-            cmd = ''
+            cmd = ""
 
-        if 'params' in kwargs:
-            params = kwargs['params']
+        if "params" in kwargs:
+            params = kwargs["params"]
         else:
             params = []
 
-        if 'thread' in kwargs:
-            thread = kwargs['thread']
+        if "thread" in kwargs:
+            thread = kwargs["thread"]
         else:
             thread = False
 
@@ -85,36 +86,35 @@ class CommandHelper(object):
 
             c.start()
             c.join()
-        
+
     def exists(self, cmd):
         print(self.commands)
         return cmd in self.commands
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     ch = CommandHelper()
 
     while True:
         # get input from terminal (use input if raw_input doesn't work)
-        cmd = input()
+        cmd = input("$: ")
 
-        #print(type(command_input))
+        # print(type(command_input))
 
         # remove command from params (very over simplified)
-        #command_input = command_input.split()
+        # command_input = command_input.split()
 
         # params are all but first position in list
-        #params = command_input[1:]
+        # params = command_input[1:]
 
         # pull actual command from list
-        #cmd = command_input[0]
+        # cmd = command_input[0]
 
         params = []
-        
 
         # if command exists in our shell
         if ch.exists(cmd):
-            ch.invoke(cmd=cmd, params=params,thread=False)
+            ch.invoke(cmd=cmd, params=params, thread=False)
         else:
             print("Error: command %s doesn't exist." % (cmd))
