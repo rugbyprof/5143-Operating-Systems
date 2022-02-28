@@ -13,13 +13,12 @@
 - WAITING (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request to complete.
 - TERMINATED - The process has completed.
 
-#### First-Come First-Serve Scheduling, FCFS
+### First-Come First-Serve Scheduling, FCFS
 
 - FCFS is very simple - Just a FIFO queue, like customers waiting in line at the bank or the post office or at a copying machine.
-
 - FCFS suffers from the convoy effect ... a long job shows up first and blocks everyone else from getting the CPU.
 
-#### Shortest-Job-First Scheduling, SJF
+### Shortest-Job-First Scheduling, SJF
 
 <center>
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/SJF.jpg" width="400">
@@ -33,23 +32,23 @@
 - Usually the system would use some algorithm or statistics to "guess" the next shortest burst based on historical information. We are going to know based on the input data.
 
 
-#### Priority Scheduling
+### Priority Scheduling
 
-Priority scheduling is a more general case of SJF, in which each job is assigned a priority and the job with the highest priority gets scheduled first. ( SJF uses the inverse of the next expected burst time as its priority - The smaller the expected burst, the higher the priority. )
+- Priority scheduling is a more general case of SJF, in which each job is assigned a priority and the job with the highest priority gets scheduled first. ( SJF uses the inverse of the next expected burst time as its priority - The smaller the expected burst, the higher the priority. )
 
-- Priority scheduling can be either **preemptive** or **non-preemptive**.
-- Priority scheduling can suffer from a major problem known as indefinite blocking, or starvation, in which a low-priority task can wait forever because there are always some other jobs around that have higher priority.
+  - Priority scheduling can be either **preemptive** or **non-preemptive**.
+  - Priority scheduling can suffer from a major problem known as indefinite blocking, or starvation, in which a low-priority task can wait forever because there are always some other jobs around that have higher priority.
 
-- One common solution to this problem is aging, in which priorities of jobs increase the longer they wait. 
+  - One common solution to this problem is aging, in which priorities of jobs increase the longer they wait. 
 
-#### Round Robin Scheduling
+### Round Robin Scheduling
 
 - Round robin scheduling is similar to FCFS scheduling, except that CPU bursts are assigned with limits called time quantum.
 - When a process is given the CPU, a timer is set for whatever value has been set for a time quantum.
 - If the process finishes its burst before the time quantum timer expires, then it is swapped out of the CPU just like the normal FCFS algorithm.
 - If the timer goes off first, then the process is swapped out of the CPU and moved to the back end of the ready queue.
 
-#### Multiple-Processor Scheduling
+### Multiple-Processor Scheduling
 - When multiple processors are available, then the scheduling gets more complicated, because now there is more than one CPU which must be kept busy and in effective use at all times.
 - Load sharing revolves around balancing the load between multiple processors.
 - Multi-processor systems may be **heterogeneous**, ( different kinds of CPUs ), or **homogenous**, ( all the same kind of CPU ). Even in the latter case there may be special scheduling constraints, such as devices which are connected via a private bus to only one of the CPUs. This book will restrict its discussion to homogenous systems.
@@ -57,7 +56,7 @@ Priority scheduling is a more general case of SJF, in which each job is assigned
   - One approach to multi-processor scheduling is **asymmetric multiprocessing**, in which one processor is the master, controlling all activities and running all kernel code, while the other runs only user code. This approach is relatively simple, as there is no need to share critical system data.
   - Another approach is **symmetric multiprocessing**, **SMP**, where each processor schedules its own jobs, either from a common ready queue or from separate ready queues for each processor.
 
-### Requirements
+## Requirements
 
 - This program is not a true system program, it is just a typical user application that requires no spawning of processes, no timer interrupt handling, no I/O interrupt handling, etc. It is a **simulation**
 - Your program must use some form of "visual presentation" to show, at least, the following four components:
