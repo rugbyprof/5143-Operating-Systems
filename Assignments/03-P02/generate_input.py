@@ -60,8 +60,8 @@ def generate_file(**kwargs):
             cpub = random.randint(minb,maxb-1)  # num cpu bursts
             fp.write(f"{process_id} ")
             priority = random.randint(1,5)
-            fp.write(f"{priority} ")
-            fp.write(f"{cpub} ")
+            fp.write(f"p{priority} ")
+            #fp.write(f"{cpub} ")
 
             #print(f"burst:{cpub}")
             for burst in range(cpub-1):
@@ -93,8 +93,10 @@ def usage():
     print("\t\tMax number of bursts (maxb)\n")
     print("\t\tMin jobs per arrival time (minat)\n")
     print("\t\tMax jobs per arrival time (maxat)\n")
+    print("\t\tMin priority (minp)\n")
+    print("\t\tMax priority (maxp)\n")
     print("Command:")
-    print("\tgen_input.py nj=N mincpu=N maxcpu=N minio=N maxio=N minb=N maxb=N minat=N maxat=N")
+    print("\tgen_input.py nj=N mincpu=N maxcpu=N minio=N maxio=N minb=N maxb=N minat=N maxat=N minp=1 maxp=5")
     sys.exit()
 
 if __name__=='__main__':

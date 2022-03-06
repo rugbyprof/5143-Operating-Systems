@@ -74,6 +74,7 @@
     - I/O burst durations (io<sub>j</sub>, j = 1, 2, ..., n-1)
  - This will all be written in one line of the input file (the name of the input file will be passed as the first command-line argument to your program) in the following order:
     - t<sub>a</sub>pid cpu<sub>1</sub> io<sub>1</sub> cpu<sub>2</sub> io<sub>2</sub> ... cpu<sub>n-1</sub> io<sub>n-1</sub> cpu<sub>n</sub>
+- Some processes will have a priority associated with them. If this is the case, the value in the input file will be pre-pended with a `p`, like `p3` for a priority of 3. It will also be in the 3rd position on any input line if that process has a priority. 
 - A process always begins and ends with a CPU burst. 
 - All the numbers are integers.
 - A Time quantum (integer) used in the Round Robin simulation is given as the second command-line parameter.
