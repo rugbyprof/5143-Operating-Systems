@@ -68,12 +68,12 @@
   
 - The description of a simulated process includes the following information:
   - Arrival time (t<sub>a</sub>) of the process
-  - Process ID
-  - Number of CPU bursts (N)
-  - CPU burst durations (c<sub>i</sub>, i = 1, 2, ..., N), 
-  - I/O burst durations (d<sub>j</sub>, j = 1, 2, ..., N-1)
+  - Process ID (pid)
+  - A series of CPU bursts interleaved with IO bursts. 
+    - CPU burst durations (cpu<sub>i</sub>, i = 1, 2, ..., n), 
+    - I/O burst durations (io<sub>j</sub>, j = 1, 2, ..., n-1)
  - This will all be written in one line of the input file (the name of the input file will be passed as the first command-line argument to your program) in the following order:
-    - t<sub>a</sub> N c<sub>1</sub> d<sub>1</sub> c<sub>2</sub> d<sub>2</sub> ... c<sub>N-1</sub> d<sub>N-1</sub> c<sub>N</sub>
+    - t<sub>a</sub>pid cpu<sub>1</sub> io<sub>1</sub> cpu<sub>2</sub> io<sub>2</sub> ... cpu<sub>n-1</sub> io<sub>n-1</sub> cpu<sub>n</sub>
 - A process always begins and ends with a CPU burst. 
 - All the numbers are integers.
 - A Time quantum (integer) used in the Round Robin simulation is given as the second command-line parameter.
