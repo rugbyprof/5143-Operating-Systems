@@ -23,60 +23,89 @@ As I mentioned, the scheduler moves processes around through a series of states,
 
 ### Job State
 <center>
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/job_process_state_diagram.png" width="800">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/job_state_diagram.png" width="700">
 </center>
 
-- NEW - The process is being created, and has not yet begun executing.
-- READY - The process is ready to execute, and is waiting to be scheduled on a CPU in the "ready queue".
-- RUNNING - The process is currently executing on a CPU.
-- WAITING (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request to complete.
-- TERMINATED - The process has completed.
+1. NEW - The process is being created, and has not yet begun executing.
+2. READY - The process is ready to execute, and is waiting to be scheduled on a CPU in the "ready queue".
+3. RUNNING - The process is currently executing on a CPU.
+4. WAITING (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request to complete.
+5. TERMINATED - The process has completed.
+
+Each state is represented as a queue that holds each process that is currently in that state. The success or failure of scheduling boils down to moving each process from queue to queue in an efficient and consistent manner. Efficiency depends on multiple factors, the main one being the actual scheduling algorithm choosing which process gets cpu time or resource time. The next section discusses the algorithms your simulation needs to implement.  
 
 ## Scheduling Algorithms
 
-#### First-Come First-Serve Scheduling, FCFS
+#### First-Come-First-Serve, FCFS
 
 - FCFS is very simple - FIFO simply queues processes in the order that they arrive in the ready queue.
 - This is the simplest scheduling algorithm. 
 - This is a **non-preemptive** scheduling algorithm.
 - Context switches only occur upon cpu burst termination.
 
-#### Shortest-Job-First Scheduling, SJF
+#### Shortest-Job-First, SJF
 
 - Shortest job first (SJF) also known as Shortest job next (SJN) or shortest process next (SPN), is a scheduling policy that selects for execution the waiting process with the smallest execution time.
 - SJF is a **non-preemptive** algorithm
 - A disadvantage of using shortest job next is that the total execution time of a job must be known before execution. But we know, so we can implement it.
 - Total Execution Time = Sum(cpuBurst<sub>**1**</sub>+cpuBurst<sub>**2**</sub>+cpuBurst<sub>**3**</sub>+...+cpuBurst<sub>**n**</sub>)
 
-#### Shortest-Remaining-Time Scheduling, SRT
+#### Shortest-Remaining-Time, SRT
 
 - Shortest remaining time, also known as shortest remaining time first (SRTF), is a scheduling method that is a **preemptive version** of shortest job next scheduling. 
 - In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. 
 - Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, the process will either run until it completes or get preempted if a new process is added that requires a smaller amount of time.
 - Execution Time Remaining = Sum of remaining cpuBursts. 
 
-#### Priority Scheduling, RR
+#### Priority-Based, PB
 
 - The operating system assigns a fixed priority rank to every process, and the scheduler arranges the processes in the ready queue in order of their priority. 
 - Lower-priority processes get interrupted by incoming higher-priority processes.
 - This is a **preemptive scheduling** algorithm.
 - Runs into possibility of starving processes with low priorities.
 
-#### Round Robin Scheduling
+#### Round-Robin, RR
 
 - The scheduler assigns a fixed time unit per process known as a time-slice or time-quantum, and cycles through each process equally. 
 - If the process completes within that time-slice it gets terminated otherwise it is rescheduled after giving a chance to all other processes.
 - This is a **preemptive scheduling** algorithm.
 
-#### Multiple-Processor Scheduling
-- When multiple processors are available, then the scheduling gets more complicated, because now there is more than one CPU which must be kept busy and in effective use at all times.
-- Load sharing revolves around balancing the load between multiple processors.
-- Multi-processor systems may be **heterogeneous**, ( different kinds of CPUs ), or **homogenous**, ( all the same kind of CPU ). Even in the latter case there may be special scheduling constraints, such as devices which are connected via a private bus to only one of the CPUs. This book will restrict its discussion to homogenous systems.
-- Approaches to Multiple-Processor Scheduling
-  - One approach to multi-processor scheduling is **asymmetric multiprocessing**, in which one processor is the master, controlling all activities and running all kernel code, while the other runs only user code. This approach is relatively simple, as there is no need to share critical system data.
-  - Another approach is **symmetric multiprocessing**, **SMP**, where each processor schedules its own jobs, either from a common ready queue or from separate ready queues for each processor.
+## Resources
+
+Our simulation is implementing the simplest process state diagram, one that has five states. Two of those states represent processes that are waiting for resources (ready queue, and wait queue). One of those states represents a process that is running (gained access to cpu). It does not have a state in which a process has been assigned an IO device. So, lets add the "state" just to make sure we will treat IO similar to cpu. We know the cpu gets processes from the ready queue and that we can have multiple cpu's, allowing more than one process to run concurrently. The same goes for IO devices. The wait queue will give IO devices to a process as they become available. 
+
+<center>
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/job_state_diagram_with_IO.png" width="700">
+</center>
+
+ To emphasize the resource issue again, I need to mention that the number of resources heavily influences throughput. Resources go up, throughput gets better. For this simulation, all resources will be categorized as one of two things: a CPU, or an IO device.
+
+#### Processors
+In fact, all CPU's (processors) are assumed to be the same. This means we do not need to worry about **heterogeneous** or **homogenous** processors. 
+
+>- **heterogeneous**: different processor types. Usually meaning one would run kernel code and others everything else, or one cpu being the "cpu in charge" delegating to others.
+>- **homogenous**: all cpu's the same type. But could still mimic above strategy regardless. 
+
+In our simulation a cpu is available to any and all processes.
+
+#### IO Devices
+
+Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. 
+
+## Input Files
+
+- 
+
 
 ### Requirements
+
+This will be a collection of thoughts and items as discussed in class. I will try to make clear the ideas we discussed in class so that there is not a large amount of ambiguity, however, there will be some.
+
+- Remember this is a simulation, where the system clock (aka timer) is simply an integer variable incremented in some loop construct.
+- We will read the the processes that will run in our simulation from multiple files, where each file will emphasize a different type of load: cpu intensive, io intensive, and random. 
+- 
+
+
 
 - This program is not a true system program, it is just a typical user application that requires no spawning of processes, no timer interrupt handling, no I/O interrupt handling, etc. It is a **simulation**
 - Your program must use some form of "visual presentation" to show, at least, the following four components:
