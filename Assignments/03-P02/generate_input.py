@@ -109,15 +109,15 @@ def generate_file(**kwargs):
     # maxp = kwargs.get("maxp", 5)
     prioWeights = kwargs.get("prioWeights", "even")  # even , high, low
 
-    intensiveBurstType = kwargs.get("intensiveBurstType", "normal")
+    intBurstType = kwargs.get("intBurstType", "normal")
 
-    if 'cpu' in intensiveBurstType:
+    if 'cpu' in intBurstType:
         minCpuBT += 10
         maxCpuBT += 20
         minIOBT -= 9
         maxIOBT -= 9
 
-    if 'io' in intensiveBurstType:
+    if 'io' in intBurstType:
         minIOBT += 10
         maxIOBT += 20
         minCpuBT += 4
@@ -173,49 +173,52 @@ def generate_file(**kwargs):
 
 def usage():
     # if params are required ...
-    print("Usage: ")
-    print("\tNeeds these parameter: ")
+    print("Usage: (All params have defaults, but can be changed with the following): \n")
 
     # total number of jobs generated
-    print("\t\tNumber of jobs (nj) [1 - n]")
+    print("\tnj      \t: Number of jobs[1 - n]")
 
     # min/max cpu burst lengths (increase for cpu intensive processes and vice versa)
-    print("\t\tMin cpu burst length (minCpuBT) Usually single digits: [1 - 9]")
-    print("\t\tMax cpu burst length (maxCpuBT) Whatever you want: [number larger than minCpuBT]")
+    print("\tminCpuBT \t: Min cpu burst length.  Usually single digits: [1 - 9]")
+    print("\tmaxCpuBT \t: Max cpu burst length. Whatever you want: [number larger than minCpuBT]")
 
     # min/max io burst lengths (increase for io intensive processes and vice versa)
-    print("\t\tMin io burst length (minIOBT) Usually single digits: [1 - 9]")
-    print("\t\tMax io burst length (maxIOBT) Whatever you want: [number larger that minIOBT]")
+    print("\tminIOBT \t: Min io burst length. Usually single digits: [1 - 9]")
+    print("\tmaxIOBT \t: Max io burst length. Whatever you want: [number larger that minIOBT]")
 
     # determine min and max number of bursts. Smaller means shorter run times easier debugging
-    print("\t\tMin number of bursts (minNumBursts) [1 - n]")
-    print("\t\tMax number of bursts (maxNumBursts) [number larger than minNumBursts\n")
+    print("\tminNumBursts \t: Min number of bursts [1 - n]")
+    print("\tmaxNumBursts \t: Max number of bursts [number larger than minNumBursts")
 
     # OR instead of min and max number of bursts, you can use "cpu or io". Cpu  will generate many
     # more cpu bursts than IO bursts, and vice versa.
-    print("\t\tGenerate bursts based on cpu intensive or io intensive (intensiveBurstType) [cpu,io]")
+    print("\tintBurstType \t: Generate bursts based on cpu intensive or io intensive [cpu,io]")
 
     # Per arrival time - means number of jobs with the SAME arrival time
     # Having more jobs show up at the same time adds complexity to the load handling.
-    print("\t\tMin jobs per arrival time (minat)\n [1-n]")
-    print("\t\tMax jobs per arrival time (maxat)\n [number larger than minat")
+    print("\tminat       \t: Min jobs per arrival time [1-n]")
+    print("\tmaxat       \t: Max jobs per arrival time [number larger than minat")
 
     # Adjust per your priority requirements. Priorities 1-5 seems sufficient in most cases.
-    print("\t\tMin priority (minp) [1-n]\n")
-    print("\t\tMax priority (maxp) [larger than minp]\n")
+    print("\tminp       \t: Min priority [1-n]")
+    print("\tmaxp       \t: Max priority [larger than minp]")
 
     # More high or low or random? Value is comma seperated values with percentage per weight
     # so with priorites 1-5 and a prioWeights = 20,20,20,20,20 you get 20 percent for each weight
     # Using even,low, or high requires using priorities 1-5. 
-    print("\t\tPriority weights (prioWeights) [even,low,high]\n")
+    print("\tprioWeights \t: Priority weights [even,low,high]")
 
-    print("\t\t Outfile Name will write the output to that file (ofile)\n")
+    print("\tofile       \t: Outfile Name will write the output to that file.")
 
-    print("Command:")
+    print("\nExample Commands:")
     print(
         """
-        \tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N minNumBursts=N maxNumBursts=N minat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]\nor\n
-        \tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N intensiveBurstType=[cpu,io] minat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]
+\tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N minNumBursts=N 
+\tmaxNumBursts=N minat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]\nor\n
+\tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N intBurstType=[cpu,io] 
+\tminat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]\nor\n
+\tgenerate_input.py prioWeights=low intensiveBurstType=cpu ofile=datafile_cpu_intense.dat\nor\n
+\tgenerate_input.py prioWeights=high intensiveBurstType=io ofile=datafile_io_intense.dat
          """
     )
     sys.exit()
