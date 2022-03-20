@@ -8,6 +8,6 @@
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-PythonThreading">04-PythonThreading</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-PythonThreading"> Python Threading </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-PythonThreading"> Creating Threads with Python</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-PythonThreading">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/05-ProducerConsumer">05-ProducerConsumer</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/05-ProducerConsumer"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/05-ProducerConsumer"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/05-ProducerConsumer">N/A</a>*** |  |
 
-<sup>Last Updated: 2022-03-14 (Mon @ 15:15)</sup> 
+<sup>Last Updated: 2022-03-20 (Sun @ 02:52)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
