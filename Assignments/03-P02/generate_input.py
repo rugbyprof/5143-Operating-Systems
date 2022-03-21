@@ -90,17 +90,23 @@ def generate_file(**kwargs):
 
     ofile = kwargs.get("ofile", "datafile.dat")
 
+    if "." in ofile:
+        name,ext = ofile.split(".")
+    else:
+        name = ofile
+        ofile = ofile+'.dat'
+
     fp = open(ofile, "w")
 
     jsonJobs = []
 
     # default values
-    nj = kwargs.get("nj", 100)
+    nj = int(kwargs.get("nj", 100))
     minCpuBT = kwargs.get("minCpuBT", random.randint(5,10))
     maxCpuBT = kwargs.get("maxCpuBT", random.randint(minCpuBT+3,minCpuBT+8))
     minIOBT = kwargs.get("minIOBT", random.randint(10,15))
     maxIOBT = kwargs.get("maxIOBT", random.randint(minIOBT,minIOBT+5))
-    minNumBursts = kwargs.get("minNumBursts", random.randint(3,5))
+    minNumBursts = kwargs.get("minNumBursts", random.randint(5,8))
     maxNumBursts = kwargs.get("maxNumBursts", random.randint(minNumBursts+3,minNumBursts+8))
 
     minat = kwargs.get("minat", 1)
@@ -152,11 +158,17 @@ def generate_file(**kwargs):
                 cpuBursts.append(b)
                 fp.write(str(i) + " ")
                 ioBursts.append(i)
-            jsonJob["cpuBursts"] = cpuBursts
-            jsonJob["ioBursts"] = ioBursts
+
             b = random.randint(minCpuBT, maxCpuBT)
             fp.write(str(b) + "\n")
-            jsonJob["cpus"] = b
+            cpuBursts.append(b)
+
+            jsonJob["cpuBursts"] = cpuBursts
+            jsonJob["ioBursts"] = ioBursts
+
+            # b = random.randint(minCpuBT, maxCpuBT)
+            # fp.write(str(b) + "\n")
+            # jsonJob["cpus"] = b
             process_id += 1
             if process_id >= nj:
                 break
@@ -165,10 +177,12 @@ def generate_file(**kwargs):
         # fp.write('\n')
     fp.close()
 
-    name,ext = ofile.split(".")
-
     fp = open(name+".json", "w")
-    json.dump(jsonJobs, fp,indent=4)
+    dumpMe = {}
+    dumpMe['kwargs'] = kwargs
+    dumpMe['jobs'] = jsonJobs
+    
+    json.dump(dumpMe, fp,indent=4)
 
 
 def usage():
@@ -213,9 +227,9 @@ def usage():
     print("\nExample Commands:")
     print(
         """
-\tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N minNumBursts=N 
+\tgen_input.py ofile=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N minNumBursts=N 
 \tmaxNumBursts=N minat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]\nor\n
-\tgen_input.py fname=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N intBurstType=[cpu,io] 
+\tgen_input.py ofile=filename.wut nj=N minCpuBT=N maxCpuBT=N minIOBT=N maxIOBT=N intBurstType=[cpu,io] 
 \tminat=N maxat=N minp=N maxp=N prioWeights=[even,high,low]\nor\n
 \tgenerate_input.py prioWeights=low intensiveBurstType=cpu ofile=datafile_cpu_intense.dat\nor\n
 \tgenerate_input.py prioWeights=high intensiveBurstType=io ofile=datafile_io_intense.dat
@@ -233,8 +247,8 @@ if __name__ == "__main__":
         usage()
 
     print("Default values can be changed in the `generate_file` function. \n")
-    print("However run this file with --help after filename to get a usage \n")
-    print("\texample to change values from command line \n")
+    print("However run this file with `--help` after filename to get a usage ")
+    print("example to change values from command line \n")
     print("Generating file with the following format:\n")
     print("\ttime pid priority cpub_1 iob_1 cpub2 iob_2 ... cpub_n \n")
     generate_file(**kwargs)
