@@ -1,2 +1,5 @@
 .*
 !.gitignore
+!.clang-format
+
+venv/
