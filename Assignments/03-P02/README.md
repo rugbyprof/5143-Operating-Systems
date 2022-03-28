@@ -96,7 +96,6 @@ Likewise, we will not distinguish between different types of IO devices (like pr
 
 Use the program `generate_input.py` to make different types of input files. The default values in the program are helpful, but you should run the script with a minimum of three file types:
 
-- Top line will have 2 values: num cpus and num io devices respectively.
 - Cpu Intensive Process (Lots of cpu time vs little IO time)
 - IO Intensive Process (Lots of IO time vs little cpu time)
 - Prioritized with lots of high priority  (few low priorities)
@@ -158,6 +157,13 @@ Use the program `generate_input.py` to make different types of input files. The 
   - "I/O wait" is the total amount of time the process had to wait for the I/O device.
 - At the end of simulation, the simulator shall display the percentage of CPU utilization, average TAT, average wait time, and average I/O wait time.
 
+### Parameterized Runs
+- Each run will require 3 inputs:
+   - Scheduling algorithm
+   - Num Cpus
+   - Num IO Devices 
+- Or one config file:
+   - {}
 
 - Sources:
   - https://en.wikipedia.org/wiki/Scheduling_(computing)
