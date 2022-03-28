@@ -96,6 +96,7 @@ Likewise, we will not distinguish between different types of IO devices (like pr
 
 Use the program `generate_input.py` to make different types of input files. The default values in the program are helpful, but you should run the script with a minimum of three file types:
 
+- Top line will have 2 values: num cpus and num io devices respectively.
 - Cpu Intensive Process (Lots of cpu time vs little IO time)
 - IO Intensive Process (Lots of IO time vs little cpu time)
 - Prioritized with lots of high priority  (few low priorities)
