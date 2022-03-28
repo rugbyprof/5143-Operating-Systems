@@ -4,7 +4,8 @@
  | [01-A01](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01) | [ Assignment 1 ](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01) | [ Getting Started](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01) | [01-12-2022 (Wednesday @ 2:30 p.m.)](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/01-A01) |
  | [02-P01](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01) | [ Shell Project ](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01) | [ Implementation of a basic shell.](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01) | [01-20-2021 (Wednesday @ 2:30 p.m.)](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/02-P01) |
  | [03-P02](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/03-P02) | [ Cpu Scheduling ](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/03-P02) | [ Simulation](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/03-P02) | [04-07-2021 (Wednesday @ 2:30 p.m.)](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/03-P02) |
- | [04-P03](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) | [ Http Producer Consumer](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) | [N/A](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) |
+ | [04-P03](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) | [ Reader Writer Part 1](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) | [TBD](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/04-P03) |
+ | [05-P04](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/05-P04) | [ Reader Writer Part 1](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/05-P04) | [TBD](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/05-P04) |
  
     
 ## File Legend
@@ -17,4 +18,4 @@
 |xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
 
     
-<sup>Last Updated: 2022-03-23 (Wed @ 12:41)</sup>
+<sup>Last Updated: 2022-03-28 (Mon @ 14:00)</sup>

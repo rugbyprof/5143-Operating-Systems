@@ -3,6 +3,11 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from typing import Optional
+from typing import List
+from fastapi import Body
+from pydantic import BaseModel
+
 
 import random
 
@@ -68,6 +73,16 @@ Place local classes here if you have any or in a module.
 # local helper classes
 
 
+class Inst(BaseModel):
+    op: str
+    val: int
+    loc: str
+
+
+class InstList(BaseModel):
+    inst: List[Inst] = []
+
+
 """
   _      ____   _____          _        __  __ ______ _______ _    _  ____  _____   _____
  | |    / __ \ / ____|   /\   | |      |  \/  |  ____|__   __| |  | |/ __ \|  __ \ / ____|
@@ -119,8 +134,8 @@ async def consume():
     return {"Response": "Response message.", "data": data}
 
 
-@app.post("/produce/{data}")
-async def producer(data):
+@app.post("/produceOne/")
+async def producerOne(inst: Inst):
     """
     ### Description:
         Recieves data  from a producer to be consumed
@@ -129,7 +144,20 @@ async def producer(data):
     ### Returns:
         bool : True = success
     """
-    return {"Response": "This is my response message.", "data": data}
+    return {"Response": "This is my response message.", "data": inst}
+
+
+@app.post("/produceMany/")
+async def producerMany(inst: InstList):
+    """
+    ### Description:
+        Recieves data  from a producer to be consumed
+    ### Params:
+        data : list
+    ### Returns:
+        bool : True = success
+    """
+    return {"Response": "This is my response message.", "data": inst}
 
 
 """
