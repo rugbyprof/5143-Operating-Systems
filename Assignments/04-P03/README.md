@@ -1,10 +1,9 @@
 ## Reader Writer Part 1
-
 #### Due: TBD
 
 Using the python concurrency mechanism that best fits the job, implement a reader / writer framework that will keep a shared memory section safe so that readers will get accurate data and writers won't conflict with each other. This is the first part of our concurrency project in which we protect a critical section of local code. Next project will involve protecting a similar critical section of code via network requests.
 
-The reader/writer problem is a classic which is still very much relevant in todays architexture, especially with database and file servers being so prevalent. The problem is as follows:
+The reader/writer problem is a classic which is still very much relevant in todays architecture, especially with database and file servers being so prevalent. The problem is as follows:
 
 > -   Any processes can read from the shared resource, even while others are reading.
 > -   Any process may write to the shared resource.
@@ -33,7 +32,7 @@ One issue this example does not show is that there needs to be multiple instance
 
 -   Your program should specify with command line params how many writers should be created.
 -   Each writer will execute randomly generated instructions that will ultimately change shared memory.
--   I would make it so no instruction uses values over 9, keeping
+-   I would make it so no instruction uses values over 9, keeping the final values relatively small and manageable.
 
 ### Instructions
 
@@ -45,18 +44,18 @@ The type of instructions that will be executed are listed below:
 
 A list of examples where R1 and R2 are registers. There can be more than 2 registers, but that is not really a factor for this program. It will be relevant next program.
 
--   'MOV': `MOV R1 R2` Copy value from register `R1` to register `R2`
+-   'MOV': `MOV R1 R2` Copy value from register `R2` to register `R1`
 -   'ADD': `ADD R1 R2` Add values in `R1` and `R2`, storing result in `R1`.
--   'SUB': `SUB R1 R2` Subtract values in `R1` and `R2`, storing result in `R1`.
+-   'SUB': `SUB R1 R2` Subtract value in `R2` from `R1`, storing result in `R1`.
 -   'MUL': `MUL R1 R2` Multiply values in `R1` and `R2`, storing result in `R1`.
--   'DIV': `DIV R1 R2` Divide values in `R1` and `R2`, storing result in `R1`.
+-   'DIV': `DIV R1 R2` Divide value in `R2` with `R1`, storing result in `R1`.
 -   'SET': `SET R2 7` Load 7 into `R2`.
 -   'READ': `READ R2 A100` Read memory location `A100` into `R2`.
 -   'WRITE': `WRITE R1 B100` Write contents of A into memory location `B100`.
 
 ### Generate instructions
 
-Generate a list of over `N` instructions (minimum in the hundreds) using the guidelines above, giving regards to our memory contraints below. This means:
+Generate a list of over `N` instructions (minimum in the hundreds) using the guidelines above, giving regards to our memory constraints below. This means:
 
 -   Each file should generate instructions depending on whether it is a reader or a writer.
 -   Have the ability to generate instructions that only read or write to 1 section of memory (A,B,C) but the default should be reading and writing to all of the three sections.
@@ -117,6 +116,20 @@ SUB R1 R2
 WRITE R1 C205
 ```
 
+One instruction is equivalent to:
+
+- 2 reads
+- operation
+- 1 write 
+
+```
+READ C205 R1
+READ A155 R2
+SUB R1 R2
+WRITE R1 C205
+```
+or similar. 
+
 #### memory.json
 
 ```python
@@ -154,22 +167,43 @@ WRITE R1 C205
 
 -   There are three components: A, B, C with addresses from 100-250 inclusive.
 -   When implementing your locking mechanisms to this shared memory space, you can initially assume that the entire space (A,B,C) can all be locked at once.
--   But, some implementations will need to lock (A) (B) and (C) seperately.
+-   But, some implementations will need to lock (A) (B) and (C) separately.
 -   When your program begins load `memory.json` to "load" the memory.
 -   When your program finishes write your memory back to `memory.json`.
 
-### Experiment
+### Experiment / Requirements
 
--   Assume `W` writers, where: `1 < W < 20`.
--   Assume `R` = `5 * W`
--   Generate `N` files of `m` random instructions, where `N = R * W` and `m > 100`.
+-   Configure each run using command line parameters (sys.argv)
+
+#### Readers / Writers
+-   Assume `W` writers, where: `1 < W < 20` (between 1 and 20 writers).
+-   Assume `R` = `5 * W` (5 times the number of readers than writers).
+
+#### Files
+-   Generate `N` files of `m` random instructions, where `N == W` and `m > 100` (Same number of input files than there are writers where each file has minimum of 100 instructions).
+
+#### Memory
 -   Remember you need to have ability to generate instructions that stay within a single memory block!
--   You need to time the running of all the instructions under two conditions:
-    -   The lock locks all of the memory blocks (A,B,C)
-    -   The lock only locks the necessary component (A), (B), (C) as needed. This does mean we might need to obtain more than one lock per instruction!
--   What issues will we encounter?
--   Can we make any improvements.
--   Can we obtain speedup by limiting instructions to only accessing one memory block?
+-   Each run will consist of executing 1 files worth of instructions and performing the lock on shared memory as follows: 
+    -   Lock **all** of the memory blocks (A,B,C)
+    -   Lock only the necessary component (A), (B), (C) as needed. This does mean we might need to obtain more than one lock per instruction as it may be locked by another process. 
+
+#### Timing 
+-    Here's a timing library to time your running code
+-    https://docs.python.org/3/library/timeit.html 
+
+#### Example Runs
+- `python3 readerWriters.py w=5`
+- This will:
+  - Generate 5 programs to be run (instruction files)
+  - Create 5 writers
+  - Create 15 readers
+- Run 1 time with above params locking ONLY the necessary memory block.
+- Run 1 time with above params locking the entire memory block. 
+- Log how much time each writer was blocked waiting for a lock on memory. 
+- Compare the time to completion for both instances.
+  - Is the time significant?
+  - Speculate on your findings. 
 
 ### References + Help
 
