@@ -1,18 +1,10 @@
 ## Lectures
-| Folder | Lecture | Description|
- | ------------|------------|------------|
- | [01-Lecture](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture) | [ Placeholder Readme ](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture) | [ No Description](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture) | [N/A](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture) |
- | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Multiprogramming, Multiprocessing, Multitasking, and Multithreading](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Multiprogramming](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Multiprocessing](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Multitasking](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Multithreading](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [02-MultiMultiMulti](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [ Terms](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) | [N/A](https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti) |
- 
-    
-## File Legend
 
-| Folder Name | Description |
-|:-----------|:-------------|
-|xx-**A**xx | This is some kind of an ***Assignment***, where an `assignment` can be anything that isn't big enough to be a full fledged program, and not specific enough to be a homework. |
-|xx-**H**xx | This is a ***Homework***. Something pretty specific, usually not requiring a lot of programming. |
-|xx-**P**xx | This is a ***Program***. Where it must be compiled, run error free, commented, and correct. |
-|xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
+| Folder | Title | Description | Due |  |
+|:------|:------|:------|:------|:-----:|
+| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">01-Lecture</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/01-Lecture">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti">02-MultiMultiMulti</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/02-MultiMultiMulti">N/A</a>*** |  |
 
-    
-<sup>Last Updated: 2022-03-28 (Mon @ 14:00)</sup>
+<sup>Last Updated: 2022-03-30 (Wed @ 14:26)</sup> 
+
+<sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
