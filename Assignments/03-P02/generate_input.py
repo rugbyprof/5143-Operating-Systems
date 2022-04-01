@@ -10,9 +10,9 @@ cpu_counts = [1, 2, 4, 8]
 class WeightedPriorities:
     def __init__(self, choiceType="even"):
         self.priorityChoiceWeights = {
-            "low":[35, 25, 18, 15, 7],
-            "even":[20, 20, 20, 20, 20],
-            "high":[7, 15, 18, 25, 35]
+            "low": [35, 25, 18, 15, 7],
+            "even": [20, 20, 20, 20, 20],
+            "high": [7, 15, 18, 25, 35],
         }
         self.choiceType = choiceType
         self.priorityChoiceList = []
@@ -20,7 +20,7 @@ class WeightedPriorities:
 
         self.nextPriority = 0  # index to walk through priorityChoiceList
 
-    def generateWeightedPriority(self,customWeights=None):
+    def generateWeightedPriority(self, customWeights=None):
         """generate a random priority using a weighted scheme.
         Param:
             choiceType (string):
@@ -37,7 +37,6 @@ class WeightedPriorities:
         """
 
         weights = self.priorityChoiceWeights[self.choiceType]
-
 
         for i in range(len(weights)):
             self.priorityChoiceList.extend([i + 1] * weights[i])
@@ -91,10 +90,10 @@ def generate_file(**kwargs):
     ofile = kwargs.get("ofile", "datafile.dat")
 
     if "." in ofile:
-        name,ext = ofile.split(".")
+        name, ext = ofile.split(".")
     else:
         name = ofile
-        ofile = ofile+'.dat'
+        ofile = ofile + ".dat"
 
     fp = open(ofile, "w")
 
@@ -102,12 +101,16 @@ def generate_file(**kwargs):
 
     # default values
     nj = int(kwargs.get("nj", 100))
-    minCpuBT = kwargs.get("minCpuBT", random.randint(5,10))
-    maxCpuBT = kwargs.get("maxCpuBT", random.randint(minCpuBT+3,minCpuBT+8))
-    minIOBT = kwargs.get("minIOBT", random.randint(10,15))
-    maxIOBT = kwargs.get("maxIOBT", random.randint(minIOBT,minIOBT+5))
-    minNumBursts = kwargs.get("minNumBursts", random.randint(5,8))
-    maxNumBursts = kwargs.get("maxNumBursts", random.randint(minNumBursts+3,minNumBursts+8))
+    minCpuBT = kwargs.get("minCpuBT", random.randint(5, 10))
+    maxCpuBT = kwargs.get(
+        "maxCpuBT", random.randint(int(minCpuBT) + 3, int(minCpuBT) + 8)
+    )
+    minIOBT = kwargs.get("minIOBT", random.randint(10, 15))
+    maxIOBT = kwargs.get("maxIOBT", random.randint(int(minIOBT), int(minIOBT) + 5))
+    minNumBursts = kwargs.get("minNumBursts", random.randint(5, 8))
+    maxNumBursts = kwargs.get(
+        "maxNumBursts", random.randint(int(minNumBursts) + 3, int(minNumBursts) + 8)
+    )
 
     minat = kwargs.get("minat", 1)
     maxat = kwargs.get("maxat", 3)
@@ -117,13 +120,13 @@ def generate_file(**kwargs):
 
     intBurstType = kwargs.get("intBurstType", "normal")
 
-    if 'cpu' in intBurstType:
+    if "cpu" in intBurstType:
         minCpuBT += 10
         maxCpuBT += 20
         minIOBT -= 9
         maxIOBT -= 9
 
-    if 'io' in intBurstType:
+    if "io" in intBurstType:
         minIOBT += 10
         maxIOBT += 20
         minCpuBT += 4
@@ -152,14 +155,14 @@ def generate_file(**kwargs):
 
             # print(f"burst:{cpub}")
             for burst in range(cpub - 1):
-                b = random.randint(minCpuBT, maxCpuBT)
-                i = random.randint(minIOBT, maxIOBT)
+                b = random.randint(int(minCpuBT), int(maxCpuBT))
+                i = random.randint(int(minIOBT), int(maxIOBT))
                 fp.write(str(b) + " ")
                 cpuBursts.append(b)
                 fp.write(str(i) + " ")
                 ioBursts.append(i)
 
-            b = random.randint(minCpuBT, maxCpuBT)
+            b = random.randint(int(minCpuBT), int(maxCpuBT))
             fp.write(str(b) + "\n")
             cpuBursts.append(b)
 
@@ -177,28 +180,36 @@ def generate_file(**kwargs):
         # fp.write('\n')
     fp.close()
 
-    fp = open(name+".json", "w")
+    fp = open(name + ".json", "w")
     dumpMe = {}
-    dumpMe['kwargs'] = kwargs
-    dumpMe['jobs'] = jsonJobs
-    
-    json.dump(dumpMe, fp,indent=4)
+    dumpMe["kwargs"] = kwargs
+    dumpMe["jobs"] = jsonJobs
+
+    json.dump(dumpMe, fp, indent=4)
+
+    return jsonJobs
 
 
 def usage():
     # if params are required ...
-    print("Usage: (All params have defaults, but can be changed with the following): \n")
+    print(
+        "Usage: (All params have defaults, but can be changed with the following): \n"
+    )
 
     # total number of jobs generated
     print("\tnj      \t: Number of jobs[1 - n]")
 
     # min/max cpu burst lengths (increase for cpu intensive processes and vice versa)
     print("\tminCpuBT \t: Min cpu burst length.  Usually single digits: [1 - 9]")
-    print("\tmaxCpuBT \t: Max cpu burst length. Whatever you want: [number larger than minCpuBT]")
+    print(
+        "\tmaxCpuBT \t: Max cpu burst length. Whatever you want: [number larger than minCpuBT]"
+    )
 
     # min/max io burst lengths (increase for io intensive processes and vice versa)
     print("\tminIOBT \t: Min io burst length. Usually single digits: [1 - 9]")
-    print("\tmaxIOBT \t: Max io burst length. Whatever you want: [number larger that minIOBT]")
+    print(
+        "\tmaxIOBT \t: Max io burst length. Whatever you want: [number larger that minIOBT]"
+    )
 
     # determine min and max number of bursts. Smaller means shorter run times easier debugging
     print("\tminNumBursts \t: Min number of bursts [1 - n]")
@@ -206,7 +217,9 @@ def usage():
 
     # OR instead of min and max number of bursts, you can use "cpu or io". Cpu  will generate many
     # more cpu bursts than IO bursts, and vice versa.
-    print("\tintBurstType \t: Generate bursts based on cpu intensive or io intensive [cpu,io]")
+    print(
+        "\tintBurstType \t: Generate bursts based on cpu intensive or io intensive [cpu,io]"
+    )
 
     # Per arrival time - means number of jobs with the SAME arrival time
     # Having more jobs show up at the same time adds complexity to the load handling.
@@ -219,7 +232,7 @@ def usage():
 
     # More high or low or random? Value is comma seperated values with percentage per weight
     # so with priorites 1-5 and a prioWeights = 20,20,20,20,20 you get 20 percent for each weight
-    # Using even,low, or high requires using priorities 1-5. 
+    # Using even,low, or high requires using priorities 1-5.
     print("\tprioWeights \t: Priority weights [even,low,high]")
 
     print("\tofile       \t: Outfile Name will write the output to that file.")
