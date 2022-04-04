@@ -72,7 +72,7 @@ WRITE R1 A205
 or
 
 ```python
-def randInstruction():
+def randInstruction(asList = False):
 
     choices = ["ADD", "SUB", "MUL", "DIV"]
     registers = ["R1", "R2"]
@@ -89,12 +89,21 @@ def randInstruction():
     mb1, mb2 = memblocks[:2]
     madd1, madd2 = memaddress[:2]
 
-    inst = ""
-    inst += f"READ {mb1}{madd1} {r1}\n"
-    inst += f"READ {mb2}{madd2} {r2}\n"
-    inst += f"{itype} {r1} {r2}\n"
-    inst += f"WRITE {r1} {mb1}{madd1}\n"
+    if not asList:
+        inst = ""
+        inst += f"READ {mb1}{madd1} {r1}\n"
+        inst += f"READ {mb2}{madd2} {r2}\n"
+        inst += f"{itype} {r1} {r2}\n"
+        inst += f"WRITE {r1} {mb1}{madd1}\n"
+    else:
+        inst = []
+        inst.append(f"READ {mb1}{madd1} {r1}")
+        inst.append(f"READ {mb2}{madd2} {r2}")
+        inst.append(f"{itype} {r1} {r2}")
+        inst.append(f"WRITE {r1} {mb1}{madd1}")
+    
     return inst
+
 ```
 
 Output:
@@ -197,7 +206,7 @@ or similar.
 - This will:
   - Generate 5 programs to be run (instruction files)
   - Create 5 writers
-  - Create 15 readers
+  - Create 25 readers
 - Run 1 time with above params locking ONLY the necessary memory block.
 - Run 1 time with above params locking the entire memory block. 
 - Log how much time each writer was blocked waiting for a lock on memory. 
