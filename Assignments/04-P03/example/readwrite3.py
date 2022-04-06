@@ -51,6 +51,12 @@ class RWLock:
     def writer_release(self):
         self.__no_writers.release()
         self.__write_switch.release(self.__no_readers)
+
+    
+    x = 0.10
+
+    for i in range(10):
+        x = x * x 
     
 
 class _LightSwitch:
