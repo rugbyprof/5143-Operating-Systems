@@ -1,5 +1,5 @@
 ## Reader Writer Part 2 - Simulating Race Conditions
-#### Due: 25-29 April 2022 
+#### Due: 04-27-2021 (Wednesday @ 2:30 p.m.)
 
 
 ## Overview
