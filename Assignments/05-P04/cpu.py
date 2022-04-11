@@ -1,4 +1,5 @@
 from rich import print
+from registers import *
 
 
 def add(l, r):
@@ -17,56 +18,31 @@ def div(l, r):
     return l / r
 
 
-opLookup = {"ADD": add, "SUB": sub, "MUL": mul, "DIV": div}
-
-
-class Register(object):
-    def __init__(self, name=None):
-        self.name = name
-        self.contents = None
-        self.val = None
-
-    def __str__(self):
-        return f"[{self.name}: {self.contents}]"
-
-    def __repr__(self):
-        return self.__str__()
-
-    def load(self, value):
-        self.set(value)
-
-    def set(self, value):
-        self.val = self.contents = value
-
-    def __setattr__(self, __name: str, __value: int) -> None:
-        self.__dict__[__name] = __value
-
-
 class Alu(object):
     def __init__(self, registers):
-        self.op = None
         self.lhs = None
         self.rhs = None
-        self.registers = None
+        self.op = None
+        self.registers = registers
+        self.ops = {"ADD": add, "SUB": sub, "MUL": mul, "DIV": div}
 
-    def exec(self, instruction):
-
-        self.lhs = self.registers
+    def exec(self, op):
+        self.lhs = self.registers[0]
+        self.rhs = self.registers[1]
+        self.op = op.upper()
+        ans = self.ops[self.op](self.lhs, self.rhs)
+        self.registers[0] = ans
 
     def __str__(self):
         return f"{self.lhs} {self.op} {self.rhs}"
 
 
 class Cpu:
-    def __init__(self, numRegisters=2):
+    def __init__(self, registers):
         self.cache = []
         self.pc = 0
-        self.registers = {}
-        for i in range(numRegisters):
-            l = str(chr(i + 65))
-            self.registers[l] = Register(l)
-
-        self.alu = Alu()
+        self.registers = registers
+        self.alu = Alu(registers)
 
     def loadProcess(self, pcb):
         pass
@@ -83,6 +59,14 @@ class Pcb(object):
 
 
 if __name__ == "__main__":
-    cpu = Cpu()
+    reg = Registers(2)
+    cpu = Cpu(reg)
 
     print(cpu)
+
+    reg[0] = 33
+    reg[1] = 41
+
+    alu = Alu(reg)
+
+    alu.exec("add")
