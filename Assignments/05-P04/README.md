@@ -1,5 +1,5 @@
 ## Reader Writer Part 2
-#### Due: TBD
+#### Due: 25-29 April 2022 
 
 
 ## Overview

@@ -1,5 +1,5 @@
 ## Reader Writer Part 1
-#### Due: TBD
+#### Due: 25-29 April 2022 
 
 Using the python concurrency mechanism that best fits the job, implement a reader / writer framework that will keep a shared memory section safe so that readers will get accurate data and writers won't conflict with each other. This is the first part of our concurrency project in which we protect a critical section of local code. Next project will involve protecting a similar critical section of code via network requests.
 
