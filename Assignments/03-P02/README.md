@@ -167,3 +167,10 @@ Use the program `generate_input.py` to make different types of input files. The 
 
 - Sources:
   - https://en.wikipedia.org/wiki/Scheduling_(computing)
+
+## Deliverables
+
+- Place code on github with a write up describing the process of writing your project and members of your group. 
+- Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
+- Present your results in class last week of April.
+- Look at requirements for how to visualize your code.

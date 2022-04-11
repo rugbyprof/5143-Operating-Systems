@@ -225,3 +225,16 @@ or similar.
 
 -   https://medium.com/geekculture/distributed-lock-implementation-with-redis-and-python-22ae932e10ee
 -   https://www.laurentluce.com/posts/python-threads-synchronization-locks-rlocks-semaphores-conditions-events-and-queues/
+
+
+## Deliverables
+
+- Place code on github with a write up describing the process of writing your project and members of your group. 
+- Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
+- Present your results in class last week of April.
+- You should visualize your output in some fashion showing the basic elements as it runs:
+  - Show memory state
+  - Which readers reading memory
+  - Which writers changing memory
+- Also show your two different types of runs, blocking all of memory, and blocking only a portion (A,B, or C) of memory. 
+- Show how the outcomes are different. If they are not, then have an explanation.

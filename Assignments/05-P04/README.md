@@ -103,6 +103,9 @@ WRITE R1 A205
 
 ## Deliverables
 
+
+- Place code on github with a write up describing the process of writing your project and members of your group. 
+- Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present the outcome of your work last week of April.
 - You again should visualize your output in some fashion showing the basic elements as it runs:
   - Process on CPU
