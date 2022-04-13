@@ -112,3 +112,11 @@ WRITE R1 A205
   - Memory Changing and by who
 - Show your program running with memory protection and with memory protection. 
 - Show memory being different when race conditions are present, and show how outcomes are the same when memory is treated as a critical section.
+
+
+
+https://realpython.com/intro-to-python-threading/
+
+https://medium.com/geekculture/distributed-lock-implementation-with-redis-and-python-22ae932e10ee
+
+https://www.laurentluce.com/posts/python-threads-synchronization-locks-rlocks-semaphores-conditions-events-and-queues/
