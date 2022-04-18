@@ -4,11 +4,67 @@
 
 ## Overview
 
-This program will have multiple process running, all needing to execute instructions. The thing about all of these processes is that they are each readers and writers accessing the same memory. So, depending on the protection of our critical section (shared memory) the end result of each program might be different. Your goal is to write a simulation testing this theory. Your simulation should be able to spawn from 1-P programs, each with 100+ instructions, then "run" each program. Your first task is to run the programs without any memory protection. 
+This program will have multiple processes (programs) running, all needing to execute instructions. Each program will read from and write to memory. A certain portion of memory is considered "shared" and processes must gain locks when updating that portion of memory. Depending on the protection of our critical section (shared memory) the end result of each program might be different. Your goal is to write a simulation testing this theory. Your simulation should be able to spawn from 1-P programs, each with 100+ instructions, then "run" each program ~~as its own thread~~. 
 
-We also want to simulate different system conditions. This means the system may be busier some times than others. To help with this, implement a random "sleep" to be imposed on each process at random times. A busy system may impose a sleep every 7-10 instructions, and a system with a light load may impose a random sleep every 10-20 instructions. The motivation behind this is to ensure different execution paths for each process. 
+As each program runs, they will read from and write to memory in an order determined by our own schedular. ~~Of course, the system schedular will perform its own context switches at the OS level, but that shouldn't effect the results of each run~~. The use of locks in programs that access shared memory is important in order to have confidence in the final values calculated at the end of the run.
+
+In order to simulate different system conditions there will be a random "sleep" imposed on each process at random times. A busy system may impose a sleep every 7-10 instructions, and a system with a light load may impose a random sleep every 10-20 instructions. The motivation behind this is to ensure different execution paths for each process. 
 
 If we simulate the running of all processes in this way, we should guarantee different outcomes for subsequent runs. Then we can show that using memory protection mechanisms are actually necessary sometimes. 
+
+## Instructions
+
+Instructions are randomly generated and are similar to the one below. In addition to the READ, WRITE operations and the ADD, SUB, MUL, DIV  there is an additional LOAD operations for privileged instructions which will load the process id into register 3 (R3) and an integer value into R4. This value is the privileged id counter (`PIC`). This also means you cannot execute a privileged instruction until R4 contains `PIC - 1`. 
+
+```
+   [
+      "READ B100 R2",
+      "READ C125 R1",
+      "MUL R2 R1",
+      "WRITE R2 B100",
+      "READ P165 R1",
+      "READ B125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P165",
+      "LOAD 4 R3",
+      "LOAD 26 R4"
+   ]
+```
+
+In order to access the privileged memory section, you need to acquire a lock. Not a threading lock, but a lock of our own design:
+
+```python
+class Lock(Borg):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.locked = False
+        self.waitQ = []
+
+    def __str__(self):
+        s = str(id(self)) + "\n"
+        for k, v in self.__dict__.items():
+            s += f"{k}={v}\n"
+        return s
+
+    def acquire(self):
+        if not self.locked:
+            if id(self) in self.waitQ:
+                self.waitQ.remove(id(self))
+            self.locked = True
+            return True
+        return False
+
+    def release(self):
+        if self.locked:
+            self.locked = False
+            return True
+        return False
+
+    def wait(self):
+        self.waitQ.append(id(self))
+```
+
+This lock allows processes to `acquire`, `release`, OR `wait` for the lock to come available via a built in queue. 
 
 ## Project Design
 
@@ -84,22 +140,19 @@ The CPU will be responsible for:
 
 The dispatcher class will be responsible for scheduling processes using a round robin scheduling algorithm. The time slice or quantum will be between 7-11 clock ticks. Scheduling a process includes moving processes between running states: new, ready, running, waiting, terminated
 
-### Instructions
+## Requirements
 
-For now all instructions will have the same format as the one below. Two reads from somewhere in memory, an arithmetic operation, and a write back to memory. This is an extremely simplified view of what really goes on, but fits our purposes.
+- Write an object oriented solution that will simulate the running of multiple processes by executing instructions on a simulated CPU. 
+- You will have a dispatcher scheduling processes using a Round Robin algorithm. 
+- Run your simulation without regard to ordering privileged instructions to view a memory snapshot at completion. 
+- Change all the sleep values for each process, and look at the memory snapshot again.
+- Now order the privileged instructions using our software lock and view memory results.
+- Finally, again change all the sleep values, and ensure that privileged memory output does not change when the instructions are ordered properly
 
-```
-READ A205 R1
-READ B240 R2
-ADD R1 R2
-WRITE R1 A205
-```
-
-## Approach to Problem
-
-- Class discussion
-
-
+**- Visualize your output for your presentation**
+  - Maybe show cpu and register contents 
+  - Show progress of programs running (percent complete)
+  - Show (possibly) shared memory as it changes
 
 ## Deliverables
 
@@ -107,11 +160,7 @@ WRITE R1 A205
 - Place code on github with a write up describing the process of writing your project and members of your group. 
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present the outcome of your work last week of April.
-- You again should visualize your output in some fashion showing the basic elements as it runs:
-  - Process on CPU
-  - Memory Changing and by who
-- Show your program running with memory protection and with memory protection. 
-- Show memory being different when race conditions are present, and show how outcomes are the same when memory is treated as a critical section.
+
 
 
 

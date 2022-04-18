@@ -1,7 +1,19 @@
-from random import shuffle
+from random import shuffle, randint
 import json
 import random
 from datetime import datetime
+
+
+def buildRandomChoiceList(ratio):
+
+    chances = []
+    ptrue = int(ratio * 100)
+    pfalse = 100 - ptrue
+    for _ in range(ptrue):
+        chances.append(1)
+    for _ in range(pfalse):
+        chances.append(0)
+    return chances
 
 
 class RandInstructions:
@@ -37,25 +49,30 @@ class RandInstructions:
         # instructions
         self.addressRange = kwargs.get("addressRange", (100, 255, 5))
         self.choices = kwargs.get("choices", ["ADD", "SUB", "MUL", "DIV"])
-        self.genAmount = kwargs.get("genAmount", 100)
+        self.genAmount = kwargs.get("genAmount", 1000)
         self.memblocks = kwargs.get("memblocks", ["A", "B", "C"])
         self.registers = kwargs.get("registers", ["R1", "R2"])
-        self.retFormat = kwargs.get("retFormat", "json")  # or 'str'
-        self.outFile = kwargs.get("outFile", "program.exe")
+        self.outFilePattern = kwargs.get("outFile", "program_")
         self.keepInstLocal = kwargs.get("keepInstLocal", False)
-        self.privileged = kwargs.get("privileged", 0)
+        self.privilegedRatio = kwargs.get("privilegedRatio", 0)
+        self.numProcesses = kwargs.get("numProcesses", 1)
+        self.sleepRatio = kwargs.get("sleepRatio", 0)
+        self.sleepRange = kwargs.get("sleepRange", [5, 15])
 
-        print(self.privileged)
+        print(self.privilegedRatio)
         self.privelegedChances = [0]
+        if self.privilegedRatio > 0:
+            self.privelegedChances = buildRandomChoiceList(self.privilegedRatio)
 
-        if self.privileged > 0:
-            self.privelegedChances = []
-            ptrue = int(self.privileged * 100)
-            pfalse = 100 - ptrue
-            for _ in range(ptrue):
-                self.privelegedChances.append(1)
-            for _ in range(pfalse):
-                self.privelegedChances.append(0)
+        print(self.sleepRatio)
+        self.sleepChances = [0]
+        if self.sleepRatio > 0:
+            self.sleepChances = buildRandomChoiceList(self.sleepRatio)
+
+        self.processInstructions = {}
+
+        for i in range(self.numProcesses):
+            self.processInstructions[i] = []
 
         print(self.privelegedChances)
 
@@ -80,71 +97,70 @@ class RandInstructions:
         shuffle(self.memblocks)
         shuffle(self.memaddress)
         shuffle(self.privelegedChances)
+        shuffle(self.sleepChances)
 
     def generateInstructions(self, num=None):
         """
         Params:
             num (int) : number of instructions to generate
         """
+        pCount = 0
         # no num passed in, use default value in constructor
         if not num:
             num = self.genAmount
 
         # loop num times
         for _ in range(num):
-            strInst = ""
-            listInst = []
-            # loop instruction length times for single,double, or triple length
-            for _ in range(self.instLength[0]):
-                self.shuffleChoices()
+            for i in range(self.numProcesses):
+                strInst = ""
+                listInst = []
+                # loop instruction length times for single,double, or triple length
+                for _ in range(self.instLength[0]):
+                    self.shuffleChoices()
 
-                privileged = self.privelegedChances[0]
-                itype = self.choices[0]
-                r1, r2 = self.registers[:2]
-                if self.keepInstLocal:
-                    if not privileged:
-                        mb1 = mb2 = self.memblocks[:1]
+                    privileged = self.privelegedChances[0]
+                    sleeping = self.sleepChances[0]
+                    itype = self.choices[0]
+                    r1, r2 = self.registers[:2]
+                    if self.keepInstLocal:
+                        if not privileged:
+                            mb1 = self.memblocks[0]
+                            mb2 = self.memblocks[0]
+                        else:
+                            mb1 = mb2 = "P"
                     else:
-                        mb1 = mb2 = "P"
-                else:
-                    if not privileged:
-                        mb1, mb2 = self.memblocks[:2]
-                    else:
-                        mb1 = "P"
-                        mb2 = self.memblocks[:1]
+                        if not privileged:
+                            mb1, mb2 = self.memblocks[:2]
+                        else:
+                            mb1 = "P"
+                            mb2 = self.memblocks[0]
 
-                madd1, madd2 = self.memaddress[:2]
+                    madd1, madd2 = self.memaddress[:2]
 
-                strInst += f"READ {mb1}{madd1} {r1}\n"
-                strInst += f"READ {mb2}{madd2} {r2}\n"
-                strInst += f"{itype} {r1} {r2}\n"
-                strInst += f"WRITE {r1} {mb1}{madd1}\n"
+                    listInst.append(f"READ {mb1}{madd1} {r1}")
+                    listInst.append(f"READ {mb2}{madd2} {r2}")
+                    listInst.append(f"{itype} {r1} {r2}")
+                    listInst.append(f"WRITE {r1} {mb1}{madd1}")
+                    if privileged:
+                        listInst.append(f"LOAD {i} R3")
+                        listInst.append(f"LOAD {pCount} R4")
+                        pCount += 1
 
-                listInst.append(f"READ {mb1}{madd1} {r1}")
-                listInst.append(f"READ {mb2}{madd2} {r2}")
-                listInst.append(f"{itype} {r1} {r2}")
-                listInst.append(f"WRITE {r1} {mb1}{madd1}")
+                self.processInstructions[i].append(listInst)
+                if sleeping:
+                    a, b = self.sleepRange
+                    self.processInstructions[i].append([f"sleep {randint(a,b)}"])
 
-            self.strInstructions += strInst
-            self.listInstructions.append(listInst)
-
-        if self.retFormat == "json":
-            with open(self.outFile, "w") as f:
-                json.dump(self.listInstructions, f, indent=3)
-            return json.dumps(self.listInstructions, indent=3)
-        else:
-            with open(self.outFile, "w") as f:
-                f.write(self.strInstructions)
-            return self.strInstructions
+        for i in range(self.numProcesses):
+            with open(self.outFilePattern + str(i) + ".exe", "w") as f:
+                json.dump(self.processInstructions[i], f, indent=3)
+        return json.dumps(self.processInstructions, indent=3)
 
     def getJson(self):
-        return json.dumps(self.listInstructions, indent=3)
-
-    def getStr(self):
-        return self.strInstructions
+        return json.dumps(self.processInstructions, indent=3)
 
 
 if __name__ == "__main__":
-    ri = RandInstructions(privileged=0.3)
+    ri = RandInstructions(privilegedRatio=0.3, sleepRatio=0.15, numProcesses=5)
 
     print(ri.getJson())
