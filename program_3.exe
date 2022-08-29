@@ -1,0 +1,9960 @@
+[
+   [
+      "READ B200 R1",
+      "READ A235 R2",
+      "DIV R1 R2",
+      "WRITE R1 B200"
+   ],
+   [
+      "READ P180 R2",
+      "READ B165 R1",
+      "DIV R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 6 R4",
+      "READ C250 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ B150 R2",
+      "READ C170 R1",
+      "MUL R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ P240 R1",
+      "READ A145 R2",
+      "ADD R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 8 R4",
+      "READ P185 R2",
+      "READ C130 R1",
+      "ADD R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 9 R4"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ C160 R2",
+      "READ B225 R1",
+      "MUL R2 R1",
+      "WRITE R2 C160",
+      "READ B160 R2",
+      "READ C120 R1",
+      "DIV R2 R1",
+      "WRITE R2 B160",
+      "READ A145 R2",
+      "READ B185 R1",
+      "SUB R2 R1",
+      "WRITE R2 A145"
+   ],
+   [
+      "READ C115 R1",
+      "READ B250 R2",
+      "ADD R1 R2",
+      "WRITE R1 C115",
+      "READ C140 R2",
+      "READ A200 R1",
+      "ADD R2 R1",
+      "WRITE R2 C140",
+      "READ P130 R1",
+      "READ B135 R2",
+      "MUL R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 12 R4"
+   ],
+   [
+      "READ P145 R1",
+      "READ C115 R2",
+      "MUL R1 R2",
+      "WRITE R1 P145",
+      "LOAD 3 R3",
+      "LOAD 15 R4"
+   ],
+   [
+      "READ P125 R1",
+      "READ B145 R2",
+      "SUB R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 19 R4",
+      "READ P220 R2",
+      "READ C105 R1",
+      "DIV R2 R1",
+      "WRITE R2 P220",
+      "LOAD 3 R3",
+      "LOAD 20 R4",
+      "READ P150 R2",
+      "READ A250 R1",
+      "ADD R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 21 R4"
+   ],
+   [
+      "READ P170 R1",
+      "READ C175 R2",
+      "SUB R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 25 R4"
+   ],
+   [
+      "READ C230 R1",
+      "READ B195 R2",
+      "ADD R1 R2",
+      "WRITE R1 C230"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ A205 R2",
+      "READ B125 R1",
+      "ADD R2 R1",
+      "WRITE R2 A205"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ B175 R2",
+      "READ C250 R1",
+      "SUB R2 R1",
+      "WRITE R2 B175"
+   ],
+   [
+      "READ B185 R2",
+      "READ C100 R1",
+      "DIV R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ C120 R2",
+      "READ B110 R1",
+      "ADD R2 R1",
+      "WRITE R2 C120"
+   ],
+   [
+      "READ B225 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 B225"
+   ],
+   [
+      "READ B250 R2",
+      "READ A215 R1",
+      "DIV R2 R1",
+      "WRITE R2 B250"
+   ],
+   [
+      "READ A225 R2",
+      "READ C145 R1",
+      "MUL R2 R1",
+      "WRITE R2 A225",
+      "READ B240 R1",
+      "READ C120 R2",
+      "DIV R1 R2",
+      "WRITE R1 B240",
+      "READ P250 R1",
+      "READ B165 R2",
+      "ADD R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 38 R4"
+   ],
+   [
+      "READ P235 R2",
+      "READ C230 R1",
+      "MUL R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 41 R4"
+   ],
+   [
+      "READ B120 R1",
+      "READ A250 R2",
+      "MUL R1 R2",
+      "WRITE R1 B120"
+   ],
+   [
+      "READ B110 R2",
+      "READ C235 R1",
+      "MUL R2 R1",
+      "WRITE R2 B110"
+   ],
+   [
+      "READ A145 R1",
+      "READ B250 R2",
+      "SUB R1 R2",
+      "WRITE R1 A145"
+   ],
+   [
+      "READ C115 R1",
+      "READ B140 R2",
+      "SUB R1 R2",
+      "WRITE R1 C115",
+      "READ A145 R1",
+      "READ B115 R2",
+      "DIV R1 R2",
+      "WRITE R1 A145"
+   ],
+   [
+      "READ B105 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 B105",
+      "READ A115 R2",
+      "READ B240 R1",
+      "ADD R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ C160 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "READ A215 R2",
+      "READ C170 R1",
+      "MUL R2 R1",
+      "WRITE R2 A215",
+      "READ P155 R1",
+      "READ B100 R2",
+      "DIV R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 51 R4",
+      "READ C175 R1",
+      "READ A155 R2",
+      "DIV R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ A195 R2",
+      "READ B240 R1",
+      "SUB R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ B140 R1",
+      "READ C110 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "READ P100 R2",
+      "READ B245 R1",
+      "ADD R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 57 R4",
+      "READ C110 R1",
+      "READ A135 R2",
+      "SUB R1 R2",
+      "WRITE R1 C110"
+   ],
+   [
+      "READ A115 R1",
+      "READ B100 R2",
+      "SUB R1 R2",
+      "WRITE R1 A115"
+   ],
+   [
+      "READ C100 R2",
+      "READ B195 R1",
+      "ADD R2 R1",
+      "WRITE R2 C100"
+   ],
+   [
+      "READ C155 R2",
+      "READ A230 R1",
+      "SUB R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ A215 R2",
+      "READ B125 R1",
+      "SUB R2 R1",
+      "WRITE R2 A215",
+      "READ P125 R2",
+      "READ A100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P125",
+      "LOAD 3 R3",
+      "LOAD 64 R4"
+   ],
+   [
+      "READ A110 R1",
+      "READ C205 R2",
+      "ADD R1 R2",
+      "WRITE R1 A110",
+      "READ P105 R1",
+      "READ C215 R2",
+      "SUB R1 R2",
+      "WRITE R1 P105",
+      "LOAD 3 R3",
+      "LOAD 68 R4",
+      "READ A120 R2",
+      "READ B135 R1",
+      "DIV R2 R1",
+      "WRITE R2 A120"
+   ],
+   [
+      "READ B230 R1",
+      "READ A175 R2",
+      "SUB R1 R2",
+      "WRITE R1 B230",
+      "READ B110 R1",
+      "READ A220 R2",
+      "ADD R1 R2",
+      "WRITE R1 B110",
+      "READ B200 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 B200"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ P180 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 73 R4",
+      "READ P115 R1",
+      "READ A155 R2",
+      "ADD R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 74 R4"
+   ],
+   [
+      "READ B230 R1",
+      "READ C150 R2",
+      "DIV R1 R2",
+      "WRITE R1 B230",
+      "READ P100 R1",
+      "READ A110 R2",
+      "ADD R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 77 R4"
+   ],
+   [
+      "READ P140 R2",
+      "READ B200 R1",
+      "SUB R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 78 R4"
+   ],
+   [
+      "READ B225 R2",
+      "READ C205 R1",
+      "SUB R2 R1",
+      "WRITE R2 B225",
+      "READ C120 R1",
+      "READ A190 R2",
+      "DIV R1 R2",
+      "WRITE R1 C120"
+   ],
+   [
+      "READ P185 R2",
+      "READ C245 R1",
+      "MUL R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 86 R4",
+      "READ P230 R1",
+      "READ C200 R2",
+      "SUB R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 87 R4",
+      "READ P105 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 88 R4"
+   ],
+   [
+      "READ A200 R1",
+      "READ C235 R2",
+      "ADD R1 R2",
+      "WRITE R1 A200",
+      "READ P235 R1",
+      "READ B160 R2",
+      "MUL R1 R2",
+      "WRITE R1 P235",
+      "LOAD 3 R3",
+      "LOAD 92 R4",
+      "READ C155 R2",
+      "READ B235 R1",
+      "ADD R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ A145 R2",
+      "READ B175 R1",
+      "ADD R2 R1",
+      "WRITE R2 A145",
+      "READ P170 R1",
+      "READ C235 R2",
+      "MUL R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 94 R4"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A195 R2",
+      "READ B100 R1",
+      "SUB R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ P110 R1",
+      "READ A145 R2",
+      "ADD R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 102 R4",
+      "READ P230 R1",
+      "READ C235 R2",
+      "SUB R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 103 R4",
+      "READ C130 R2",
+      "READ A115 R1",
+      "DIV R2 R1",
+      "WRITE R2 C130"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B110 R1",
+      "READ A225 R2",
+      "MUL R1 R2",
+      "WRITE R1 B110",
+      "READ P145 R2",
+      "READ C225 R1",
+      "MUL R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 107 R4",
+      "READ P190 R1",
+      "READ C140 R2",
+      "SUB R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 108 R4"
+   ],
+   [
+      "READ P205 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 P205",
+      "LOAD 3 R3",
+      "LOAD 110 R4"
+   ],
+   [
+      "READ B230 R1",
+      "READ A120 R2",
+      "ADD R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ B195 R2",
+      "READ C110 R1",
+      "DIV R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ A105 R1",
+      "READ C150 R2",
+      "DIV R1 R2",
+      "WRITE R1 A105"
+   ],
+   [
+      "READ C180 R2",
+      "READ B105 R1",
+      "ADD R2 R1",
+      "WRITE R2 C180"
+   ],
+   [
+      "READ P145 R1",
+      "READ C225 R2",
+      "ADD R1 R2",
+      "WRITE R1 P145",
+      "LOAD 3 R3",
+      "LOAD 121 R4"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ C240 R2",
+      "READ B135 R1",
+      "MUL R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ B250 R1",
+      "READ C190 R2",
+      "DIV R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ C120 R2",
+      "READ A160 R1",
+      "DIV R2 R1",
+      "WRITE R2 C120"
+   ],
+   [
+      "READ A165 R2",
+      "READ B225 R1",
+      "SUB R2 R1",
+      "WRITE R2 A165"
+   ],
+   [
+      "READ P165 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 134 R4",
+      "READ P180 R1",
+      "READ B185 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 135 R4",
+      "READ P240 R2",
+      "READ B250 R1",
+      "ADD R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 136 R4"
+   ],
+   [
+      "READ P230 R1",
+      "READ A250 R2",
+      "SUB R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 137 R4",
+      "READ A250 R2",
+      "READ B125 R1",
+      "SUB R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ P170 R2",
+      "READ A190 R1",
+      "ADD R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 139 R4"
+   ],
+   [
+      "READ A115 R2",
+      "READ C165 R1",
+      "MUL R2 R1",
+      "WRITE R2 A115",
+      "READ B140 R1",
+      "READ A185 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ P235 R2",
+      "READ B135 R1",
+      "DIV R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 144 R4"
+   ],
+   [
+      "READ C165 R2",
+      "READ B200 R1",
+      "SUB R2 R1",
+      "WRITE R2 C165",
+      "READ C215 R1",
+      "READ A105 R2",
+      "ADD R1 R2",
+      "WRITE R1 C215",
+      "READ B130 R2",
+      "READ C225 R1",
+      "SUB R2 R1",
+      "WRITE R2 B130"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ C250 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 C250",
+      "READ B105 R2",
+      "READ A160 R1",
+      "DIV R2 R1",
+      "WRITE R2 B105"
+   ],
+   [
+      "READ P180 R2",
+      "READ C190 R1",
+      "SUB R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 151 R4"
+   ],
+   [
+      "READ B245 R2",
+      "READ A130 R1",
+      "ADD R2 R1",
+      "WRITE R2 B245"
+   ],
+   [
+      "READ P205 R2",
+      "READ A175 R1",
+      "MUL R2 R1",
+      "WRITE R2 P205",
+      "LOAD 3 R3",
+      "LOAD 155 R4"
+   ],
+   [
+      "READ B240 R2",
+      "READ C225 R1",
+      "DIV R2 R1",
+      "WRITE R2 B240",
+      "READ C150 R1",
+      "READ B235 R2",
+      "ADD R1 R2",
+      "WRITE R1 C150"
+   ],
+   [
+      "READ P160 R1",
+      "READ C215 R2",
+      "MUL R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 161 R4"
+   ],
+   [
+      "READ A110 R1",
+      "READ C180 R2",
+      "SUB R1 R2",
+      "WRITE R1 A110"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P215 R1",
+      "READ A115 R2",
+      "DIV R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 166 R4",
+      "READ A235 R1",
+      "READ C125 R2",
+      "SUB R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ P220 R1",
+      "READ B205 R2",
+      "DIV R1 R2",
+      "WRITE R1 P220",
+      "LOAD 3 R3",
+      "LOAD 170 R4"
+   ],
+   [
+      "READ B195 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 B195"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ C210 R1",
+      "READ B130 R2",
+      "SUB R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "READ P115 R2",
+      "READ C210 R1",
+      "DIV R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 179 R4",
+      "READ A140 R1",
+      "READ B190 R2",
+      "MUL R1 R2",
+      "WRITE R1 A140"
+   ],
+   [
+      "READ A160 R1",
+      "READ C100 R2",
+      "DIV R1 R2",
+      "WRITE R1 A160"
+   ],
+   [
+      "READ P140 R1",
+      "READ B240 R2",
+      "ADD R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 187 R4"
+   ],
+   [
+      "READ C245 R2",
+      "READ A210 R1",
+      "ADD R2 R1",
+      "WRITE R2 C245"
+   ],
+   [
+      "READ A105 R2",
+      "READ B145 R1",
+      "ADD R2 R1",
+      "WRITE R2 A105",
+      "READ P230 R1",
+      "READ B135 R2",
+      "SUB R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 197 R4"
+   ],
+   [
+      "READ A245 R2",
+      "READ B195 R1",
+      "ADD R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "READ B180 R2",
+      "READ C135 R1",
+      "SUB R2 R1",
+      "WRITE R2 B180"
+   ],
+   [
+      "READ C150 R1",
+      "READ A230 R2",
+      "ADD R1 R2",
+      "WRITE R1 C150",
+      "READ A100 R1",
+      "READ C245 R2",
+      "DIV R1 R2",
+      "WRITE R1 A100"
+   ],
+   [
+      "READ P150 R2",
+      "READ C250 R1",
+      "SUB R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 210 R4"
+   ],
+   [
+      "READ A200 R2",
+      "READ C150 R1",
+      "ADD R2 R1",
+      "WRITE R2 A200",
+      "READ P225 R1",
+      "READ B125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 213 R4",
+      "READ P200 R1",
+      "READ B110 R2",
+      "SUB R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 214 R4"
+   ],
+   [
+      "READ B210 R1",
+      "READ C105 R2",
+      "DIV R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "READ B150 R1",
+      "READ A145 R2",
+      "SUB R1 R2",
+      "WRITE R1 B150"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A205 R1",
+      "READ B235 R2",
+      "DIV R1 R2",
+      "WRITE R1 A205"
+   ],
+   [
+      "READ A110 R1",
+      "READ B235 R2",
+      "ADD R1 R2",
+      "WRITE R1 A110"
+   ],
+   [
+      "READ P225 R2",
+      "READ B130 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 225 R4"
+   ],
+   [
+      "READ P115 R1",
+      "READ A185 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 228 R4"
+   ],
+   [
+      "READ A165 R2",
+      "READ B125 R1",
+      "DIV R2 R1",
+      "WRITE R2 A165"
+   ],
+   [
+      "READ A170 R2",
+      "READ C245 R1",
+      "SUB R2 R1",
+      "WRITE R2 A170"
+   ],
+   [
+      "READ P100 R2",
+      "READ B235 R1",
+      "DIV R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 235 R4",
+      "READ P155 R2",
+      "READ B100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 236 R4",
+      "READ A240 R2",
+      "READ B180 R1",
+      "SUB R2 R1",
+      "WRITE R2 A240"
+   ],
+   [
+      "READ B170 R1",
+      "READ A180 R2",
+      "ADD R1 R2",
+      "WRITE R1 B170"
+   ],
+   [
+      "READ P240 R2",
+      "READ B110 R1",
+      "ADD R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 240 R4"
+   ],
+   [
+      "READ B205 R2",
+      "READ A185 R1",
+      "DIV R2 R1",
+      "WRITE R2 B205"
+   ],
+   [
+      "READ B100 R2",
+      "READ C225 R1",
+      "SUB R2 R1",
+      "WRITE R2 B100"
+   ],
+   [
+      "READ C230 R1",
+      "READ A155 R2",
+      "MUL R1 R2",
+      "WRITE R1 C230"
+   ],
+   [
+      "READ B190 R2",
+      "READ C105 R1",
+      "MUL R2 R1",
+      "WRITE R2 B190",
+      "READ A235 R2",
+      "READ B210 R1",
+      "DIV R2 R1",
+      "WRITE R2 A235"
+   ],
+   [
+      "READ B110 R1",
+      "READ C105 R2",
+      "DIV R1 R2",
+      "WRITE R1 B110",
+      "READ B210 R1",
+      "READ A185 R2",
+      "MUL R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "READ P160 R1",
+      "READ C150 R2",
+      "MUL R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 253 R4"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ B125 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 B125",
+      "READ A155 R2",
+      "READ C120 R1",
+      "SUB R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ P175 R1",
+      "READ C155 R2",
+      "SUB R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 257 R4"
+   ],
+   [
+      "READ B170 R2",
+      "READ C165 R1",
+      "MUL R2 R1",
+      "WRITE R2 B170",
+      "READ P135 R1",
+      "READ B205 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 259 R4",
+      "READ A250 R2",
+      "READ B140 R1",
+      "SUB R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ P120 R1",
+      "READ B110 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 263 R4"
+   ],
+   [
+      "READ A245 R2",
+      "READ B250 R1",
+      "SUB R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "READ A245 R2",
+      "READ B160 R1",
+      "DIV R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A240 R1",
+      "READ C225 R2",
+      "ADD R1 R2",
+      "WRITE R1 A240",
+      "READ C180 R1",
+      "READ B135 R2",
+      "DIV R1 R2",
+      "WRITE R1 C180",
+      "READ A215 R1",
+      "READ C145 R2",
+      "MUL R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ B210 R2",
+      "READ A195 R1",
+      "SUB R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C190 R2",
+      "READ A245 R1",
+      "DIV R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ C185 R1",
+      "READ B140 R2",
+      "ADD R1 R2",
+      "WRITE R1 C185",
+      "READ P225 R2",
+      "READ C135 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 273 R4"
+   ],
+   [
+      "READ B205 R2",
+      "READ A125 R1",
+      "DIV R2 R1",
+      "WRITE R2 B205",
+      "READ P215 R2",
+      "READ C200 R1",
+      "DIV R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 275 R4",
+      "READ B185 R1",
+      "READ C250 R2",
+      "ADD R1 R2",
+      "WRITE R1 B185"
+   ],
+   [
+      "READ A170 R1",
+      "READ B215 R2",
+      "MUL R1 R2",
+      "WRITE R1 A170"
+   ],
+   [
+      "READ B130 R2",
+      "READ A210 R1",
+      "ADD R2 R1",
+      "WRITE R2 B130",
+      "READ P200 R2",
+      "READ A125 R1",
+      "DIV R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 279 R4"
+   ],
+   [
+      "READ P135 R2",
+      "READ A120 R1",
+      "SUB R2 R1",
+      "WRITE R2 P135",
+      "LOAD 3 R3",
+      "LOAD 280 R4"
+   ],
+   [
+      "READ P140 R1",
+      "READ B150 R2",
+      "DIV R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 282 R4",
+      "READ C250 R1",
+      "READ A200 R2",
+      "SUB R1 R2",
+      "WRITE R1 C250",
+      "READ B250 R1",
+      "READ A235 R2",
+      "SUB R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ P165 R1",
+      "READ B110 R2",
+      "MUL R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 286 R4",
+      "READ C180 R2",
+      "READ B185 R1",
+      "MUL R2 R1",
+      "WRITE R2 C180",
+      "READ A205 R1",
+      "READ B210 R2",
+      "SUB R1 R2",
+      "WRITE R1 A205"
+   ],
+   [
+      "READ P110 R1",
+      "READ B175 R2",
+      "ADD R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 289 R4",
+      "READ A145 R2",
+      "READ C120 R1",
+      "SUB R2 R1",
+      "WRITE R2 A145",
+      "READ B235 R2",
+      "READ C240 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ C195 R2",
+      "READ B190 R1",
+      "DIV R2 R1",
+      "WRITE R2 C195",
+      "READ P245 R2",
+      "READ C210 R1",
+      "MUL R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 292 R4",
+      "READ B195 R2",
+      "READ A105 R1",
+      "SUB R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ P210 R2",
+      "READ A235 R1",
+      "ADD R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 294 R4"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ C210 R1",
+      "READ A175 R2",
+      "MUL R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ P230 R1",
+      "READ C195 R2",
+      "ADD R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 297 R4"
+   ],
+   [
+      "READ C130 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ P195 R2",
+      "READ A105 R1",
+      "SUB R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 301 R4",
+      "READ P155 R1",
+      "READ C120 R2",
+      "MUL R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 302 R4"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ P115 R1",
+      "READ C250 R2",
+      "MUL R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 306 R4"
+   ],
+   [
+      "READ P210 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 310 R4"
+   ],
+   [
+      "READ A130 R1",
+      "READ B245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A130"
+   ],
+   [
+      "READ A220 R2",
+      "READ C135 R1",
+      "DIV R2 R1",
+      "WRITE R2 A220",
+      "READ P120 R1",
+      "READ C180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 315 R4"
+   ],
+   [
+      "READ P240 R2",
+      "READ B215 R1",
+      "DIV R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 318 R4",
+      "READ P185 R2",
+      "READ C205 R1",
+      "DIV R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 319 R4"
+   ],
+   [
+      "READ C195 R2",
+      "READ A220 R1",
+      "ADD R2 R1",
+      "WRITE R2 C195",
+      "READ B155 R1",
+      "READ A125 R2",
+      "DIV R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "READ A140 R1",
+      "READ C170 R2",
+      "SUB R1 R2",
+      "WRITE R1 A140"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P115 R1",
+      "READ B205 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 325 R4",
+      "READ C160 R1",
+      "READ B230 R2",
+      "ADD R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B190 R2",
+      "READ C130 R1",
+      "DIV R2 R1",
+      "WRITE R2 B190"
+   ],
+   [
+      "READ B235 R2",
+      "READ A195 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ C110 R2",
+      "READ A165 R1",
+      "SUB R2 R1",
+      "WRITE R2 C110"
+   ],
+   [
+      "READ B210 R2",
+      "READ C130 R1",
+      "ADD R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ A195 R1",
+      "READ B155 R2",
+      "SUB R1 R2",
+      "WRITE R1 A195"
+   ],
+   [
+      "READ B210 R2",
+      "READ C235 R1",
+      "ADD R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C120 R2",
+      "READ B110 R1",
+      "DIV R2 R1",
+      "WRITE R2 C120",
+      "READ P180 R2",
+      "READ A190 R1",
+      "MUL R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 344 R4",
+      "READ B120 R2",
+      "READ C145 R1",
+      "SUB R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "READ C175 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 C175"
+   ],
+   [
+      "READ C120 R1",
+      "READ A250 R2",
+      "DIV R1 R2",
+      "WRITE R1 C120"
+   ],
+   [
+      "READ P135 R2",
+      "READ C220 R1",
+      "SUB R2 R1",
+      "WRITE R2 P135",
+      "LOAD 3 R3",
+      "LOAD 348 R4",
+      "READ A225 R1",
+      "READ C180 R2",
+      "DIV R1 R2",
+      "WRITE R1 A225"
+   ],
+   [
+      "READ C220 R2",
+      "READ B175 R1",
+      "ADD R2 R1",
+      "WRITE R2 C220",
+      "READ P205 R1",
+      "READ A220 R2",
+      "DIV R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 351 R4"
+   ],
+   [
+      "READ A235 R1",
+      "READ C115 R2",
+      "ADD R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ A205 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A205",
+      "READ A225 R2",
+      "READ C160 R1",
+      "ADD R2 R1",
+      "WRITE R2 A225",
+      "READ C110 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 C110"
+   ],
+   [
+      "READ C140 R2",
+      "READ B185 R1",
+      "MUL R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "READ A200 R1",
+      "READ B215 R2",
+      "MUL R1 R2",
+      "WRITE R1 A200"
+   ],
+   [
+      "READ B105 R2",
+      "READ C160 R1",
+      "ADD R2 R1",
+      "WRITE R2 B105"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P100 R1",
+      "READ C140 R2",
+      "ADD R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 362 R4",
+      "READ B150 R2",
+      "READ A135 R1",
+      "SUB R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ P215 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 365 R4"
+   ],
+   [
+      "READ B220 R2",
+      "READ C130 R1",
+      "SUB R2 R1",
+      "WRITE R2 B220"
+   ],
+   [
+      "READ C175 R1",
+      "READ A145 R2",
+      "MUL R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ A225 R1",
+      "READ C200 R2",
+      "SUB R1 R2",
+      "WRITE R1 A225"
+   ],
+   [
+      "READ B235 R2",
+      "READ A250 R1",
+      "SUB R2 R1",
+      "WRITE R2 B235",
+      "READ A235 R1",
+      "READ C210 R2",
+      "ADD R1 R2",
+      "WRITE R1 A235",
+      "READ A195 R2",
+      "READ B115 R1",
+      "ADD R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ C250 R1",
+      "READ B105 R2",
+      "DIV R1 R2",
+      "WRITE R1 C250"
+   ],
+   [
+      "READ C135 R1",
+      "READ A185 R2",
+      "ADD R1 R2",
+      "WRITE R1 C135"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ B170 R2",
+      "READ A140 R1",
+      "ADD R2 R1",
+      "WRITE R2 B170"
+   ],
+   [
+      "READ P210 R2",
+      "READ C195 R1",
+      "SUB R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 383 R4"
+   ],
+   [
+      "READ B145 R2",
+      "READ C100 R1",
+      "MUL R2 R1",
+      "WRITE R2 B145",
+      "READ A240 R2",
+      "READ C130 R1",
+      "SUB R2 R1",
+      "WRITE R2 A240"
+   ],
+   [
+      "READ A175 R2",
+      "READ C120 R1",
+      "DIV R2 R1",
+      "WRITE R2 A175",
+      "READ B210 R1",
+      "READ C115 R2",
+      "DIV R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "READ B225 R2",
+      "READ A245 R1",
+      "ADD R2 R1",
+      "WRITE R2 B225",
+      "READ B205 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 B205"
+   ],
+   [
+      "READ B225 R2",
+      "READ A195 R1",
+      "SUB R2 R1",
+      "WRITE R2 B225",
+      "READ P235 R1",
+      "READ A135 R2",
+      "DIV R1 R2",
+      "WRITE R1 P235",
+      "LOAD 3 R3",
+      "LOAD 390 R4",
+      "READ C160 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "READ P100 R1",
+      "READ A155 R2",
+      "DIV R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 396 R4"
+   ],
+   [
+      "READ C210 R1",
+      "READ B125 R2",
+      "SUB R1 R2",
+      "WRITE R1 C210",
+      "READ C245 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 C245"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ P225 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 401 R4",
+      "READ P210 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 402 R4",
+      "READ C140 R2",
+      "READ B175 R1",
+      "SUB R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "READ C145 R1",
+      "READ A180 R2",
+      "DIV R1 R2",
+      "WRITE R1 C145",
+      "READ A160 R1",
+      "READ C100 R2",
+      "MUL R1 R2",
+      "WRITE R1 A160",
+      "READ B160 R1",
+      "READ A110 R2",
+      "SUB R1 R2",
+      "WRITE R1 B160"
+   ],
+   [
+      "READ P150 R1",
+      "READ C190 R2",
+      "ADD R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 405 R4",
+      "READ A155 R1",
+      "READ C225 R2",
+      "ADD R1 R2",
+      "WRITE R1 A155",
+      "READ P190 R1",
+      "READ A150 R2",
+      "MUL R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 406 R4"
+   ],
+   [
+      "READ A215 R1",
+      "READ B145 R2",
+      "DIV R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ C225 R1",
+      "READ B175 R2",
+      "MUL R1 R2",
+      "WRITE R1 C225"
+   ],
+   [
+      "READ C115 R2",
+      "READ A120 R1",
+      "SUB R2 R1",
+      "WRITE R2 C115"
+   ],
+   [
+      "READ B190 R2",
+      "READ C180 R1",
+      "ADD R2 R1",
+      "WRITE R2 B190"
+   ],
+   [
+      "READ P250 R1",
+      "READ B155 R2",
+      "SUB R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 414 R4",
+      "READ B235 R1",
+      "READ A170 R2",
+      "ADD R1 R2",
+      "WRITE R1 B235",
+      "READ B115 R1",
+      "READ C175 R2",
+      "MUL R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ C160 R2",
+      "READ A235 R1",
+      "DIV R2 R1",
+      "WRITE R2 C160",
+      "READ B120 R2",
+      "READ A125 R1",
+      "SUB R2 R1",
+      "WRITE R2 B120",
+      "READ C120 R1",
+      "READ A240 R2",
+      "SUB R1 R2",
+      "WRITE R1 C120"
+   ],
+   [
+      "READ B110 R2",
+      "READ A175 R1",
+      "ADD R2 R1",
+      "WRITE R2 B110",
+      "READ C205 R2",
+      "READ A240 R1",
+      "DIV R2 R1",
+      "WRITE R2 C205",
+      "READ P120 R1",
+      "READ A180 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 419 R4"
+   ],
+   [
+      "READ C210 R2",
+      "READ A120 R1",
+      "DIV R2 R1",
+      "WRITE R2 C210"
+   ],
+   [
+      "READ P230 R2",
+      "READ A210 R1",
+      "DIV R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 424 R4",
+      "READ P245 R2",
+      "READ B100 R1",
+      "SUB R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 425 R4"
+   ],
+   [
+      "READ P250 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 426 R4",
+      "READ C190 R2",
+      "READ B250 R1",
+      "ADD R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ A245 R2",
+      "READ C110 R1",
+      "ADD R2 R1",
+      "WRITE R2 A245",
+      "READ A240 R1",
+      "READ B170 R2",
+      "SUB R1 R2",
+      "WRITE R1 A240",
+      "READ P230 R2",
+      "READ B190 R1",
+      "DIV R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 427 R4"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ C195 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 C195"
+   ],
+   [
+      "READ C185 R1",
+      "READ B150 R2",
+      "DIV R1 R2",
+      "WRITE R1 C185",
+      "READ A125 R1",
+      "READ B120 R2",
+      "SUB R1 R2",
+      "WRITE R1 A125"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P220 R1",
+      "READ A190 R2",
+      "ADD R1 R2",
+      "WRITE R1 P220",
+      "LOAD 3 R3",
+      "LOAD 430 R4",
+      "READ B120 R2",
+      "READ C150 R1",
+      "SUB R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "READ B155 R1",
+      "READ C190 R2",
+      "SUB R1 R2",
+      "WRITE R1 B155",
+      "READ P240 R2",
+      "READ C230 R1",
+      "SUB R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 434 R4"
+   ],
+   [
+      "READ B145 R1",
+      "READ C205 R2",
+      "DIV R1 R2",
+      "WRITE R1 B145",
+      "READ B210 R1",
+      "READ A240 R2",
+      "SUB R1 R2",
+      "WRITE R1 B210",
+      "READ P135 R1",
+      "READ C130 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 437 R4"
+   ],
+   [
+      "READ C165 R2",
+      "READ A180 R1",
+      "ADD R2 R1",
+      "WRITE R2 C165"
+   ],
+   [
+      "READ P165 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 444 R4",
+      "READ A180 R1",
+      "READ C190 R2",
+      "MUL R1 R2",
+      "WRITE R1 A180",
+      "READ C135 R2",
+      "READ B175 R1",
+      "MUL R2 R1",
+      "WRITE R2 C135"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ B105 R2",
+      "READ C120 R1",
+      "DIV R2 R1",
+      "WRITE R2 B105",
+      "READ C135 R2",
+      "READ B205 R1",
+      "ADD R2 R1",
+      "WRITE R2 C135",
+      "READ B115 R2",
+      "READ A200 R1",
+      "DIV R2 R1",
+      "WRITE R2 B115"
+   ],
+   [
+      "READ B150 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ C100 R1",
+      "READ B185 R2",
+      "DIV R1 R2",
+      "WRITE R1 C100"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ B185 R2",
+      "READ A120 R1",
+      "MUL R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ A130 R2",
+      "READ C100 R1",
+      "MUL R2 R1",
+      "WRITE R2 A130",
+      "READ A135 R1",
+      "READ B200 R2",
+      "ADD R1 R2",
+      "WRITE R1 A135"
+   ],
+   [
+      "READ P225 R1",
+      "READ C215 R2",
+      "MUL R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 458 R4",
+      "READ C200 R2",
+      "READ A210 R1",
+      "SUB R2 R1",
+      "WRITE R2 C200"
+   ],
+   [
+      "READ B205 R2",
+      "READ C135 R1",
+      "MUL R2 R1",
+      "WRITE R2 B205",
+      "READ B130 R2",
+      "READ A200 R1",
+      "ADD R2 R1",
+      "WRITE R2 B130",
+      "READ B135 R1",
+      "READ C210 R2",
+      "ADD R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "READ C120 R1",
+      "READ A215 R2",
+      "DIV R1 R2",
+      "WRITE R1 C120",
+      "READ A200 R2",
+      "READ B215 R1",
+      "SUB R2 R1",
+      "WRITE R2 A200"
+   ],
+   [
+      "READ B170 R2",
+      "READ C120 R1",
+      "ADD R2 R1",
+      "WRITE R2 B170"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ P225 R2",
+      "READ B180 R1",
+      "MUL R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 468 R4",
+      "READ P145 R2",
+      "READ C230 R1",
+      "ADD R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 469 R4"
+   ],
+   [
+      "READ P230 R1",
+      "READ A180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 473 R4"
+   ],
+   [
+      "READ P230 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 477 R4",
+      "READ C250 R1",
+      "READ A120 R2",
+      "MUL R1 R2",
+      "WRITE R1 C250"
+   ],
+   [
+      "READ C230 R1",
+      "READ B190 R2",
+      "MUL R1 R2",
+      "WRITE R1 C230"
+   ],
+   [
+      "READ P240 R1",
+      "READ C115 R2",
+      "SUB R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 482 R4"
+   ],
+   [
+      "READ B225 R2",
+      "READ A220 R1",
+      "SUB R2 R1",
+      "WRITE R2 B225"
+   ],
+   [
+      "READ B210 R2",
+      "READ C120 R1",
+      "DIV R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ P235 R2",
+      "READ A230 R1",
+      "MUL R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 489 R4",
+      "READ A175 R2",
+      "READ C165 R1",
+      "SUB R2 R1",
+      "WRITE R2 A175",
+      "READ A250 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ C115 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 C115"
+   ],
+   [
+      "READ C105 R1",
+      "READ A115 R2",
+      "SUB R1 R2",
+      "WRITE R1 C105",
+      "READ C145 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 C145"
+   ],
+   [
+      "READ A115 R1",
+      "READ B110 R2",
+      "DIV R1 R2",
+      "WRITE R1 A115"
+   ],
+   [
+      "READ C125 R1",
+      "READ B235 R2",
+      "MUL R1 R2",
+      "WRITE R1 C125",
+      "READ P225 R2",
+      "READ C240 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 503 R4"
+   ],
+   [
+      "READ A100 R2",
+      "READ B220 R1",
+      "DIV R2 R1",
+      "WRITE R2 A100",
+      "READ P185 R1",
+      "READ C245 R2",
+      "DIV R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 508 R4"
+   ],
+   [
+      "READ P185 R2",
+      "READ A160 R1",
+      "ADD R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 511 R4",
+      "READ P190 R1",
+      "READ C235 R2",
+      "DIV R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 512 R4"
+   ],
+   [
+      "READ C155 R2",
+      "READ B145 R1",
+      "SUB R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ P105 R1",
+      "READ B100 R2",
+      "SUB R1 R2",
+      "WRITE R1 P105",
+      "LOAD 3 R3",
+      "LOAD 518 R4"
+   ],
+   [
+      "READ P100 R2",
+      "READ C155 R1",
+      "DIV R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 519 R4",
+      "READ A250 R1",
+      "READ B210 R2",
+      "SUB R1 R2",
+      "WRITE R1 A250"
+   ],
+   [
+      "READ C165 R1",
+      "READ A110 R2",
+      "ADD R1 R2",
+      "WRITE R1 C165"
+   ],
+   [
+      "READ B235 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ B235 R1",
+      "READ A170 R2",
+      "MUL R1 R2",
+      "WRITE R1 B235"
+   ],
+   [
+      "READ B140 R2",
+      "READ C205 R1",
+      "DIV R2 R1",
+      "WRITE R2 B140",
+      "READ P180 R2",
+      "READ A170 R1",
+      "ADD R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 527 R4"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B210 R2",
+      "READ C215 R1",
+      "SUB R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ B220 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 B220",
+      "READ B195 R2",
+      "READ A120 R1",
+      "MUL R2 R1",
+      "WRITE R2 B195",
+      "READ C110 R2",
+      "READ B205 R1",
+      "SUB R2 R1",
+      "WRITE R2 C110"
+   ],
+   [
+      "READ B205 R2",
+      "READ C210 R1",
+      "SUB R2 R1",
+      "WRITE R2 B205",
+      "READ C165 R2",
+      "READ B125 R1",
+      "ADD R2 R1",
+      "WRITE R2 C165",
+      "READ C240 R1",
+      "READ B195 R2",
+      "SUB R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ C235 R2",
+      "READ B150 R1",
+      "ADD R2 R1",
+      "WRITE R2 C235",
+      "READ A180 R2",
+      "READ C185 R1",
+      "DIV R2 R1",
+      "WRITE R2 A180",
+      "READ P170 R2",
+      "READ C180 R1",
+      "SUB R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 534 R4"
+   ],
+   [
+      "READ B195 R1",
+      "READ C145 R2",
+      "ADD R1 R2",
+      "WRITE R1 B195",
+      "READ C225 R2",
+      "READ B220 R1",
+      "MUL R2 R1",
+      "WRITE R2 C225"
+   ],
+   [
+      "READ B215 R1",
+      "READ C230 R2",
+      "DIV R1 R2",
+      "WRITE R1 B215"
+   ],
+   [
+      "READ A250 R2",
+      "READ B195 R1",
+      "DIV R2 R1",
+      "WRITE R2 A250",
+      "READ B140 R2",
+      "READ A145 R1",
+      "ADD R2 R1",
+      "WRITE R2 B140",
+      "READ P130 R1",
+      "READ C140 R2",
+      "MUL R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 537 R4"
+   ],
+   [
+      "READ B200 R1",
+      "READ C130 R2",
+      "ADD R1 R2",
+      "WRITE R1 B200",
+      "READ C245 R2",
+      "READ B230 R1",
+      "MUL R2 R1",
+      "WRITE R2 C245",
+      "READ B195 R2",
+      "READ A110 R1",
+      "MUL R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ C160 R2",
+      "READ A230 R1",
+      "ADD R2 R1",
+      "WRITE R2 C160",
+      "READ P110 R1",
+      "READ A230 R2",
+      "MUL R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 542 R4"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ P220 R1",
+      "READ A235 R2",
+      "SUB R1 R2",
+      "WRITE R1 P220",
+      "LOAD 3 R3",
+      "LOAD 545 R4"
+   ],
+   [
+      "READ P225 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 546 R4",
+      "READ B250 R1",
+      "READ C160 R2",
+      "DIV R1 R2",
+      "WRITE R1 B250",
+      "READ C180 R2",
+      "READ B140 R1",
+      "ADD R2 R1",
+      "WRITE R2 C180"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ P190 R1",
+      "READ B140 R2",
+      "MUL R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 549 R4",
+      "READ C160 R1",
+      "READ B180 R2",
+      "SUB R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "READ B245 R1",
+      "READ A230 R2",
+      "DIV R1 R2",
+      "WRITE R1 B245"
+   ],
+   [
+      "READ P250 R2",
+      "READ C200 R1",
+      "SUB R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 552 R4"
+   ],
+   [
+      "READ P180 R2",
+      "READ C100 R1",
+      "MUL R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 554 R4",
+      "READ A240 R2",
+      "READ B175 R1",
+      "DIV R2 R1",
+      "WRITE R2 A240",
+      "READ P235 R2",
+      "READ C120 R1",
+      "SUB R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 555 R4"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ C160 R2",
+      "READ B145 R1",
+      "ADD R2 R1",
+      "WRITE R2 C160",
+      "READ P120 R2",
+      "READ C250 R1",
+      "DIV R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 557 R4",
+      "READ C155 R1",
+      "READ A200 R2",
+      "MUL R1 R2",
+      "WRITE R1 C155"
+   ],
+   [
+      "READ B210 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ P120 R2",
+      "READ C170 R1",
+      "DIV R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 559 R4"
+   ],
+   [
+      "READ B140 R2",
+      "READ A240 R1",
+      "ADD R2 R1",
+      "WRITE R2 B140",
+      "READ A200 R1",
+      "READ C220 R2",
+      "DIV R1 R2",
+      "WRITE R1 A200"
+   ],
+   [
+      "READ P120 R1",
+      "READ B105 R2",
+      "SUB R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 568 R4"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ P215 R2",
+      "READ B205 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 572 R4",
+      "READ C140 R1",
+      "READ A165 R2",
+      "MUL R1 R2",
+      "WRITE R1 C140",
+      "READ C100 R2",
+      "READ A225 R1",
+      "DIV R2 R1",
+      "WRITE R2 C100"
+   ],
+   [
+      "READ C105 R2",
+      "READ B195 R1",
+      "MUL R2 R1",
+      "WRITE R2 C105",
+      "READ A210 R1",
+      "READ C190 R2",
+      "DIV R1 R2",
+      "WRITE R1 A210"
+   ],
+   [
+      "READ A235 R1",
+      "READ C155 R2",
+      "DIV R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ B250 R1",
+      "READ C120 R2",
+      "ADD R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ P120 R1",
+      "READ B190 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 582 R4",
+      "READ P205 R1",
+      "READ A245 R2",
+      "SUB R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 583 R4"
+   ],
+   [
+      "READ A225 R1",
+      "READ B120 R2",
+      "SUB R1 R2",
+      "WRITE R1 A225"
+   ],
+   [
+      "READ P215 R2",
+      "READ A220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 584 R4"
+   ],
+   [
+      "READ P225 R2",
+      "READ A115 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 585 R4"
+   ],
+   [
+      "READ C140 R1",
+      "READ B220 R2",
+      "MUL R1 R2",
+      "WRITE R1 C140",
+      "READ B200 R1",
+      "READ C100 R2",
+      "SUB R1 R2",
+      "WRITE R1 B200",
+      "READ A115 R1",
+      "READ B225 R2",
+      "SUB R1 R2",
+      "WRITE R1 A115"
+   ],
+   [
+      "READ A130 R2",
+      "READ C105 R1",
+      "ADD R2 R1",
+      "WRITE R2 A130"
+   ],
+   [
+      "READ P195 R2",
+      "READ A215 R1",
+      "DIV R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 593 R4"
+   ],
+   [
+      "READ A210 R1",
+      "READ C190 R2",
+      "SUB R1 R2",
+      "WRITE R1 A210",
+      "READ A225 R2",
+      "READ C125 R1",
+      "MUL R2 R1",
+      "WRITE R2 A225"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A160 R2",
+      "READ B175 R1",
+      "MUL R2 R1",
+      "WRITE R2 A160"
+   ],
+   [
+      "READ A110 R2",
+      "READ C155 R1",
+      "MUL R2 R1",
+      "WRITE R2 A110"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P170 R1",
+      "READ C160 R2",
+      "MUL R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 598 R4",
+      "READ C170 R2",
+      "READ A130 R1",
+      "MUL R2 R1",
+      "WRITE R2 C170"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ A175 R2",
+      "READ B100 R1",
+      "ADD R2 R1",
+      "WRITE R2 A175"
+   ],
+   [
+      "READ C150 R2",
+      "READ B175 R1",
+      "SUB R2 R1",
+      "WRITE R2 C150"
+   ],
+   [
+      "READ C200 R1",
+      "READ B190 R2",
+      "ADD R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "READ C200 R1",
+      "READ B135 R2",
+      "DIV R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "READ C220 R2",
+      "READ B155 R1",
+      "ADD R2 R1",
+      "WRITE R2 C220",
+      "READ C235 R2",
+      "READ A210 R1",
+      "MUL R2 R1",
+      "WRITE R2 C235",
+      "READ B235 R2",
+      "READ A140 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ C220 R2",
+      "READ B200 R1",
+      "SUB R2 R1",
+      "WRITE R2 C220"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ C175 R1",
+      "READ A165 R2",
+      "MUL R1 R2",
+      "WRITE R1 C175",
+      "READ A105 R1",
+      "READ C215 R2",
+      "MUL R1 R2",
+      "WRITE R1 A105",
+      "READ C240 R1",
+      "READ B225 R2",
+      "ADD R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ C160 R2",
+      "READ A135 R1",
+      "MUL R2 R1",
+      "WRITE R2 C160",
+      "READ P225 R2",
+      "READ C240 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 611 R4",
+      "READ P140 R1",
+      "READ A250 R2",
+      "SUB R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 612 R4"
+   ],
+   [
+      "READ P135 R1",
+      "READ A140 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 614 R4"
+   ],
+   [
+      "READ P195 R1",
+      "READ A155 R2",
+      "SUB R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 616 R4"
+   ],
+   [
+      "READ B215 R2",
+      "READ C190 R1",
+      "SUB R2 R1",
+      "WRITE R2 B215"
+   ],
+   [
+      "READ C190 R1",
+      "READ B170 R2",
+      "ADD R1 R2",
+      "WRITE R1 C190",
+      "READ B210 R2",
+      "READ C140 R1",
+      "MUL R2 R1",
+      "WRITE R2 B210",
+      "READ B240 R2",
+      "READ A140 R1",
+      "MUL R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ P120 R1",
+      "READ C245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 625 R4",
+      "READ C105 R1",
+      "READ B185 R2",
+      "DIV R1 R2",
+      "WRITE R1 C105",
+      "READ P170 R2",
+      "READ A125 R1",
+      "MUL R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 626 R4"
+   ],
+   [
+      "READ P145 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P145",
+      "LOAD 3 R3",
+      "LOAD 627 R4",
+      "READ B150 R2",
+      "READ C195 R1",
+      "MUL R2 R1",
+      "WRITE R2 B150",
+      "READ C220 R2",
+      "READ A145 R1",
+      "DIV R2 R1",
+      "WRITE R2 C220"
+   ],
+   [
+      "READ C230 R2",
+      "READ A110 R1",
+      "ADD R2 R1",
+      "WRITE R2 C230",
+      "READ P165 R1",
+      "READ B185 R2",
+      "MUL R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 629 R4",
+      "READ B185 R2",
+      "READ C120 R1",
+      "SUB R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ C220 R1",
+      "READ B110 R2",
+      "DIV R1 R2",
+      "WRITE R1 C220",
+      "READ P120 R2",
+      "READ C115 R1",
+      "MUL R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 632 R4"
+   ],
+   [
+      "READ A210 R1",
+      "READ B150 R2",
+      "MUL R1 R2",
+      "WRITE R1 A210",
+      "READ P145 R1",
+      "READ B195 R2",
+      "DIV R1 R2",
+      "WRITE R1 P145",
+      "LOAD 3 R3",
+      "LOAD 633 R4"
+   ],
+   [
+      "READ C205 R1",
+      "READ B245 R2",
+      "ADD R1 R2",
+      "WRITE R1 C205"
+   ],
+   [
+      "READ P215 R2",
+      "READ C155 R1",
+      "SUB R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 637 R4"
+   ],
+   [
+      "READ P200 R1",
+      "READ C110 R2",
+      "SUB R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 639 R4"
+   ],
+   [
+      "READ B100 R1",
+      "READ A240 R2",
+      "SUB R1 R2",
+      "WRITE R1 B100",
+      "READ P210 R2",
+      "READ C145 R1",
+      "MUL R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 644 R4",
+      "READ A115 R2",
+      "READ B160 R1",
+      "MUL R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ A240 R2",
+      "READ C195 R1",
+      "ADD R2 R1",
+      "WRITE R2 A240",
+      "READ A120 R1",
+      "READ B175 R2",
+      "SUB R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "READ B180 R2",
+      "READ C195 R1",
+      "MUL R2 R1",
+      "WRITE R2 B180",
+      "READ P155 R1",
+      "READ C245 R2",
+      "ADD R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 651 R4"
+   ],
+   [
+      "READ C170 R1",
+      "READ B230 R2",
+      "ADD R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ C175 R2",
+      "READ A125 R1",
+      "MUL R2 R1",
+      "WRITE R2 C175"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ B120 R2",
+      "READ A245 R1",
+      "SUB R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ A250 R2",
+      "READ B225 R1",
+      "MUL R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ C215 R1",
+      "READ B195 R2",
+      "DIV R1 R2",
+      "WRITE R1 C215",
+      "READ A175 R1",
+      "READ B145 R2",
+      "DIV R1 R2",
+      "WRITE R1 A175"
+   ],
+   [
+      "READ C210 R2",
+      "READ A140 R1",
+      "ADD R2 R1",
+      "WRITE R2 C210"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ B155 R2",
+      "READ A245 R1",
+      "ADD R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ P155 R1",
+      "READ A190 R2",
+      "ADD R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 674 R4"
+   ],
+   [
+      "READ B180 R1",
+      "READ C140 R2",
+      "SUB R1 R2",
+      "WRITE R1 B180"
+   ],
+   [
+      "READ A210 R1",
+      "READ B225 R2",
+      "MUL R1 R2",
+      "WRITE R1 A210",
+      "READ P190 R1",
+      "READ A175 R2",
+      "SUB R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 680 R4",
+      "READ A120 R1",
+      "READ C215 R2",
+      "ADD R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ B115 R1",
+      "READ A250 R2",
+      "SUB R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "READ A170 R1",
+      "READ B155 R2",
+      "MUL R1 R2",
+      "WRITE R1 A170"
+   ],
+   [
+      "READ C240 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ A185 R2",
+      "READ B235 R1",
+      "ADD R2 R1",
+      "WRITE R2 A185",
+      "READ B135 R1",
+      "READ C170 R2",
+      "MUL R1 R2",
+      "WRITE R1 B135",
+      "READ P230 R2",
+      "READ C100 R1",
+      "SUB R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 683 R4"
+   ],
+   [
+      "READ A165 R2",
+      "READ B205 R1",
+      "MUL R2 R1",
+      "WRITE R2 A165",
+      "READ A245 R2",
+      "READ C125 R1",
+      "SUB R2 R1",
+      "WRITE R2 A245",
+      "READ C100 R2",
+      "READ B230 R1",
+      "MUL R2 R1",
+      "WRITE R2 C100"
+   ],
+   [
+      "READ A100 R2",
+      "READ B120 R1",
+      "DIV R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "READ C170 R2",
+      "READ B100 R1",
+      "DIV R2 R1",
+      "WRITE R2 C170"
+   ],
+   [
+      "READ P250 R1",
+      "READ C145 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 691 R4",
+      "READ B105 R2",
+      "READ A170 R1",
+      "DIV R2 R1",
+      "WRITE R2 B105"
+   ],
+   [
+      "READ B205 R1",
+      "READ C110 R2",
+      "SUB R1 R2",
+      "WRITE R1 B205"
+   ],
+   [
+      "READ P120 R2",
+      "READ A245 R1",
+      "MUL R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 698 R4",
+      "READ B120 R1",
+      "READ C175 R2",
+      "MUL R1 R2",
+      "WRITE R1 B120"
+   ],
+   [
+      "READ C240 R1",
+      "READ A160 R2",
+      "ADD R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ C175 R1",
+      "READ A155 R2",
+      "DIV R1 R2",
+      "WRITE R1 C175",
+      "READ B195 R2",
+      "READ A150 R1",
+      "SUB R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ B155 R2",
+      "READ C240 R1",
+      "ADD R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ B235 R2",
+      "READ C160 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ P105 R2",
+      "READ B145 R1",
+      "MUL R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 709 R4",
+      "READ C190 R2",
+      "READ A105 R1",
+      "DIV R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ P110 R1",
+      "READ A195 R2",
+      "MUL R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 713 R4"
+   ],
+   [
+      "READ A245 R1",
+      "READ C175 R2",
+      "ADD R1 R2",
+      "WRITE R1 A245"
+   ],
+   [
+      "READ B150 R2",
+      "READ A140 R1",
+      "SUB R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ B240 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ B160 R1",
+      "READ C220 R2",
+      "ADD R1 R2",
+      "WRITE R1 B160",
+      "READ P185 R1",
+      "READ C155 R2",
+      "DIV R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 719 R4",
+      "READ B200 R2",
+      "READ A110 R1",
+      "MUL R2 R1",
+      "WRITE R2 B200"
+   ],
+   [
+      "READ P105 R1",
+      "READ A170 R2",
+      "ADD R1 R2",
+      "WRITE R1 P105",
+      "LOAD 3 R3",
+      "LOAD 721 R4",
+      "READ C175 R1",
+      "READ B165 R2",
+      "SUB R1 R2",
+      "WRITE R1 C175",
+      "READ C145 R1",
+      "READ A200 R2",
+      "MUL R1 R2",
+      "WRITE R1 C145"
+   ],
+   [
+      "READ C240 R1",
+      "READ A110 R2",
+      "DIV R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ P135 R1",
+      "READ B165 R2",
+      "MUL R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 727 R4",
+      "READ C170 R2",
+      "READ A200 R1",
+      "DIV R2 R1",
+      "WRITE R2 C170",
+      "READ P145 R2",
+      "READ B210 R1",
+      "DIV R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 728 R4"
+   ],
+   [
+      "READ P120 R2",
+      "READ C130 R1",
+      "ADD R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 730 R4"
+   ],
+   [
+      "READ A210 R2",
+      "READ B215 R1",
+      "ADD R2 R1",
+      "WRITE R2 A210",
+      "READ C130 R1",
+      "READ B160 R2",
+      "SUB R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ C120 R1",
+      "READ A165 R2",
+      "MUL R1 R2",
+      "WRITE R1 C120"
+   ],
+   [
+      "READ P230 R2",
+      "READ B125 R1",
+      "DIV R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 738 R4"
+   ],
+   [
+      "READ P195 R2",
+      "READ A165 R1",
+      "DIV R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 740 R4"
+   ],
+   [
+      "READ C170 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ C170 R2",
+      "READ A250 R1",
+      "ADD R2 R1",
+      "WRITE R2 C170"
+   ],
+   [
+      "READ P240 R1",
+      "READ C105 R2",
+      "ADD R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 744 R4",
+      "READ P120 R1",
+      "READ A170 R2",
+      "MUL R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 745 R4"
+   ],
+   [
+      "READ P120 R1",
+      "READ C135 R2",
+      "SUB R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 750 R4"
+   ],
+   [
+      "READ C115 R2",
+      "READ B110 R1",
+      "MUL R2 R1",
+      "WRITE R2 C115",
+      "READ P155 R2",
+      "READ B120 R1",
+      "DIV R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 751 R4",
+      "READ A150 R2",
+      "READ B235 R1",
+      "DIV R2 R1",
+      "WRITE R2 A150"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ C245 R2",
+      "READ A100 R1",
+      "DIV R2 R1",
+      "WRITE R2 C245"
+   ],
+   [
+      "READ B125 R1",
+      "READ A215 R2",
+      "MUL R1 R2",
+      "WRITE R1 B125",
+      "READ A195 R1",
+      "READ C250 R2",
+      "MUL R1 R2",
+      "WRITE R1 A195",
+      "READ P180 R1",
+      "READ A100 R2",
+      "ADD R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 754 R4"
+   ],
+   [
+      "READ P245 R2",
+      "READ A125 R1",
+      "MUL R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 758 R4"
+   ],
+   [
+      "READ C235 R1",
+      "READ B125 R2",
+      "DIV R1 R2",
+      "WRITE R1 C235"
+   ],
+   [
+      "READ P245 R1",
+      "READ C250 R2",
+      "ADD R1 R2",
+      "WRITE R1 P245",
+      "LOAD 3 R3",
+      "LOAD 762 R4"
+   ],
+   [
+      "READ B100 R2",
+      "READ A220 R1",
+      "DIV R2 R1",
+      "WRITE R2 B100"
+   ],
+   [
+      "READ P135 R1",
+      "READ C225 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 767 R4",
+      "READ C170 R1",
+      "READ A155 R2",
+      "MUL R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ P100 R2",
+      "READ B210 R1",
+      "ADD R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 769 R4",
+      "READ A195 R2",
+      "READ B145 R1",
+      "DIV R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ A185 R1",
+      "READ C230 R2",
+      "ADD R1 R2",
+      "WRITE R1 A185",
+      "READ B135 R2",
+      "READ C160 R1",
+      "DIV R2 R1",
+      "WRITE R2 B135",
+      "READ P135 R1",
+      "READ B235 R2",
+      "SUB R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 773 R4"
+   ],
+   [
+      "READ B155 R1",
+      "READ A240 R2",
+      "DIV R1 R2",
+      "WRITE R1 B155",
+      "READ B105 R1",
+      "READ A135 R2",
+      "MUL R1 R2",
+      "WRITE R1 B105"
+   ],
+   [
+      "READ C190 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ C130 R2",
+      "READ A200 R1",
+      "MUL R2 R1",
+      "WRITE R2 C130",
+      "READ C115 R2",
+      "READ A210 R1",
+      "ADD R2 R1",
+      "WRITE R2 C115"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B215 R2",
+      "READ C145 R1",
+      "MUL R2 R1",
+      "WRITE R2 B215"
+   ],
+   [
+      "READ P225 R2",
+      "READ A150 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 783 R4",
+      "READ C115 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 C115"
+   ],
+   [
+      "READ B220 R1",
+      "READ C135 R2",
+      "ADD R1 R2",
+      "WRITE R1 B220",
+      "READ A135 R2",
+      "READ B195 R1",
+      "MUL R2 R1",
+      "WRITE R2 A135",
+      "READ A190 R2",
+      "READ B155 R1",
+      "DIV R2 R1",
+      "WRITE R2 A190"
+   ],
+   [
+      "READ P145 R2",
+      "READ C215 R1",
+      "SUB R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 786 R4"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ B230 R2",
+      "READ C150 R1",
+      "SUB R2 R1",
+      "WRITE R2 B230"
+   ],
+   [
+      "READ A175 R2",
+      "READ C185 R1",
+      "SUB R2 R1",
+      "WRITE R2 A175",
+      "READ A155 R2",
+      "READ B245 R1",
+      "DIV R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ B205 R2",
+      "READ C125 R1",
+      "DIV R2 R1",
+      "WRITE R2 B205",
+      "READ P175 R1",
+      "READ B235 R2",
+      "SUB R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 792 R4",
+      "READ B145 R2",
+      "READ A105 R1",
+      "ADD R2 R1",
+      "WRITE R2 B145"
+   ],
+   [
+      "READ A120 R1",
+      "READ C195 R2",
+      "ADD R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "READ B210 R1",
+      "READ A220 R2",
+      "MUL R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "READ P110 R2",
+      "READ A250 R1",
+      "MUL R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 798 R4"
+   ],
+   [
+      "READ P130 R1",
+      "READ B205 R2",
+      "ADD R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 802 R4",
+      "READ B185 R2",
+      "READ C115 R1",
+      "DIV R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ P200 R2",
+      "READ A145 R1",
+      "SUB R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 805 R4"
+   ],
+   [
+      "READ P235 R2",
+      "READ C150 R1",
+      "ADD R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 808 R4",
+      "READ P105 R1",
+      "READ C240 R2",
+      "DIV R1 R2",
+      "WRITE R1 P105",
+      "LOAD 3 R3",
+      "LOAD 809 R4",
+      "READ B235 R2",
+      "READ A160 R1",
+      "SUB R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ C190 R1",
+      "READ B165 R2",
+      "MUL R1 R2",
+      "WRITE R1 C190"
+   ],
+   [
+      "READ A190 R2",
+      "READ B110 R1",
+      "DIV R2 R1",
+      "WRITE R2 A190"
+   ],
+   [
+      "READ B120 R1",
+      "READ A215 R2",
+      "ADD R1 R2",
+      "WRITE R1 B120"
+   ],
+   [
+      "READ B190 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 B190"
+   ],
+   [
+      "READ C250 R2",
+      "READ B125 R1",
+      "ADD R2 R1",
+      "WRITE R2 C250",
+      "READ P215 R2",
+      "READ C185 R1",
+      "SUB R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 820 R4",
+      "READ B210 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ A200 R2",
+      "READ B160 R1",
+      "ADD R2 R1",
+      "WRITE R2 A200",
+      "READ C165 R1",
+      "READ B140 R2",
+      "SUB R1 R2",
+      "WRITE R1 C165",
+      "READ B245 R2",
+      "READ C240 R1",
+      "ADD R2 R1",
+      "WRITE R2 B245"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ B230 R1",
+      "READ A165 R2",
+      "DIV R1 R2",
+      "WRITE R1 B230",
+      "READ B190 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 B190",
+      "READ A205 R1",
+      "READ C155 R2",
+      "SUB R1 R2",
+      "WRITE R1 A205"
+   ],
+   [
+      "READ B140 R1",
+      "READ C220 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P190 R2",
+      "READ B235 R1",
+      "MUL R2 R1",
+      "WRITE R2 P190",
+      "LOAD 3 R3",
+      "LOAD 827 R4"
+   ],
+   [
+      "READ P225 R2",
+      "READ C100 R1",
+      "SUB R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 828 R4"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ C225 R2",
+      "READ A240 R1",
+      "DIV R2 R1",
+      "WRITE R2 C225"
+   ],
+   [
+      "READ B230 R2",
+      "READ A220 R1",
+      "DIV R2 R1",
+      "WRITE R2 B230"
+   ],
+   [
+      "READ A235 R1",
+      "READ C115 R2",
+      "DIV R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ B130 R1",
+      "READ A155 R2",
+      "ADD R1 R2",
+      "WRITE R1 B130",
+      "READ B235 R1",
+      "READ C125 R2",
+      "DIV R1 R2",
+      "WRITE R1 B235"
+   ],
+   [
+      "READ A135 R1",
+      "READ B115 R2",
+      "MUL R1 R2",
+      "WRITE R1 A135",
+      "READ P245 R2",
+      "READ C105 R1",
+      "DIV R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 844 R4"
+   ],
+   [
+      "READ C210 R1",
+      "READ A215 R2",
+      "DIV R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "READ P225 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 851 R4",
+      "READ A220 R1",
+      "READ B235 R2",
+      "MUL R1 R2",
+      "WRITE R1 A220"
+   ],
+   [
+      "READ B220 R2",
+      "READ C225 R1",
+      "SUB R2 R1",
+      "WRITE R2 B220",
+      "READ B230 R2",
+      "READ A125 R1",
+      "DIV R2 R1",
+      "WRITE R2 B230"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ C125 R1",
+      "READ B110 R2",
+      "MUL R1 R2",
+      "WRITE R1 C125",
+      "READ C205 R2",
+      "READ B130 R1",
+      "SUB R2 R1",
+      "WRITE R2 C205"
+   ],
+   [
+      "READ B155 R2",
+      "READ A105 R1",
+      "SUB R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ A195 R1",
+      "READ B160 R2",
+      "SUB R1 R2",
+      "WRITE R1 A195"
+   ],
+   [
+      "READ C220 R1",
+      "READ B130 R2",
+      "DIV R1 R2",
+      "WRITE R1 C220",
+      "READ B165 R2",
+      "READ A160 R1",
+      "MUL R2 R1",
+      "WRITE R2 B165",
+      "READ P165 R2",
+      "READ C230 R1",
+      "DIV R2 R1",
+      "WRITE R2 P165",
+      "LOAD 3 R3",
+      "LOAD 861 R4"
+   ],
+   [
+      "READ A105 R1",
+      "READ B175 R2",
+      "SUB R1 R2",
+      "WRITE R1 A105"
+   ],
+   [
+      "READ C175 R2",
+      "READ B220 R1",
+      "ADD R2 R1",
+      "WRITE R2 C175",
+      "READ C210 R2",
+      "READ B140 R1",
+      "ADD R2 R1",
+      "WRITE R2 C210"
+   ],
+   [
+      "READ A250 R2",
+      "READ C235 R1",
+      "MUL R2 R1",
+      "WRITE R2 A250",
+      "READ P235 R2",
+      "READ B155 R1",
+      "MUL R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 863 R4"
+   ],
+   [
+      "READ B155 R2",
+      "READ A210 R1",
+      "ADD R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ P225 R1",
+      "READ A250 R2",
+      "DIV R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 866 R4",
+      "READ C115 R2",
+      "READ B220 R1",
+      "SUB R2 R1",
+      "WRITE R2 C115"
+   ],
+   [
+      "READ B165 R2",
+      "READ A180 R1",
+      "SUB R2 R1",
+      "WRITE R2 B165",
+      "READ P145 R2",
+      "READ B240 R1",
+      "SUB R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 868 R4"
+   ],
+   [
+      "READ B215 R1",
+      "READ C130 R2",
+      "ADD R1 R2",
+      "WRITE R1 B215"
+   ],
+   [
+      "READ B155 R2",
+      "READ A120 R1",
+      "SUB R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ A245 R2",
+      "READ C130 R1",
+      "SUB R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "READ B180 R2",
+      "READ C110 R1",
+      "MUL R2 R1",
+      "WRITE R2 B180",
+      "READ B145 R1",
+      "READ C125 R2",
+      "MUL R1 R2",
+      "WRITE R1 B145",
+      "READ C235 R2",
+      "READ A120 R1",
+      "DIV R2 R1",
+      "WRITE R2 C235"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A175 R2",
+      "READ B200 R1",
+      "DIV R2 R1",
+      "WRITE R2 A175"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ A250 R1",
+      "READ C200 R2",
+      "ADD R1 R2",
+      "WRITE R1 A250",
+      "READ B120 R2",
+      "READ A130 R1",
+      "DIV R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "READ B125 R1",
+      "READ A230 R2",
+      "ADD R1 R2",
+      "WRITE R1 B125",
+      "READ B130 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 B130"
+   ],
+   [
+      "READ A235 R2",
+      "READ B245 R1",
+      "DIV R2 R1",
+      "WRITE R2 A235",
+      "READ C240 R2",
+      "READ B135 R1",
+      "ADD R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ A115 R1",
+      "READ C205 R2",
+      "SUB R1 R2",
+      "WRITE R1 A115",
+      "READ P245 R2",
+      "READ A115 R1",
+      "DIV R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 883 R4",
+      "READ P200 R2",
+      "READ C150 R1",
+      "SUB R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 884 R4"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B220 R1",
+      "READ C180 R2",
+      "SUB R1 R2",
+      "WRITE R1 B220"
+   ],
+   [
+      "READ P200 R1",
+      "READ B100 R2",
+      "MUL R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 889 R4"
+   ],
+   [
+      "READ P110 R2",
+      "READ B180 R1",
+      "ADD R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 892 R4",
+      "READ P210 R2",
+      "READ A130 R1",
+      "MUL R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 893 R4"
+   ],
+   [
+      "READ C170 R1",
+      "READ A225 R2",
+      "ADD R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ P155 R1",
+      "READ B170 R2",
+      "ADD R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 898 R4"
+   ],
+   [
+      "READ A110 R2",
+      "READ B120 R1",
+      "SUB R2 R1",
+      "WRITE R2 A110"
+   ],
+   [
+      "READ B240 R1",
+      "READ C200 R2",
+      "ADD R1 R2",
+      "WRITE R1 B240"
+   ],
+   [
+      "READ P240 R1",
+      "READ A225 R2",
+      "ADD R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 903 R4"
+   ],
+   [
+      "READ B220 R1",
+      "READ C195 R2",
+      "MUL R1 R2",
+      "WRITE R1 B220"
+   ],
+   [
+      "READ P240 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 909 R4"
+   ],
+   [
+      "READ C150 R1",
+      "READ A235 R2",
+      "MUL R1 R2",
+      "WRITE R1 C150",
+      "READ B250 R2",
+      "READ C110 R1",
+      "DIV R2 R1",
+      "WRITE R2 B250"
+   ],
+   [
+      "READ C145 R1",
+      "READ A245 R2",
+      "DIV R1 R2",
+      "WRITE R1 C145",
+      "READ C130 R1",
+      "READ B105 R2",
+      "DIV R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ A170 R2",
+      "READ C130 R1",
+      "SUB R2 R1",
+      "WRITE R2 A170",
+      "READ C120 R2",
+      "READ B210 R1",
+      "DIV R2 R1",
+      "WRITE R2 C120"
+   ],
+   [
+      "READ B135 R1",
+      "READ C145 R2",
+      "MUL R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "READ A175 R2",
+      "READ C205 R1",
+      "DIV R2 R1",
+      "WRITE R2 A175"
+   ],
+   [
+      "READ P240 R1",
+      "READ B230 R2",
+      "DIV R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 921 R4"
+   ],
+   [
+      "READ C145 R1",
+      "READ A160 R2",
+      "SUB R1 R2",
+      "WRITE R1 C145",
+      "READ A120 R2",
+      "READ C250 R1",
+      "ADD R2 R1",
+      "WRITE R2 A120"
+   ],
+   [
+      "READ C170 R1",
+      "READ A245 R2",
+      "SUB R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ P180 R1",
+      "READ C130 R2",
+      "DIV R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 926 R4"
+   ],
+   [
+      "READ C155 R2",
+      "READ B225 R1",
+      "DIV R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ A235 R2",
+      "READ C215 R1",
+      "ADD R2 R1",
+      "WRITE R2 A235",
+      "READ C165 R2",
+      "READ A115 R1",
+      "MUL R2 R1",
+      "WRITE R2 C165",
+      "READ B115 R1",
+      "READ A240 R2",
+      "SUB R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "READ P110 R1",
+      "READ A240 R2",
+      "DIV R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 930 R4"
+   ],
+   [
+      "READ B150 R2",
+      "READ C185 R1",
+      "ADD R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ P175 R1",
+      "READ A145 R2",
+      "DIV R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 934 R4"
+   ],
+   [
+      "READ C180 R2",
+      "READ A140 R1",
+      "ADD R2 R1",
+      "WRITE R2 C180"
+   ],
+   [
+      "READ P210 R1",
+      "READ A110 R2",
+      "DIV R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 936 R4"
+   ],
+   [
+      "READ C135 R1",
+      "READ A155 R2",
+      "DIV R1 R2",
+      "WRITE R1 C135",
+      "READ P155 R1",
+      "READ A135 R2",
+      "MUL R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 938 R4",
+      "READ P100 R1",
+      "READ B125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 939 R4"
+   ],
+   [
+      "READ P190 R1",
+      "READ A140 R2",
+      "DIV R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 941 R4"
+   ],
+   [
+      "READ B245 R2",
+      "READ C125 R1",
+      "MUL R2 R1",
+      "WRITE R2 B245"
+   ],
+   [
+      "READ C140 R2",
+      "READ A165 R1",
+      "SUB R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "READ P250 R2",
+      "READ C155 R1",
+      "MUL R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 944 R4"
+   ],
+   [
+      "READ A210 R2",
+      "READ B115 R1",
+      "DIV R2 R1",
+      "WRITE R2 A210"
+   ],
+   [
+      "READ C125 R1",
+      "READ B195 R2",
+      "ADD R1 R2",
+      "WRITE R1 C125"
+   ],
+   [
+      "READ B200 R2",
+      "READ A185 R1",
+      "MUL R2 R1",
+      "WRITE R2 B200",
+      "READ C215 R2",
+      "READ A200 R1",
+      "SUB R2 R1",
+      "WRITE R2 C215",
+      "READ P195 R2",
+      "READ A160 R1",
+      "MUL R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 947 R4"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ B220 R1",
+      "READ C155 R2",
+      "SUB R1 R2",
+      "WRITE R1 B220",
+      "READ A190 R1",
+      "READ C185 R2",
+      "MUL R1 R2",
+      "WRITE R1 A190",
+      "READ B140 R1",
+      "READ C215 R2",
+      "DIV R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "READ B235 R2",
+      "READ C180 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ A250 R1",
+      "READ C205 R2",
+      "SUB R1 R2",
+      "WRITE R1 A250"
+   ],
+   [
+      "READ C150 R2",
+      "READ A240 R1",
+      "DIV R2 R1",
+      "WRITE R2 C150",
+      "READ P215 R2",
+      "READ B150 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 953 R4"
+   ],
+   [
+      "READ A230 R2",
+      "READ C160 R1",
+      "SUB R2 R1",
+      "WRITE R2 A230"
+   ],
+   [
+      "READ P200 R1",
+      "READ C240 R2",
+      "DIV R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 958 R4"
+   ],
+   [
+      "READ C205 R1",
+      "READ B195 R2",
+      "ADD R1 R2",
+      "WRITE R1 C205",
+      "READ B110 R1",
+      "READ A140 R2",
+      "SUB R1 R2",
+      "WRITE R1 B110",
+      "READ B175 R1",
+      "READ C240 R2",
+      "MUL R1 R2",
+      "WRITE R1 B175"
+   ],
+   [
+      "READ B190 R1",
+      "READ A140 R2",
+      "SUB R1 R2",
+      "WRITE R1 B190",
+      "READ A250 R1",
+      "READ B130 R2",
+      "MUL R1 R2",
+      "WRITE R1 A250",
+      "READ C100 R1",
+      "READ B160 R2",
+      "DIV R1 R2",
+      "WRITE R1 C100"
+   ],
+   [
+      "READ C115 R1",
+      "READ A200 R2",
+      "SUB R1 R2",
+      "WRITE R1 C115"
+   ],
+   [
+      "READ C215 R1",
+      "READ A120 R2",
+      "MUL R1 R2",
+      "WRITE R1 C215"
+   ],
+   [
+      "READ B205 R1",
+      "READ A225 R2",
+      "DIV R1 R2",
+      "WRITE R1 B205"
+   ],
+   [
+      "READ P195 R1",
+      "READ B110 R2",
+      "MUL R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 967 R4"
+   ],
+   [
+      "READ P125 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 971 R4",
+      "READ C235 R2",
+      "READ B230 R1",
+      "DIV R2 R1",
+      "WRITE R2 C235"
+   ],
+   [
+      "READ P170 R2",
+      "READ C140 R1",
+      "DIV R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 973 R4",
+      "READ P240 R1",
+      "READ A175 R2",
+      "DIV R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 974 R4"
+   ],
+   [
+      "READ P120 R2",
+      "READ C205 R1",
+      "ADD R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 976 R4"
+   ],
+   [
+      "READ B135 R1",
+      "READ C170 R2",
+      "SUB R1 R2",
+      "WRITE R1 B135",
+      "READ A130 R2",
+      "READ B155 R1",
+      "ADD R2 R1",
+      "WRITE R2 A130"
+   ],
+   [
+      "READ A190 R1",
+      "READ B125 R2",
+      "MUL R1 R2",
+      "WRITE R1 A190"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P225 R1",
+      "READ B235 R2",
+      "SUB R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 986 R4",
+      "READ C240 R1",
+      "READ A180 R2",
+      "MUL R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ B240 R2",
+      "READ C115 R1",
+      "MUL R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ A175 R2",
+      "READ B155 R1",
+      "DIV R2 R1",
+      "WRITE R2 A175",
+      "READ P130 R1",
+      "READ A125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 991 R4",
+      "READ A100 R2",
+      "READ B135 R1",
+      "SUB R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P115 R2",
+      "READ B150 R1",
+      "MUL R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 994 R4"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ B150 R1",
+      "READ A140 R2",
+      "SUB R1 R2",
+      "WRITE R1 B150",
+      "READ A120 R2",
+      "READ B165 R1",
+      "ADD R2 R1",
+      "WRITE R2 A120"
+   ],
+   [
+      "READ B250 R1",
+      "READ A110 R2",
+      "MUL R1 R2",
+      "WRITE R1 B250",
+      "READ P240 R2",
+      "READ A115 R1",
+      "MUL R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 1000 R4"
+   ],
+   [
+      "READ C130 R1",
+      "READ A115 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ B185 R1",
+      "READ A230 R2",
+      "MUL R1 R2",
+      "WRITE R1 B185",
+      "READ P110 R2",
+      "READ B235 R1",
+      "SUB R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1001 R4",
+      "READ B205 R1",
+      "READ C230 R2",
+      "ADD R1 R2",
+      "WRITE R1 B205"
+   ],
+   [
+      "READ C130 R1",
+      "READ B155 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130",
+      "READ B110 R1",
+      "READ C135 R2",
+      "DIV R1 R2",
+      "WRITE R1 B110",
+      "READ A180 R1",
+      "READ C140 R2",
+      "MUL R1 R2",
+      "WRITE R1 A180"
+   ],
+   [
+      "READ B130 R2",
+      "READ C105 R1",
+      "SUB R2 R1",
+      "WRITE R2 B130"
+   ],
+   [
+      "READ A150 R1",
+      "READ B155 R2",
+      "DIV R1 R2",
+      "WRITE R1 A150"
+   ],
+   [
+      "READ B150 R1",
+      "READ A240 R2",
+      "SUB R1 R2",
+      "WRITE R1 B150",
+      "READ P155 R2",
+      "READ B140 R1",
+      "SUB R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 1010 R4"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ A195 R2",
+      "READ C140 R1",
+      "DIV R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ C115 R2",
+      "READ A250 R1",
+      "SUB R2 R1",
+      "WRITE R2 C115",
+      "READ B190 R1",
+      "READ C240 R2",
+      "ADD R1 R2",
+      "WRITE R1 B190"
+   ],
+   [
+      "READ B205 R2",
+      "READ C110 R1",
+      "MUL R2 R1",
+      "WRITE R2 B205",
+      "READ P195 R1",
+      "READ B160 R2",
+      "ADD R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 1022 R4",
+      "READ A205 R1",
+      "READ C210 R2",
+      "SUB R1 R2",
+      "WRITE R1 A205"
+   ],
+   [
+      "READ A165 R2",
+      "READ B230 R1",
+      "MUL R2 R1",
+      "WRITE R2 A165"
+   ],
+   [
+      "READ P160 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 1026 R4"
+   ],
+   [
+      "READ P105 R2",
+      "READ A205 R1",
+      "ADD R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 1028 R4",
+      "READ A145 R1",
+      "READ B130 R2",
+      "ADD R1 R2",
+      "WRITE R1 A145",
+      "READ B235 R1",
+      "READ A160 R2",
+      "ADD R1 R2",
+      "WRITE R1 B235"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ C120 R2",
+      "READ A130 R1",
+      "ADD R2 R1",
+      "WRITE R2 C120",
+      "READ P100 R1",
+      "READ C195 R2",
+      "ADD R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 1032 R4",
+      "READ B230 R1",
+      "READ A240 R2",
+      "MUL R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ A210 R1",
+      "READ B195 R2",
+      "DIV R1 R2",
+      "WRITE R1 A210",
+      "READ C165 R1",
+      "READ A150 R2",
+      "DIV R1 R2",
+      "WRITE R1 C165",
+      "READ B185 R2",
+      "READ A165 R1",
+      "MUL R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ B170 R2",
+      "READ C180 R1",
+      "ADD R2 R1",
+      "WRITE R2 B170",
+      "READ B165 R1",
+      "READ A185 R2",
+      "SUB R1 R2",
+      "WRITE R1 B165",
+      "READ P100 R2",
+      "READ A165 R1",
+      "DIV R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 1037 R4"
+   ],
+   [
+      "READ P215 R1",
+      "READ A230 R2",
+      "MUL R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1041 R4"
+   ],
+   [
+      "READ C215 R1",
+      "READ B150 R2",
+      "SUB R1 R2",
+      "WRITE R1 C215"
+   ],
+   [
+      "READ A245 R1",
+      "READ C130 R2",
+      "DIV R1 R2",
+      "WRITE R1 A245",
+      "READ A115 R1",
+      "READ B130 R2",
+      "DIV R1 R2",
+      "WRITE R1 A115",
+      "READ P200 R1",
+      "READ C150 R2",
+      "ADD R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1043 R4"
+   ],
+   [
+      "READ A185 R2",
+      "READ C160 R1",
+      "MUL R2 R1",
+      "WRITE R2 A185"
+   ],
+   [
+      "READ A245 R2",
+      "READ B190 R1",
+      "ADD R2 R1",
+      "WRITE R2 A245",
+      "READ B245 R2",
+      "READ C165 R1",
+      "SUB R2 R1",
+      "WRITE R2 B245",
+      "READ P200 R1",
+      "READ B115 R2",
+      "SUB R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1053 R4"
+   ],
+   [
+      "READ A150 R2",
+      "READ C115 R1",
+      "MUL R2 R1",
+      "WRITE R2 A150",
+      "READ B110 R2",
+      "READ A240 R1",
+      "DIV R2 R1",
+      "WRITE R2 B110"
+   ],
+   [
+      "READ C155 R2",
+      "READ B235 R1",
+      "ADD R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ A110 R1",
+      "READ B100 R2",
+      "ADD R1 R2",
+      "WRITE R1 A110"
+   ],
+   [
+      "READ C240 R2",
+      "READ A110 R1",
+      "DIV R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ C220 R1",
+      "READ B125 R2",
+      "SUB R1 R2",
+      "WRITE R1 C220"
+   ],
+   [
+      "READ C215 R2",
+      "READ B185 R1",
+      "DIV R2 R1",
+      "WRITE R2 C215",
+      "READ C225 R1",
+      "READ B145 R2",
+      "DIV R1 R2",
+      "WRITE R1 C225"
+   ],
+   [
+      "READ C205 R2",
+      "READ B210 R1",
+      "ADD R2 R1",
+      "WRITE R2 C205",
+      "READ B160 R2",
+      "READ A110 R1",
+      "ADD R2 R1",
+      "WRITE R2 B160",
+      "READ A235 R1",
+      "READ C185 R2",
+      "SUB R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ P155 R2",
+      "READ B215 R1",
+      "SUB R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 1068 R4"
+   ],
+   [
+      "READ B150 R1",
+      "READ A155 R2",
+      "DIV R1 R2",
+      "WRITE R1 B150",
+      "READ C235 R1",
+      "READ B110 R2",
+      "ADD R1 R2",
+      "WRITE R1 C235"
+   ],
+   [
+      "READ B180 R2",
+      "READ A240 R1",
+      "MUL R2 R1",
+      "WRITE R2 B180",
+      "READ A100 R2",
+      "READ C235 R1",
+      "DIV R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "READ A215 R1",
+      "READ B105 R2",
+      "MUL R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ C145 R1",
+      "READ A110 R2",
+      "MUL R1 R2",
+      "WRITE R1 C145",
+      "READ A140 R1",
+      "READ C230 R2",
+      "ADD R1 R2",
+      "WRITE R1 A140",
+      "READ A240 R2",
+      "READ C160 R1",
+      "DIV R2 R1",
+      "WRITE R2 A240"
+   ],
+   [
+      "READ A130 R1",
+      "READ B150 R2",
+      "SUB R1 R2",
+      "WRITE R1 A130"
+   ],
+   [
+      "READ C110 R1",
+      "READ B220 R2",
+      "DIV R1 R2",
+      "WRITE R1 C110",
+      "READ P175 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 P175",
+      "LOAD 3 R3",
+      "LOAD 1078 R4",
+      "READ B135 R1",
+      "READ C130 R2",
+      "ADD R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ A200 R1",
+      "READ B145 R2",
+      "MUL R1 R2",
+      "WRITE R1 A200",
+      "READ A200 R1",
+      "READ C180 R2",
+      "ADD R1 R2",
+      "WRITE R1 A200"
+   ],
+   [
+      "READ P245 R1",
+      "READ A175 R2",
+      "DIV R1 R2",
+      "WRITE R1 P245",
+      "LOAD 3 R3",
+      "LOAD 1083 R4"
+   ],
+   [
+      "READ C135 R2",
+      "READ A120 R1",
+      "MUL R2 R1",
+      "WRITE R2 C135"
+   ],
+   [
+      "READ B100 R2",
+      "READ C205 R1",
+      "SUB R2 R1",
+      "WRITE R2 B100",
+      "READ P110 R1",
+      "READ B170 R2",
+      "MUL R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 1088 R4"
+   ],
+   [
+      "READ C110 R1",
+      "READ B215 R2",
+      "DIV R1 R2",
+      "WRITE R1 C110",
+      "READ C240 R2",
+      "READ A180 R1",
+      "DIV R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ C200 R2",
+      "READ B105 R1",
+      "ADD R2 R1",
+      "WRITE R2 C200",
+      "READ P220 R1",
+      "READ C120 R2",
+      "SUB R1 R2",
+      "WRITE R1 P220",
+      "LOAD 3 R3",
+      "LOAD 1093 R4"
+   ],
+   [
+      "READ B170 R2",
+      "READ A120 R1",
+      "ADD R2 R1",
+      "WRITE R2 B170",
+      "READ P215 R1",
+      "READ C205 R2",
+      "MUL R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1096 R4",
+      "READ C250 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 C250"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ C105 R1",
+      "READ A250 R2",
+      "DIV R1 R2",
+      "WRITE R1 C105"
+   ],
+   [
+      "READ B200 R1",
+      "READ A210 R2",
+      "SUB R1 R2",
+      "WRITE R1 B200",
+      "READ A140 R2",
+      "READ B225 R1",
+      "DIV R2 R1",
+      "WRITE R2 A140"
+   ],
+   [
+      "READ B135 R1",
+      "READ C195 R2",
+      "MUL R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "READ B110 R2",
+      "READ A245 R1",
+      "MUL R2 R1",
+      "WRITE R2 B110"
+   ],
+   [
+      "READ B140 R2",
+      "READ C195 R1",
+      "ADD R2 R1",
+      "WRITE R2 B140",
+      "READ B220 R1",
+      "READ A145 R2",
+      "SUB R1 R2",
+      "WRITE R1 B220"
+   ],
+   [
+      "READ C165 R2",
+      "READ A125 R1",
+      "ADD R2 R1",
+      "WRITE R2 C165"
+   ],
+   [
+      "READ P175 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 1106 R4"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ A220 R2",
+      "READ B135 R1",
+      "MUL R2 R1",
+      "WRITE R2 A220"
+   ],
+   [
+      "READ B155 R1",
+      "READ C110 R2",
+      "SUB R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "READ A140 R2",
+      "READ B115 R1",
+      "DIV R2 R1",
+      "WRITE R2 A140"
+   ],
+   [
+      "READ B215 R1",
+      "READ C185 R2",
+      "SUB R1 R2",
+      "WRITE R1 B215",
+      "READ B140 R1",
+      "READ C215 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "READ A250 R2",
+      "READ C200 R1",
+      "MUL R2 R1",
+      "WRITE R2 A250",
+      "READ C230 R2",
+      "READ B105 R1",
+      "DIV R2 R1",
+      "WRITE R2 C230",
+      "READ A130 R1",
+      "READ C115 R2",
+      "MUL R1 R2",
+      "WRITE R1 A130"
+   ],
+   [
+      "READ A240 R1",
+      "READ C200 R2",
+      "DIV R1 R2",
+      "WRITE R1 A240",
+      "READ A230 R1",
+      "READ B120 R2",
+      "DIV R1 R2",
+      "WRITE R1 A230"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ B180 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 B180",
+      "READ P165 R1",
+      "READ A105 R2",
+      "ADD R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 1119 R4",
+      "READ A145 R2",
+      "READ B100 R1",
+      "DIV R2 R1",
+      "WRITE R2 A145"
+   ],
+   [
+      "READ C125 R2",
+      "READ B175 R1",
+      "SUB R2 R1",
+      "WRITE R2 C125"
+   ],
+   [
+      "READ B240 R1",
+      "READ A180 R2",
+      "SUB R1 R2",
+      "WRITE R1 B240",
+      "READ P180 R1",
+      "READ B210 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 1126 R4",
+      "READ P200 R1",
+      "READ A185 R2",
+      "SUB R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1127 R4"
+   ],
+   [
+      "READ A195 R2",
+      "READ B150 R1",
+      "DIV R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ B250 R1",
+      "READ C140 R2",
+      "ADD R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ P230 R1",
+      "READ C235 R2",
+      "DIV R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 1134 R4",
+      "READ A120 R1",
+      "READ C110 R2",
+      "ADD R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "READ P165 R2",
+      "READ B220 R1",
+      "SUB R2 R1",
+      "WRITE R2 P165",
+      "LOAD 3 R3",
+      "LOAD 1136 R4",
+      "READ C210 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 C210",
+      "READ A155 R2",
+      "READ C170 R1",
+      "DIV R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ B175 R1",
+      "READ C180 R2",
+      "DIV R1 R2",
+      "WRITE R1 B175",
+      "READ P250 R2",
+      "READ A135 R1",
+      "ADD R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 1139 R4"
+   ],
+   [
+      "READ C250 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ C175 R1",
+      "READ B225 R2",
+      "SUB R1 R2",
+      "WRITE R1 C175",
+      "READ A160 R1",
+      "READ C190 R2",
+      "MUL R1 R2",
+      "WRITE R1 A160",
+      "READ P140 R1",
+      "READ A130 R2",
+      "MUL R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1145 R4"
+   ],
+   [
+      "READ A130 R2",
+      "READ B205 R1",
+      "ADD R2 R1",
+      "WRITE R2 A130",
+      "READ C170 R2",
+      "READ B225 R1",
+      "ADD R2 R1",
+      "WRITE R2 C170"
+   ],
+   [
+      "READ C220 R2",
+      "READ A160 R1",
+      "ADD R2 R1",
+      "WRITE R2 C220",
+      "READ B135 R1",
+      "READ C110 R2",
+      "DIV R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ A155 R1",
+      "READ C190 R2",
+      "DIV R1 R2",
+      "WRITE R1 A155",
+      "READ B170 R2",
+      "READ C150 R1",
+      "MUL R2 R1",
+      "WRITE R2 B170"
+   ],
+   [
+      "READ A120 R2",
+      "READ B145 R1",
+      "SUB R2 R1",
+      "WRITE R2 A120"
+   ],
+   [
+      "READ B240 R2",
+      "READ C215 R1",
+      "SUB R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ P180 R2",
+      "READ A185 R1",
+      "MUL R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 1156 R4",
+      "READ P160 R1",
+      "READ C240 R2",
+      "ADD R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 1157 R4"
+   ],
+   [
+      "READ A135 R1",
+      "READ C120 R2",
+      "ADD R1 R2",
+      "WRITE R1 A135"
+   ],
+   [
+      "READ B135 R2",
+      "READ C170 R1",
+      "ADD R2 R1",
+      "WRITE R2 B135"
+   ],
+   [
+      "READ C180 R1",
+      "READ B125 R2",
+      "DIV R1 R2",
+      "WRITE R1 C180",
+      "READ P155 R2",
+      "READ C135 R1",
+      "DIV R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 1162 R4",
+      "READ B150 R2",
+      "READ C220 R1",
+      "MUL R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ C150 R1",
+      "READ A110 R2",
+      "SUB R1 R2",
+      "WRITE R1 C150",
+      "READ A100 R2",
+      "READ C110 R1",
+      "MUL R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ P240 R1",
+      "READ B170 R2",
+      "MUL R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 1168 R4",
+      "READ P135 R1",
+      "READ C110 R2",
+      "MUL R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 1169 R4"
+   ],
+   [
+      "READ A135 R2",
+      "READ C140 R1",
+      "MUL R2 R1",
+      "WRITE R2 A135"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ C225 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 C225",
+      "READ C190 R2",
+      "READ A130 R1",
+      "SUB R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A115 R2",
+      "READ B195 R1",
+      "ADD R2 R1",
+      "WRITE R2 A115",
+      "READ P225 R2",
+      "READ B160 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1179 R4",
+      "READ P120 R2",
+      "READ B100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1180 R4"
+   ],
+   [
+      "READ C155 R1",
+      "READ A140 R2",
+      "ADD R1 R2",
+      "WRITE R1 C155"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ P185 R2",
+      "READ A200 R1",
+      "ADD R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1186 R4"
+   ],
+   [
+      "READ P210 R2",
+      "READ B205 R1",
+      "DIV R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 1188 R4",
+      "READ P150 R2",
+      "READ B100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 1189 R4",
+      "READ B170 R1",
+      "READ C150 R2",
+      "SUB R1 R2",
+      "WRITE R1 B170"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P250 R1",
+      "READ B205 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 1191 R4"
+   ],
+   [
+      "READ C125 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 C125"
+   ],
+   [
+      "READ A120 R2",
+      "READ C165 R1",
+      "ADD R2 R1",
+      "WRITE R2 A120"
+   ],
+   [
+      "READ P215 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1199 R4"
+   ],
+   [
+      "READ P250 R2",
+      "READ C160 R1",
+      "MUL R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 1201 R4"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ C165 R1",
+      "READ B195 R2",
+      "ADD R1 R2",
+      "WRITE R1 C165",
+      "READ C215 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 C215",
+      "READ A180 R1",
+      "READ B100 R2",
+      "MUL R1 R2",
+      "WRITE R1 A180"
+   ],
+   [
+      "READ A200 R2",
+      "READ C250 R1",
+      "DIV R2 R1",
+      "WRITE R2 A200"
+   ],
+   [
+      "READ P150 R1",
+      "READ B225 R2",
+      "ADD R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1206 R4"
+   ],
+   [
+      "READ P200 R2",
+      "READ C100 R1",
+      "DIV R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 1207 R4"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A245 R1",
+      "READ C170 R2",
+      "DIV R1 R2",
+      "WRITE R1 A245"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ B235 R1",
+      "READ A225 R2",
+      "ADD R1 R2",
+      "WRITE R1 B235"
+   ],
+   [
+      "READ P105 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 1210 R4"
+   ],
+   [
+      "READ C200 R1",
+      "READ A220 R2",
+      "MUL R1 R2",
+      "WRITE R1 C200",
+      "READ B105 R1",
+      "READ C145 R2",
+      "ADD R1 R2",
+      "WRITE R1 B105",
+      "READ P160 R2",
+      "READ B150 R1",
+      "MUL R2 R1",
+      "WRITE R2 P160",
+      "LOAD 3 R3",
+      "LOAD 1212 R4"
+   ],
+   [
+      "READ C175 R1",
+      "READ A140 R2",
+      "ADD R1 R2",
+      "WRITE R1 C175",
+      "READ B155 R1",
+      "READ C160 R2",
+      "SUB R1 R2",
+      "WRITE R1 B155",
+      "READ C185 R2",
+      "READ A100 R1",
+      "MUL R2 R1",
+      "WRITE R2 C185"
+   ],
+   [
+      "READ A205 R2",
+      "READ B250 R1",
+      "MUL R2 R1",
+      "WRITE R2 A205",
+      "READ C180 R2",
+      "READ B110 R1",
+      "MUL R2 R1",
+      "WRITE R2 C180",
+      "READ C205 R2",
+      "READ B180 R1",
+      "ADD R2 R1",
+      "WRITE R2 C205"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ C210 R1",
+      "READ B245 R2",
+      "SUB R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "READ P185 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1222 R4"
+   ],
+   [
+      "READ B130 R1",
+      "READ C105 R2",
+      "MUL R1 R2",
+      "WRITE R1 B130",
+      "READ C240 R1",
+      "READ B250 R2",
+      "SUB R1 R2",
+      "WRITE R1 C240",
+      "READ P140 R1",
+      "READ B195 R2",
+      "ADD R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1227 R4"
+   ],
+   [
+      "READ P240 R1",
+      "READ A135 R2",
+      "MUL R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 1229 R4"
+   ],
+   [
+      "READ C160 R2",
+      "READ A190 R1",
+      "DIV R2 R1",
+      "WRITE R2 C160",
+      "READ B165 R1",
+      "READ A225 R2",
+      "MUL R1 R2",
+      "WRITE R1 B165",
+      "READ B195 R2",
+      "READ A140 R1",
+      "DIV R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ P200 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1232 R4"
+   ],
+   [
+      "READ A135 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A135",
+      "READ A235 R1",
+      "READ B190 R2",
+      "DIV R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ B215 R2",
+      "READ A160 R1",
+      "ADD R2 R1",
+      "WRITE R2 B215"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A235 R2",
+      "READ C160 R1",
+      "DIV R2 R1",
+      "WRITE R2 A235",
+      "READ B120 R2",
+      "READ A105 R1",
+      "DIV R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "READ C230 R2",
+      "READ A205 R1",
+      "MUL R2 R1",
+      "WRITE R2 C230",
+      "READ B120 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 B120",
+      "READ P185 R2",
+      "READ C215 R1",
+      "ADD R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1238 R4"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ C115 R1",
+      "READ A100 R2",
+      "MUL R1 R2",
+      "WRITE R1 C115"
+   ],
+   [
+      "READ P250 R2",
+      "READ B140 R1",
+      "MUL R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 1246 R4",
+      "READ A205 R2",
+      "READ C210 R1",
+      "SUB R2 R1",
+      "WRITE R2 A205"
+   ],
+   [
+      "READ C105 R2",
+      "READ B235 R1",
+      "DIV R2 R1",
+      "WRITE R2 C105"
+   ],
+   [
+      "READ C130 R1",
+      "READ A205 R2",
+      "ADD R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ A240 R1",
+      "READ B210 R2",
+      "ADD R1 R2",
+      "WRITE R1 A240",
+      "READ B155 R2",
+      "READ A145 R1",
+      "SUB R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ C140 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 C140",
+      "READ P120 R2",
+      "READ A125 R1",
+      "SUB R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1254 R4"
+   ],
+   [
+      "READ C235 R1",
+      "READ A230 R2",
+      "DIV R1 R2",
+      "WRITE R1 C235"
+   ],
+   [
+      "READ A170 R2",
+      "READ B145 R1",
+      "DIV R2 R1",
+      "WRITE R2 A170",
+      "READ B160 R2",
+      "READ C225 R1",
+      "SUB R2 R1",
+      "WRITE R2 B160"
+   ],
+   [
+      "READ B225 R2",
+      "READ C175 R1",
+      "DIV R2 R1",
+      "WRITE R2 B225",
+      "READ P150 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1262 R4",
+      "READ P200 R1",
+      "READ A115 R2",
+      "DIV R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1263 R4"
+   ],
+   [
+      "READ B105 R1",
+      "READ A185 R2",
+      "MUL R1 R2",
+      "WRITE R1 B105"
+   ],
+   [
+      "READ A120 R1",
+      "READ C200 R2",
+      "DIV R1 R2",
+      "WRITE R1 A120",
+      "READ P250 R2",
+      "READ C140 R1",
+      "SUB R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 1265 R4"
+   ],
+   [
+      "READ B180 R1",
+      "READ C115 R2",
+      "SUB R1 R2",
+      "WRITE R1 B180",
+      "READ A220 R2",
+      "READ B240 R1",
+      "MUL R2 R1",
+      "WRITE R2 A220",
+      "READ A220 R2",
+      "READ B140 R1",
+      "DIV R2 R1",
+      "WRITE R2 A220"
+   ],
+   [
+      "READ B215 R1",
+      "READ C250 R2",
+      "DIV R1 R2",
+      "WRITE R1 B215",
+      "READ B200 R2",
+      "READ A125 R1",
+      "MUL R2 R1",
+      "WRITE R2 B200",
+      "READ A230 R2",
+      "READ B175 R1",
+      "MUL R2 R1",
+      "WRITE R2 A230"
+   ],
+   [
+      "READ P215 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1272 R4",
+      "READ A110 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A110",
+      "READ C155 R1",
+      "READ A115 R2",
+      "MUL R1 R2",
+      "WRITE R1 C155"
+   ],
+   [
+      "READ B120 R2",
+      "READ C155 R1",
+      "ADD R2 R1",
+      "WRITE R2 B120",
+      "READ P115 R1",
+      "READ C195 R2",
+      "SUB R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 1273 R4"
+   ],
+   [
+      "READ B190 R1",
+      "READ C155 R2",
+      "MUL R1 R2",
+      "WRITE R1 B190"
+   ],
+   [
+      "READ P155 R2",
+      "READ B240 R1",
+      "DIV R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 1278 R4",
+      "READ P140 R1",
+      "READ B165 R2",
+      "MUL R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1279 R4"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ P140 R1",
+      "READ C125 R2",
+      "ADD R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1280 R4"
+   ],
+   [
+      "READ P190 R2",
+      "READ B105 R1",
+      "SUB R2 R1",
+      "WRITE R2 P190",
+      "LOAD 3 R3",
+      "LOAD 1282 R4"
+   ],
+   [
+      "READ P220 R1",
+      "READ C120 R2",
+      "ADD R1 R2",
+      "WRITE R1 P220",
+      "LOAD 3 R3",
+      "LOAD 1286 R4"
+   ],
+   [
+      "READ P145 R2",
+      "READ A200 R1",
+      "SUB R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 1288 R4"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ A195 R2",
+      "READ B190 R1",
+      "DIV R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "READ P140 R2",
+      "READ B215 R1",
+      "DIV R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1294 R4"
+   ],
+   [
+      "READ P160 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 1297 R4"
+   ],
+   [
+      "READ B225 R2",
+      "READ A170 R1",
+      "MUL R2 R1",
+      "WRITE R2 B225",
+      "READ P200 R1",
+      "READ B245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1300 R4",
+      "READ C200 R1",
+      "READ A205 R2",
+      "ADD R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "READ B155 R2",
+      "READ A200 R1",
+      "SUB R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ B150 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 B150"
+   ],
+   [
+      "READ A145 R1",
+      "READ B110 R2",
+      "DIV R1 R2",
+      "WRITE R1 A145",
+      "READ B200 R1",
+      "READ A155 R2",
+      "ADD R1 R2",
+      "WRITE R1 B200",
+      "READ P130 R2",
+      "READ B230 R1",
+      "SUB R2 R1",
+      "WRITE R2 P130",
+      "LOAD 3 R3",
+      "LOAD 1304 R4"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ B175 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 B175"
+   ],
+   [
+      "READ B160 R1",
+      "READ C125 R2",
+      "DIV R1 R2",
+      "WRITE R1 B160",
+      "READ P135 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 1310 R4"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ P240 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P240",
+      "LOAD 3 R3",
+      "LOAD 1311 R4",
+      "READ P135 R1",
+      "READ A160 R2",
+      "SUB R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 1312 R4"
+   ],
+   [
+      "READ A100 R2",
+      "READ C125 R1",
+      "SUB R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "READ C185 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 C185",
+      "READ P230 R2",
+      "READ C150 R1",
+      "ADD R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 1315 R4",
+      "READ P175 R1",
+      "READ B195 R2",
+      "DIV R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 1316 R4"
+   ],
+   [
+      "READ C230 R2",
+      "READ B220 R1",
+      "ADD R2 R1",
+      "WRITE R2 C230"
+   ],
+   [
+      "READ P205 R1",
+      "READ A145 R2",
+      "ADD R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 1319 R4",
+      "READ P185 R1",
+      "READ B150 R2",
+      "DIV R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1320 R4",
+      "READ A170 R1",
+      "READ C160 R2",
+      "SUB R1 R2",
+      "WRITE R1 A170"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ B140 R1",
+      "READ A160 R2",
+      "SUB R1 R2",
+      "WRITE R1 B140",
+      "READ A180 R1",
+      "READ C235 R2",
+      "ADD R1 R2",
+      "WRITE R1 A180"
+   ],
+   [
+      "READ B110 R1",
+      "READ A200 R2",
+      "MUL R1 R2",
+      "WRITE R1 B110",
+      "READ C210 R2",
+      "READ A200 R1",
+      "DIV R2 R1",
+      "WRITE R2 C210",
+      "READ P200 R1",
+      "READ A225 R2",
+      "SUB R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 1323 R4"
+   ],
+   [
+      "READ P225 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1324 R4"
+   ],
+   [
+      "READ P110 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 1330 R4"
+   ],
+   [
+      "READ P215 R2",
+      "READ C105 R1",
+      "DIV R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 1334 R4"
+   ],
+   [
+      "READ P190 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 1337 R4"
+   ],
+   [
+      "READ P215 R1",
+      "READ A150 R2",
+      "DIV R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1342 R4",
+      "READ B230 R1",
+      "READ A190 R2",
+      "ADD R1 R2",
+      "WRITE R1 B230",
+      "READ A160 R2",
+      "READ C195 R1",
+      "MUL R2 R1",
+      "WRITE R2 A160"
+   ],
+   [
+      "READ B105 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 B105"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ B235 R1",
+      "READ A125 R2",
+      "SUB R1 R2",
+      "WRITE R1 B235",
+      "READ A235 R1",
+      "READ B110 R2",
+      "SUB R1 R2",
+      "WRITE R1 A235",
+      "READ C175 R1",
+      "READ A100 R2",
+      "ADD R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ B145 R2",
+      "READ C140 R1",
+      "SUB R2 R1",
+      "WRITE R2 B145"
+   ],
+   [
+      "READ B205 R1",
+      "READ C140 R2",
+      "ADD R1 R2",
+      "WRITE R1 B205",
+      "READ B200 R2",
+      "READ A120 R1",
+      "DIV R2 R1",
+      "WRITE R2 B200",
+      "READ B165 R1",
+      "READ C160 R2",
+      "ADD R1 R2",
+      "WRITE R1 B165"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P125 R2",
+      "READ B205 R1",
+      "MUL R2 R1",
+      "WRITE R2 P125",
+      "LOAD 3 R3",
+      "LOAD 1357 R4"
+   ],
+   [
+      "READ P150 R1",
+      "READ A225 R2",
+      "MUL R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1358 R4",
+      "READ B115 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "READ P180 R2",
+      "READ C125 R1",
+      "MUL R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 1360 R4"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ P215 R1",
+      "READ B240 R2",
+      "ADD R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1362 R4"
+   ],
+   [
+      "READ C215 R1",
+      "READ A105 R2",
+      "DIV R1 R2",
+      "WRITE R1 C215",
+      "READ B220 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 B220"
+   ],
+   [
+      "READ B175 R2",
+      "READ A155 R1",
+      "ADD R2 R1",
+      "WRITE R2 B175"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ P130 R1",
+      "READ A240 R2",
+      "DIV R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 1372 R4"
+   ],
+   [
+      "READ B145 R2",
+      "READ A120 R1",
+      "SUB R2 R1",
+      "WRITE R2 B145"
+   ],
+   [
+      "READ A165 R2",
+      "READ B140 R1",
+      "MUL R2 R1",
+      "WRITE R2 A165"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ C160 R1",
+      "READ A115 R2",
+      "MUL R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "READ B170 R2",
+      "READ A200 R1",
+      "SUB R2 R1",
+      "WRITE R2 B170",
+      "READ B100 R1",
+      "READ A135 R2",
+      "SUB R1 R2",
+      "WRITE R1 B100",
+      "READ A145 R2",
+      "READ B250 R1",
+      "DIV R2 R1",
+      "WRITE R2 A145"
+   ],
+   [
+      "READ B120 R2",
+      "READ A175 R1",
+      "DIV R2 R1",
+      "WRITE R2 B120",
+      "READ C145 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 C145",
+      "READ P250 R1",
+      "READ A210 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 1387 R4"
+   ],
+   [
+      "READ C190 R1",
+      "READ B220 R2",
+      "SUB R1 R2",
+      "WRITE R1 C190",
+      "READ B210 R2",
+      "READ A110 R1",
+      "SUB R2 R1",
+      "WRITE R2 B210",
+      "READ P205 R1",
+      "READ C225 R2",
+      "ADD R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 1390 R4"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ B105 R1",
+      "READ C155 R2",
+      "SUB R1 R2",
+      "WRITE R1 B105",
+      "READ B190 R2",
+      "READ C235 R1",
+      "SUB R2 R1",
+      "WRITE R2 B190",
+      "READ P185 R2",
+      "READ A210 R1",
+      "DIV R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1392 R4"
+   ],
+   [
+      "READ B215 R2",
+      "READ A135 R1",
+      "DIV R2 R1",
+      "WRITE R2 B215"
+   ],
+   [
+      "READ P250 R1",
+      "READ C230 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 1397 R4"
+   ],
+   [
+      "READ B205 R1",
+      "READ C215 R2",
+      "ADD R1 R2",
+      "WRITE R1 B205",
+      "READ A245 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 A245",
+      "READ C185 R2",
+      "READ B105 R1",
+      "SUB R2 R1",
+      "WRITE R2 C185"
+   ],
+   [
+      "READ B200 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 B200"
+   ],
+   [
+      "READ P215 R1",
+      "READ A200 R2",
+      "DIV R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1403 R4",
+      "READ A135 R2",
+      "READ C200 R1",
+      "MUL R2 R1",
+      "WRITE R2 A135"
+   ],
+   [
+      "READ A210 R2",
+      "READ C230 R1",
+      "ADD R2 R1",
+      "WRITE R2 A210",
+      "READ A150 R1",
+      "READ C240 R2",
+      "SUB R1 R2",
+      "WRITE R1 A150",
+      "READ B230 R1",
+      "READ C125 R2",
+      "ADD R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ C225 R1",
+      "READ B215 R2",
+      "MUL R1 R2",
+      "WRITE R1 C225",
+      "READ B110 R2",
+      "READ A135 R1",
+      "ADD R2 R1",
+      "WRITE R2 B110",
+      "READ C170 R1",
+      "READ A180 R2",
+      "DIV R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ C150 R2",
+      "READ B200 R1",
+      "MUL R2 R1",
+      "WRITE R2 C150"
+   ],
+   [
+      "READ B125 R1",
+      "READ C235 R2",
+      "SUB R1 R2",
+      "WRITE R1 B125"
+   ],
+   [
+      "READ P145 R1",
+      "READ B135 R2",
+      "DIV R1 R2",
+      "WRITE R1 P145",
+      "LOAD 3 R3",
+      "LOAD 1412 R4"
+   ],
+   [
+      "READ B105 R1",
+      "READ C180 R2",
+      "MUL R1 R2",
+      "WRITE R1 B105",
+      "READ P200 R2",
+      "READ B105 R1",
+      "MUL R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 1415 R4"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ P140 R1",
+      "READ A165 R2",
+      "SUB R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1416 R4",
+      "READ B235 R2",
+      "READ A185 R1",
+      "DIV R2 R1",
+      "WRITE R2 B235"
+   ],
+   [
+      "READ C100 R1",
+      "READ A195 R2",
+      "SUB R1 R2",
+      "WRITE R1 C100",
+      "READ A160 R1",
+      "READ C140 R2",
+      "MUL R1 R2",
+      "WRITE R1 A160"
+   ],
+   [
+      "READ A245 R2",
+      "READ B230 R1",
+      "ADD R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "READ P155 R2",
+      "READ A205 R1",
+      "ADD R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 1421 R4"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ C195 R2",
+      "READ A225 R1",
+      "ADD R2 R1",
+      "WRITE R2 C195",
+      "READ B235 R1",
+      "READ A165 R2",
+      "SUB R1 R2",
+      "WRITE R1 B235",
+      "READ C120 R1",
+      "READ B175 R2",
+      "ADD R1 R2",
+      "WRITE R1 C120"
+   ],
+   [
+      "READ A200 R1",
+      "READ B215 R2",
+      "ADD R1 R2",
+      "WRITE R1 A200"
+   ],
+   [
+      "READ C165 R1",
+      "READ A180 R2",
+      "MUL R1 R2",
+      "WRITE R1 C165"
+   ],
+   [
+      "READ C110 R1",
+      "READ A120 R2",
+      "DIV R1 R2",
+      "WRITE R1 C110",
+      "READ P170 R1",
+      "READ B135 R2",
+      "SUB R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 1430 R4",
+      "READ C240 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 C240"
+   ],
+   [
+      "READ B150 R2",
+      "READ C175 R1",
+      "DIV R2 R1",
+      "WRITE R2 B150",
+      "READ C220 R2",
+      "READ A140 R1",
+      "MUL R2 R1",
+      "WRITE R2 C220"
+   ],
+   [
+      "READ P185 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1435 R4"
+   ],
+   [
+      "READ B225 R1",
+      "READ C200 R2",
+      "SUB R1 R2",
+      "WRITE R1 B225"
+   ],
+   [
+      "READ C140 R1",
+      "READ B215 R2",
+      "MUL R1 R2",
+      "WRITE R1 C140",
+      "READ P130 R2",
+      "READ B110 R1",
+      "SUB R2 R1",
+      "WRITE R2 P130",
+      "LOAD 3 R3",
+      "LOAD 1440 R4",
+      "READ B240 R1",
+      "READ A155 R2",
+      "SUB R1 R2",
+      "WRITE R1 B240"
+   ],
+   [
+      "READ B215 R1",
+      "READ A225 R2",
+      "DIV R1 R2",
+      "WRITE R1 B215"
+   ],
+   [
+      "READ A125 R1",
+      "READ C120 R2",
+      "ADD R1 R2",
+      "WRITE R1 A125",
+      "READ A155 R2",
+      "READ B105 R1",
+      "ADD R2 R1",
+      "WRITE R2 A155",
+      "READ P140 R2",
+      "READ C100 R1",
+      "SUB R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1446 R4"
+   ],
+   [
+      "READ C185 R2",
+      "READ B180 R1",
+      "ADD R2 R1",
+      "WRITE R2 C185",
+      "READ P215 R2",
+      "READ A240 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 1450 R4",
+      "READ A165 R2",
+      "READ C100 R1",
+      "MUL R2 R1",
+      "WRITE R2 A165"
+   ],
+   [
+      "READ B100 R2",
+      "READ A120 R1",
+      "MUL R2 R1",
+      "WRITE R2 B100",
+      "READ B100 R2",
+      "READ C155 R1",
+      "DIV R2 R1",
+      "WRITE R2 B100"
+   ],
+   [
+      "READ A150 R1",
+      "READ C175 R2",
+      "DIV R1 R2",
+      "WRITE R1 A150",
+      "READ P230 R2",
+      "READ C235 R1",
+      "DIV R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 1459 R4",
+      "READ A110 R1",
+      "READ B140 R2",
+      "DIV R1 R2",
+      "WRITE R1 A110"
+   ],
+   [
+      "READ A250 R1",
+      "READ B190 R2",
+      "DIV R1 R2",
+      "WRITE R1 A250"
+   ],
+   [
+      "READ P175 R1",
+      "READ B200 R2",
+      "DIV R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 1462 R4"
+   ],
+   [
+      "READ C140 R2",
+      "READ B200 R1",
+      "DIV R2 R1",
+      "WRITE R2 C140",
+      "READ A140 R1",
+      "READ B240 R2",
+      "ADD R1 R2",
+      "WRITE R1 A140"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ P115 R1",
+      "READ A125 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 1464 R4",
+      "READ C240 R2",
+      "READ A160 R1",
+      "MUL R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ P120 R2",
+      "READ A235 R1",
+      "MUL R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1467 R4"
+   ],
+   [
+      "READ C215 R2",
+      "READ B100 R1",
+      "DIV R2 R1",
+      "WRITE R2 C215"
+   ],
+   [
+      "READ P115 R1",
+      "READ A240 R2",
+      "ADD R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 1473 R4",
+      "READ C175 R2",
+      "READ A125 R1",
+      "ADD R2 R1",
+      "WRITE R2 C175"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ C130 R2",
+      "READ B110 R1",
+      "SUB R2 R1",
+      "WRITE R2 C130",
+      "READ P185 R2",
+      "READ A155 R1",
+      "ADD R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1475 R4"
+   ],
+   [
+      "READ C120 R1",
+      "READ B215 R2",
+      "MUL R1 R2",
+      "WRITE R1 C120",
+      "READ C145 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 C145"
+   ],
+   [
+      "READ B180 R2",
+      "READ A200 R1",
+      "MUL R2 R1",
+      "WRITE R2 B180"
+   ],
+   [
+      "READ A155 R1",
+      "READ B175 R2",
+      "ADD R1 R2",
+      "WRITE R1 A155"
+   ],
+   [
+      "READ C165 R1",
+      "READ B250 R2",
+      "SUB R1 R2",
+      "WRITE R1 C165",
+      "READ A135 R2",
+      "READ B130 R1",
+      "SUB R2 R1",
+      "WRITE R2 A135",
+      "READ P120 R1",
+      "READ A245 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1484 R4"
+   ],
+   [
+      "READ A135 R1",
+      "READ C235 R2",
+      "MUL R1 R2",
+      "WRITE R1 A135",
+      "READ A180 R2",
+      "READ B135 R1",
+      "DIV R2 R1",
+      "WRITE R2 A180",
+      "READ C250 R2",
+      "READ B140 R1",
+      "DIV R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ B220 R2",
+      "READ C155 R1",
+      "DIV R2 R1",
+      "WRITE R2 B220",
+      "READ B230 R2",
+      "READ C175 R1",
+      "ADD R2 R1",
+      "WRITE R2 B230",
+      "READ P190 R2",
+      "READ A225 R1",
+      "ADD R2 R1",
+      "WRITE R2 P190",
+      "LOAD 3 R3",
+      "LOAD 1487 R4"
+   ],
+   [
+      "READ A180 R2",
+      "READ B130 R1",
+      "DIV R2 R1",
+      "WRITE R2 A180",
+      "READ C240 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 C240",
+      "READ P110 R2",
+      "READ C180 R1",
+      "MUL R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1490 R4"
+   ],
+   [
+      "READ B145 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 B145"
+   ],
+   [
+      "READ A215 R1",
+      "READ C220 R2",
+      "ADD R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ P155 R1",
+      "READ A105 R2",
+      "MUL R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 1497 R4"
+   ],
+   [
+      "READ C150 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 C150",
+      "READ A150 R2",
+      "READ C235 R1",
+      "DIV R2 R1",
+      "WRITE R2 A150"
+   ],
+   [
+      "READ C130 R1",
+      "READ B160 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ P140 R2",
+      "READ A145 R1",
+      "MUL R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1503 R4",
+      "READ C120 R2",
+      "READ B145 R1",
+      "MUL R2 R1",
+      "WRITE R2 C120",
+      "READ B100 R2",
+      "READ C160 R1",
+      "SUB R2 R1",
+      "WRITE R2 B100"
+   ],
+   [
+      "READ A205 R1",
+      "READ C250 R2",
+      "SUB R1 R2",
+      "WRITE R1 A205",
+      "READ P110 R1",
+      "READ B180 R2",
+      "SUB R1 R2",
+      "WRITE R1 P110",
+      "LOAD 3 R3",
+      "LOAD 1504 R4",
+      "READ P140 R2",
+      "READ C235 R1",
+      "DIV R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1505 R4"
+   ],
+   [
+      "READ C115 R1",
+      "READ A130 R2",
+      "DIV R1 R2",
+      "WRITE R1 C115"
+   ],
+   [
+      "READ P235 R2",
+      "READ C220 R1",
+      "DIV R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 1510 R4"
+   ],
+   [
+      "READ A250 R2",
+      "READ B165 R1",
+      "MUL R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ B155 R1",
+      "READ A150 R2",
+      "ADD R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "READ A180 R2",
+      "READ C200 R1",
+      "DIV R2 R1",
+      "WRITE R2 A180"
+   ],
+   [
+      "READ P195 R1",
+      "READ B185 R2",
+      "SUB R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 1520 R4",
+      "READ P225 R1",
+      "READ C250 R2",
+      "DIV R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 1521 R4",
+      "READ A150 R1",
+      "READ C235 R2",
+      "DIV R1 R2",
+      "WRITE R1 A150"
+   ],
+   [
+      "READ P215 R1",
+      "READ C185 R2",
+      "ADD R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 1524 R4",
+      "READ C175 R1",
+      "READ B245 R2",
+      "DIV R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ A115 R2",
+      "READ B200 R1",
+      "DIV R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ P100 R1",
+      "READ A235 R2",
+      "DIV R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 1529 R4",
+      "READ P130 R2",
+      "READ C155 R1",
+      "MUL R2 R1",
+      "WRITE R2 P130",
+      "LOAD 3 R3",
+      "LOAD 1530 R4"
+   ],
+   [
+      "READ C215 R1",
+      "READ B105 R2",
+      "ADD R1 R2",
+      "WRITE R1 C215",
+      "READ A235 R1",
+      "READ B170 R2",
+      "DIV R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ A195 R2",
+      "READ B105 R1",
+      "ADD R2 R1",
+      "WRITE R2 A195"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P245 R2",
+      "READ A185 R1",
+      "MUL R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 1542 R4",
+      "READ A175 R2",
+      "READ B110 R1",
+      "SUB R2 R1",
+      "WRITE R2 A175"
+   ],
+   [
+      "READ P205 R1",
+      "READ B160 R2",
+      "MUL R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 1545 R4",
+      "READ P145 R2",
+      "READ C175 R1",
+      "ADD R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 1546 R4"
+   ],
+   [
+      "READ P125 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 1549 R4",
+      "READ C125 R1",
+      "READ A235 R2",
+      "SUB R1 R2",
+      "WRITE R1 C125"
+   ],
+   [
+      "READ P150 R1",
+      "READ B125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1552 R4"
+   ],
+   [
+      "READ C205 R1",
+      "READ A245 R2",
+      "ADD R1 R2",
+      "WRITE R1 C205",
+      "READ P175 R2",
+      "READ B225 R1",
+      "SUB R2 R1",
+      "WRITE R2 P175",
+      "LOAD 3 R3",
+      "LOAD 1556 R4"
+   ],
+   [
+      "READ P210 R1",
+      "READ C220 R2",
+      "DIV R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 1558 R4",
+      "READ P200 R2",
+      "READ C215 R1",
+      "MUL R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 1559 R4"
+   ],
+   [
+      "READ B210 R2",
+      "READ C230 R1",
+      "ADD R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C115 R1",
+      "READ A215 R2",
+      "DIV R1 R2",
+      "WRITE R1 C115"
+   ],
+   [
+      "READ P125 R1",
+      "READ B140 R2",
+      "MUL R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 1571 R4",
+      "READ P150 R2",
+      "READ A100 R1",
+      "MUL R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 1572 R4",
+      "READ B200 R1",
+      "READ A145 R2",
+      "DIV R1 R2",
+      "WRITE R1 B200"
+   ],
+   [
+      "READ P110 R2",
+      "READ C185 R1",
+      "DIV R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1577 R4",
+      "READ P160 R1",
+      "READ C205 R2",
+      "MUL R1 R2",
+      "WRITE R1 P160",
+      "LOAD 3 R3",
+      "LOAD 1578 R4"
+   ],
+   [
+      "READ A240 R1",
+      "READ C110 R2",
+      "SUB R1 R2",
+      "WRITE R1 A240",
+      "READ A155 R2",
+      "READ C170 R1",
+      "ADD R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ A100 R2",
+      "READ C110 R1",
+      "SUB R2 R1",
+      "WRITE R2 A100"
+   ],
+   [
+      "READ C140 R2",
+      "READ A190 R1",
+      "MUL R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "READ C195 R1",
+      "READ B125 R2",
+      "ADD R1 R2",
+      "WRITE R1 C195",
+      "READ B125 R1",
+      "READ C210 R2",
+      "DIV R1 R2",
+      "WRITE R1 B125",
+      "READ A125 R1",
+      "READ C245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A125"
+   ],
+   [
+      "READ A105 R1",
+      "READ B155 R2",
+      "DIV R1 R2",
+      "WRITE R1 A105"
+   ],
+   [
+      "READ A100 R2",
+      "READ C140 R1",
+      "SUB R2 R1",
+      "WRITE R2 A100",
+      "READ C140 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 C140",
+      "READ P120 R1",
+      "READ A220 R2",
+      "SUB R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1589 R4"
+   ],
+   [
+      "READ A185 R1",
+      "READ C220 R2",
+      "SUB R1 R2",
+      "WRITE R1 A185",
+      "READ P195 R2",
+      "READ A185 R1",
+      "MUL R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 1593 R4"
+   ],
+   [
+      "READ P180 R1",
+      "READ A235 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 1595 R4",
+      "READ C195 R1",
+      "READ B210 R2",
+      "MUL R1 R2",
+      "WRITE R1 C195"
+   ],
+   [
+      "READ C170 R2",
+      "READ A165 R1",
+      "SUB R2 R1",
+      "WRITE R2 C170"
+   ],
+   [
+      "READ P240 R1",
+      "READ B185 R2",
+      "DIV R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 1607 R4"
+   ],
+   [
+      "READ P145 R2",
+      "READ A195 R1",
+      "ADD R2 R1",
+      "WRITE R2 P145",
+      "LOAD 3 R3",
+      "LOAD 1609 R4",
+      "READ C215 R1",
+      "READ B135 R2",
+      "ADD R1 R2",
+      "WRITE R1 C215"
+   ],
+   [
+      "READ C170 R2",
+      "READ A210 R1",
+      "DIV R2 R1",
+      "WRITE R2 C170",
+      "READ A120 R2",
+      "READ B230 R1",
+      "SUB R2 R1",
+      "WRITE R2 A120",
+      "READ C185 R2",
+      "READ B170 R1",
+      "MUL R2 R1",
+      "WRITE R2 C185"
+   ],
+   [
+      "READ A220 R1",
+      "READ C195 R2",
+      "DIV R1 R2",
+      "WRITE R1 A220",
+      "READ P110 R2",
+      "READ B160 R1",
+      "ADD R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1612 R4",
+      "READ P165 R2",
+      "READ B150 R1",
+      "MUL R2 R1",
+      "WRITE R2 P165",
+      "LOAD 3 R3",
+      "LOAD 1613 R4"
+   ],
+   [
+      "READ B140 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A250 R1",
+      "READ C240 R2",
+      "MUL R1 R2",
+      "WRITE R1 A250",
+      "READ P175 R1",
+      "READ C230 R2",
+      "SUB R1 R2",
+      "WRITE R1 P175",
+      "LOAD 3 R3",
+      "LOAD 1616 R4"
+   ],
+   [
+      "READ A240 R1",
+      "READ B205 R2",
+      "SUB R1 R2",
+      "WRITE R1 A240",
+      "READ B135 R1",
+      "READ A110 R2",
+      "SUB R1 R2",
+      "WRITE R1 B135"
+   ],
+   [
+      "READ P150 R1",
+      "READ C250 R2",
+      "ADD R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1621 R4"
+   ],
+   [
+      "READ P150 R2",
+      "READ A100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 1624 R4"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ C180 R1",
+      "READ B130 R2",
+      "MUL R1 R2",
+      "WRITE R1 C180"
+   ],
+   [
+      "READ P210 R1",
+      "READ A110 R2",
+      "DIV R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 1630 R4"
+   ],
+   [
+      "READ P155 R1",
+      "READ B135 R2",
+      "ADD R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 1632 R4",
+      "READ P125 R2",
+      "READ C145 R1",
+      "DIV R2 R1",
+      "WRITE R2 P125",
+      "LOAD 3 R3",
+      "LOAD 1633 R4"
+   ],
+   [
+      "READ B180 R2",
+      "READ A130 R1",
+      "SUB R2 R1",
+      "WRITE R2 B180",
+      "READ P115 R2",
+      "READ A205 R1",
+      "DIV R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 1635 R4"
+   ],
+   [
+      "READ P120 R2",
+      "READ A185 R1",
+      "ADD R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1637 R4"
+   ],
+   [
+      "READ B140 R1",
+      "READ C160 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140",
+      "READ B185 R2",
+      "READ C230 R1",
+      "SUB R2 R1",
+      "WRITE R2 B185",
+      "READ A200 R1",
+      "READ B100 R2",
+      "DIV R1 R2",
+      "WRITE R1 A200"
+   ],
+   [
+      "READ C245 R1",
+      "READ B145 R2",
+      "DIV R1 R2",
+      "WRITE R1 C245",
+      "READ P245 R1",
+      "READ A140 R2",
+      "SUB R1 R2",
+      "WRITE R1 P245",
+      "LOAD 3 R3",
+      "LOAD 1642 R4",
+      "READ P190 R2",
+      "READ B170 R1",
+      "MUL R2 R1",
+      "WRITE R2 P190",
+      "LOAD 3 R3",
+      "LOAD 1643 R4"
+   ],
+   [
+      "READ C125 R1",
+      "READ A235 R2",
+      "MUL R1 R2",
+      "WRITE R1 C125"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ P215 R2",
+      "READ C200 R1",
+      "SUB R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 1647 R4",
+      "READ A145 R2",
+      "READ C215 R1",
+      "ADD R2 R1",
+      "WRITE R2 A145"
+   ],
+   [
+      "READ A205 R2",
+      "READ C210 R1",
+      "DIV R2 R1",
+      "WRITE R2 A205"
+   ],
+   [
+      "READ B155 R1",
+      "READ C160 R2",
+      "SUB R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ B210 R1",
+      "READ C135 R2",
+      "MUL R1 R2",
+      "WRITE R1 B210"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ B195 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 B195"
+   ],
+   [
+      "READ P140 R2",
+      "READ C175 R1",
+      "SUB R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1659 R4"
+   ],
+   [
+      "READ C230 R1",
+      "READ A110 R2",
+      "ADD R1 R2",
+      "WRITE R1 C230"
+   ],
+   [
+      "READ C175 R1",
+      "READ A190 R2",
+      "DIV R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ P140 R2",
+      "READ A175 R1",
+      "SUB R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1669 R4",
+      "READ P165 R1",
+      "READ B110 R2",
+      "SUB R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 1670 R4"
+   ],
+   [
+      "READ A150 R2",
+      "READ C135 R1",
+      "MUL R2 R1",
+      "WRITE R2 A150",
+      "READ B250 R1",
+      "READ A185 R2",
+      "MUL R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ B105 R1",
+      "READ C250 R2",
+      "DIV R1 R2",
+      "WRITE R1 B105"
+   ],
+   [
+      "READ C250 R2",
+      "READ B170 R1",
+      "MUL R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ C140 R2",
+      "READ A105 R1",
+      "MUL R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ B140 R2",
+      "READ A150 R1",
+      "ADD R2 R1",
+      "WRITE R2 B140",
+      "READ P140 R2",
+      "READ A155 R1",
+      "DIV R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1681 R4"
+   ],
+   [
+      "READ C170 R1",
+      "READ A100 R2",
+      "DIV R1 R2",
+      "WRITE R1 C170"
+   ],
+   [
+      "READ C175 R1",
+      "READ B240 R2",
+      "MUL R1 R2",
+      "WRITE R1 C175"
+   ],
+   [
+      "READ P225 R2",
+      "READ B150 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1690 R4"
+   ],
+   [
+      "READ P230 R1",
+      "READ B140 R2",
+      "SUB R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 1691 R4",
+      "READ B205 R1",
+      "READ C200 R2",
+      "ADD R1 R2",
+      "WRITE R1 B205",
+      "READ B130 R2",
+      "READ A100 R1",
+      "DIV R2 R1",
+      "WRITE R2 B130"
+   ],
+   [
+      "READ B175 R1",
+      "READ C210 R2",
+      "SUB R1 R2",
+      "WRITE R1 B175"
+   ],
+   [
+      "READ P225 R2",
+      "READ B240 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1698 R4"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ C230 R2",
+      "READ A160 R1",
+      "MUL R2 R1",
+      "WRITE R2 C230"
+   ],
+   [
+      "READ C180 R1",
+      "READ B170 R2",
+      "SUB R1 R2",
+      "WRITE R1 C180"
+   ],
+   [
+      "READ C140 R2",
+      "READ A110 R1",
+      "MUL R2 R1",
+      "WRITE R2 C140",
+      "READ P165 R2",
+      "READ B220 R1",
+      "DIV R2 R1",
+      "WRITE R2 P165",
+      "LOAD 3 R3",
+      "LOAD 1703 R4"
+   ],
+   [
+      "READ A115 R1",
+      "READ C140 R2",
+      "DIV R1 R2",
+      "WRITE R1 A115"
+   ],
+   [
+      "READ B100 R1",
+      "READ A130 R2",
+      "ADD R1 R2",
+      "WRITE R1 B100",
+      "READ B235 R1",
+      "READ C240 R2",
+      "DIV R1 R2",
+      "WRITE R1 B235",
+      "READ P160 R2",
+      "READ A215 R1",
+      "DIV R2 R1",
+      "WRITE R2 P160",
+      "LOAD 3 R3",
+      "LOAD 1705 R4"
+   ],
+   [
+      "READ C250 R2",
+      "READ B100 R1",
+      "DIV R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ A100 R2",
+      "READ C110 R1",
+      "ADD R2 R1",
+      "WRITE R2 A100",
+      "READ B155 R2",
+      "READ C165 R1",
+      "SUB R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ P115 R2",
+      "READ B230 R1",
+      "SUB R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 1713 R4"
+   ],
+   [
+      "READ C140 R2",
+      "READ B195 R1",
+      "ADD R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ P120 R2",
+      "READ A215 R1",
+      "MUL R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1715 R4"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ C135 R1",
+      "READ B210 R2",
+      "DIV R1 R2",
+      "WRITE R1 C135",
+      "READ B170 R1",
+      "READ C230 R2",
+      "DIV R1 R2",
+      "WRITE R1 B170"
+   ],
+   [
+      "READ A135 R1",
+      "READ C140 R2",
+      "SUB R1 R2",
+      "WRITE R1 A135",
+      "READ C105 R2",
+      "READ A160 R1",
+      "ADD R2 R1",
+      "WRITE R2 C105"
+   ],
+   [
+      "READ C205 R2",
+      "READ B240 R1",
+      "MUL R2 R1",
+      "WRITE R2 C205"
+   ],
+   [
+      "READ B200 R1",
+      "READ C225 R2",
+      "SUB R1 R2",
+      "WRITE R1 B200",
+      "READ C100 R1",
+      "READ A175 R2",
+      "MUL R1 R2",
+      "WRITE R1 C100",
+      "READ B230 R1",
+      "READ C125 R2",
+      "MUL R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ P180 R2",
+      "READ C235 R1",
+      "SUB R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 1722 R4"
+   ],
+   [
+      "READ P180 R2",
+      "READ C240 R1",
+      "DIV R2 R1",
+      "WRITE R2 P180",
+      "LOAD 3 R3",
+      "LOAD 1726 R4",
+      "READ P225 R1",
+      "READ C105 R2",
+      "ADD R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 1727 R4",
+      "READ P135 R1",
+      "READ A205 R2",
+      "ADD R1 R2",
+      "WRITE R1 P135",
+      "LOAD 3 R3",
+      "LOAD 1728 R4"
+   ],
+   [
+      "READ P205 R2",
+      "READ C220 R1",
+      "MUL R2 R1",
+      "WRITE R2 P205",
+      "LOAD 3 R3",
+      "LOAD 1733 R4",
+      "READ B155 R2",
+      "READ A115 R1",
+      "DIV R2 R1",
+      "WRITE R2 B155"
+   ],
+   [
+      "READ P230 R2",
+      "READ C175 R1",
+      "SUB R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 1735 R4"
+   ],
+   [
+      "READ P155 R1",
+      "READ B210 R2",
+      "ADD R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 1738 R4"
+   ],
+   [
+      "READ A225 R2",
+      "READ B185 R1",
+      "MUL R2 R1",
+      "WRITE R2 A225",
+      "READ A170 R2",
+      "READ C200 R1",
+      "MUL R2 R1",
+      "WRITE R2 A170"
+   ],
+   [
+      "READ A250 R2",
+      "READ C225 R1",
+      "DIV R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ B115 R2",
+      "READ C165 R1",
+      "SUB R2 R1",
+      "WRITE R2 B115"
+   ],
+   [
+      "READ B215 R2",
+      "READ A170 R1",
+      "MUL R2 R1",
+      "WRITE R2 B215",
+      "READ C230 R2",
+      "READ A170 R1",
+      "DIV R2 R1",
+      "WRITE R2 C230"
+   ],
+   [
+      "READ A250 R2",
+      "READ C180 R1",
+      "DIV R2 R1",
+      "WRITE R2 A250"
+   ],
+   [
+      "READ A185 R2",
+      "READ B200 R1",
+      "SUB R2 R1",
+      "WRITE R2 A185",
+      "READ B135 R2",
+      "READ A215 R1",
+      "ADD R2 R1",
+      "WRITE R2 B135",
+      "READ P195 R1",
+      "READ A105 R2",
+      "ADD R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 1749 R4"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P115 R2",
+      "READ B210 R1",
+      "ADD R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 1754 R4",
+      "READ P110 R2",
+      "READ B210 R1",
+      "MUL R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1755 R4"
+   ],
+   [
+      "READ B200 R2",
+      "READ C205 R1",
+      "MUL R2 R1",
+      "WRITE R2 B200"
+   ],
+   [
+      "READ P225 R2",
+      "READ C155 R1",
+      "SUB R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1757 R4",
+      "READ A160 R2",
+      "READ C245 R1",
+      "ADD R2 R1",
+      "WRITE R2 A160"
+   ],
+   [
+      "READ A240 R2",
+      "READ C185 R1",
+      "ADD R2 R1",
+      "WRITE R2 A240"
+   ],
+   [
+      "READ A210 R2",
+      "READ B245 R1",
+      "MUL R2 R1",
+      "WRITE R2 A210",
+      "READ P115 R1",
+      "READ B200 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 1761 R4"
+   ],
+   [
+      "READ C160 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 C160",
+      "READ A170 R2",
+      "READ B165 R1",
+      "SUB R2 R1",
+      "WRITE R2 A170",
+      "READ B245 R2",
+      "READ A125 R1",
+      "SUB R2 R1",
+      "WRITE R2 B245"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ P190 R1",
+      "READ B170 R2",
+      "ADD R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 1764 R4"
+   ],
+   [
+      "READ A175 R1",
+      "READ C200 R2",
+      "MUL R1 R2",
+      "WRITE R1 A175",
+      "READ A220 R1",
+      "READ C235 R2",
+      "SUB R1 R2",
+      "WRITE R1 A220"
+   ],
+   [
+      "READ A115 R2",
+      "READ B215 R1",
+      "ADD R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ B175 R2",
+      "READ A185 R1",
+      "DIV R2 R1",
+      "WRITE R2 B175"
+   ],
+   [
+      "READ A245 R2",
+      "READ B150 R1",
+      "DIV R2 R1",
+      "WRITE R2 A245"
+   ],
+   [
+      "READ C175 R2",
+      "READ B155 R1",
+      "MUL R2 R1",
+      "WRITE R2 C175"
+   ],
+   [
+      "READ A185 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 A185"
+   ],
+   [
+      "READ A110 R2",
+      "READ C130 R1",
+      "ADD R2 R1",
+      "WRITE R2 A110"
+   ],
+   [
+      "READ C210 R2",
+      "READ B200 R1",
+      "ADD R2 R1",
+      "WRITE R2 C210",
+      "READ B240 R2",
+      "READ A105 R1",
+      "ADD R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ P210 R2",
+      "READ B130 R1",
+      "ADD R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 1784 R4"
+   ],
+   [
+      "READ P120 R2",
+      "READ C125 R1",
+      "DIV R2 R1",
+      "WRITE R2 P120",
+      "LOAD 3 R3",
+      "LOAD 1786 R4"
+   ],
+   [
+      "READ B240 R1",
+      "READ C185 R2",
+      "DIV R1 R2",
+      "WRITE R1 B240"
+   ],
+   [
+      "READ C175 R2",
+      "READ B245 R1",
+      "SUB R2 R1",
+      "WRITE R2 C175"
+   ],
+   [
+      "READ A115 R1",
+      "READ C240 R2",
+      "MUL R1 R2",
+      "WRITE R1 A115",
+      "READ P225 R2",
+      "READ B205 R1",
+      "DIV R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1790 R4"
+   ],
+   [
+      "READ C200 R1",
+      "READ A105 R2",
+      "ADD R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "READ P225 R2",
+      "READ C190 R1",
+      "SUB R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1793 R4",
+      "READ C130 R1",
+      "READ B170 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130"
+   ],
+   [
+      "READ P120 R1",
+      "READ A165 R2",
+      "SUB R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1796 R4"
+   ],
+   [
+      "READ B235 R1",
+      "READ A225 R2",
+      "SUB R1 R2",
+      "WRITE R1 B235",
+      "READ P205 R1",
+      "READ A230 R2",
+      "MUL R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 1801 R4"
+   ],
+   [
+      "READ A215 R2",
+      "READ C130 R1",
+      "MUL R2 R1",
+      "WRITE R2 A215"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ A175 R1",
+      "READ B155 R2",
+      "ADD R1 R2",
+      "WRITE R1 A175",
+      "READ C250 R2",
+      "READ A245 R1",
+      "ADD R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ B185 R2",
+      "READ A200 R1",
+      "MUL R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ P125 R1",
+      "READ C190 R2",
+      "ADD R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 1811 R4"
+   ],
+   [
+      "READ P185 R1",
+      "READ A115 R2",
+      "SUB R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1813 R4"
+   ],
+   [
+      "READ P140 R2",
+      "READ A170 R1",
+      "DIV R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 1819 R4"
+   ],
+   [
+      "READ P170 R2",
+      "READ B150 R1",
+      "ADD R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 1820 R4",
+      "READ A250 R1",
+      "READ C100 R2",
+      "MUL R1 R2",
+      "WRITE R1 A250",
+      "READ B185 R1",
+      "READ C240 R2",
+      "ADD R1 R2",
+      "WRITE R1 B185"
+   ],
+   [
+      "READ A165 R1",
+      "READ B210 R2",
+      "MUL R1 R2",
+      "WRITE R1 A165"
+   ],
+   [
+      "READ B175 R2",
+      "READ C170 R1",
+      "MUL R2 R1",
+      "WRITE R2 B175",
+      "READ A250 R1",
+      "READ C130 R2",
+      "MUL R1 R2",
+      "WRITE R1 A250"
+   ],
+   [
+      "READ P155 R1",
+      "READ C195 R2",
+      "DIV R1 R2",
+      "WRITE R1 P155",
+      "LOAD 3 R3",
+      "LOAD 1826 R4",
+      "READ C250 R2",
+      "READ B160 R1",
+      "ADD R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ C160 R2",
+      "READ A195 R1",
+      "DIV R2 R1",
+      "WRITE R2 C160",
+      "READ B165 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 B165"
+   ],
+   [
+      "READ P120 R1",
+      "READ B170 R2",
+      "DIV R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1829 R4",
+      "READ P250 R1",
+      "READ A120 R2",
+      "SUB R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 1830 R4",
+      "READ B250 R1",
+      "READ A130 R2",
+      "SUB R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ P125 R1",
+      "READ C130 R2",
+      "SUB R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 1834 R4"
+   ],
+   [
+      "READ P100 R2",
+      "READ C160 R1",
+      "MUL R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 1836 R4"
+   ],
+   [
+      "READ A135 R1",
+      "READ C120 R2",
+      "ADD R1 R2",
+      "WRITE R1 A135"
+   ],
+   [
+      "READ C195 R2",
+      "READ A120 R1",
+      "ADD R2 R1",
+      "WRITE R2 C195",
+      "READ P230 R2",
+      "READ C185 R1",
+      "MUL R2 R1",
+      "WRITE R2 P230",
+      "LOAD 3 R3",
+      "LOAD 1840 R4"
+   ],
+   [
+      "READ P110 R2",
+      "READ B135 R1",
+      "MUL R2 R1",
+      "WRITE R2 P110",
+      "LOAD 3 R3",
+      "LOAD 1841 R4",
+      "READ B120 R2",
+      "READ C240 R1",
+      "DIV R2 R1",
+      "WRITE R2 B120"
+   ],
+   [
+      "READ P130 R2",
+      "READ A205 R1",
+      "ADD R2 R1",
+      "WRITE R2 P130",
+      "LOAD 3 R3",
+      "LOAD 1846 R4"
+   ],
+   [
+      "READ C195 R1",
+      "READ A145 R2",
+      "MUL R1 R2",
+      "WRITE R1 C195"
+   ],
+   [
+      "READ P165 R1",
+      "READ B240 R2",
+      "SUB R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 1848 R4"
+   ],
+   [
+      "READ C135 R2",
+      "READ A165 R1",
+      "ADD R2 R1",
+      "WRITE R2 C135",
+      "READ A215 R2",
+      "READ C240 R1",
+      "MUL R2 R1",
+      "WRITE R2 A215"
+   ],
+   [
+      "READ P100 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 1855 R4"
+   ],
+   [
+      "READ C165 R2",
+      "READ B115 R1",
+      "SUB R2 R1",
+      "WRITE R2 C165"
+   ],
+   [
+      "READ A160 R2",
+      "READ C220 R1",
+      "DIV R2 R1",
+      "WRITE R2 A160"
+   ],
+   [
+      "READ A100 R1",
+      "READ B110 R2",
+      "ADD R1 R2",
+      "WRITE R1 A100"
+   ],
+   [
+      "READ P150 R2",
+      "READ C185 R1",
+      "SUB R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 1865 R4",
+      "READ C210 R2",
+      "READ A175 R1",
+      "SUB R2 R1",
+      "WRITE R2 C210",
+      "READ C130 R2",
+      "READ A190 R1",
+      "MUL R2 R1",
+      "WRITE R2 C130"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ C205 R1",
+      "READ B130 R2",
+      "ADD R1 R2",
+      "WRITE R1 C205",
+      "READ P185 R1",
+      "READ C190 R2",
+      "MUL R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1867 R4",
+      "READ A135 R2",
+      "READ B140 R1",
+      "SUB R2 R1",
+      "WRITE R2 A135"
+   ],
+   [
+      "READ C155 R2",
+      "READ B220 R1",
+      "DIV R2 R1",
+      "WRITE R2 C155"
+   ],
+   [
+      "READ A195 R1",
+      "READ B245 R2",
+      "ADD R1 R2",
+      "WRITE R1 A195"
+   ],
+   [
+      "READ B195 R2",
+      "READ C175 R1",
+      "DIV R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ P170 R2",
+      "READ A115 R1",
+      "SUB R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 1873 R4"
+   ],
+   [
+      "READ A215 R1",
+      "READ C100 R2",
+      "ADD R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ P210 R1",
+      "READ B190 R2",
+      "DIV R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 1879 R4"
+   ],
+   [
+      "READ P185 R2",
+      "READ C165 R1",
+      "MUL R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1880 R4"
+   ],
+   [
+      "READ P170 R2",
+      "READ C140 R1",
+      "ADD R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 1883 R4"
+   ],
+   [
+      "READ B195 R2",
+      "READ C140 R1",
+      "DIV R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ P225 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 P225",
+      "LOAD 3 R3",
+      "LOAD 1885 R4",
+      "READ C135 R2",
+      "READ B250 R1",
+      "DIV R2 R1",
+      "WRITE R2 C135"
+   ],
+   [
+      "READ B205 R1",
+      "READ C225 R2",
+      "SUB R1 R2",
+      "WRITE R1 B205"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ B205 R2",
+      "READ A180 R1",
+      "DIV R2 R1",
+      "WRITE R2 B205",
+      "READ B185 R2",
+      "READ A240 R1",
+      "ADD R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ P120 R1",
+      "READ A150 R2",
+      "DIV R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1892 R4"
+   ],
+   [
+      "READ P125 R1",
+      "READ B180 R2",
+      "DIV R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 1895 R4",
+      "READ A180 R1",
+      "READ B115 R2",
+      "DIV R1 R2",
+      "WRITE R1 A180",
+      "READ A225 R2",
+      "READ B230 R1",
+      "MUL R2 R1",
+      "WRITE R2 A225"
+   ],
+   [
+      "READ P235 R2",
+      "READ C240 R1",
+      "ADD R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 1899 R4"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ P195 R1",
+      "READ C235 R2",
+      "DIV R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 1903 R4",
+      "READ B230 R1",
+      "READ A145 R2",
+      "DIV R1 R2",
+      "WRITE R1 B230",
+      "READ P105 R2",
+      "READ C170 R1",
+      "ADD R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 1904 R4"
+   ],
+   [
+      "READ P185 R1",
+      "READ A200 R2",
+      "ADD R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 1908 R4",
+      "READ B200 R2",
+      "READ C170 R1",
+      "SUB R2 R1",
+      "WRITE R2 B200"
+   ],
+   [
+      "READ P150 R1",
+      "READ B185 R2",
+      "MUL R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 1909 R4",
+      "READ P210 R1",
+      "READ B170 R2",
+      "MUL R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 1910 R4",
+      "READ A225 R2",
+      "READ B235 R1",
+      "MUL R2 R1",
+      "WRITE R2 A225"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ A150 R1",
+      "READ B220 R2",
+      "MUL R1 R2",
+      "WRITE R1 A150"
+   ],
+   [
+      "READ P245 R2",
+      "READ C210 R1",
+      "ADD R2 R1",
+      "WRITE R2 P245",
+      "LOAD 3 R3",
+      "LOAD 1915 R4",
+      "READ P115 R1",
+      "READ A100 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 1916 R4"
+   ],
+   [
+      "READ P180 R1",
+      "READ C190 R2",
+      "SUB R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 1918 R4"
+   ],
+   [
+      "READ P105 R2",
+      "READ C170 R1",
+      "ADD R2 R1",
+      "WRITE R2 P105",
+      "LOAD 3 R3",
+      "LOAD 1923 R4",
+      "READ C180 R1",
+      "READ A235 R2",
+      "MUL R1 R2",
+      "WRITE R1 C180"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ P140 R1",
+      "READ B105 R2",
+      "MUL R1 R2",
+      "WRITE R1 P140",
+      "LOAD 3 R3",
+      "LOAD 1926 R4"
+   ],
+   [
+      "READ A155 R2",
+      "READ B235 R1",
+      "ADD R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ B110 R2",
+      "READ A180 R1",
+      "ADD R2 R1",
+      "WRITE R2 B110"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ A195 R1",
+      "READ C200 R2",
+      "SUB R1 R2",
+      "WRITE R1 A195"
+   ],
+   [
+      "READ C225 R2",
+      "READ B100 R1",
+      "SUB R2 R1",
+      "WRITE R2 C225"
+   ],
+   [
+      "READ C135 R2",
+      "READ B235 R1",
+      "ADD R2 R1",
+      "WRITE R2 C135"
+   ],
+   [
+      "READ P200 R2",
+      "READ C155 R1",
+      "SUB R2 R1",
+      "WRITE R2 P200",
+      "LOAD 3 R3",
+      "LOAD 1937 R4"
+   ],
+   [
+      "READ P250 R1",
+      "READ A160 R2",
+      "SUB R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 1940 R4",
+      "READ B135 R2",
+      "READ A190 R1",
+      "SUB R2 R1",
+      "WRITE R2 B135"
+   ],
+   [
+      "READ P195 R1",
+      "READ B210 R2",
+      "MUL R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 1942 R4"
+   ],
+   [
+      "READ B230 R1",
+      "READ C100 R2",
+      "SUB R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ C210 R1",
+      "READ B235 R2",
+      "SUB R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "READ P160 R2",
+      "READ A230 R1",
+      "ADD R2 R1",
+      "WRITE R2 P160",
+      "LOAD 3 R3",
+      "LOAD 1946 R4",
+      "READ P120 R1",
+      "READ B245 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 1947 R4",
+      "READ P225 R1",
+      "READ B180 R2",
+      "ADD R1 R2",
+      "WRITE R1 P225",
+      "LOAD 3 R3",
+      "LOAD 1948 R4"
+   ],
+   [
+      "READ B195 R2",
+      "READ C150 R1",
+      "ADD R2 R1",
+      "WRITE R2 B195",
+      "READ B210 R2",
+      "READ A105 R1",
+      "ADD R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C140 R2",
+      "READ B135 R1",
+      "DIV R2 R1",
+      "WRITE R2 C140",
+      "READ B220 R1",
+      "READ A160 R2",
+      "DIV R1 R2",
+      "WRITE R1 B220",
+      "READ B220 R2",
+      "READ A240 R1",
+      "DIV R2 R1",
+      "WRITE R2 B220"
+   ],
+   [
+      "READ P210 R1",
+      "READ C145 R2",
+      "MUL R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 1958 R4",
+      "READ B135 R1",
+      "READ A215 R2",
+      "SUB R1 R2",
+      "WRITE R1 B135",
+      "READ A115 R1",
+      "READ B125 R2",
+      "SUB R1 R2",
+      "WRITE R1 A115"
+   ],
+   [
+      "READ C220 R2",
+      "READ A250 R1",
+      "SUB R2 R1",
+      "WRITE R2 C220"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ C220 R1",
+      "READ A215 R2",
+      "DIV R1 R2",
+      "WRITE R1 C220"
+   ],
+   [
+      "READ C100 R1",
+      "READ A225 R2",
+      "DIV R1 R2",
+      "WRITE R1 C100"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ C215 R2",
+      "READ A155 R1",
+      "SUB R2 R1",
+      "WRITE R2 C215"
+   ],
+   [
+      "READ B155 R1",
+      "READ C115 R2",
+      "MUL R1 R2",
+      "WRITE R1 B155",
+      "READ C150 R2",
+      "READ A205 R1",
+      "SUB R2 R1",
+      "WRITE R2 C150",
+      "READ P100 R1",
+      "READ B105 R2",
+      "MUL R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 1973 R4"
+   ],
+   [
+      "READ P175 R2",
+      "READ B105 R1",
+      "SUB R2 R1",
+      "WRITE R2 P175",
+      "LOAD 3 R3",
+      "LOAD 1977 R4"
+   ],
+   [
+      "READ P235 R2",
+      "READ B105 R1",
+      "SUB R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 1980 R4"
+   ],
+   [
+      "READ B250 R1",
+      "READ A100 R2",
+      "DIV R1 R2",
+      "WRITE R1 B250",
+      "READ B130 R2",
+      "READ A100 R1",
+      "SUB R2 R1",
+      "WRITE R2 B130"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P220 R2",
+      "READ B230 R1",
+      "DIV R2 R1",
+      "WRITE R2 P220",
+      "LOAD 3 R3",
+      "LOAD 1988 R4"
+   ],
+   [
+      "READ P180 R1",
+      "READ B185 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 1992 R4"
+   ],
+   [
+      "READ B215 R2",
+      "READ C105 R1",
+      "SUB R2 R1",
+      "WRITE R2 B215"
+   ],
+   [
+      "READ A230 R2",
+      "READ C115 R1",
+      "ADD R2 R1",
+      "WRITE R2 A230"
+   ],
+   [
+      "READ P185 R2",
+      "READ C135 R1",
+      "SUB R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 1999 R4"
+   ],
+   [
+      "READ B160 R1",
+      "READ A250 R2",
+      "ADD R1 R2",
+      "WRITE R1 B160",
+      "READ P240 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 2002 R4"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ B250 R1",
+      "READ A100 R2",
+      "ADD R1 R2",
+      "WRITE R1 B250",
+      "READ B190 R2",
+      "READ C170 R1",
+      "ADD R2 R1",
+      "WRITE R2 B190"
+   ],
+   [
+      "READ P170 R1",
+      "READ C220 R2",
+      "DIV R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 2004 R4"
+   ],
+   [
+      "READ P175 R2",
+      "READ B105 R1",
+      "DIV R2 R1",
+      "WRITE R2 P175",
+      "LOAD 3 R3",
+      "LOAD 2005 R4"
+   ],
+   [
+      "READ C225 R2",
+      "READ A250 R1",
+      "DIV R2 R1",
+      "WRITE R2 C225",
+      "READ B120 R2",
+      "READ C135 R1",
+      "MUL R2 R1",
+      "WRITE R2 B120",
+      "READ B140 R2",
+      "READ C215 R1",
+      "DIV R2 R1",
+      "WRITE R2 B140"
+   ],
+   [
+      "READ C185 R1",
+      "READ B135 R2",
+      "MUL R1 R2",
+      "WRITE R1 C185",
+      "READ P135 R2",
+      "READ C130 R1",
+      "MUL R2 R1",
+      "WRITE R2 P135",
+      "LOAD 3 R3",
+      "LOAD 2008 R4"
+   ],
+   [
+      "READ P240 R1",
+      "READ B210 R2",
+      "DIV R1 R2",
+      "WRITE R1 P240",
+      "LOAD 3 R3",
+      "LOAD 2012 R4",
+      "READ A220 R2",
+      "READ C205 R1",
+      "SUB R2 R1",
+      "WRITE R2 A220"
+   ],
+   [
+      "sleep 9"
+   ],
+   [
+      "READ A210 R1",
+      "READ C240 R2",
+      "SUB R1 R2",
+      "WRITE R1 A210"
+   ],
+   [
+      "READ C130 R2",
+      "READ A105 R1",
+      "DIV R2 R1",
+      "WRITE R2 C130",
+      "READ A125 R2",
+      "READ C100 R1",
+      "SUB R2 R1",
+      "WRITE R2 A125"
+   ],
+   [
+      "READ P180 R1",
+      "READ A195 R2",
+      "MUL R1 R2",
+      "WRITE R1 P180",
+      "LOAD 3 R3",
+      "LOAD 2018 R4",
+      "READ B245 R2",
+      "READ A150 R1",
+      "SUB R2 R1",
+      "WRITE R2 B245"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ A235 R2",
+      "READ C225 R1",
+      "SUB R2 R1",
+      "WRITE R2 A235"
+   ],
+   [
+      "READ B235 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 B235",
+      "READ B210 R1",
+      "READ C130 R2",
+      "DIV R1 R2",
+      "WRITE R1 B210",
+      "READ P190 R1",
+      "READ C210 R2",
+      "DIV R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 2024 R4"
+   ],
+   [
+      "READ A230 R2",
+      "READ B245 R1",
+      "ADD R2 R1",
+      "WRITE R2 A230"
+   ],
+   [
+      "READ P150 R2",
+      "READ A140 R1",
+      "DIV R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 2032 R4"
+   ],
+   [
+      "READ C235 R2",
+      "READ B250 R1",
+      "ADD R2 R1",
+      "WRITE R2 C235"
+   ],
+   [
+      "READ A215 R1",
+      "READ B185 R2",
+      "SUB R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ A100 R2",
+      "READ C155 R1",
+      "MUL R2 R1",
+      "WRITE R2 A100",
+      "READ P235 R2",
+      "READ A150 R1",
+      "MUL R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 2034 R4",
+      "READ B210 R2",
+      "READ A120 R1",
+      "MUL R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C225 R2",
+      "READ B105 R1",
+      "DIV R2 R1",
+      "WRITE R2 C225"
+   ],
+   [
+      "READ A225 R1",
+      "READ B195 R2",
+      "SUB R1 R2",
+      "WRITE R1 A225",
+      "READ A155 R2",
+      "READ B220 R1",
+      "MUL R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ C205 R1",
+      "READ A175 R2",
+      "SUB R1 R2",
+      "WRITE R1 C205"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ B140 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 B140"
+   ],
+   [
+      "READ B160 R2",
+      "READ A165 R1",
+      "SUB R2 R1",
+      "WRITE R2 B160"
+   ],
+   [
+      "READ P205 R1",
+      "READ C105 R2",
+      "ADD R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 2042 R4",
+      "READ P185 R1",
+      "READ A180 R2",
+      "MUL R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 2043 R4"
+   ],
+   [
+      "READ A150 R1",
+      "READ C115 R2",
+      "DIV R1 R2",
+      "WRITE R1 A150"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ B175 R1",
+      "READ A160 R2",
+      "DIV R1 R2",
+      "WRITE R1 B175",
+      "READ P105 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 P105",
+      "LOAD 3 R3",
+      "LOAD 2048 R4"
+   ],
+   [
+      "READ B250 R2",
+      "READ C235 R1",
+      "ADD R2 R1",
+      "WRITE R2 B250"
+   ],
+   [
+      "READ B180 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 B180",
+      "READ C225 R1",
+      "READ B115 R2",
+      "SUB R1 R2",
+      "WRITE R1 C225"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ P165 R1",
+      "READ A125 R2",
+      "MUL R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 2051 R4"
+   ],
+   [
+      "READ A165 R1",
+      "READ C115 R2",
+      "DIV R1 R2",
+      "WRITE R1 A165",
+      "READ P170 R1",
+      "READ B100 R2",
+      "ADD R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 2052 R4"
+   ],
+   [
+      "READ B125 R2",
+      "READ C195 R1",
+      "SUB R2 R1",
+      "WRITE R2 B125"
+   ],
+   [
+      "READ C195 R2",
+      "READ A160 R1",
+      "SUB R2 R1",
+      "WRITE R2 C195",
+      "READ A225 R1",
+      "READ B245 R2",
+      "SUB R1 R2",
+      "WRITE R1 A225"
+   ],
+   [
+      "READ C200 R1",
+      "READ B130 R2",
+      "MUL R1 R2",
+      "WRITE R1 C200",
+      "READ C105 R2",
+      "READ B245 R1",
+      "ADD R2 R1",
+      "WRITE R2 C105"
+   ],
+   [
+      "READ B130 R1",
+      "READ A250 R2",
+      "MUL R1 R2",
+      "WRITE R1 B130"
+   ],
+   [
+      "READ B205 R2",
+      "READ A100 R1",
+      "DIV R2 R1",
+      "WRITE R2 B205",
+      "READ A120 R1",
+      "READ B160 R2",
+      "SUB R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "READ P170 R1",
+      "READ C215 R2",
+      "MUL R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 2065 R4",
+      "READ P135 R2",
+      "READ C150 R1",
+      "SUB R2 R1",
+      "WRITE R2 P135",
+      "LOAD 3 R3",
+      "LOAD 2066 R4"
+   ],
+   [
+      "READ B195 R2",
+      "READ A215 R1",
+      "DIV R2 R1",
+      "WRITE R2 B195"
+   ],
+   [
+      "READ C110 R2",
+      "READ B245 R1",
+      "ADD R2 R1",
+      "WRITE R2 C110",
+      "READ B225 R1",
+      "READ C110 R2",
+      "ADD R1 R2",
+      "WRITE R1 B225",
+      "READ A135 R2",
+      "READ B190 R1",
+      "SUB R2 R1",
+      "WRITE R2 A135"
+   ],
+   [
+      "READ P215 R2",
+      "READ C250 R1",
+      "ADD R2 R1",
+      "WRITE R2 P215",
+      "LOAD 3 R3",
+      "LOAD 2071 R4"
+   ],
+   [
+      "READ P170 R1",
+      "READ C215 R2",
+      "DIV R1 R2",
+      "WRITE R1 P170",
+      "LOAD 3 R3",
+      "LOAD 2073 R4",
+      "READ B195 R2",
+      "READ A115 R1",
+      "SUB R2 R1",
+      "WRITE R2 B195",
+      "READ B115 R1",
+      "READ C225 R2",
+      "SUB R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "READ P210 R1",
+      "READ A155 R2",
+      "MUL R1 R2",
+      "WRITE R1 P210",
+      "LOAD 3 R3",
+      "LOAD 2077 R4",
+      "READ B170 R2",
+      "READ C100 R1",
+      "DIV R2 R1",
+      "WRITE R2 B170"
+   ],
+   [
+      "READ A215 R1",
+      "READ C240 R2",
+      "ADD R1 R2",
+      "WRITE R1 A215",
+      "READ B165 R1",
+      "READ A110 R2",
+      "SUB R1 R2",
+      "WRITE R1 B165"
+   ],
+   [
+      "READ B160 R2",
+      "READ C190 R1",
+      "ADD R2 R1",
+      "WRITE R2 B160"
+   ],
+   [
+      "READ A115 R2",
+      "READ B190 R1",
+      "ADD R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ P195 R2",
+      "READ A100 R1",
+      "DIV R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 2082 R4"
+   ],
+   [
+      "READ A115 R2",
+      "READ C145 R1",
+      "SUB R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ A205 R2",
+      "READ C145 R1",
+      "SUB R2 R1",
+      "WRITE R2 A205",
+      "READ A235 R1",
+      "READ C240 R2",
+      "DIV R1 R2",
+      "WRITE R1 A235"
+   ],
+   [
+      "READ B100 R2",
+      "READ C150 R1",
+      "SUB R2 R1",
+      "WRITE R2 B100"
+   ],
+   [
+      "READ C235 R1",
+      "READ B215 R2",
+      "ADD R1 R2",
+      "WRITE R1 C235"
+   ],
+   [
+      "READ B145 R1",
+      "READ C195 R2",
+      "ADD R1 R2",
+      "WRITE R1 B145",
+      "READ A150 R2",
+      "READ B230 R1",
+      "ADD R2 R1",
+      "WRITE R2 A150"
+   ],
+   [
+      "READ C105 R1",
+      "READ B230 R2",
+      "MUL R1 R2",
+      "WRITE R1 C105"
+   ],
+   [
+      "READ P130 R2",
+      "READ C175 R1",
+      "ADD R2 R1",
+      "WRITE R2 P130",
+      "LOAD 3 R3",
+      "LOAD 2095 R4"
+   ],
+   [
+      "READ A220 R2",
+      "READ B170 R1",
+      "DIV R2 R1",
+      "WRITE R2 A220",
+      "READ B105 R2",
+      "READ C175 R1",
+      "DIV R2 R1",
+      "WRITE R2 B105"
+   ],
+   [
+      "READ C235 R1",
+      "READ B200 R2",
+      "ADD R1 R2",
+      "WRITE R1 C235",
+      "READ B125 R1",
+      "READ C180 R2",
+      "ADD R1 R2",
+      "WRITE R1 B125",
+      "READ C250 R1",
+      "READ B100 R2",
+      "SUB R1 R2",
+      "WRITE R1 C250"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A115 R2",
+      "READ B160 R1",
+      "DIV R2 R1",
+      "WRITE R2 A115"
+   ],
+   [
+      "READ C250 R2",
+      "READ B165 R1",
+      "ADD R2 R1",
+      "WRITE R2 C250",
+      "READ A105 R2",
+      "READ B250 R1",
+      "MUL R2 R1",
+      "WRITE R2 A105"
+   ],
+   [
+      "READ C110 R1",
+      "READ A175 R2",
+      "SUB R1 R2",
+      "WRITE R1 C110",
+      "READ B205 R2",
+      "READ A180 R1",
+      "ADD R2 R1",
+      "WRITE R2 B205"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ C200 R1",
+      "READ B175 R2",
+      "DIV R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "sleep 11"
+   ],
+   [
+      "READ C245 R2",
+      "READ B195 R1",
+      "DIV R2 R1",
+      "WRITE R2 C245",
+      "READ P220 R2",
+      "READ B175 R1",
+      "DIV R2 R1",
+      "WRITE R2 P220",
+      "LOAD 3 R3",
+      "LOAD 2108 R4",
+      "READ C250 R1",
+      "READ A190 R2",
+      "ADD R1 R2",
+      "WRITE R1 C250"
+   ],
+   [
+      "READ P185 R1",
+      "READ B250 R2",
+      "MUL R1 R2",
+      "WRITE R1 P185",
+      "LOAD 3 R3",
+      "LOAD 2110 R4",
+      "READ B190 R1",
+      "READ C105 R2",
+      "MUL R1 R2",
+      "WRITE R1 B190"
+   ],
+   [
+      "READ P155 R2",
+      "READ A220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 2111 R4",
+      "READ B200 R1",
+      "READ C235 R2",
+      "DIV R1 R2",
+      "WRITE R1 B200",
+      "READ B230 R1",
+      "READ A180 R2",
+      "ADD R1 R2",
+      "WRITE R1 B230"
+   ],
+   [
+      "READ C245 R1",
+      "READ B150 R2",
+      "SUB R1 R2",
+      "WRITE R1 C245",
+      "READ B180 R1",
+      "READ A220 R2",
+      "ADD R1 R2",
+      "WRITE R1 B180"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ P245 R1",
+      "READ B225 R2",
+      "SUB R1 R2",
+      "WRITE R1 P245",
+      "LOAD 3 R3",
+      "LOAD 2115 R4",
+      "READ P250 R1",
+      "READ B215 R2",
+      "DIV R1 R2",
+      "WRITE R1 P250",
+      "LOAD 3 R3",
+      "LOAD 2116 R4"
+   ],
+   [
+      "READ A245 R2",
+      "READ B115 R1",
+      "MUL R2 R1",
+      "WRITE R2 A245",
+      "READ C190 R2",
+      "READ B250 R1",
+      "SUB R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ B195 R1",
+      "READ A130 R2",
+      "DIV R1 R2",
+      "WRITE R1 B195",
+      "READ C240 R2",
+      "READ B210 R1",
+      "DIV R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ P250 R2",
+      "READ A200 R1",
+      "DIV R2 R1",
+      "WRITE R2 P250",
+      "LOAD 3 R3",
+      "LOAD 2123 R4",
+      "READ B235 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 B235",
+      "READ A185 R2",
+      "READ B140 R1",
+      "DIV R2 R1",
+      "WRITE R2 A185"
+   ],
+   [
+      "READ A235 R2",
+      "READ B170 R1",
+      "SUB R2 R1",
+      "WRITE R2 A235",
+      "READ B130 R2",
+      "READ A205 R1",
+      "MUL R2 R1",
+      "WRITE R2 B130",
+      "READ P195 R1",
+      "READ B235 R2",
+      "DIV R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 2125 R4"
+   ],
+   [
+      "READ P190 R2",
+      "READ B160 R1",
+      "ADD R2 R1",
+      "WRITE R2 P190",
+      "LOAD 3 R3",
+      "LOAD 2129 R4"
+   ],
+   [
+      "READ B225 R1",
+      "READ A180 R2",
+      "ADD R1 R2",
+      "WRITE R1 B225",
+      "READ P150 R2",
+      "READ A245 R1",
+      "MUL R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 2132 R4",
+      "READ P195 R2",
+      "READ A215 R1",
+      "DIV R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 2133 R4"
+   ],
+   [
+      "READ P165 R2",
+      "READ B120 R1",
+      "DIV R2 R1",
+      "WRITE R2 P165",
+      "LOAD 3 R3",
+      "LOAD 2136 R4"
+   ],
+   [
+      "sleep 8"
+   ],
+   [
+      "READ C130 R1",
+      "READ B245 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130",
+      "READ B105 R2",
+      "READ A250 R1",
+      "MUL R2 R1",
+      "WRITE R2 B105",
+      "READ B115 R1",
+      "READ A175 R2",
+      "MUL R1 R2",
+      "WRITE R1 B115"
+   ],
+   [
+      "READ A170 R2",
+      "READ B215 R1",
+      "DIV R2 R1",
+      "WRITE R2 A170",
+      "READ P230 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 2139 R4"
+   ],
+   [
+      "READ C140 R2",
+      "READ B245 R1",
+      "SUB R2 R1",
+      "WRITE R2 C140"
+   ],
+   [
+      "READ A190 R2",
+      "READ C215 R1",
+      "SUB R2 R1",
+      "WRITE R2 A190",
+      "READ A240 R1",
+      "READ B225 R2",
+      "DIV R1 R2",
+      "WRITE R1 A240"
+   ],
+   [
+      "READ B250 R2",
+      "READ A180 R1",
+      "SUB R2 R1",
+      "WRITE R2 B250"
+   ],
+   [
+      "READ A155 R2",
+      "READ B125 R1",
+      "MUL R2 R1",
+      "WRITE R2 A155"
+   ],
+   [
+      "READ C115 R1",
+      "READ B235 R2",
+      "ADD R1 R2",
+      "WRITE R1 C115",
+      "READ C110 R1",
+      "READ B170 R2",
+      "SUB R1 R2",
+      "WRITE R1 C110"
+   ],
+   [
+      "READ P155 R2",
+      "READ A175 R1",
+      "DIV R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 2150 R4",
+      "READ A225 R1",
+      "READ C250 R2",
+      "ADD R1 R2",
+      "WRITE R1 A225",
+      "READ P230 R1",
+      "READ B190 R2",
+      "DIV R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 2151 R4"
+   ],
+   [
+      "READ P230 R1",
+      "READ C110 R2",
+      "DIV R1 R2",
+      "WRITE R1 P230",
+      "LOAD 3 R3",
+      "LOAD 2153 R4"
+   ],
+   [
+      "READ B100 R1",
+      "READ A115 R2",
+      "MUL R1 R2",
+      "WRITE R1 B100"
+   ],
+   [
+      "sleep 15"
+   ],
+   [
+      "READ B250 R1",
+      "READ C175 R2",
+      "SUB R1 R2",
+      "WRITE R1 B250"
+   ],
+   [
+      "READ C130 R2",
+      "READ B230 R1",
+      "DIV R2 R1",
+      "WRITE R2 C130"
+   ],
+   [
+      "READ P130 R1",
+      "READ A210 R2",
+      "ADD R1 R2",
+      "WRITE R1 P130",
+      "LOAD 3 R3",
+      "LOAD 2158 R4"
+   ],
+   [
+      "READ P165 R1",
+      "READ A175 R2",
+      "DIV R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 2161 R4"
+   ],
+   [
+      "READ B230 R2",
+      "READ C215 R1",
+      "SUB R2 R1",
+      "WRITE R2 B230",
+      "READ C130 R1",
+      "READ B195 R2",
+      "MUL R1 R2",
+      "WRITE R1 C130",
+      "READ A125 R1",
+      "READ B235 R2",
+      "MUL R1 R2",
+      "WRITE R1 A125"
+   ],
+   [
+      "READ P170 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 2165 R4"
+   ],
+   [
+      "READ P235 R2",
+      "READ B195 R1",
+      "MUL R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 2167 R4",
+      "READ A110 R1",
+      "READ B250 R2",
+      "DIV R1 R2",
+      "WRITE R1 A110",
+      "READ C195 R2",
+      "READ B210 R1",
+      "DIV R2 R1",
+      "WRITE R2 C195"
+   ],
+   [
+      "READ C250 R2",
+      "READ A125 R1",
+      "SUB R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ P120 R1",
+      "READ C180 R2",
+      "SUB R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 2170 R4"
+   ],
+   [
+      "READ C220 R1",
+      "READ A155 R2",
+      "SUB R1 R2",
+      "WRITE R1 C220"
+   ],
+   [
+      "READ C200 R1",
+      "READ A250 R2",
+      "ADD R1 R2",
+      "WRITE R1 C200"
+   ],
+   [
+      "READ A235 R1",
+      "READ B130 R2",
+      "SUB R1 R2",
+      "WRITE R1 A235",
+      "READ B240 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 B240"
+   ],
+   [
+      "READ C100 R2",
+      "READ A250 R1",
+      "ADD R2 R1",
+      "WRITE R2 C100"
+   ],
+   [
+      "READ C145 R1",
+      "READ A185 R2",
+      "MUL R1 R2",
+      "WRITE R1 C145",
+      "READ C165 R2",
+      "READ B130 R1",
+      "DIV R2 R1",
+      "WRITE R2 C165",
+      "READ A165 R1",
+      "READ B130 R2",
+      "SUB R1 R2",
+      "WRITE R1 A165"
+   ],
+   [
+      "READ C225 R1",
+      "READ A135 R2",
+      "SUB R1 R2",
+      "WRITE R1 C225"
+   ],
+   [
+      "READ B185 R2",
+      "READ C145 R1",
+      "MUL R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ P170 R2",
+      "READ B100 R1",
+      "MUL R2 R1",
+      "WRITE R2 P170",
+      "LOAD 3 R3",
+      "LOAD 2184 R4"
+   ],
+   [
+      "READ C140 R1",
+      "READ A130 R2",
+      "ADD R1 R2",
+      "WRITE R1 C140",
+      "READ B140 R2",
+      "READ A195 R1",
+      "SUB R2 R1",
+      "WRITE R2 B140",
+      "READ P200 R1",
+      "READ C235 R2",
+      "ADD R1 R2",
+      "WRITE R1 P200",
+      "LOAD 3 R3",
+      "LOAD 2186 R4"
+   ],
+   [
+      "READ P140 R2",
+      "READ B185 R1",
+      "DIV R2 R1",
+      "WRITE R2 P140",
+      "LOAD 3 R3",
+      "LOAD 2187 R4"
+   ],
+   [
+      "READ A145 R2",
+      "READ B170 R1",
+      "SUB R2 R1",
+      "WRITE R2 A145"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P235 R1",
+      "READ B115 R2",
+      "MUL R1 R2",
+      "WRITE R1 P235",
+      "LOAD 3 R3",
+      "LOAD 2193 R4",
+      "READ P210 R2",
+      "READ A200 R1",
+      "ADD R2 R1",
+      "WRITE R2 P210",
+      "LOAD 3 R3",
+      "LOAD 2194 R4",
+      "READ C240 R2",
+      "READ A245 R1",
+      "MUL R2 R1",
+      "WRITE R2 C240"
+   ],
+   [
+      "READ A170 R1",
+      "READ C175 R2",
+      "ADD R1 R2",
+      "WRITE R1 A170"
+   ],
+   [
+      "READ B230 R1",
+      "READ A145 R2",
+      "MUL R1 R2",
+      "WRITE R1 B230",
+      "READ C145 R2",
+      "READ A110 R1",
+      "ADD R2 R1",
+      "WRITE R2 C145"
+   ],
+   [
+      "READ B215 R2",
+      "READ C165 R1",
+      "DIV R2 R1",
+      "WRITE R2 B215",
+      "READ C250 R2",
+      "READ B160 R1",
+      "MUL R2 R1",
+      "WRITE R2 C250"
+   ],
+   [
+      "READ C225 R1",
+      "READ A235 R2",
+      "MUL R1 R2",
+      "WRITE R1 C225",
+      "READ B175 R1",
+      "READ A150 R2",
+      "SUB R1 R2",
+      "WRITE R1 B175"
+   ],
+   [
+      "READ C215 R2",
+      "READ B200 R1",
+      "MUL R2 R1",
+      "WRITE R2 C215"
+   ],
+   [
+      "READ B185 R2",
+      "READ A205 R1",
+      "MUL R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ B125 R2",
+      "READ C200 R1",
+      "DIV R2 R1",
+      "WRITE R2 B125"
+   ],
+   [
+      "READ A100 R1",
+      "READ B190 R2",
+      "ADD R1 R2",
+      "WRITE R1 A100"
+   ],
+   [
+      "READ B110 R2",
+      "READ C150 R1",
+      "ADD R2 R1",
+      "WRITE R2 B110"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ C240 R1",
+      "READ A205 R2",
+      "MUL R1 R2",
+      "WRITE R1 C240",
+      "READ A230 R2",
+      "READ B135 R1",
+      "SUB R2 R1",
+      "WRITE R2 A230",
+      "READ P125 R1",
+      "READ B240 R2",
+      "DIV R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 2214 R4"
+   ],
+   [
+      "READ P205 R1",
+      "READ A185 R2",
+      "MUL R1 R2",
+      "WRITE R1 P205",
+      "LOAD 3 R3",
+      "LOAD 2216 R4"
+   ],
+   [
+      "READ C190 R2",
+      "READ B210 R1",
+      "MUL R2 R1",
+      "WRITE R2 C190"
+   ],
+   [
+      "READ P120 R1",
+      "READ C145 R2",
+      "ADD R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 2220 R4"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ P190 R1",
+      "READ B170 R2",
+      "MUL R1 R2",
+      "WRITE R1 P190",
+      "LOAD 3 R3",
+      "LOAD 2224 R4",
+      "READ A230 R1",
+      "READ B100 R2",
+      "DIV R1 R2",
+      "WRITE R1 A230",
+      "READ C125 R1",
+      "READ B150 R2",
+      "SUB R1 R2",
+      "WRITE R1 C125"
+   ],
+   [
+      "READ A185 R2",
+      "READ B100 R1",
+      "MUL R2 R1",
+      "WRITE R2 A185",
+      "READ P220 R2",
+      "READ B170 R1",
+      "MUL R2 R1",
+      "WRITE R2 P220",
+      "LOAD 3 R3",
+      "LOAD 2226 R4"
+   ],
+   [
+      "READ C220 R2",
+      "READ B175 R1",
+      "SUB R2 R1",
+      "WRITE R2 C220",
+      "READ P195 R1",
+      "READ C215 R2",
+      "SUB R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 2230 R4"
+   ],
+   [
+      "READ A135 R2",
+      "READ B120 R1",
+      "DIV R2 R1",
+      "WRITE R2 A135"
+   ],
+   [
+      "READ C110 R2",
+      "READ B225 R1",
+      "SUB R2 R1",
+      "WRITE R2 C110",
+      "READ B135 R2",
+      "READ A215 R1",
+      "MUL R2 R1",
+      "WRITE R2 B135",
+      "READ C160 R1",
+      "READ B185 R2",
+      "DIV R1 R2",
+      "WRITE R1 C160"
+   ],
+   [
+      "sleep 5"
+   ],
+   [
+      "READ A135 R1",
+      "READ C145 R2",
+      "DIV R1 R2",
+      "WRITE R1 A135"
+   ],
+   [
+      "READ P120 R1",
+      "READ A240 R2",
+      "MUL R1 R2",
+      "WRITE R1 P120",
+      "LOAD 3 R3",
+      "LOAD 2237 R4",
+      "READ A170 R2",
+      "READ B165 R1",
+      "MUL R2 R1",
+      "WRITE R2 A170"
+   ],
+   [
+      "READ A190 R2",
+      "READ B240 R1",
+      "ADD R2 R1",
+      "WRITE R2 A190"
+   ],
+   [
+      "READ A205 R2",
+      "READ B125 R1",
+      "SUB R2 R1",
+      "WRITE R2 A205",
+      "READ A150 R2",
+      "READ B100 R1",
+      "DIV R2 R1",
+      "WRITE R2 A150"
+   ],
+   [
+      "READ A200 R1",
+      "READ C175 R2",
+      "ADD R1 R2",
+      "WRITE R1 A200",
+      "READ C235 R1",
+      "READ A170 R2",
+      "MUL R1 R2",
+      "WRITE R1 C235",
+      "READ B120 R1",
+      "READ A245 R2",
+      "MUL R1 R2",
+      "WRITE R1 B120"
+   ],
+   [
+      "READ B200 R1",
+      "READ C145 R2",
+      "DIV R1 R2",
+      "WRITE R1 B200"
+   ],
+   [
+      "READ C195 R1",
+      "READ A235 R2",
+      "SUB R1 R2",
+      "WRITE R1 C195"
+   ],
+   [
+      "READ P215 R1",
+      "READ B210 R2",
+      "ADD R1 R2",
+      "WRITE R1 P215",
+      "LOAD 3 R3",
+      "LOAD 2249 R4"
+   ],
+   [
+      "READ B180 R2",
+      "READ C185 R1",
+      "SUB R2 R1",
+      "WRITE R2 B180"
+   ],
+   [
+      "READ P125 R1",
+      "READ A225 R2",
+      "SUB R1 R2",
+      "WRITE R1 P125",
+      "LOAD 3 R3",
+      "LOAD 2252 R4"
+   ],
+   [
+      "READ C200 R2",
+      "READ A105 R1",
+      "SUB R2 R1",
+      "WRITE R2 C200"
+   ],
+   [
+      "READ B155 R1",
+      "READ A125 R2",
+      "MUL R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A220 R1",
+      "READ C215 R2",
+      "DIV R1 R2",
+      "WRITE R1 A220"
+   ],
+   [
+      "READ B155 R1",
+      "READ A235 R2",
+      "DIV R1 R2",
+      "WRITE R1 B155"
+   ],
+   [
+      "READ P235 R2",
+      "READ B220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P235",
+      "LOAD 3 R3",
+      "LOAD 2262 R4",
+      "READ C195 R1",
+      "READ B100 R2",
+      "SUB R1 R2",
+      "WRITE R1 C195"
+   ],
+   [
+      "READ C100 R1",
+      "READ A105 R2",
+      "MUL R1 R2",
+      "WRITE R1 C100"
+   ],
+   [
+      "READ P115 R2",
+      "READ A180 R1",
+      "SUB R2 R1",
+      "WRITE R2 P115",
+      "LOAD 3 R3",
+      "LOAD 2266 R4"
+   ],
+   [
+      "sleep 14"
+   ],
+   [
+      "READ P150 R1",
+      "READ B230 R2",
+      "ADD R1 R2",
+      "WRITE R1 P150",
+      "LOAD 3 R3",
+      "LOAD 2267 R4"
+   ],
+   [
+      "READ B185 R2",
+      "READ A160 R1",
+      "ADD R2 R1",
+      "WRITE R2 B185"
+   ],
+   [
+      "READ B190 R2",
+      "READ C230 R1",
+      "MUL R2 R1",
+      "WRITE R2 B190",
+      "READ A155 R1",
+      "READ B180 R2",
+      "SUB R1 R2",
+      "WRITE R1 A155"
+   ],
+   [
+      "READ P245 R1",
+      "READ B210 R2",
+      "DIV R1 R2",
+      "WRITE R1 P245",
+      "LOAD 3 R3",
+      "LOAD 2275 R4"
+   ],
+   [
+      "sleep 12"
+   ],
+   [
+      "READ A175 R2",
+      "READ B185 R1",
+      "DIV R2 R1",
+      "WRITE R2 A175"
+   ],
+   [
+      "READ C230 R1",
+      "READ A210 R2",
+      "MUL R1 R2",
+      "WRITE R1 C230",
+      "READ C210 R1",
+      "READ B195 R2",
+      "DIV R1 R2",
+      "WRITE R1 C210"
+   ],
+   [
+      "READ B245 R1",
+      "READ C180 R2",
+      "ADD R1 R2",
+      "WRITE R1 B245"
+   ],
+   [
+      "READ B145 R2",
+      "READ A195 R1",
+      "ADD R2 R1",
+      "WRITE R2 B145",
+      "READ P165 R1",
+      "READ B105 R2",
+      "DIV R1 R2",
+      "WRITE R1 P165",
+      "LOAD 3 R3",
+      "LOAD 2281 R4"
+   ],
+   [
+      "READ A145 R1",
+      "READ C250 R2",
+      "SUB R1 R2",
+      "WRITE R1 A145",
+      "READ A215 R1",
+      "READ B245 R2",
+      "DIV R1 R2",
+      "WRITE R1 A215"
+   ],
+   [
+      "READ P155 R2",
+      "READ B185 R1",
+      "DIV R2 R1",
+      "WRITE R2 P155",
+      "LOAD 3 R3",
+      "LOAD 2286 R4",
+      "READ P115 R1",
+      "READ A215 R2",
+      "DIV R1 R2",
+      "WRITE R1 P115",
+      "LOAD 3 R3",
+      "LOAD 2287 R4",
+      "READ A120 R1",
+      "READ C135 R2",
+      "SUB R1 R2",
+      "WRITE R1 A120"
+   ],
+   [
+      "sleep 13"
+   ],
+   [
+      "READ B245 R1",
+      "READ A115 R2",
+      "ADD R1 R2",
+      "WRITE R1 B245"
+   ],
+   [
+      "READ P220 R2",
+      "READ A225 R1",
+      "SUB R2 R1",
+      "WRITE R2 P220",
+      "LOAD 3 R3",
+      "LOAD 2291 R4"
+   ],
+   [
+      "READ B210 R2",
+      "READ A205 R1",
+      "DIV R2 R1",
+      "WRITE R2 B210"
+   ],
+   [
+      "READ C185 R2",
+      "READ A125 R1",
+      "SUB R2 R1",
+      "WRITE R2 C185",
+      "READ A105 R1",
+      "READ B235 R2",
+      "DIV R1 R2",
+      "WRITE R1 A105"
+   ],
+   [
+      "sleep 6"
+   ],
+   [
+      "READ P195 R2",
+      "READ B100 R1",
+      "ADD R2 R1",
+      "WRITE R2 P195",
+      "LOAD 3 R3",
+      "LOAD 2300 R4",
+      "READ C215 R1",
+      "READ B210 R2",
+      "MUL R1 R2",
+      "WRITE R1 C215",
+      "READ A185 R1",
+      "READ B120 R2",
+      "MUL R1 R2",
+      "WRITE R1 A185"
+   ],
+   [
+      "READ C125 R2",
+      "READ B105 R1",
+      "SUB R2 R1",
+      "WRITE R2 C125"
+   ],
+   [
+      "READ B130 R2",
+      "READ A140 R1",
+      "DIV R2 R1",
+      "WRITE R2 B130"
+   ],
+   [
+      "READ C150 R1",
+      "READ B100 R2",
+      "SUB R1 R2",
+      "WRITE R1 C150"
+   ],
+   [
+      "READ A240 R2",
+      "READ B245 R1",
+      "SUB R2 R1",
+      "WRITE R2 A240",
+      "READ P185 R2",
+      "READ A105 R1",
+      "DIV R2 R1",
+      "WRITE R2 P185",
+      "LOAD 3 R3",
+      "LOAD 2310 R4"
+   ],
+   [
+      "sleep 7"
+   ],
+   [
+      "READ P100 R1",
+      "READ A175 R2",
+      "ADD R1 R2",
+      "WRITE R1 P100",
+      "LOAD 3 R3",
+      "LOAD 2314 R4",
+      "READ P195 R1",
+      "READ C245 R2",
+      "ADD R1 R2",
+      "WRITE R1 P195",
+      "LOAD 3 R3",
+      "LOAD 2315 R4"
+   ],
+   [
+      "sleep 10"
+   ],
+   [
+      "READ P100 R2",
+      "READ A170 R1",
+      "MUL R2 R1",
+      "WRITE R2 P100",
+      "LOAD 3 R3",
+      "LOAD 2317 R4",
+      "READ P150 R2",
+      "READ C220 R1",
+      "ADD R2 R1",
+      "WRITE R2 P150",
+      "LOAD 3 R3",
+      "LOAD 2318 R4",
+      "READ B225 R2",
+      "READ A135 R1",
+      "SUB R2 R1",
+      "WRITE R2 B225"
+   ],
+   [
+      "READ B195 R1",
+      "READ A170 R2",
+      "DIV R1 R2",
+      "WRITE R1 B195"
+   ],
+   [
+      "READ B145 R1",
+      "READ C105 R2",
+      "MUL R1 R2",
+      "WRITE R1 B145",
+      "READ B170 R1",
+      "READ C210 R2",
+      "SUB R1 R2",
+      "WRITE R1 B170"
+   ],
+   [
+      "READ B155 R2",
+      "READ C245 R1",
+      "ADD R2 R1",
+      "WRITE R2 B155",
+      "READ B150 R1",
+      "READ A110 R2",
+      "DIV R1 R2",
+      "WRITE R1 B150",
+      "READ B165 R2",
+      "READ A175 R1",
+      "ADD R2 R1",
+      "WRITE R2 B165"
+   ]
+]
