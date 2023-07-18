@@ -2,19 +2,23 @@
 
 ### Roster
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1oLIa6TvbNEwIcdtKgl7Yi2ltXpuQjh4yniXOZD28dmE/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](none)
 
 
 ### General Course Info
-- __Days:__ MW 2:30 p.m. - 3:50 p.m. 
-- __Location:__ BO 209
-- [__Semester:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2022.pdf) Monday January 10<sup>th</sup> - Friday April 29<sup>rd</sup>
-- [__Holidays:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2022.pdf)
-  - __Martin Luther King Jr. Day__ Monday January 17<sup>th</sup>
-  - __Spring Break :__ Monday March 14<sup>st</sup> - Friday March 19<sup>th</sup> 
-- [__Last Day for “W”:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2022.pdf)  Friday March 21<sup>st</sup>
-- [__Last Day of Class:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2022.pdf) Friday April 29<sup>th</sup>
-- [__Final Exam:__](https://msutexas.edu/registrar/_assets/files/pdfs/spring22finals.pdf) Wednesday May 4<sup>th</sup> @ 5:45pm in BO 209
+- __Days:__ 
+  - Section 101: TR 0200pm 0320pm
+  - Section 102: MW 0500pm 0620pm 
+- __Location:__ BO 320
+- [__Semester:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf) Monday August 28<sup>th</sup> - Friday December 8<sup>th</sup>
+- [__Holidays:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf)
+  - __Labor Day__ Monday September 4<sup>th</sup>
+  - __Thanksgiving:__  November 22<sup>nd</sup> - Friday November 24<sup>th</sup> 
+- [__Last Day for “W”:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf)  Friday October 30<sup>th</sup>
+- [__Last Day of Class:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf) Friday December 8<sup>th</sup>
+- [__Final Exam:__](https://msutexas.edu/registrar/_assets/files/pdfs/finalexamschedulespringfall2023.pdf)
+  - Section 101: Thursday December 14<sup>th</sup> @ 1:00pm - 3:00pm in BO 320
+  - Section 102: Monday December 11<sup>th</sup> @ 3:30pm - 5:30pm in BO 320
 
 ### Resources
 
