@@ -2,14 +2,18 @@
 
 ### Roster
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](none)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 101](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
+
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 102](https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing)
+
+
 
 
 ### General Course Info
 - __Days:__ 
   - Section 101: TR 0200pm 0320pm
   - Section 102: MW 0500pm 0620pm 
-- __Location:__ BO 320
+- __Location:__ [BO 320](https://goo.gl/maps/19yTKot4pnxjgYqr9)
 - [__Semester:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf) Monday August 28<sup>th</sup> - Friday December 8<sup>th</sup>
 - [__Holidays:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2324.pdf)
   - __Labor Day__ Monday September 4<sup>th</sup>
@@ -20,13 +24,14 @@
   - Section 101: Thursday December 14<sup>th</sup> @ 1:00pm - 3:00pm in BO 320
   - Section 102: Monday December 11<sup>th</sup> @ 3:30pm - 5:30pm in BO 320
 
+
 ### Resources
 
 Here is an open source book for the course. I hope you guys appreciate the amount of effort it takes to put material together and then put it on the internet for free.
 
 - [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
   - Thanks To: [Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau (University of Wisconsin-Madison)](http://people.scs.carleton.ca/~michiel/)
-  - [Local Copy](ostep.pdf)
+  - [Local Copy](Resources/01-Books/Operating_Systems-Three_Easy_Pieces.pdf)
 
 ### Assumed
 
@@ -40,6 +45,7 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 #### Topics List
 
+- [ ] OOP Concepts for Project
 - [ ] Processes
     - [ ] Concurrency
     - [ ] Synchronization
@@ -49,7 +55,7 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
     - [ ] Paging
     - [ ] Segmentation
     - [ ] Virtual Memory
-- [ ] Scheduling Algorithms
+- [ ] CPU Scheduling Algorithms
     - [ ] Uniprocessor
     - [ ] Multiprocessor & Multicore
 - [ ] I/O & Disk Scheduling
@@ -98,7 +104,7 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 - Presentations are a major component of graduate work. The ability to discuss complex topics in front a group of your peers is an important skill to have. 
 - Every project, group or individual, will be accompanied with a presentation.
-- The quality of your presentation is somewhat based on the quality of your project. A poor project makes it hard to give a proper presentation if much of the expected functionality was not included with your project. Basically you don't have much to discuss. On the flip side, an excellent project doesn't ensure a great presentation either. So preparation is key, and I am ALWAYS available for help with presentations.
+- The quality of your presentation is somewhat based on the quality of your project. A poor project makes it hard to give a proper presentation if much of the expected functionality was not included in said project. Basically you don't have much to discuss. On the flip side, an excellent project doesn't ensure a great presentation either. So preparation is key, and I am ALWAYS available for help with presentations.
 - I will give specific requirements for each presentation since each project may vary greatly. One project may simulate scheduling algorithms and will have results, whereas a shell project simply needs a walk-through showing commands, examples of piping, and redirection.  
 - In general presentations in my course should follow a basic outline:
   - Project description (if necessary)

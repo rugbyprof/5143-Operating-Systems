@@ -1,0 +1,92 @@
+\documentclass[11pt, twoside]{article}	% Always compile at least twice.
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+% Cover Information
+\def\univname{Midwestern State University}
+\def\coursenum{CMPS 2143}
+\def\coursetitle{Object Oriented Programming}
+\def\coursesubtitle{Course Notes}
+\def\professor{Griffin}
+% \def\student{Note Taker}
+\def\semesteryear{Fall 2020}
+\def\imagename{images/msutexas3}		    % Replace with University Seal
+\def\scalesize{0.90}					% Scale Logo Size 
+
+% Style Package (Load After Cover Information)
+\usepackage{course}	% Change to match style file
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+% Cover Page
+\coverpage
+
+% Last Updated
+\updated{\today}
+
+% Table of Contents
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\setcounter{section}{0}
+\setcounter{page}{1}
+
+% Sections
+
+
+\input{sections/introduction}
+\input{sections/comments}
+\input{sections/stack_heap_memory}
+\input{sections/pointers}
+\input{sections/cpp_templating}
+\input{sections/recursion}
+\input{sections/arrays_and_lists}
+\input{sections/scope}
+\input{sections/uml}
+\input{sections/objects_and_classes}
+\input{sections/class_types}
+\input{sections/access_control}
+\input{sections/access_control_gpt}
+\input{sections/class_hierarchy}
+\input{sections/operator_overloading}
+\input{sections/inheritance}
+\input{sections/static_keyword}
+\input{sections/friend_classes}
+\input{sections/multi_level_inheritance}
+\input{sections/polymorphism}
+\input{sections/virtual_functions}
+\input{sections/virtual_destructor}
+\input{sections/early_late_binding}
+\input{sections/linkage}
+\input{sections/name_spaces}
+\input{sections/access_control_gpt.tex}
+\input{sections/class_types_gpt.tex}
+\input{sections/copy_constructor_gpt.tex}
+\input{sections/friend_classes_gpt.tex}
+\input{sections/name_spaces_gpt.tex}
+\input{sections/polymorphism_gpt.tex}
+\input{sections/static_keyword_gpt.tex}
+
+
+% \input{sections/python_intro}
+% \input{sections/cpp_vs_python}
+
+
+% \input{sections/frequency_analysis}
+% \input{sections/cryptanalysis_hints}
+% \input{sections/operator_overloading}
+\input{sections/vocab}
+
+
+% Bibliography
+% \newpage
+% \nocite{*}
+% \printbibliography[heading=bibintoc]
+
+
+\end{document}
+

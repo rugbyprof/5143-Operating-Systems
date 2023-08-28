@@ -1,0 +1,345 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+    array,              % Better table cells
+	amsmath,			% Math Environments
+  	amssymb,			% Math Symbols
+  	amsthm,			    % Theorem Environments
+  	bookmark,        	% Replaces (and loads) hyperref
+  	caption,            % space caption from table
+  	cancel,             % cool strikethrough
+	chngcntr,			% Use counterwithin
+	changepage,         % page margins on the fly
+	enumerate,		    % Enumerate Environments
+	fancyhdr,			% Better Headers
+	fontawesome5,       % icons
+	float,				% Force Image Placement
+	hyperref,           % internal href
+	longtable,          % table span multiple pages
+	makecell,           % make sub cells in a table
+  	mathrsfs,           % More Math Scripts
+  	mathtools,       	% Allows Prescript
+  	microtype,       	% Improved Appearance
+	multicol,			% Use Multi-columns
+	multirow,			% Use Multi-rows
+	minted,             % syntax highlighting
+	nicefrac,			% Alternative Fractions
+	relsize,			% Bigger Math Symbols
+	stmaryrd,			% Power Series Brackets
+  	thmtools,           % Custom Theorem Environments
+	thm-restate,		% For Re-stateable Theorems
+	totcount,			% Define counters
+	xcolor,			    % Define Colors
+}
+
+\captionsetup[table]{skip=3mm}
+
+% \usepackage[svgnames]{xcolor}
+% \usepackage[colorlinks=true,linkcolor=blue]{hyperref}%
+% \hypersetup{colorlinks,linkcolor=blue,citecolor=blue,urlcolor=red} 
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[all]{xy}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue
+}
+\PassOptionsToPackage{hyphens}{url}
+
+
+% -------------------
+% BibTex
+% -------------------
+\usepackage[
+	hyperref = true,      	% Link to online documents
+  	backend  = bibtex,      % Use bibtex instead of biber
+  	sorting  = nyt,       	% Sorts by (name, year, title)
+  	style  = numeric 	% Citations look like [Har77]
+]{biblatex}
+\addbibresource{main.bib}	% Change to match bib file
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\definecolor{UnivColor}{RGB}{132,0,41}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[CE]{}
+\fancyhead[CO]{}
+\fancyhead[RE]{\thepage}
+\fancyhead[LO]{\thepage}
+
+\headheight=14pt
+\footskip=14pt
+
+
+% -------------------
+% Tikz & PGF
+% -------------------
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{
+	calc,
+	decorations.pathmorphing,
+	hobby,
+	matrix,arrows,
+	positioning,
+	shapes.geometric
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+
+% -------------------
+% Commands
+% -------------------
+
+% Special Characters
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\fp}{\mathfrak{p}}
+
+% Math Operators
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+% Special Commands
+\newcommand{\xqed}{\hfill \lower-0.3ex\hbox{$\triangleleft$}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand*{\defeq}{\stackrel{\text{def}}{=}}
+\newcommand{\pf}{\noindent\emph{Proof. }}
+\newcommand{\pfsk}{\noindent\emph{Proof (Sketch). }}
+\newcommand{\two}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4 \end{pmatrix}}
+
+% Counter Commands
+\newcounter{problem}
+\newcommand{\prob}{
+	\stepcounter{problem}%
+	\noindent\textbf{Problem \theproblem: }
+}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\numberwithin{equation}{section}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}[section]
+\newtheorem{nex}{Non-Example}[section]
+\newtheorem*{dfn}{Definition}
+\newtheorem*{conject}{Conjecture}
+
+%\theoemstyle{remark}
+\newtheorem*{rem}{Remark}
+
+
+% -------------------
+% First Pages
+% -------------------
+
+% Title Page
+\newcommand{\coverpage}{%
+\pagestyle{empty}
+    \begin{adjustwidth}{-35pt}{100pt}
+
+	\begin{tabular}{ll}
+	\raisebox{-.5\height}{\includegraphics[scale=\scalesize]{\imagename}} & {\color{UnivColor} \Huge \univname} \\
+	\end{tabular}
+    \end{adjustwidth}
+\vspace{3in}
+
+{\color{UnivColor} \Huge\noindent\coursenum : \noindent\coursetitle \par\vspace{0.1cm}}
+
+{\color{UnivColor} \LARGE \noindent Course Notes}
+
+{\color{UnivColor} \noindent\rule{0.65\textwidth}{0.05cm}\par\vspace{0.2cm}}
+
+{\color{UnivColor} \large \noindent Professor: \professor }
+
+\vfill
+\begin{center} {\huge \color{UnivColor} \semesteryear} \end{center}
+}
+
+
+% Last Updated
+\newcommand{\updated}[1]{%
+\newpage
+\vspace*{\fill} 
+    \begin{quote} 
+    \centering 
+    Last Updated: #1 
+    \end{quote}
+\vspace*{\fill}
+\newpage
+}
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\definecolor{grule}{rgb}{0.80,0.80,0.80}
+\definecolor{clear}{rgb}{1,1,1}
+\definecolor{reg}{rgb}{0.0,0.0,0.0}
+% \definecolor{def}{rgb}{.25,.28,.14}
+\definecolor{def}{rgb}{.25,.50,.50}
+% \definecolor{def}{rgb}{0.39,0.20,0.24}
+
+% set default params for minted code highlighting
+\setminted[c++]
+{framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,bgcolor=bg,frame=lines}
+% frame=lines,
+% ,bgcolor=bg
+
+
+\setminted[c]
+{fontsize=\large,bgcolor=bg}
+
+
+% thick double line with space above and below
+\newcommand{\doublelinewithspace}[1]{
+\vspace{#1}
+\begin{adjustwidth}{-.75cm}{.5cm}
+\begin{center}\noindent\rule{19cm}{1.0pt}\end{center}
+\vspace{-1.1cm}
+\begin{center}\noindent\rule{19cm}{1.0pt}\end{center}
+\end{adjustwidth}
+\vspace{#1}
+}
+
+% line 
+\newcommand{\sepline}{
+% \begin{adjustwidth}{-.75cm}{.5cm}
+\color{grule} 
+\begin{center}\noindent\rule{15cm}{1.0pt}\end{center}
+\color{black}
+}
+
+\newcommand{\ccode}[1]{
+{\fontfamily{pcr}\selectfont{\textbf{#1}}\fontfamily{phv}\selectfont}
+}
+
+% my inline code highlight
+\newcommand{\btic}[1]{
+\colorbox{bg}{\texttt{#1}}
+}
+
+\newcommand{\cc}[1]{
+\colorbox{bg}{\texttt{#1}}
+}
+
+\newcommand{\ccc}[1]{\color{def}#1\,\fontfamily{phv}\selectfont\color{reg}}
+
+% \, is a kern? non breaking space? or something
+\newcommand{\ccb}[1]{\color{def}\textbf{#1\,}\fontfamily{phv}\selectfont\color{reg}}
+
+\newcommand{\cci}[1]{\color{def}\textit{#1\,}\fontfamily{phv}\selectfont\color{reg}\normalsize}
+
+% \fontfamily{qbk}\selectfont
+
+\newcommand{\ccbb}[1]{\color{def}\large\textbf{#1\,}\fontfamily{phv}\selectfont\color{reg}\normalsize}
+
+% stop first line indent on paragraph
+\setlength\parindent{0pt}
+
+% pandoc tightlist 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  
+\newcommand{\mysection}[1]{
+    \section[#1]{\fontfamily{lmtt}\selectfont\Huge{{\textbf{#1}}}\fontfamily{phv}\selectfont}
+}
+\newcommand{\mysubsection}[1]{
+    \subsection[#1]{\fontfamily{lmtt}\selectfont\huge{{\textbf{#1}}}\fontfamily{phv}\selectfont}
+}
+\newcommand{\mysubsubsection}[1]{
+    \subsubsection[#1]{\fontfamily{lmtt}\selectfont\LARGE{{\textbf{#1}}}\fontfamily{phv}\selectfont}
+}
+\newcommand{\myparagraph}[1]{
+    \paragraph[#1]{\fontfamily{lmtt}\selectfont\Large{{\textbf{#1}}}\fontfamily{phv}\selectfont}
+}
+\newcommand{\supcite}[1]{\textsuperscript{\textbf{\cite{#1}}}}
+
+
+% \tiny	F-tiny.png
+% \scriptsize	F-scriptsize.png
+% \footnotesize	F-footnotesize.png
+% \small	F-small.png
+% \normalsize	F-normalsize.png
+% \large	F-large.png
+% \Large	F-large2.png
+% \LARGE	F-large3.png
+% \huge	F-huge.png
+% \Huge	F-huge2.png
+
+
+% Family                 Font Name
+% pag                    Avant Garde
+% fvs                    Bitstream Vera Sans
+% pbk                    Bookman
+% bch                    Charter
+% ccr                    Computer Concrete
+% cmr                    Computer Modern
+% pcr                    Courier
+% mdugm                  Garamond
+% phv                    Helvetica
+% fi4                    Inconsolata
+% lmr                    Latin Modern
+% lmss                   Latin Modern Sans
+% lmtt                   Latin Modern Typewriter
+% LinuxBiolinumT-OsF     Linux Biolinum (formerly 'fxb' in older package versions)
+% LinuxLibertineT-OsF    Linux Libertine (formerly 'fxl' in older package versions)
+% pnc                    New Century Schoolbook
+% ppl                    Palatino
+% qag                    TeX Gyre Adventor 
+% qbk                    TeX Gyre Bonum 
+% qzc                    TeX Gyre Chorus
+% qcr                    TeX Gyre Cursor
+% qhv                    TeX Gyre Heros
+% qpl                    TeX Gyre Pagella 
+% qcs                    TeX Gyre Schola
+% qtm                    TeX Gyre Termes
+% ptm                    Times
+% uncl                   Uncial
+% put                    Utopia
+% pzc                    Zapf Chancery
+
+\newcommand{\myheading}[1]{
+    \vspace{.5cm}
+    \Large{{\textbf{#1}}}\\
+    \normalsize
+}
+
+% Allows you to center data in a table cell when using "p or m"
+% to define the cell.
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}

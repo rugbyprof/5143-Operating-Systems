@@ -12,7 +12,7 @@ from rich.live import Live
 from rich.text import Text
 from rich.table import Table
 from rich.panel import Panel
-from rich.console import render_group
+from rich.console import Group
 import random
 import json
 import sys,os
