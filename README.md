@@ -2,9 +2,9 @@
 
 ### Roster
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 101](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 101 (TTh)](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 102](https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster Section 102 (MW)](https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing)
 
 
 

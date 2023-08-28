@@ -6,6 +6,6 @@
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A02">A02</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A02"> Assignment 2 </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A02"> Code Repository</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A02"> 09-01-2023 (Friday @ 5:00 p.m.)</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A02">2023-09-01 00:00:00</a>*** | 4 |
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/Projects">Projects</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/Projects"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/Projects"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/Projects">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/Projects">None</a>*** |  |
 
-<sup>Last Updated: 2023-08-28 (Mon @ 16:51)</sup> 
+<sup>Last Updated: 2023-08-28 (Mon @ 16:55)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
