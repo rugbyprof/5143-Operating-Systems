@@ -57,9 +57,13 @@ Now that we have our communication client set up, we probably need to start gett
 
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: <a href="https://docs.google.com/spreadsheets/d/1Ul2tjl74iJoQRd6qQ6leq0M5kmy-lEUSc5PQD91JK6c/edit?usp=sharing"><img src="https://www.gstatic.com/images/branding/product/2x/sheets_2020q4_48dp.png" width="30">Class Roster</a>
+- Here is a link to section **101 (TTh)** class roster on google docs: 
+<a href="https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" width="15"> Class Roster</a></a>
 
-- Update the roster by adding your information to it.
+- Here is a link to section **102 (MW)** class roster on google docs: 
+<a href="https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing"><img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" width="15"> Class Roster</a></a>
+
+Update the roster by adding your information to it.
 
 Add:
 
