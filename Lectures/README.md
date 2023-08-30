@@ -1,9 +1,9 @@
 ## Lectures
 
-| Folder | Title | Description | Due | Filename |
-|-----|-----|-----|-----|-----|
-| None | None | None | None | None |
+| Folder | Title | Description | Due | dueDate |  |
+|:------|:------|:------|:------|:-----:|-----|
+| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">Projects</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">None</a>*** |  |
 
-<sup>Last Updated: 2023-08-29 (Tue @ 13:38)</sup> 
+<sup>Last Updated: 2023-08-30 (Wed @ 16:00)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

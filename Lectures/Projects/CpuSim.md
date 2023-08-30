@@ -105,5 +105,3 @@ HALT                 ; Stop the execution of the program
 ```
 
 In this expanded example, we have added arithmetic operations (multiplication, division, modulus), bitwise operations (AND, OR, XOR, NOT), input/output instructions, and control flow instructions (CALL, RET) for subroutine execution. These additional instruction types provide a broader range of functionality within the simulated machine language.
-
-Feel free to modify and expand upon this example as per your teaching requirements and the specific topics you want to cover in your course.
