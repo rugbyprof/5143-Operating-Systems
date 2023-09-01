@@ -23,7 +23,7 @@ If you have had me before, and this seems **TL;DR** make sure you:
 
 ---
 
-<img src="http://cs.msutexas.edu/~griffin/zcloud/zcloud-files/slack_icon.png" width="120">
+<img src="https://images2.imgbox.com/d3/be/V4785lWc_o.png" width="120">
 
 
 The first step in doing well in any of my courses is establishing a base of communication. Why? Not everything can be done while we are in class.
