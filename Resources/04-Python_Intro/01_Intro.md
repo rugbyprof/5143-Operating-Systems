@@ -3,7 +3,7 @@
 To print a string, just write:
 
 ```python
-print "This line will be printed."
+print("This line will be printed.")
 ```
 
 ## Indentation
@@ -13,7 +13,7 @@ Python uses indentation for blocks, instead of curly braces. Both tabs and space
 x = 1
 if x == 1:
     # indented four spaces
-    print "x is 1."
+    print("x is 1.")
 ```
 
 ## Variables and Types
@@ -77,7 +77,7 @@ Mixing operators between numbers and strings is not supported:
 
 ```python
 # This will not work!
-print one + two + hello
+print(one + two + hello)
 ```
 
 ## Lists
@@ -95,7 +95,7 @@ print(mylist[2]) # prints 3
 
 # prints out 1,2,3
 for x in mylist:
-    print x
+    print(x)
 ```
 
 ```python
@@ -226,11 +226,11 @@ For-in statement - makes it easy to loop over the items in a list
 
 ```python
 for item in L:
-    print item
+    print(item)
 
 L = ['red', 'blue', 'green']
 for col in L:
-    print col
+    print(col)
 ```
 
 ## Basic Operators
@@ -284,10 +284,10 @@ all_numbers = odd_numbers + even_numbers
 Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:
 
 ```python
-print [1,2,3] * 3
+print([1,2,3] * 3)
 ```
 
-## String Formatting
+## Old String Formatting
 
 Python uses C-style string formatting to create new, formatted strings. The `%` operator is used to format a set of variables enclosed in a `tuple` (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like `%s` and `%d`.
 
@@ -305,7 +305,7 @@ To use two or more argument specifiers, use a tuple (parentheses):
 # This prints out "John is 23 years old."
 name = "John"
 age = 23
-print "%s is %d years old." % (name, age)
+print("%s is %d years old." % (name, age))
 ```
 
 Any object which is not a string can be formatted using the %s operator as well. The string which returns from the "repr" method of that object is formatted as the string. For example:
@@ -313,7 +313,7 @@ Any object which is not a string can be formatted using the %s operator as well.
 ```python
 # This prints out: A list: [1, 2, 3]
 mylist = [1,2,3]
-print "A list: %s" % mylist
+print("A list: %s" % mylist)
 ```
 Here are some basic argument specifiers you should know:
 
@@ -325,6 +325,26 @@ Here are some basic argument specifiers you should know:
 %x/%X - Integers in hex representation (lowercase/uppercase)
 ```
 
+## Newer String Formatting
+
+```python
+# This prints out "Hello, John!"
+name = "John"
+print(f"Hello, {name}!")
+```
+
+```python
+# This prints out "John is 23 years old."
+name = "John"
+age = 23
+print(f"{name} is {str(age)} years old.")
+```
+```python
+# This prints out: A list: [1, 2, 3]
+mylist = [1,2,3]
+print(f"A list: {mylist}")
+```
+
 ## Basic String Operations
 Strings are bits of text. They can be defined as anything between quotes:
 
@@ -334,12 +354,12 @@ astring = "Hello world!"
 As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
 
 ```python
-print len(astring)
+print(len(astring))
 ```
 That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
 
 ```python
-print astring.index("o")
+print(astring.index("o"))
 ```
 
 That prints out 4, because the location of the first occurrence of the letter "o" is 4 characters away from the first character. Notice how there are actually two o's in the phrase - this method only recognizes the first.
@@ -347,12 +367,12 @@ That prints out 4, because the location of the first occurrence of the letter "o
 But why didn't it print out 5? Isn't "o" the fifth character in the string? To make things more simple, Python (and most other programming languages) start things at 0 instead of 1. So the index of "o" is 4.
 
 ```python
-print astring.count("l")
+print(astring.count("l"))
 ```
 For those of you using silly fonts, that is a lowercase L, not a number one. This counts the number of l's in the string. Therefore, it should print 3.
 
 ```python
-print astring[3:7]
+print(astring[3:7])
 ```
 This prints a slice of the string, starting at index 3, and ending at index 6. But why 6 and not 7? Again, most programming languages do this - it makes doing math inside those brackets easier.
 
@@ -361,14 +381,14 @@ If you just have one number in the brackets, it will give you the single charact
 You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
 
 ```python
-print astring.upper()
-print astring.lower()
+print(astring.upper())
+print(astring.lower())
 ```
 These make a new string with all letters converted to uppercase and lowercase, respectively.
 
 ```python
-print astring.startswith("Hello")
-print astring.endswith("asdfasdfasdf")
+print(astring.startswith("Hello"))
+print(astring.endswith("asdfasdfasdf"))
 ```
 This is used to determine whether the string starts with something or ends with something, respectively. The first one will print True, as the string starts with "Hello". The second one will print False, as the string certainly does not end with "asdfasdfasdf".
 
@@ -381,9 +401,9 @@ Python uses boolean variables to evaluate conditions. The boolean values True an
 
 ```python
 x = 2
-print x == 2 # prints out True
-print x == 3 # prints out False
-print x < 3  # prints out True
+print(x == 2) # prints out True
+print(x == 3) # prints out False
+print(x < 3) # prints out True
 ```
 
 Notice that variable assignment is done using a single equals operator "=", whereas comparison between two variables is done using the double equals operator "==". The "not equals" operator is marked as "!=".
@@ -396,10 +416,10 @@ The "and" and "or" boolean operators allow building complex boolean expressions,
 name = "John"
 age = 23
 if name == "John" and age == 23:
-    print "Your name is John, and you are also 23 years old."
+    print("Your name is John, and you are also 23 years old.")
 
 if name == "John" or name == "Rick":
-    print "Your name is either John or Rick."
+    print("Your name is either John or Rick.")
 ```
 
 #### The "in" operator
@@ -408,7 +428,7 @@ The "in" operator could be used to check if a specified object exists within an 
 
 ```python
 if name in ["John", "Rick"]:
-    print "Your name is either John or Rick."
+    print("Your name is either John or Rick.")
 ```
 
 Python uses indentation to define code blocks, instead of brackets. The standard Python indentation is 4 spaces, although tabs and any other space size will work, as long as it is consistent. Notice that code blocks do not need any termination.
@@ -435,9 +455,9 @@ For example:
 ```python
 x = 2
 if x == 2:
-    print "x equals two!"
+    print("x equals two!")
 else:
-    print "x does not equal to two."
+    print("x does not equal to two.")
 ```
 
 A statement is evaluated as true if one of the following is correct: 
@@ -459,8 +479,8 @@ Unlike the double equals operator "==", the "is" operator does not match the val
 ```python
 x = [1,2,3]
 y = [1,2,3]
-print x == y # Prints out True
-print x is y # Prints out False
+print(x == y) # Prints out True
+print(x is y) # Prints out False
 ```
 
 #### The "not" operator
@@ -468,8 +488,8 @@ print x is y # Prints out False
 Using "not" before a boolean expression inverts it:
 
 ```python
-print not False # Prints out True
-print (not False) == (False) # Prints out False
+print(not False) # Prints out True
+print((not False) == (False)) # Prints out False
 ```
 
 ## Loops
@@ -481,7 +501,7 @@ For loops iterate over a given sequence. Here is an example:
 ```python
 primes = [2, 3, 5, 7]
 for prime in primes:
-    print prime
+    print(prime)
 ```
 
 For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the xrange function is zero based.
@@ -489,15 +509,15 @@ For loops can iterate over a sequence of numbers using the "range" and "xrange" 
 ```python
 # Prints out the numbers 0,1,2,3,4
 for x in xrange(5): # or range(5)
-    print x
+    print(x)
 
 # Prints out 3,4,5
 for x in xrange(3, 6): # or range(3, 6)
-    print x
+    print(x)
 
 # Prints out 3,5,7
 for x in xrange(3, 8, 2): # or range(3, 8, 2)
-    print x
+    print(x)
 ```
 
 #### "while" loops
@@ -509,7 +529,7 @@ While loops repeat as long as a certain boolean condition is met. For example:
 
 count = 0
 while count < 5:
-    print count
+    print(count)
     count += 1  # This is the same as count = count + 1
 ```
 
@@ -522,7 +542,7 @@ break is used to exit a for loop or a while loop, whereas continue is used to sk
 
 count = 0
 while True:
-    print count
+    print(count)
     count += 1
     if count >= 5:
         break
@@ -532,7 +552,7 @@ for x in xrange(10):
     # Check if x is even
     if x % 2 == 0:
         continue
-    print x
+    print(x)
 ```
 
 ## Dictionaries
@@ -586,21 +606,21 @@ This gives you a list of tuples. When you loop over them like this, each tuple i
 
 ```python
 for k,v in d.items():
-    print k, 'corresponds to', v
+    print(k, 'corresponds to', v)
 ```
 
 Using k and v as variable names when looping over a dict is quite common if the body of the loop is only a few lines. For more complicated loops it may be a good idea to use more descriptive names
 
 ```python
 for letter, number in d.items():
-    print letter, 'corresponds to', number
+    print(letter, 'corresponds to', number)
 ```
 
 It's a good idea going forward to get into the habit of using format strings
 
 ```python
 for letter, number in d.items():
-    print '{0} corresponds to {1}'.format(letter, number)
+    print('{0} corresponds to {1}'.format(letter, number))
 ```
 
 #### Removing a value
@@ -662,7 +682,7 @@ Functions in python are defined using the block keyword "def", followed with the
 
 ```python
 def my_function():
-    print "Hello From My Function!"
+    print("Hello From My Function!")
 ```
 
 Functions may also receive arguments (variables passed from the caller to the function). For example:
@@ -704,7 +724,7 @@ class MyClass:
     variable = "blah"
 
     def function(self):
-        print "This is a message inside the class."
+        print("This is a message inside the class.")
 ```
 
 We'll explain why you have to include that "self" as a parameter a little bit later. First, to assign the above class(template) to an object you would do the following:
@@ -723,7 +743,7 @@ myobjectx.variable
 So for instance the below would output the string "blah":
 
 ```python
-print myobjectx.variable
+print(myobjectx.variable)
 ```
 You can create multiple different objects that are of the same class(have the same variables and functions defined). However, each object contains independent copies of the variables defined in the class. For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
 
@@ -734,8 +754,8 @@ myobjecty.variable = "yackity"
 Then print out both values:
 
 ```python
-print myobjectx.variable   # This would print "blah".
-print myobjecty.variable   # This would print "yackity".
+print(myobjectx.variable)  # This would print "blah".
+print(myobjecty.variable)   # This would print "yackity".
 ```
 #### Accessing Object Functions
 To access a function inside of an object you use notation similar to accessing a variable:
@@ -926,7 +946,7 @@ There are two basic formats for JSON data. Either in a string or the object data
 To load JSON back to a data structure, use the "loads" method. This method takes a string and turns it back into the json object datastructure:
 
 ```python
-print json.loads(json_string)
+print(json.loads(json_string))
 ```
 
 To encode a data structure to JSON, use the "dumps" method. This method takes an object and returns a String:
@@ -942,7 +962,7 @@ You can use it exactly the same way.
 ```python
 import cPickle
 pickled_string = cPickle.dumps([1, 2, 3, "a", "b", "c"])
-print cPickle.loads(pickled_string)
+print(cPickle.loads(pickled_string))
 ```
 
 ## Sets
@@ -950,7 +970,7 @@ print cPickle.loads(pickled_string)
 Sets are lists with no duplicate entries. Let's say you want to collect a list of words used in a paragraph:
 
 ```python
-print set("my name is Eric and Eric is my name".split())
+print(set("my name is Eric and Eric is my name".split()))
 ```
 
 This will print out a list containing "my", "name", "is", "Eric", and finally "and". Since the rest of the sentence uses words which are already in the set, they are not inserted twice.

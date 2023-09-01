@@ -10,8 +10,14 @@ All of these are important! So do them with expedience.
 If you have had me before, and this seems **TL;DR** make sure you:
 
 1. Are on my slack channel: https://griffin-courses.slack.com
-2. Add yourself to the class <a href="https://docs.google.com/spreadsheets/d/1Ul2tjl74iJoQRd6qQ6leq0M5kmy-lEUSc5PQD91JK6c/edit?usp=sharing">roster</a>
-3. Make sure you add an image or avatar to your slack profile. (These will also be placed into the class <a href="https://docs.google.com/spreadsheets/d/1Ul2tjl74iJoQRd6qQ6leq0M5kmy-lEUSc5PQD91JK6c/edit?usp=sharing">roster</a>).
+2. Add yourself to the class:
+3. Make sure you add an image to your slack profile.
+
+<img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 101 (TTh)](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
+
+<img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 102 (MW)](https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing)
+
+ (These will also be placed into the class <a href="https://docs.google.com/spreadsheets/d/1Ul2tjl74iJoQRd6qQ6leq0M5kmy-lEUSc5PQD91JK6c/edit?usp=sharing">roster</a>).
 
 ### Team Chat
 

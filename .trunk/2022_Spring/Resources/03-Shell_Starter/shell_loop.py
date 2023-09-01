@@ -57,15 +57,23 @@ getch = Getch()                             # create instance of our getch class
 prompt = "%:"                               # set default prompt
 
 
+def clean_line(padding=80):
+    """ This function "cleans" off the command line, then prints
+        whatever cmd that is passed to it to the bottom of the terminal.
+    """
+
+    sys.stdout.write("\r"+padding)
+
+def flush():
+    sys.stdout.flush()
+
 def print_cmd(cmd):
     """ This function "cleans" off the command line, then prints
         whatever cmd that is passed to it to the bottom of the terminal.
     """
-    padding = " " * 80
-    sys.stdout.write("\r"+padding)
+    clean_line(80)
     sys.stdout.write("\r"+prompt+cmd)
     sys.stdout.flush()
-
 
 if __name__ == '__main__':
     cmd = ""                                # empty cmd variable

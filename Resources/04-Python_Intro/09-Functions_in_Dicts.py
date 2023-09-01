@@ -5,7 +5,7 @@ You can assign functions to variables in python. We can use this to leverage som
 
 You could obviously use a huge `if then else` statement to achieve the same thing, but this will look cleaner.
 
-Each function below is fake with crap filler just for this example.
+Each function below has worthless filler just for this example.
 """
 
 def ls(**kwargs):

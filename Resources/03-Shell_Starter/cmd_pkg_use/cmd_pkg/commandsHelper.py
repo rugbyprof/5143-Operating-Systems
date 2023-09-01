@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-from ls import ls
-from pwd import pwd
-from cat import cat
-from grep import grep
-from exit import exit
-from history import history
+from Ls import ls
+from Pwd import pwd
+from Cat import cat
+# from Grep import grep
+# from Exit import exit 
+# from History import history
 
 """
 This function iterates over globals.items() and if one of the values is "callable"
@@ -28,8 +28,8 @@ class CommandsHelper(object):
     def exists(self,cmd):
         return cmd in self.invoke
     
-    def help(self,cmd):
-        return self.commands.invoke[cmd].__doc__
+    # def help(self,cmd):
+    #     return self.commands.invoke[cmd].__doc__
     
         
 
