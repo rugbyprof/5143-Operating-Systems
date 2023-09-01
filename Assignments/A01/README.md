@@ -59,7 +59,7 @@ Now that we have our communication client set up, we probably need to start gett
 ### Class Roster
 ---
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/google-sheets.png" width="90">
+<img src="https://images2.imgbox.com/38/ed/t8796trL_o.png" width="120">
 
 #### Update the Class Roster:
 
