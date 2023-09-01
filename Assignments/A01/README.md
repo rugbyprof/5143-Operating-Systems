@@ -10,7 +10,7 @@ All of these are important! So do them with expedience.
 If you have had me before, and this seems **TL;DR** make sure you:
 
 1. Are on my slack channel: https://griffin-courses.slack.com
-2. Add yourself to the class:
+2. Add yourself to the class, links below.
 3. Make sure you add an image to your slack profile.
 
 <img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 101 (TTh)](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
