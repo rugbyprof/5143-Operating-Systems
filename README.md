@@ -1,12 +1,13 @@
 # 5143 - Operating Systems
 
+<!--
 ### Roster
 
-<img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 101 (TTh)](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
+ <img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 101 (TTh)](https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing)
 
 <img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="20"> [Class Roster Section 102 (MW)](https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing)
 
-
+ -->
 
 
 ### General Course Info

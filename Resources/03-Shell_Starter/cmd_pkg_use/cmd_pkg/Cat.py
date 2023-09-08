@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from subprocess import call
 
-def cat(**kwargs):
+def Cat(**kwargs):
     """   
     NAME
         cat - concatenate files and print on the standard output

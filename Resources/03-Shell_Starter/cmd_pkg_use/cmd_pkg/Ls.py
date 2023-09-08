@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from subprocess import call
 
-def ls(**kwargs):
+def Ls(**kwargs):
     print("\n")
     call(["ls"])

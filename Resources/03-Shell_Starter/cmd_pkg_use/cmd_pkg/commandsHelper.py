@@ -1,21 +1,26 @@
-#!/usr/bin/env python
-from Ls import ls
-from Pwd import pwd
-from Cat import cat
+import os,sys
+
+sys.path.append(os.getcwd())
+
+# from ls import Ls
+# from pwd import Pwd
+# from cat import Cat
+
 # from Grep import grep
 # from Exit import exit 
 # from History import history
 
-"""
-This function iterates over globals.items() and if one of the values is "callable"
-meaning it is a function, then I add it to a dictionary called 'invoke'. I also
-add the functions '__doc__' string to a help dictionary.
 
-Methods:
-    exists (string) : checks if a command exists (dictionary points to the function)
-    help (string) : returns the doc string for a function 
-"""
 class CommandsHelper(object):
+    """
+    This function iterates over globals.items() and if one of the values is "callable"
+    meaning it is a function, then I add it to a dictionary called 'invoke'. I also
+    add the functions '__doc__' string to a help dictionary.
+
+    Methods:
+        exists (string) : checks if a command exists (dictionary points to the function)
+        help (string) : returns the doc string for a function 
+    """
     def __init__(self):
         self.invoke = {}
         self.help = {}
@@ -28,10 +33,12 @@ class CommandsHelper(object):
     def exists(self,cmd):
         return cmd in self.invoke
     
-    # def help(self,cmd):
-    #     return self.commands.invoke[cmd].__doc__
+    def help(self,cmd):
+        return self.commands.invoke[cmd].__doc__
     
         
 
 if __name__=='__main__':
-    pass
+    print("hello")
+    print(os.getcwd())
+    print(globals().items())

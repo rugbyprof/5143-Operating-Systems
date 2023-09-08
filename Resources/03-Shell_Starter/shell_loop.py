@@ -10,6 +10,8 @@ import os
 import sys
 from time import sleep
 
+
+
 ##################################################################################
 ##################################################################################
 class Getch:
@@ -54,7 +56,7 @@ class _GetchWindows:
 
 getch = Getch()                             # create instance of our getch class
 
-prompt = "%:"                               # set default prompt
+prompt = "$"                               # set default prompt
 
 
 def print_cmd(cmd):
