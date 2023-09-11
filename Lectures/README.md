@@ -4,6 +4,6 @@
 |:------|:------|:------|:-----:|:-----:|-----|
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">Projects</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">None</a>*** |  |
 
-<sup>Last Updated: 2023-09-01 (Fri @ 15:48)</sup> 
+<sup>Last Updated: 2023-09-11 (Mon @ 13:01)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
