@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-from Ls import ls
-from Pwd import pwd
-from Cat import cat
+from cmd_pkg.Ls import ls
+from cmd_pkg.Pwd import pwd
+from cmd_pkg.Cat import cat
 # from Grep import grep
 # from Exit import exit 
 # from History import history

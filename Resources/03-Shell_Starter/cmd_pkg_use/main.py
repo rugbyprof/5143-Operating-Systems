@@ -8,7 +8,15 @@ sys.path.append(os.path.join(os.getcwd(),'cmd_pkg'))
 from cmd_pkg import *
 from cmd_pkg import commandsHelper
 
-cmd = CommandsHelper()
+cmdHelper = CommandsHelper()
 
-print(cmd.help['cat'])
+if __name__=='__main__':
+    cmd = sys.argv[1]
+
+    if cmd != 'help':
+        result = cmdHelper.run(cmd)
+    else: 
+        result = cmdHelper.help[sys.argv[2]]
+    print(result)
+
 

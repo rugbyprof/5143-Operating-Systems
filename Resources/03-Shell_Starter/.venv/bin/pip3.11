@@ -1,4 +1,4 @@
-#!/Users/griffin/Sync/__currentCourses/5143-Operating-Systems/Resources/03-Shell_Starter/.venv/bin/python3.11
+#!/Users/griffin/Sync/__currentCourses/5143-Operating-Systems/Resources/03-Shell_Starter/.venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,14 +1,13 @@
 import os,sys
 
-sys.path.append(os.getcwd())
+# sys.path.append(os.getcwd())
 
-# from ls import Ls
-# from pwd import Pwd
-# from cat import Cat
-
-# from Grep import grep
-# from Exit import exit 
-# from History import history
+from cmd_pkg.cmdLs import ls
+from cmd_pkg.cmdPwd import pwd
+from cmd_pkg.cmdCat import cat
+from cmd_pkg.cmdGrep import grep
+from cmd_pkg.cmdExit import exit
+from cmd_pkg.cmdHistory import history
 
 
 class CommandsHelper(object):
@@ -33,9 +32,13 @@ class CommandsHelper(object):
     def exists(self,cmd):
         return cmd in self.invoke
     
-    def help(self,cmd):
-        return self.commands.invoke[cmd].__doc__
+    def run(self,cmd):
+        if self.exists(cmd):
+            return self.invoke[cmd]()
     
+    def help(self,cmd):
+        if self.exists(cmd):
+            return self.help[cmd]
         
 
 if __name__=='__main__':

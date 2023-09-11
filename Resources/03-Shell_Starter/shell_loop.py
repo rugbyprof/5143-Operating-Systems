@@ -4,13 +4,15 @@ This file is about using getch to capture input and handle certain keys
 when the are pushed. The 'command_helper.py' was about parsing and calling functions.
 This file is about capturing the user input so that you can mimic shell behavior.
 
-I'll discuss more in class.
 """
 import os
 import sys
 from time import sleep
 
+from cmd_pkg_use.cmd_pkg import *
+from cmd_pkg_use.cmd_pkg import commandsHelper
 
+cmdHelper = CommandsHelper()
 
 ##################################################################################
 ##################################################################################
