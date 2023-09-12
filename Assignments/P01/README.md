@@ -1,5 +1,7 @@
 ## Shell Project - Implementation of a basic shell.
-#### Due: 01-20-2021 (Wednesday @ 2:30 p.m.)
+#### Due: 09-25-2023 (Wednesday @ 2:30 p.m.)
+
+### Parts Due Dates
 
 - Part 1 - Group Selection (posted on class roster) - Due: Sep 11<sup>th</sup>  
 - Part 2 - Repository Creation (link posted on class roster) - Due: Sep 13<sup>th</sup> 
