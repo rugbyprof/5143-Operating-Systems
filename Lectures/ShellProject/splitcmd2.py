@@ -2,6 +2,17 @@
 Discussion in the TTh class about handling the processing of commands
 """
 
+def grabFlags(cmd):
+    flags = []
+    cmd = cmd.split()
+    for f in cmd:
+        if '-' in f:
+            flags.append(f.lstrip('-'))
+
+    return ''.join(flags)
+
+
+
 # Example commands
 cmd = 'ls /etc/hosts -lah | grep .txt > outfile.txt'
 cmd = 'ls -l  /usr/local -ah /home/runner/5143shellhelp/ | grep nix > out'
@@ -39,3 +50,6 @@ c = {
     'params':['/usr/bin','/home'],
     'flags':'lah'
 }
+
+flags = grabFlags('ls -l /usr/bin/ -ah')
+print(flags)
