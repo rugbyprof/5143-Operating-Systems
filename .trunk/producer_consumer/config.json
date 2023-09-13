@@ -1,6 +1,0 @@
-{
-    "port":8100,
-    "max_time_quantum":3,
-    "min_time_quantum":0.05,
-    "host":"167.99.224.154"
-}

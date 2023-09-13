@@ -1,5 +1,0 @@
-.*
-!.gitignore
-!.clang-format
-
-venv/
