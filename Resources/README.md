@@ -9,6 +9,6 @@
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-Python_Intro">04-Python_Intro</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-Python_Intro">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-Python_Intro">| #   | File                                                 | Description |</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/04-Python_Intro">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/06-Rich_Example">06-Rich_Example</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/06-Rich_Example">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/06-Rich_Example">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/06-Rich_Example">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Resources/06-Rich_Example">None</a>*** |  |
 
-<sup>Last Updated: 2023-09-12 (Tue @ 23:13)</sup> 
+<sup>Last Updated: 2023-09-13 (Wed @ 16:58)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
