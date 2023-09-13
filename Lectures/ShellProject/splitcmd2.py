@@ -4,12 +4,15 @@ Discussion in the TTh class about handling the processing of commands
 
 def grabFlags(cmd):
     flags = []
+    directives = []
     cmd = cmd.split()
     for f in cmd:
-        if '-' in f:
+        if '--' in f:
+            directives.append(f.lstrip('--'))
+        elif '-' in f:
             flags.append(f.lstrip('-'))
 
-    return ''.join(flags)
+    return {'flags':''.join(flags),'directives':directives}
 
 
 
@@ -52,4 +55,7 @@ c = {
 }
 
 flags = grabFlags('ls -l /usr/bin/ -ah')
+print(flags)
+
+flags = grabFlags('ls --help')
 print(flags)
