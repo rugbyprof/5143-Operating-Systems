@@ -1,7 +1,5 @@
-combine with cpu simulation assignment.
-
-
-**Assignment: CPU Scheduling Simulation**
+## Project X - CPU Scheduling Simulation
+#### Due: TBD
 
 **Introduction:**
 In this assignment, you will develop a simulation of CPU scheduling algorithms using a basic machine learning instruction set. You will implement four scheduling algorithms: Shortest Job First (SJF), First Come First Serve (FCFS), Priority Scheduling, and Round Robin. The simulation will be divided into three main components: the machine language breakdown, the scheduling algorithms, and the CPU components: ALU, Cache, and Registers.

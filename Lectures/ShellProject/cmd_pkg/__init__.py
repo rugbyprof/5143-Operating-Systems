@@ -5,3 +5,4 @@ from cmd_pkg.cmdGrep import grep
 from cmd_pkg.cmdExit import exit
 from cmd_pkg.cmdHistory import history
 from cmd_pkg.commandsHelper import CommandsHelper
+from cmd_pkg.getch import Getch

@@ -9,8 +9,8 @@ import os
 import sys
 from time import sleep
 
-from cmd_pkg_use.cmd_pkg import *
-from cmd_pkg_use.cmd_pkg import commandsHelper
+from cmd_pkg import *
+from cmd_pkg import CommandsHelper
 
 cmdHelper = CommandsHelper()
 
@@ -131,7 +131,14 @@ if __name__ == '__main__':
             cmd = "Executing command...."   # 
             print_cmd(cmd)                  
             sleep(1)    
+
+            ## YOUR CODE HERE
+            ## Parse the command
+            ## Figure out what your executing like finding pipes and redirects
+
             cmd = ""                        # reset command to nothing (since we just executed it)
+
+
 
             print_cmd(cmd)                  # now print empty cmd prompt
         else:
