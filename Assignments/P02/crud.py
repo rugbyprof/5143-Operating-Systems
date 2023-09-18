@@ -64,6 +64,38 @@ class SQLiteCRUD:
         self.conn.close()
         print("Database connection closed.")
 
+class FileSystem:
+    def __init__(self):
+        db_name = "filesystem.db"
+        crud = SQLiteCRUD(db_name)
+        current_location = "0"
+
+
+    def __buildDB(self):
+        # Define table schema
+        table_name = "files"
+        columns = ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","group TEXT","permissions TEXT"]
+        # Create table
+        crud.create_table(table_name, columns)
+
+    def __getFileId(self,**kwargs):
+        """ Find a file id using current location + name
+        """
+        pass
+
+    def list(self,**kwargs):
+        """ List the files and folders in current directory
+        """
+        pass
+
+
+
+    def chmod(self,**kwargs):
+        """ Change the permissions of a file
+        """
+        pass
+    
+
 # Example usage:
 if __name__ == "__main__":
     db_name = "my_database.db"
