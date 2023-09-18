@@ -128,8 +128,18 @@ if __name__ == '__main__':
         elif char in '\r':                  # return pressed 
             
             # This 'elif' simulates something "happening" after pressing return
-            cmd = "Executing command...."   # 
-            print_cmd(cmd)                  
+            # cmd = "Executing command...."   # 
+            # print_cmd(cmd)                  
+            
+
+            if cmd == "ls":
+                # run your ls function
+                print("running ls function")
+            elif cmd =='pwd':
+                pass
+            elif cmd == 'grep':
+                pass
+
             sleep(1)    
 
             ## YOUR CODE HERE
