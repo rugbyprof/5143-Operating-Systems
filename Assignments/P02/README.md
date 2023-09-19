@@ -177,8 +177,16 @@ conn.close()
     ```
 
 5. **List Directory Contents**: List the contents (files and subdirectories) of a specified directory.
+   
+    ```python
+    cursor.execute("SELECT * FROM files WHERE id = ?", (directory_id,))
+    ```
 
 6. **Read File**: Read the contents of an existing file.
+
+    ```python
+    cursor.execute("SELECT content FROM files WHERE id = ?", (directory_id,))
+    ```
 
 7. **Write File**: Write data to an existing file, potentially appending to the existing content.
 
