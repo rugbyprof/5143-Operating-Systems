@@ -4,14 +4,15 @@
 
 ## Files 
 
-|  #  |Name                               |Description                      |
-|:---:|:----------------------------------|:--------------------------------|
-|  1  | [data_types.md](data_types.md)    |  Sqlite - Data Types            |
-|  2  | [fileSystem.py](fileSystem.py)    |  Filesystem Starter Class       |
-|  3  | [files](files)                    |  Python Scripts to Build Fake Files|
-|  4  | [my_database.db](my_database.db)  |                                 |
-|  5  | [sqliteCRUD.py](sqliteCRUD.py)    |  Crud Class for Sqlite          |
-|  6  | [timestamps.md](timestamps.md)    |  Sqlite - Timestamp functions   |
+|   #   | Name                             | Description                        |
+| :---: | :------------------------------- | :--------------------------------- |
+|   1   | [data_types.md](data_types.md)   | Sqlite - Data Types                |
+|   2   | [fileSystem.py](fileSystem.py)   | Filesystem Starter Class           |
+|   3   | [files](files)                   | Python Scripts to Build Fake Files |
+|   4   | [my_database.db](my_database.db) |                                    |
+|   5   | [permissions.md](permissions.md) | Linux Permissions String Convert   |
+|   6   | [sqliteCRUD.py](sqliteCRUD.py)   | Crud Class for Sqlite              |
+|   7   | [timestamps.md](timestamps.md)   | Sqlite - Timestamp functions       |
 
 ## Overview
 
@@ -56,20 +57,20 @@ Let's break down each column:
 
 ### Example Data
 
-| id | pid | filename     | file_type  | file_size | owner | group | permissions | modification_time       | content                  | hidden |
-|----|-----|--------------|------------|-----------|-------|-------|-------------|-------------------------|--------------------------|--------|
-| 1  | 0   | /            | directory  | NULL      | root  | root  | rwxr-xr-x    | 2023-09-13 14:00:00 UTC | NULL                     | false  |
-| 2  | 1   | /home        | directory  | NULL      | root  | root  | rwxr-xr-x    | 2023-09-13 14:05:00 UTC | NULL                     | false  |
-| 3  | 2   | /home/user1  | directory  | NULL      | user1 | users | rwxr-x---    | 2023-09-13 14:10:00 UTC | NULL                     | false  |
-| 4  | 2   | /home/user2  | directory  | NULL      | user2 | users | rwxr-x---    | 2023-09-13 14:15:00 UTC | NULL                     | false  |
-| 5  | 2   | /home/user3  | directory  | NULL      | user3 | users | rwxr-x---    | 2023-09-13 14:20:00 UTC | NULL                     | false  |
-| 6  | 3   | file1.txt    | file       | 1024      | user1 | users | rw-r-----    | 2023-09-13 14:30:00 UTC | [Binary data for file1] | false  |
-| 7  | 3   | file2.txt    | file       | 2048      | user1 | users | rw-r-----    | 2023-09-13 14:35:00 UTC | [Binary data for file2] | false  |
-| 8  | 4   | file3.txt    | file       | 1536      | user2 | users | rw-r-----    | 2023-09-13 14:40:00 UTC | [Binary data for file3] | false  |
-| 9  | 4   | file4.txt    | file       | 3072      | user2 | users | rw-r-----    | 2023-09-13 14:45:00 UTC | [Binary data for file4] | false  |
-| 10 | 5   | file5.txt    | file       | 2560      | user3 | users | rw-r-----    | 2023-09-13 14:50:00 UTC | [Binary data for file5] | false  |
-| 11 | 0   | /tmp         | directory  | NULL      | root  | root  | rwxr-xr-x    | 2023-09-13 15:00:00 UTC | NULL                     | false  |
-| 12 | 11  | temp_file.txt| file       | 512       | root  | root  | rw-r--r--    | 2023-09-13 15:05:00 UTC | [Binary data for temp]  | false  |
+| id  | pid | filename      | file_type | file_size | owner | group | permissions | modification_time       | content                 | hidden |
+| --- | --- | ------------- | --------- | --------- | ----- | ----- | ----------- | ----------------------- | ----------------------- | ------ |
+| 1   | 0   | /             | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 14:00:00 UTC | NULL                    | false  |
+| 2   | 1   | /home         | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 14:05:00 UTC | NULL                    | false  |
+| 3   | 2   | /home/user1   | directory | NULL      | user1 | users | rwxr-x---   | 2023-09-13 14:10:00 UTC | NULL                    | false  |
+| 4   | 2   | /home/user2   | directory | NULL      | user2 | users | rwxr-x---   | 2023-09-13 14:15:00 UTC | NULL                    | false  |
+| 5   | 2   | /home/user3   | directory | NULL      | user3 | users | rwxr-x---   | 2023-09-13 14:20:00 UTC | NULL                    | false  |
+| 6   | 3   | file1.txt     | file      | 1024      | user1 | users | rw-r-----   | 2023-09-13 14:30:00 UTC | [Binary data for file1] | false  |
+| 7   | 3   | file2.txt     | file      | 2048      | user1 | users | rw-r-----   | 2023-09-13 14:35:00 UTC | [Binary data for file2] | false  |
+| 8   | 4   | file3.txt     | file      | 1536      | user2 | users | rw-r-----   | 2023-09-13 14:40:00 UTC | [Binary data for file3] | false  |
+| 9   | 4   | file4.txt     | file      | 3072      | user2 | users | rw-r-----   | 2023-09-13 14:45:00 UTC | [Binary data for file4] | false  |
+| 10  | 5   | file5.txt     | file      | 2560      | user3 | users | rw-r-----   | 2023-09-13 14:50:00 UTC | [Binary data for file5] | false  |
+| 11  | 0   | /tmp          | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 15:00:00 UTC | NULL                    | false  |
+| 12  | 11  | temp_file.txt | file      | 512       | root  | root  | rw-r--r--   | 2023-09-13 15:05:00 UTC | [Binary data for temp]  | false  |
 
 ## Requirements
 
