@@ -1,3 +1,5 @@
+# Crud Class for Sqlite
+
 import sqlite3
 
 class SQLiteCRUD:
