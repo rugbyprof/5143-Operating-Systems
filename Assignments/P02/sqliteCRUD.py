@@ -22,6 +22,11 @@ class SQLiteCRUD:
         return table
 
     def create_table(self, table_name, columns):
+        """
+        Params:
+            table_name (str) - name of table
+            columns (list) - ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","owner_group TEXT","permissions TEXT"]
+        """
         try:
             # Create a table with the given columns
             create_table_query = f"CREATE TABLE IF NOT EXISTS {table_name} ({', '.join(columns)});"
@@ -31,6 +36,22 @@ class SQLiteCRUD:
         except sqlite3.Error as e:
             print(f"Error creating table: {e}")
             
+    def drop_table(self, table_name):
+        """
+        Params:
+            table_name (str) - name of table
+            columns (list) - ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","owner_group TEXT","permissions TEXT"]
+        """
+        try:
+            # Create a table with the given columns
+            create_table_query = f"DROP TABLE IF EXISTS {table_name});"
+            self.cursor.execute(create_table_query)
+            self.conn.commit()
+            print(f"Dropped '{table_name} successfully.")
+        except sqlite3.Error as e:
+            print(f"Error creating table: {e}")
+            
+
     def show_tables(self,raw=True):
 
         self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
@@ -171,103 +192,21 @@ class SQLiteCRUD:
             return False
 
 
-
-class FileSystem:
-    def __init__(self):
-        db_name = "filesystem.db"
-        crud = SQLiteCRUD(db_name)
-        current_location = "0"
-
-
-    def __buildDB(self):
-        # Define table schema
-        table_name = "files"
-        columns = ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","group TEXT","permissions TEXT"]
-        # Create table
-        crud.create_table(table_name, columns)
-
-    def __getFileId(self,**kwargs):
-        """ Find a file id using current location + name
-        """
-        pass
-
-    def list(self,**kwargs):
-        """ List the files and folders in current directory
-        """
-        pass
-
-
-
-    def chmod(self,**kwargs):
-        """ Change the permissions of a file
-        """
-        pass
-    
-import uuid
-
-def generate_uuid():
-    return str(uuid.uuid4())
-
 # Example usage:
 if __name__ == "__main__":
+
+    conn = SQLiteCRUD("database.sqlite")
     
-    crud1 = SQLiteCRUD("filesystem.sqlite")
-    crud2 = SQLiteCRUD("my_database.sqlite")
-    
-    print(crud1.table_exists("FileSystem3"))  
-    print(crud1.show_tables(raw=False))
-    
-    # cursor.execute("""
-    # CREATE TABLE FileSystem2 (
-    #     id INTEGER PRIMARY KEY,
-    #     pid INTEGER NOT NULL,
-    #     filename TEXT NOT NULL,
-    #     file_type TEXT NOT NULL,
-    #     file_size INTEGER,
-    #     owner TEXT NOT NULL,
-    #     group_name TEXT NOT NULL,
-    #     permissions TEXT NOT NULL,
-    #     modification_time DATETIME,
-    #     content BLOB,
-    #     hidden NUMBER 
-    # );
-    # """)
+    print(conn.table_exists("FileSystem2"))  
+    print(conn.show_tables(raw=False))
 
-    # # Inserting data into the FileSystem2 table
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (0, 'root', 'directory', NULL, 'root', 'admin', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
 
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (1, 'home', 'directory', NULL, 'root', 'admin', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
+    table_name = "files"
+    columns = ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","owner_group TEXT","permissions TEXT"]
+    # Create table
+    conn.create_table(table_name, columns)
 
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (2, 'user1', 'directory', NULL, 'user1', 'users', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
-
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (2, 'user2', 'directory', NULL, 'user2', 'users', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
-
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (1, 'docs', 'directory', NULL, 'user1', 'users', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
-
-    # cursor.execute("""
-    #     INSERT INTO FileSystem2 (pid, filename, file_type, file_size, owner, group_name, permissions, modification_time, content, hidden)
-    #     VALUES (1, 'pictures', 'directory', NULL, 'user2', 'users', 'rwxr-xr-x', '2023-09-22 12:00:00', NULL, 0)
-    # """)
-
-    # # Commit the changes and close the connection
-    # conn.commit()
-    # conn.close()
-
+    print(conn.show_tables(raw=False))
 
 
     # crud = SQLiteCRUD("filesystem.sqlite")
@@ -312,3 +251,8 @@ if __name__ == "__main__":
 
     # Close the database connection
     # crud.close_connection()
+
+    # need the id parent folder 
+
+    # SELECT SUM(file_size) FROM filesystem
+    # WHERE pid = id
