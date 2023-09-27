@@ -1,0 +1,223 @@
+[
+    {
+        "type": "directory",
+        "name": "linux",
+        "owner":"bob",
+        "contents": [
+            {
+                "type": "directory",
+                "name": "drivers",
+                "contents": [
+                    {
+                        "type": "directory",
+                        "name": "perfctr",
+                        "contents": [
+                            {
+                                "type": "file",
+                                "name": "global.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "init.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "virtual_stub.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "x86.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "x86_setup.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "x86_tests.c"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "directory",
+        "name": "win2k",
+        "owner":"mia",
+        "contents": [
+            {
+                "type": "directory",
+                "name": "shell",
+                "contents": [
+                    {
+                        "type": "file",
+                        "name": "PAPI_Errors.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "StdAfx.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "test_get_cycles.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "winpapi_console.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "WinPAPIShell.c"
+                    }
+                ]
+            },
+            {
+                "type": "directory",
+                "name": "substrate",
+                "contents": [
+                    {
+                        "type": "file",
+                        "name": "cpuinfo.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "win32.c"
+                    }
+                ]
+            },
+            {
+                "type": "directory",
+                "name": "winpmc",
+                "contents": [
+                    {
+                        "type": "file",
+                        "name": "pmclib.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "pmc_x86.c"
+                    },
+                    {
+                        "type": "file",
+                        "name": "WinPMC.c"
+                    }
+                ]
+            },
+            {
+                "type": "directory",
+                "name": "tools",
+                "contents": [
+                    {
+                        "type": "directory",
+                        "name": "papiex",
+                        "contents": [
+                            {
+                                "type": "directory",
+                                "name": "src",
+                                "contents": [
+                                    {
+                                        "type": "file",
+                                        "name": "eventinfo.c"
+                                    },
+                                    {
+                                        "type": "file",
+                                        "name": "main.c"
+                                    },
+                                    {
+                                        "type": "file",
+                                        "name": "papiex.c"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "directory",
+                                "name": "tests",
+                                "contents": [
+                                    {
+                                        "type": "directory",
+                                        "name": "src",
+                                        "contents": [
+                                            {
+                                                "type": "file",
+                                                "name": "abort.c"
+                                            },
+                                            {
+                                                "type": "file",
+                                                "name": "assert.c"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "directory",
+                        "name": "papinfo",
+                        "contents": [
+                            {
+                                "type": "directory",
+                                "name": "src",
+                                "contents": [
+                                    {
+                                        "type": "file",
+                                        "name": "main.c"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "directory",
+                        "name": "trapper",
+                        "contents": [
+                            {
+                                "type": "file",
+                                "name": "process_trap.c"
+                            },
+                            {
+                                "type": "file",
+                                "name": "pthread_trap_create.c"
+                            },
+                            {
+                                "type": "directory",
+                                "name": "tests",
+                                "contents": [
+                                    {
+                                        "type": "file",
+                                        "name": "dumbtime.c"
+                                    },
+                                    {
+                                        "type": "file",
+                                        "name": "test5.c"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "directory",
+        "name": "winpmc",
+        "owner":"raj",
+        "contents": [
+            {
+                "type": "file",
+                "name": "pmclib.c"
+            },
+            {
+                "type": "file",
+                "name": "pmc_x86.c"
+            },
+            {
+                "type": "file",
+                "name": "WinPMC.c"
+            }
+        ]
+    }
+]

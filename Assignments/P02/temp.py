@@ -1,9 +1,9 @@
-# conn Class for Sqlite
-
 import sqlite3
 from prettytable import PrettyTable
-   
-class SQLiteconn:
+
+
+class SQLiteCRUD:
+    """SQLite CRUD operations manager."""
     
     def __init__(self, db_path):
         """Initialize database connection and cursor."""
@@ -26,12 +26,7 @@ class SQLiteconn:
         return table
 
     def create_table(self, table_name, columns):
-        """
-        Params:
-            table_name (str) - name of table
-            columns (list) - ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","owner_group TEXT","permissions TEXT"]
-
-        Create a new table with specified columns.
+        """Create a new table with specified columns.
         
         Args:
             table_name (str): Name of the table.
@@ -47,11 +42,7 @@ class SQLiteconn:
             print(f"Error creating table: {e}")
             
     def drop_table(self, table_name):
-        """
-        Params:
-            table_name (str) - name of table
-            columns (list) - ["id INTEGER PRIMARY KEY", "name TEXT", "created TEXT", "modified TEXT", "size REAL","type TEXT","owner TEXT","owner_group TEXT","permissions TEXT"]
-        Drop a table by name.
+        """Drop a table by name.
         
         Args:
             table_name (str): Name of the table to drop.
@@ -66,12 +57,13 @@ class SQLiteconn:
             print(f"Error creating table: {e}")
             
 
-    def show_tables(self,raw=True):
+    def show_tables(self, raw=True):
         """Show all tables in the database.
         
         Args:
             raw (bool): Whether to return raw results or formatted table.
         """
+
         self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
         results = self.cursor.fetchall()
 
@@ -81,7 +73,7 @@ class SQLiteconn:
             return self.__raw_results(results)
 
 
-    def describe_table(self,table_name,raw=False):
+    def describe_table(self, table_name, raw=False):
         """Describe the structure of a table.
         
         Args:
@@ -187,7 +179,7 @@ class SQLiteconn:
         print("Database connection closed.")
         
         
-    def formatted_print(self,table_name):
+    def formatted_print(self, table_name):
         """Print the contents of a table in a formatted manner.
         
         Args:
@@ -204,7 +196,7 @@ class SQLiteconn:
 
         return table
 
-    def table_exists(self, table_name,db_path=None):
+    def table_exists(self, table_name, db_path=None):
         """Check if a table exists.
         
         Args:
@@ -240,7 +232,7 @@ class SQLiteconn:
 
 
 
-    def drop_table(self,table_name):
+    def drop_table(self, table_name):
         """Drop a table by its name.
         
         Args:
@@ -260,37 +252,4 @@ class SQLiteconn:
             return False
 
 
-# Example usage:
-if __name__ == "__main__":
 
-    db_name = "students.sqlite"
-    conn = SQLiteconn(db_name)
-    
-    # Define table schema
-    table_name = "students"   
-    columns = ["id TEXT", "name TEXT", "age INTEGER"]
-
-    # # Create table
-    conn.create_table(table_name, columns)
-
-    # Insert data
-    data = ("1", "Alice", 25)
-    conn.insert_data(table_name, data)
-    
-    data = ("2","Bob", 23)
-    conn.insert_data(table_name, data)
-    
-    data = ("3","Charlie", 11)
-    conn.insert_data(table_name, data)
-
-    # Read data
-    conn.read_data(table_name)
-
-    # Update data
-    conn.update_data(table_name, "age", 26, "name", "Alice")
-
-    # Delete data
-    conn.delete_data(table_name, "name", "Alice")
-
-    #Close the database connection
-    conn.close_connection()

@@ -4,16 +4,19 @@
 
 ## Files 
 
-|   #   | Name                             | Description                        |
-| :---: | :------------------------------- | :--------------------------------- |
-|   1   | [data_types.md](data_types.md)   | Sqlite - Data Types                |
-|   2   | [fileSystem.py](fileSystem.py)   | Filesystem Starter Class           |
-|   3   | [files](files)                   | Python Scripts to Build Fake Files |
-|   4   | [my_database.db](my_database.db) |                                    |
-|   5   | [permissions.md](permissions.md) | Linux Permissions String Convert   |
-|   6   | [sqliteCRUD.py](sqliteCRUD.py)   | Crud Class for Sqlite              |
-|   7   | [timestamps.md](timestamps.md)   | Sqlite - Timestamp functions       |
-
+|   #   | Name                                                 | Description                                        |
+| :---: | :--------------------------------------------------- | :------------------------------------------------- |
+|   1   | [data_formatting.md](data_formatting.md)             | [Data Formatting](data_formatting.md)              |
+|   2   | [data_types.md](data_types.md)                       | [Sqlite - Data Types](data_types.md)               |
+|   3   | [file-sys-primer-data.csv](file-sys-primer-data.csv) | [None](file-sys-primer-data.csv)                   |
+|   4   | [fileSystem.py](fileSystem.py)                       | [Filesystem Starter Class](fileSystem.py)          |
+|   5   | [fileSystem.py](filesystem.sqlite)                   | [Filesystem Starter Class](filesystem.sqlite)      |
+|   6   | [fileSystem.py](my_database.sqlite)                  | [Filesystem Starter Class](my_database.sqlite)     |
+|   7   | [permissions.md](permissions.md)                     | [Linux Permissions String Convert](permissions.md) |
+|   8   | [requirements.txt](requirements.txt)                 | [None](requirements.txt)                           |
+|   9   | [sqliteCRUD.py](sqliteCRUD.py)                       | [Crud Class for Sqlite](sqliteCRUD.py)             |
+|  10   | [sqliteCRUD.py](testfilesystem.sqlite)               | [Crud Class for Sqlite](testfilesystem.sqlite)     |
+|  11   | [timestamps.md](timestamps.md)                       | [Sqlite - Timestamp functions](timestamps.md)      |
 ## Overview
 
 This project will implement a virtual database that uses Sqlite as its storage. We will not be storing large files, or storing thousands of them, so a sqlite db should be fine. If there ever is an issue, it's not hard to change to PostGres or similar. This virtual file system will store all content in a single database table, the structure of which is explained below. But what is a "virtual" file system? It can mean many things, but for this project it simply means that instead of writing data organized in a file to disk, we will write that data to a column in a database table. It is possible to store real files like word docs, powerpoints, images, etc. in a table, but for this project you will store some randomly generated assembly instructions which I will provide. These files are to simulate instructions in an executable file. See example tiny file below:
@@ -103,7 +106,7 @@ CREATE TABLE FileSystem (
 
 | Column Name         | Description                                                                                               |
 | ------------------- | --------------------------------------------------------------------------------------------------------- |
-| `id`                | A unique identifier for each file system entry (primary key).                                        |
+| `id`                | A unique identifier for each file system entry (primary key).                                             |
 | `pid`               | The id of the parent folder.                                                                              |
 | `filename`          | The name of the file or directory.                                                                        |
 | `file_type`         | A text field representing the type of the file (e.g., "file" or "directory").                             |
@@ -330,10 +333,7 @@ We can discuss these in class later.
 
 ## Requirements
 
-
-
-
-- Using the provided example code, create a sqlite database to store the appropriate file system files and metadata for each file. You can change the `schema` (table structure) if you feel it will improve your own version. But your filesystem should be designed (not necessarily implemented) to do the following:
-
-  - 
-- 
+- Create a sqlite database to store the appropriate file system files, directories, and metadata for each. 
+- You can change the provided `schema` (table structure) if you feel it will improve your own version, but you must be able to support the file systems basic purposes (listed way above).
+- Your implementation should be written in a class that extends through composition or inheritance another more generic class that interfaces with Sqlite performing basic queries. For example, a `Sqlite Class` which provides basic inserts, updates, selects, and deletes (with some other helper methods of course) would be used by a `Filesystem Class` that supports everything listed in the **File System Purpose** section.
+- I created a logical (yet fake) file system such that each id is correct. Meaning, each parent id for files and directories matches as it should. I did not create the "assembly code" for each of those files however and therefore there is no filesize. [HERE](./file-sys-primer-data.csv) is the results of the generator code.

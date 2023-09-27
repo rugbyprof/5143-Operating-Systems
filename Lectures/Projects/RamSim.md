@@ -17,3 +17,5 @@ Here's an overview of a simulated RAM along with virtual memory address translat
 6. **Monitoring and Metrics**: Collect statistics during the simulation, such as page fault rates, hit rates, and the behavior of the page replacement algorithm. These metrics provide insights into the performance and behavior of the simulated RAM and virtual memory system.
 
 By simulating RAM and virtual memory together, you can demonstrate the interaction between the two and showcase the address translation process. This allows students to understand how virtual memory helps manage larger address spaces than physically available RAM.
+
+

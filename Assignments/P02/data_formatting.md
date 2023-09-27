@@ -1,3 +1,5 @@
+## Data Formatting
+
 When displaying database information from an SQLite database in Python, you have several options depending on your needs and the level of detail you want to present. Here are some common methods to display database information:
 
 1. **Pretty-Printed Tabular Output**: You can use libraries like `prettytable` or `tabulate` to format query results into a visually appealing tabular format. These libraries make it easy to display rows and columns in a structured way.
