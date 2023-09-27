@@ -10,13 +10,15 @@
 |   2   | [data_types.md](data_types.md)                       | [Sqlite - Data Types](data_types.md)               |
 |   3   | [file-sys-primer-data.csv](file-sys-primer-data.csv) | [None](file-sys-primer-data.csv)                   |
 |   4   | [fileSystem.py](fileSystem.py)                       | [Filesystem Starter Class](fileSystem.py)          |
-|   5   | [fileSystem.py](filesystem.sqlite)                   | [Filesystem Starter Class](filesystem.sqlite)      |
-|   6   | [fileSystem.py](my_database.sqlite)                  | [Filesystem Starter Class](my_database.sqlite)     |
+|   5   | [filesystem.sqlite](filesystem.sqlite)               | [binary file](filesystem.sqlite)                   |
+|   6   | [my_database.sqlite](my_database.sqlite)             | [binary file](my_database.sqlite)                  |
 |   7   | [permissions.md](permissions.md)                     | [Linux Permissions String Convert](permissions.md) |
 |   8   | [requirements.txt](requirements.txt)                 | [None](requirements.txt)                           |
-|   9   | [sqliteCRUD.py](sqliteCRUD.py)                       | [Crud Class for Sqlite](sqliteCRUD.py)             |
-|  10   | [sqliteCRUD.py](testfilesystem.sqlite)               | [Crud Class for Sqlite](testfilesystem.sqlite)     |
-|  11   | [timestamps.md](timestamps.md)                       | [Sqlite - Timestamp functions](timestamps.md)      |
+|   9   | [sqliteCRUD.py](sqliteCRUD.py)                       | [conn Class for Sqlite](sqliteCRUD.py)             |
+|  10   | [students.sqlite](students.sqlite)                   | [binary file](students.sqlite)                     |
+|  11   | [testfilesystem.sqlite](testfilesystem.sqlite)       | [binary file](testfilesystem.sqlite)               |
+|  12   | [timestamps.md](timestamps.md)                       | [Sqlite - Timestamp functions](timestamps.md)      |
+
 ## Overview
 
 This project will implement a virtual database that uses Sqlite as its storage. We will not be storing large files, or storing thousands of them, so a sqlite db should be fine. If there ever is an issue, it's not hard to change to PostGres or similar. This virtual file system will store all content in a single database table, the structure of which is explained below. But what is a "virtual" file system? It can mean many things, but for this project it simply means that instead of writing data organized in a file to disk, we will write that data to a column in a database table. It is possible to store real files like word docs, powerpoints, images, etc. in a table, but for this project you will store some randomly generated assembly instructions which I will provide. These files are to simulate instructions in an executable file. See example tiny file below:
