@@ -113,6 +113,7 @@ Thats a little background on representing file data, and how we might store it i
 ####  Example Simple Query 
 
 - This first example is a small "start" to "finish" example showing how to connect, excute a query, and close a connection.
+- Mostly we will be using classes designed by us to abstract some of these details, but ultimately still connects and queries Sqlite like [HERE](./sqliteCRUD.py).
 - It inserts a new row int the `theDatabase` database. 
 - Notice the syntax with the `?` marks as place holders for values.
 
