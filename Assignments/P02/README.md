@@ -18,7 +18,6 @@
 
 This project will implement a virtual database that uses Sqlite as its storage. We will not be storing large files, or storing thousands of them, so a sqlite db should be fine. If there ever is an issue, it's not hard to change to PostGres or similar. This virtual file system will store all content in a single database table, the structure of which is explained below. But what is a "virtual" file system? It can mean many things, but for this project it simply means that instead of writing data organized in a file to disk, we will write that data to a column in a database table. It is possible to store real files like word docs, powerpoints, images, etc. in a table, but for this project you will store some randomly generated assembly instructions which I will provide. These files are to simulate instructions in an executable file. See example tiny file below:
 
-
 #### Example Executable
 ```asm
 LOAD R1, 5           ; Load the value 5 into register R1
@@ -64,6 +63,22 @@ Next I will discuss sqlite, and some of its benefits. But as I discuss storing f
 - `mkdir`
 - `chmod`
 
+## File System Purpose
+
+The purpose of a file system is to provide the following basic functionality: 
+
+  - Create files and directories
+  - Copy and Move files and directories to different locations
+  - Edit a file and a directories metadata (some of this overlaps with other purposes)
+    - permissions
+    - ownership
+    - name
+    - location
+  - Delete files and directories
+  - Get a file or directories contents 
+
+All of the queries below are directly or indirectly supporting the above abilities with respect to our files and directories. With python we could use the `os` or `sys` libraries (amongst others) to apply these actions to our file system. Our goal now is to forgo these built in libraries, and implement these actions using sql queries and the Sqlite DB.
+
 ### Sqlite
 
 Sqlite is a small local db that resides in a file. To interact with sqlite we will use a python library to run "queries". The query below creates a SQL table that matches the example data you see above. This is not a db class, so most (not all) of the sql you need will be provided by me. 
@@ -108,13 +123,15 @@ Each column in a sql table must have a data type and not all databases provide t
 
 Thats a little background on representing file data, and how we might store it in a sql table. But it doesn't exactly explain how you might use this as a file system. To explain the relationship to how it can be used as a file system, I will go through some example querys next.
 
+
+
 ## Some Example Queries
 
 ####  Example Simple Query 
 
 - This first example is a small "start" to "finish" example showing how to connect, excute a query, and close a connection.
-- Mostly we will be using classes designed by us to abstract some of these details, but ultimately still connects and queries Sqlite like [HERE](./sqliteCRUD.py).
-- It inserts a new row int the `theDatabase` database. 
+- Mostly we will be using classes designed by us to abstract some of these details, but ultimately still connects and queries Sqlite like [the Sqlite Crud Class](./sqliteCRUD.py).
+- This example inserts a new row into the `theDatabase` database. 
 - Notice the syntax with the `?` marks as place holders for values.
 
 ```python
@@ -286,50 +303,37 @@ cursor.execute("SELECT * FROM files WHERE id = ?", (id,))
 
 ```
 
-
 ### Other Possible Queries
 
 We can discuss these in class later. 
 
 1. **Write File**: Write data to an existing file, potentially appending to the existing content.
-
 4.  **Change Ownership**: Change the owner of a file or directory.
-
 5.  **Change Group**: Change the group associated with a file or directory.
-
 6.  **Change Permissions**: Modify the permissions (e.g., read, write, execute) of a file or directory.
-
 7.  **Get File or Directory Information**: Retrieve metadata (e.g., size, modification time) about a file or directory.
-
 8.  **Search for Files**: Search for files or directories based on criteria like name, type, owner, or permissions.
-
 9.  **Access Control**: Implement access control checks to determine whether a user has permission to perform specific operations on files or directories.
-
 10. **File Upload**: Upload a file from an external source (e.g., a client application) and store it in the file system.
-
 11. **File Download**: Retrieve a file from the file system and provide it for download to an external client.
-
 12. **File Versioning**: Implement version control for files to track changes and revisions.
-
 13. **File Metadata Management**: Allow users to add and manage metadata (e.g., tags, descriptions) for files and directories.
-
 14. **File and Directory Renaming**: Rename files and directories.
-
 15. **Hidden Files and Directories Handling**: Implement functionality to hide or unhide files and directories based on naming conventions or attributes.
-
 16. **File and Directory Permissions Enforcement**: Enforce access permissions to ensure that users can only perform actions allowed by their permissions.
-
 17. **Error Handling and Logging**: Implement error handling to manage and log any exceptions or issues that arise during file system operations.
-
 18. **File and Directory Locking**: Provide mechanisms to lock and unlock files and directories to prevent concurrent access conflicts.
-
 19. **File and Directory Monitoring**: Implement mechanisms to monitor changes to files and directories (e.g., using inotify or similar technologies).
-
 20. **File and Directory Permissions Inheritance**: Implement inheritance of permissions from parent directories to child directories and files.
-
 21. **Trash or Recycle Bin**: Implement a feature to move deleted files and directories to a trash or recycle bin for potential recovery.
 
 
 ## Requirements
 
-- Using the available files and example code, create a sqlite database 
+
+
+
+- Using the provided example code, create a sqlite database to store the appropriate file system files and metadata for each file. You can change the `schema` (table structure) if you feel it will improve your own version. But your filesystem should be designed (not necessarily implemented) to do the following:
+
+  - 
+- 
