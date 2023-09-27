@@ -38,7 +38,7 @@ Of course, a file system stores many more things beyond file content and we will
 
 This data is organized into `rows` and `columns`, where a column is vertical and rows are horizontal. A "row" is a collection of data that is stored together, meaning it is associated with a single entry. If you stored data for a single person, all of there information would be in the same row. Columns are just data values that are alike. Like all the ages of a person would be in the same column. I don't want to get into database theory, but we need to be able to find a single row of data without ambiguity, and that is when we use a `key`, more specifially a `primary key`. In this example data the primary key is the `id` column. And a very abstracted query to obtain data from a database table could be: `Give me the row of data that has the id 7`. But using primary keys allows us to know that we are receiving the correct and unique data for that `id`.
 
-``````
+```
 | id  | pid | filename      | file_type | file_size | owner | groop | permissions | modification_time       | content                 | hidden |
 | --- | --- | ------------- | --------- | --------- | ----- | ----- | ----------- | ----------------------- | ----------------------- | ------ |
 | 1   | 0   |               | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 14:00:00 UTC | NULL                    | false  |
