@@ -58,7 +58,11 @@ class FileSystem:
 
 # Example usage:
 if __name__ == "__main__":
-
+    """
+    THIS USAGE REALLY JUST SHOWS THE SqliteCRUD CLASS BUT WITH A FILESYSTEM THEME.
+    WILL FIX AS WE ADD FUNCTIONALITY INTO THE FileSystem CLASS ABOVE
+    SORRY FOR ALL CAPS DIDN'T WANT YOU TO MISS    
+    """
      # Define table schema
     table_name = "files_data"
     columns = ["id INTEGER PRIMARY KEY", "pid INTEGER", "name TEXT", "created_date TEXT", "modified_date TEXT", "size REAL","type TEXT","owner TEXT","groop TEXT","permissions TEXT"]
