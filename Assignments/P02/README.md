@@ -103,8 +103,8 @@ CREATE TABLE FileSystem (
 
 
 Each column in a sql table must have a data type and not all databases provide the same data types. The two docs below discuss sqlite data types, and how to deal with date and time types. 
-- [datatypes.md](data_types.md)
-- [timestamps.md](timestamps.md)
+- [Sqlite datatypes overview](data_types.md)
+- [How to represent timestamps in sqlite](timestamps.md)
 
 Thats a little background on representing file data, and how we might store it in a sql table. But it doesn't exactly explain how you might use this as a file system. To explain the relationship to how it can be used as a file system, I will go through some example querys next.
 
