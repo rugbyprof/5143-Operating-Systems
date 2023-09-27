@@ -30,7 +30,7 @@ DIV R6, R2, R1       ; Divide the value in R2 by the value in R1, and store the 
 MOD R7, R2, R1       ; Calculate the modulus of the value in R2 divided by the value in R1, and store the result in R7
 ```
 
-Of course, a file system stores many more things beyond file content and we will need to address many of them. Look at the example data below. Where you see `[Binary data for _______]` replace it with pretend file content from the example above. Notice this data looks extremely similar to a long listing `ls -l` 
+Of course, a file system stores many more things beyond file content and we will need to address many of them. Look at the example data below. Where you see `[Binary data for _______]` replace it with pretend file content from the example above. Notice the data in the table below looks extremely similar to a long listing `ls -l` 
 
 #### Example Data
 
@@ -38,6 +38,7 @@ Of course, a file system stores many more things beyond file content and we will
 
 This data is organized into `rows` and `columns`, where a column is vertical and rows are horizontal. A "row" is a collection of data that is stored together, meaning it is associated with a single entry. If you stored data for a single person, all of there information would be in the same row. Columns are just data values that are alike. Like all the ages of a person would be in the same column. I don't want to get into database theory, but we need to be able to find a single row of data without ambiguity, and that is when we use a `key`, more specifially a `primary key`. In this example data the primary key is the `id` column. And a very abstracted query to obtain data from a database table could be: `Give me the row of data that has the id 7`. But using primary keys allows us to know that we are receiving the correct and unique data for that `id`.
 
+``````
 | id  | pid | filename      | file_type | file_size | owner | groop | permissions | modification_time       | content                 | hidden |
 | --- | --- | ------------- | --------- | --------- | ----- | ----- | ----------- | ----------------------- | ----------------------- | ------ |
 | 1   | 0   |               | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 14:00:00 UTC | NULL                    | false  |
@@ -53,6 +54,7 @@ This data is organized into `rows` and `columns`, where a column is vertical and
 | 11  | 0   | tmp           | directory | NULL      | root  | root  | rwxr-xr-x   | 2023-09-13 15:00:00 UTC | NULL                    | false  |
 | 12  | 11  | temp_file.txt | file      | 512       | root  | root  | rw-r--r--   | 2023-09-13 15:05:00 UTC | [Binary data for temp]  | false  |
 | 13  | 5   | homework      | directory | NULL      | user3 | users | rwxr-x---   | 2023-09-13 14:20:00 UTC | NULL                    | false  |
+```
 
 Next I will discuss sqlite, and some of its benefits. But as I discuss storing files in a database table, I want you to think about implementing shell commands. What? Yes, I will be giving examples of how to `insert`, `find`, `update`, and `delete` data dealing with files. So as Im going over examples, think about ways to implement 
 
