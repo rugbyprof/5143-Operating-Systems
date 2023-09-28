@@ -1,3 +1,4 @@
+type,name,owner,group,id,pid,create_date,mod_date,perm
 directory,linux,bob,bob,1,0,2018-06-23 19:15:35,2018-08-18 09:05:02,rwxr-xr-x
 directory,drivers,bob,bob,2,1,2017-06-27 01:02:44,2017-10-05 06:02:11,rwxr-xr-x
 directory,perfctr,bob,bob,3,2,2021-10-19 15:58:04,2021-11-13 10:21:53,rwxr-xr-x
