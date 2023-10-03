@@ -3,7 +3,10 @@
 import sqlite3
 from prettytable import PrettyTable
    
-class SQLiteconn:
+class SQLiteCrud:
+    """
+    Comment
+    """
     
     def __init__(self, db_path):
         """Initialize database connection and cursor."""
