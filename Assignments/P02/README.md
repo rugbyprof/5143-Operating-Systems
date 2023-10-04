@@ -101,7 +101,7 @@ cursor.execute(sql_query, (name, age))
 conn.commit()
 conn.close()
 
-``````
+```
 
 
 1. **Create File**: Create a new file in a specified directory with the given name, owner, group, and permissions.
@@ -231,6 +231,42 @@ conn.close()
 
 27. **Trash or Recycle Bin**: Implement a feature to move deleted files and directories to a trash or recycle bin for potential recovery.
 
+
+
+## Requirements 
+
+### Those That Have Not Presented 
+
+- If you haven't presented your shell yet and have opted to wait, then the [checklist](../P01/command_checklist.md) in `P02` applies to this assignment. 
+- Meaning you will present just as all the others did, but using sqlite as a backend.
+
+### Those That Have Presented 
+
+- Here is a smaller checklist.
+- You will not have to present per se. You will have to show a walkthrough
+
+|    #    | Item                                             |  Value  | Earned |
+| :-----: | ------------------------------------------------ | :-----: | :----: |
+| ***1*** | ***Commands***                                   | **200** |        |
+|    1    | *ls -lah*                                        |    ▢    |        |
+|    2    | *mkdir bananas*                                  |    ▢    |        |
+|    3    | *cd bananas*                                     |    ▢    |        |
+|    4    | *cd ..*                                          |    ▢    |        |
+|    5    | *pwd*                                            |    ▢    |        |
+|    6    | *mv somefile.txt bananas*                        |    ▢    |        |
+|    7    | *cp bananas/somefile.txt somefile/otherfile.txt* |    ▢    |        |
+|    8    | *rm -rf bananas*                                 |    ▢    |        |
+|    9    | *history*                                        |    ▢    |        |
+|   10    | *chmod 777 somefile.txt*                         |    ▢    |        |
+
+- You can simply run a file that shows an example `usage` of your file system.
+- Example:
+
+<img src="https://images2.imgbox.com/18/4e/iZzcjQcb_o.png">
+
+- This should have a delay between commands so it can be seen running.
+- Using python rich, you can have fun with it and format the output however you want, as long as you stay within the spirit of the command. 
+- I've provided a mocked up example walkthrough [here](./walkthrough.py).
 
 
 
