@@ -2,6 +2,15 @@
 Discussion in the MW class about handling the processing of commands
 """
 
+def ls(**kwargs):
+    cmd = kwargs.get('cmd',None)
+    flags = kwargs.get('flags',None)
+    params = kwargs.get('params',None)
+
+    print(cmd)
+    print(flags)
+    print(params)
+
 # Example commands
 cmd = 'ls /etc/hosts -lah | grep .txt > outfile.txt'
 cmd = 'ls -l  /usr/local -ah /home/runner/5143shellhelp/ | grep nix > out'
@@ -47,10 +56,15 @@ parts = {
 }
 
 parts = {
-    'cmd':'wc',
-    'flags':['l',''],
-    'params':''
+    'cmd':'ls',
+    'flags':['l','a','h'],
+    'params':'/usr/bin'
 }
+
+print("="*40)
+ls(**parts)
+print("="*40)
+ls(cmd='ls',flags=['l','a','h'],params='/usr/bin')
 
 # example function call
 # ls(params=['/etc/hosts','-lah'],flags=[''],stdin=historyOut)
