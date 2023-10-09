@@ -26,3 +26,4 @@ num_points = 100
 
 img = fibonacci_spiral(image_size, num_points)
 img.show()
+img.save("fib.bmp")
