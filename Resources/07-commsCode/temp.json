@@ -1,0 +1,592 @@
+[
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "Default virtual host",
+        "metadata": {
+            "description": "Default virtual host",
+            "tags": []
+        },
+        "name": "/",
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "ack": 0,
+            "ack_details": {
+                "rate": 0.0
+            },
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "deliver": 0,
+            "deliver_details": {
+                "rate": 0.0
+            },
+            "deliver_get": 8734,
+            "deliver_get_details": {
+                "rate": 0.0
+            },
+            "deliver_no_ack": 8734,
+            "deliver_no_ack_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 4,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "get": 0,
+            "get_details": {
+                "rate": 0.0
+            },
+            "get_empty": 0,
+            "get_empty_details": {
+                "rate": 0.0
+            },
+            "get_no_ack": 0,
+            "get_no_ack_details": {
+                "rate": 0.0
+            },
+            "publish": 4009,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "redeliver": 0,
+            "redeliver_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-01",
+        "recv_oct": 722701,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 1910263,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "ack": 0,
+            "ack_details": {
+                "rate": 0.0
+            },
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "deliver": 0,
+            "deliver_details": {
+                "rate": 0.0
+            },
+            "deliver_get": 6,
+            "deliver_get_details": {
+                "rate": 0.0
+            },
+            "deliver_no_ack": 6,
+            "deliver_no_ack_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 18,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "get": 0,
+            "get_details": {
+                "rate": 0.0
+            },
+            "get_empty": 0,
+            "get_empty_details": {
+                "rate": 0.0
+            },
+            "get_no_ack": 0,
+            "get_no_ack_details": {
+                "rate": 0.0
+            },
+            "publish": 24,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "redeliver": 0,
+            "redeliver_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-02",
+        "recv_oct": 7648,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 10035,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "ack": 0,
+            "ack_details": {
+                "rate": 0.0
+            },
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "deliver": 0,
+            "deliver_details": {
+                "rate": 0.0
+            },
+            "deliver_get": 9,
+            "deliver_get_details": {
+                "rate": 0.0
+            },
+            "deliver_no_ack": 9,
+            "deliver_no_ack_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 123,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "get": 0,
+            "get_details": {
+                "rate": 0.0
+            },
+            "get_empty": 0,
+            "get_empty_details": {
+                "rate": 0.0
+            },
+            "get_no_ack": 0,
+            "get_no_ack_details": {
+                "rate": 0.0
+            },
+            "publish": 132,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "redeliver": 0,
+            "redeliver_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-03",
+        "recv_oct": 21469,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 8781,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 3,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "publish": 3,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-04",
+        "recv_oct": 812,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 571,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "ack": 0,
+            "ack_details": {
+                "rate": 0.0
+            },
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "deliver": 0,
+            "deliver_details": {
+                "rate": 0.0
+            },
+            "deliver_get": 130229,
+            "deliver_get_details": {
+                "rate": 0.0
+            },
+            "deliver_no_ack": 130229,
+            "deliver_no_ack_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 3,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "get": 0,
+            "get_details": {
+                "rate": 0.0
+            },
+            "get_empty": 0,
+            "get_empty_details": {
+                "rate": 0.0
+            },
+            "get_no_ack": 0,
+            "get_no_ack_details": {
+                "rate": 0.0
+            },
+            "publish": 70105,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "redeliver": 0,
+            "redeliver_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-05",
+        "recv_oct": 9638790,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 23526283,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "ack": 0,
+            "ack_details": {
+                "rate": 0.0
+            },
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "deliver": 0,
+            "deliver_details": {
+                "rate": 0.0
+            },
+            "deliver_get": 1449,
+            "deliver_get_details": {
+                "rate": 0.0
+            },
+            "deliver_no_ack": 1449,
+            "deliver_no_ack_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 0,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "get": 0,
+            "get_details": {
+                "rate": 0.0
+            },
+            "get_empty": 0,
+            "get_empty_details": {
+                "rate": 0.0
+            },
+            "get_no_ack": 0,
+            "get_no_ack_details": {
+                "rate": 0.0
+            },
+            "publish": 859,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "redeliver": 0,
+            "redeliver_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-06",
+        "recv_oct": 223199,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 393719,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-07",
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "message_stats": {
+            "confirm": 0,
+            "confirm_details": {
+                "rate": 0.0
+            },
+            "drop_unroutable": 3,
+            "drop_unroutable_details": {
+                "rate": 0.0
+            },
+            "publish": 3,
+            "publish_details": {
+                "rate": 0.0
+            },
+            "return_unroutable": 0,
+            "return_unroutable_details": {
+                "rate": 0.0
+            }
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-08",
+        "recv_oct": 365,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 543,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-09",
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "messages": 0,
+        "messages_details": {
+            "rate": 0.0
+        },
+        "messages_ready": 0,
+        "messages_ready_details": {
+            "rate": 0.0
+        },
+        "messages_unacknowledged": 0,
+        "messages_unacknowledged_details": {
+            "rate": 0.0
+        },
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "game-10",
+        "recv_oct": 720,
+        "recv_oct_details": {
+            "rate": 0.0
+        },
+        "send_oct": 753,
+        "send_oct_details": {
+            "rate": 0.0
+        },
+        "tags": [],
+        "tracing": false
+    },
+    {
+        "cluster_state": {
+            "rabbit@messenger": "running"
+        },
+        "default_queue_type": "undefined",
+        "description": "",
+        "metadata": {
+            "description": "",
+            "tags": []
+        },
+        "name": "messages",
+        "tags": [],
+        "tracing": false
+    }
+]

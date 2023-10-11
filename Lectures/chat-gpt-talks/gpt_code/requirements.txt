@@ -1,0 +1,4 @@
+rich
+numpy
+opencv-python
+pillow

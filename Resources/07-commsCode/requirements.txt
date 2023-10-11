@@ -1,0 +1,4 @@
+pygame
+pika
+requests
+rich

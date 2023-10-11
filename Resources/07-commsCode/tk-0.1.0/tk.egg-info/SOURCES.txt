@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+tk/__init__.py
+tk.egg-info/PKG-INFO
+tk.egg-info/SOURCES.txt
+tk.egg-info/dependency_links.txt
+tk.egg-info/top_level.txt
+tk/structure/Tensor.py
+tk/structure/TensorMap.py
+tk/structure/__init__.py
