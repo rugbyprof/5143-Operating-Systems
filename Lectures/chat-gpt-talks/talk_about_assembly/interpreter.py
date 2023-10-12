@@ -37,6 +37,7 @@ class PseudoAssemblyInterpreter:
             if instruction:
                 self.execute_instruction(instruction)
 
+
     def execute_instruction(self, instruction):
         parts = instruction.split()
         opcode = parts[0].upper()
