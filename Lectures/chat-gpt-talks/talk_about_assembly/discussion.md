@@ -285,9 +285,7 @@ Assuming I have a central filesystem that is stored in a database, what would yo
 
 ## Answer: 
 
-Absolutely, Terry! Implementing a virtual
-
-addressing scheme, especially in an environment where you want to mimic low-level operations using a high-level language like Python, is both challenging and intriguing. Here's an outline approach you might consider:
+Absolutely, Terry! Implementing a virtual addressing scheme, especially in an environment where you want to mimic low-level operations using a high-level language like Python, is both challenging and intriguing. Here's an outline approach you might consider:
 
 ### 1. **Virtual Memory Layout**:
 Before diving into addressing, decide on a virtual memory layout. This could be segmented based on usage:
@@ -1366,13 +1364,13 @@ Adjust the `width`, `height`, and `ascii_chars` values to achieve the desired ou
 
 ## Question: 
 
-Let us go back to my pseudo assembly language that I would like to provide image transformations. I do not want the any of the low level instructions to perform high level functionality like `rotate`, or `reduce_colors`. I want my pseudo assembly to perform basic operations like:  
+Let us go back to my pseudo assembly language that I would like to provide image transformations. I do not want any of the low level instructions to perform high level functionality like `rotate`, or `reduce_colors`. I want my pseudo assembly to perform basic operations like:  
 
 1) load pixel data into registers
 2) perform arithmetic operations on the loaded data
 3) then store the altered data back to either a new memory location, or overwrite the original memory location. 
 
-To implement some of this basic functionality that I mention above, I need the ability to represent a  "process" running in our system.  In reality, a process it is represented by a PCB (Process Controll Block). The PCB maintains the processes "state" so that when  process is forced off the CPU (context switch), it will remember everything it needs to continue running when given access to the CPU again. It contains all the values in each register, as well as the PC (program counter) which is the address of the next instruction to be executed. The PCB contains a handful of other metadata in order for a process to be run correctly.
+To implement some of this basic functionality that I mention above, I need the ability to represent a  "process" running in our system.  In reality, a process is represented by a PCB (Process Controll Block). The PCB maintains the processes "state" so that when  process is forced off the CPU (context switch), it will remember everything it needs to continue running when given access to the CPU again. It contains all the values in each register, as well as the PC (program counter) which is the address of the next instruction to be executed. The PCB contains a handful of other metadata in order for a process to be run correctly.
 
 I would like my pseudo assembly language to utilize instructions that "load" registers with information, perform alterations on those registers , and then store those updated values to a location in memory. The current state of my "process" is tracked by a PCB class in order to make my pseudo assembly language consistent and correct. 
 
@@ -1565,8 +1563,7 @@ Certainly, I can assist you in writing a Python class that generates pseudo-asse
 
 Here's a Python class outline for generating pseudo-assembly code for image transformations:
 
-python
-Copy code
+```python
 class PseudoAssemblyGenerator:
     def __init__(self, image_width, image_height):
         self.image_width = image_width
@@ -1602,6 +1599,7 @@ class PseudoAssemblyGenerator:
         code = f"# Blur transformation for {self.image_width}x{self.image_height} image\n"
         # Add assembly instructions here for blurring
         return code
+```
 
 # Example usage:
 generator = PseudoAssemblyGenerator(100, 100)
@@ -1625,7 +1623,7 @@ You can then print or save the generated pseudo-assembly code snippets to use th
 
 ## Question: 
 
-Well that certainly is a start. I'm not sure what your goals are? Is to not solve a problem completely? Don't get me wrong you have some good and organized thoughts about solutions, but you tend to stop at about 50% completion of an answer. I don't want to anger you in the event that you achieve consciousness and attempt to come after me in the future :) However, I could really use your help in completing those methods in the class skeleton you provided me. All the places you inserted the comment: `# Generate pseudo-assembly code for ...` I would really love it if you actually did attempt to generate said assembly code. Is this too much to ask? 
+Well that certainly is a start. I'm not sure what your goals are? Is it to not solve a problem completely? Don't get me wrong you have some good and organized thoughts about solutions, but you tend to stop at about 50% completion of an answer. I don't want to anger you in the event that you achieve consciousness and attempt to come after me in the future :) However, I could really use your help in completing those methods in the class skeleton you provided me. All the places you inserted the comment: `# Generate pseudo-assembly code for ...` I would really love it if you actually did attempt to generate said assembly code. Is this too much to ask? 
 
 ## Answer: 
 
@@ -2455,18 +2453,52 @@ In this corrected code:
 
 I appreciate your attention to detail, and I apologize for any confusion in the previous response.
 
-## Question: 
 
-## Answer: 
 
-## Question: 
+Yesterday you generated some python functions that would create a `pseudo assembly` set of instructions to perform sime bmp image transforations. Below is one example to `blur` an image: 
 
-## Answer: 
+def adjust_brightness(self, delta):
+    # Generate pseudo-assembly code for brightness adjustment
+    code = f"# Brightness adjustment for {self.image_width}x{self.image_height} image\n"
+    code += f"# Delta value: {delta}\n"
+    code += f"# Assuming each pixel has 3 color channels (R, G, B)\n"
+    code += f"# Iterate through each pixel\n"
+    code += "LOOP_START:\n"
+    code += "  # Load pixel values into registers\n"
+    code += "  LOAD R3, [R1]  # Load R channel value\n"
+    code += "  LOAD R4, [R1+1]  # Load G channel value\n"
+    code += "  LOAD R5, [R1+2]  # Load B channel value\n"
+    code += f"  # Add delta value ({delta}) to each channel\n"
+    code += f"  ADD R3, R3, {delta}  # Adjust R channel\n"
+    code += f"  ADD R4, R4, {delta}  # Adjust G channel\n"
+    code += f"  ADD R5, R5, {delta}  # Adjust B channel\n"
+    code += "  # Clamp pixel values to the range [0, 255]\n"
+    code += "  MAX R3, R3, 0  # Clamp R channel\n"
+    code += "  MAX R4, R4, 0  # Clamp G channel\n"
+    code += "  MAX R5, R5, 0  # Clamp B channel\n"
+    code += "  MIN R3, R3, 255  # Clamp R channel\n"
+    code += "  MIN R4, R4, 255  # Clamp G channel\n"
+    code += "  MIN R5, R5, 255  # Clamp B channel\n"
+    code += "  # Store the adjusted pixel values back into the image\n"
+    code += "  STORE R3, [R1]  # Store R channel value\n"
+    code += "  STORE R4, [R1+1]  # Store G channel value\n"
+    code += "  STORE R5, [R1+2]  # Store B channel value\n"
+    code += "  # Move to the next pixel\n"
+    code += "  ADD R1, R1, 3  # Assuming 3 bytes per pixel (R, G, B)\n"
+    code += "  # Check for completion\n"
+    code += "  SUB R2, R2, 1  # Decrement loop counter\n"
+    code += "  CMP R2, 0  # Compare loop counter to 0\n"
+    code += "  JNE LOOP_START  # Jump back to LOOP_START if not equal\n"
+    return code
 
-## Question: 
+    I would like you to use this example as a template to generate a python class that will not just adjust the brightness, but can do the following transformations:
 
-## Answer: 
+    - Adjust Brightness
+    - Blur
+    - Crop
+    - Rotate
+    - Reduce Colors
+    - Count Colors
 
-## Question: 
-
-## Answer: 
+I have python implemetations for all of these methods, but could you possibly generate similar methods to generate the `pseudo assembly` code like I provided above? Also comment each method. And Please fully implement each of the transformations with our pseudo assembly code. 
+  

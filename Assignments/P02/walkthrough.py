@@ -2,9 +2,14 @@ import time
 from rich import print
 from rich.table import Table
 from rich.box import SIMPLE
+import time
+from rich.progress import track
+
+
+
 
 def display_ls(files):
-    table = Table(show_header=True, header_style="bold blue", box=SIMPLE)
+    table = Table(show_header=True, header_style="bold blue", ) #box=SIMPLE
     table.add_column("Filename", style="dim", width=20)
     table.add_column("Owner", width=10)
     table.add_column("Permissions", width=10)
@@ -12,11 +17,14 @@ def display_ls(files):
     for filename, (owner, perms, size) in files.items():
         table.add_row(filename, owner, perms, size)
     print(table)
-    time.sleep(2)
+
+    for i in track(range(5), description="Processing..."):
+        time.sleep(.5)  # Simulate work being done
 
 def display_pwd(directory):
     print(f"[bold cyan]Current Directory:[/bold cyan] [green]{directory}[/green]")
-    time.sleep(1)
+    for i in track(range(5), description="Processing..."):
+        time.sleep(.5)  # Simulate work being done
 
 # Dummy data for the example
 current_directory = "/home/user"
@@ -45,7 +53,8 @@ display_ls(files_before)
 
 print("\n[bold blue]Command:[/bold blue] [green]mkdir newfolder[/green]")
 print("[bold green]Folder 'newfolder' created.[/bold green]")
-time.sleep(1)
+for i in track(range(5), description="Processing..."):
+    time.sleep(.5)  # Simulate work being done
 
 print("\n[bold blue]Command:[/bold blue] [green]ls[/green]")
 display_ls(files_after)
@@ -56,11 +65,14 @@ display_pwd(current_directory)
 
 print("\n[bold blue]Command:[/bold blue] [green]cp ../file1.txt .[/green]")
 print("[bold green]File 'file1.txt' copied to current directory.[/bold green]")
-time.sleep(1)
+for i in track(range(5), description="Processing..."):
+    time.sleep(.5)  # Simulate work being done
+
 
 print("\n[bold blue]Command:[/bold blue] [green]rm ../file1.txt ../file2.txt ../file5.txt[/green]")
 print("[bold green]Files 'file1.txt', 'file2.txt', and 'file5.txt' removed.[/bold green]")
-time.sleep(1)
+for i in track(range(5), description="Processing..."):
+    time.sleep(.5)  # Simulate work being done
 
 print("\n[bold blue]Command:[/bold blue] [green]ls[/green]")
 display_ls(files_after)

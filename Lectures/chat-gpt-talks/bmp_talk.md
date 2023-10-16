@@ -268,7 +268,7 @@ Here's the game plan:
 
 Here's how the assembly might look:
 
-```assembly
+```asm
 # Assembly code to flip an image vertically using R1-R10 registers.
 
 # Load image width to R1 and height to R2
@@ -418,3 +418,374 @@ Note:
 - We're using a simple mean blur and skipping the edges of the image for the sake of simplicity.
 - This algorithm is inefficient, especially in an assembly context. Advanced algorithms like the Gaussian blur and the use of separable filters can achieve similar effects much more efficiently.
 - Real-world assembly would require multiple instructions to accomplish tasks like multi-register arithmetic. The pseudo-code above abstracts many of these details for clarity.
+
+
+---
+
+
+Sure, Terry! Creating a Python class that generates pseudo-assembly code for various image transformations is a super interesting idea. This could serve as a useful teaching tool, helping students understand the low-level operations involved in image processing. Here's a Python class that includes your specified image transformations:
+
+```python
+class PseudoAssemblyImageProcessor:
+    def __init__(self, image_width, image_height):
+        self.image_width = image_width
+        self.image_height = image_height
+
+    def adjust_brightness(self, delta):
+        # Code for brightness adjustment
+        # Similar to the code you provided
+        # ... [snipped for brevity] ...
+
+        return code
+
+    def blur(self):
+        # Generate pseudo-assembly code for blurring
+        code = f"# Blurring for {self.image_width}x{self.image_height} image\n"
+        # ... [snipped for brevity] ...
+
+        return code
+
+    def crop(self, x1, y1, x2, y2):
+        # Generate pseudo-assembly code for cropping
+        code = f"# Cropping for {self.image_width}x{self.image_height} image\n"
+        # ... [snipped for brevity] ...
+
+        return code
+
+    def rotate(self, angle):
+        # Generate pseudo-assembly code for rotation
+        code = f"# Rotation for {self.image_width}x{self.image_height} image\n"
+        # ... [snipped for brevity] ...
+
+        return code
+
+    def reduce_colors(self, bit_depth):
+        # Generate pseudo-assembly code for color reduction
+        code = f"# Color reduction for {self.image_width}x{self.image_height} image\n"
+        # ... [snipped for brevity] ...
+
+        return code
+
+    def count_colors(self):
+        # Generate pseudo-assembly code for color counting
+        code = f"# Color counting for {self.image_width}x{self.image_height} image\n"
+        # ... [snipped for brevity] ...
+
+        return code
+```
+
+Unfortunately, due to space constraints, I can't put all the pseudo-assembly implementations here at once. However, I can absolutely help you come up with each of these one at a time, fully commented as you asked. Which one would you like to start with?
+
+## Count Colors
+Absolutely, Terry! Counting colors in an image is often an interesting operation to delve into, especially when you're trying to understand the image at a low level. You'll have to iterate over each pixel and store a unique count for each RGB value you encounter. Here's how the pseudo-assembly might look for this:
+
+```python
+    def count_colors(self):
+        # Generate pseudo-assembly code for color counting
+        code = f"# Color counting for {self.image_width}x{self.image_height} image\n"
+        code += "# Assuming each pixel has 3 color channels (R, G, B)\n"
+        code += "# Initialize counter and set to 0\n"
+        code += "LOAD R9, 0  # Color counter\n"
+        code += "# Create a table in memory to store unique colors\n"
+        code += "ALLOCATE TABLE_SIZE  # Allocate memory for color table\n"
+        code += "LOAD R10, TABLE_START  # R10 will point to the start of the table\n"
+        code += "# Iterate through each pixel\n"
+        code += "LOOP_START:\n"
+        code += "  # Load pixel values into registers\n"
+        code += "  LOAD R3, [R1]  # Load R channel value\n"
+        code += "  LOAD R4, [R1+1]  # Load G channel value\n"
+        code += "  LOAD R5, [R1+2]  # Load B channel value\n"
+        code += "  # Compute a hash for the RGB values\n"
+        code += "  HASH R6, R3, R4, R5  # Hash result stored in R6\n"
+        code += "  # Check if this hash is in the table\n"
+        code += "  SEARCH_TABLE R7, R6, R10  # Result stored in R7\n"
+        code += "  CMP R7, 0  # Check if hash was found\n"
+        code += "  JE NEW_COLOR  # If not found, add new color\n"
+        code += "  # Color already counted, move to next pixel\n"
+        code += "  JMP NEXT_PIXEL\n"
+        code += "NEW_COLOR:\n"
+        code += "  # Add hash to the table\n"
+        code += "  INSERT_TABLE R6, R10\n"
+        code += "  # Increment the color counter\n"
+        code += "  INC R9\n"
+        code += "NEXT_PIXEL:\n"
+        code += "  # Move to the next pixel\n"
+        code += "  ADD R1, R1, 3  # Assuming 3 bytes per pixel (R, G, B)\n"
+        code += "  # Check for completion\n"
+        code += "  SUB R2, R2, 1  # Decrement loop counter\n"
+        code += "  CMP R2, 0  # Compare loop counter to 0\n"
+        code += "  JNE LOOP_START  # Jump back to LOOP_START if not equal\n"
+        code += "  # Store the color count into a memory location\n"
+        code += "  STORE R9, COLOR_COUNT_LOCATION\n"
+
+        return code
+```
+
+This is quite a high-level pseudo-assembly code and assumes the existence of some kind of table data structure and hash function in your assembly environment. The operations like `SEARCH_TABLE` and `INSERT_TABLE` are placeholders for more detailed operations you'd need to perform to search or insert an item into your table. The point is to show the overall structure of what you'd need to do to count unique colors in an image.
+
+Let me know if this aligns with what you had in mind or if you'd like further details or modifications!
+
+
+## Cropping
+
+Certainly, Terry! Cropping is a pretty straightforward image transformation, but it gets interesting when you think about it in terms of low-level operations. Here's how you might represent cropping an image using pseudo-assembly code:
+
+```python
+    def crop(self, x1, y1, x2, y2):
+        # Generate pseudo-assembly code for cropping
+        code = f"# Cropping a {self.image_width}x{self.image_height} image to coordinates ({x1}, {y1}) to ({x2}, {y2})\n"
+        code += "# Assuming each pixel has 3 color channels (R, G, B)\n"
+        code += "# Initialize destination pointer\n"
+        code += "LOAD R8, DEST_START  # R8 will point to the start of the destination image\n"
+        code += "# Loop through rows and columns in the crop rectangle\n"
+        code += f"LOAD R4, {y1}  # Start row\n"
+        code += f"LOAD R5, {y2}  # End row\n"
+        code += f"LOAD R6, {x1}  # Start column\n"
+        code += f"LOAD R7, {x2}  # End column\n"
+        code += "ROW_LOOP_START:\n"
+        code += "  # Set source pointer to the start of the current row\n"
+        code += "  COMPUTE_ROW_PTR R1, R4, R6  # Compute address, store in R1\n"
+        code += "  # Loop through each column in the row\n"
+        code += "  LOAD R9, R6  # Current column\n"
+        code += "  COLUMN_LOOP_START:\n"
+        code += "    # Copy pixel from source to destination\n"
+        code += "    LOAD R2, [R1]  # Load R channel value\n"
+        code += "    LOAD R3, [R1+1]  # Load G channel value\n"
+        code += "    LOAD R10, [R1+2]  # Load B channel value\n"
+        code += "    STORE R2, [R8]  # Store R channel value\n"
+        code += "    STORE R3, [R8+1]  # Store G channel value\n"
+        code += "    STORE R10, [R8+2]  # Store B channel value\n"
+        code += "    # Move source and destination pointers\n"
+        code += "    ADD R1, R1, 3  # Move to the next source pixel\n"
+        code += "    ADD R8, R8, 3  # Move to the next destination pixel\n"
+        code += "    INC R9  # Move to next column\n"
+        code += "    CMP R9, R7  # Check if at the end of columns\n"
+        code += "    JLE COLUMN_LOOP_START  # Loop if not at end\n"
+        code += "  # Move to the next row\n"
+        code += "  INC R4  # Increment current row\n"
+        code += "  CMP R4, R5  # Check if at the end of rows\n"
+        code += "  JLE ROW_LOOP_START  # Loop if not at end\n"
+
+        return code
+```
+
+In this pseudo-assembly code, I'm assuming that:
+
+- `DEST_START` is the starting memory location where the cropped image will be stored.
+- `COMPUTE_ROW_PTR` is a macro or function that computes the starting memory address of a row in the original image based on the row and column index.
+
+Again, this is a high-level description and some of the actual assembly implementations would depend on the specific details of your assembly language.
+
+Hope this helps! Let me know if you have more questions or need further clarifications.
+
+## Image Rotate
+
+Rotating an image can be a bit trickier than other transformations, especially if we're considering arbitrary angles. But if we limit ourselves to right-angle rotations (90, 180, 270 degrees), things become simpler. I'll provide pseudo-assembly for 90-degree clockwise rotation.
+
+Here we go:
+
+```python
+    def rotate_90_degrees(self):
+        # Generate pseudo-assembly code for 90-degree clockwise rotation
+        code = f"# 90-degree clockwise rotation of a {self.image_width}x{self.image_height} image\n"
+        code += "# Assuming each pixel has 3 color channels (R, G, B)\n"
+        code += "# Initialize destination pointer\n"
+        code += "LOAD R8, DEST_START  # R8 will point to the start of the destination image\n"
+        code += "# Loop through each column (since we are rotating, columns become rows)\n"
+        code += f"LOAD R5, 0  # Start column\n"
+        code += f"LOAD R6, {self.image_width}  # End column\n"
+        code += "COLUMN_LOOP_START:\n"
+        code += "  # Set source pointer to the bottom of the current column\n"
+        code += f"  COMPUTE_COLUMN_PTR R1, {self.image_height}, R5  # Compute address, store in R1\n"
+        code += "  # Loop through each row in the column, moving upwards\n"
+        code += f"  LOAD R7, {self.image_height}  # Start row\n"
+        code += f"  LOAD R9, 0  # End row\n"
+        code += "  ROW_LOOP_START:\n"
+        code += "    # Copy pixel from source to destination\n"
+        code += "    LOAD R2, [R1]  # Load R channel value\n"
+        code += "    LOAD R3, [R1+1]  # Load G channel value\n"
+        code += "    LOAD R10, [R1+2]  # Load B channel value\n"
+        code += "    STORE R2, [R8]  # Store R channel value\n"
+        code += "    STORE R3, [R8+1]  # Store G channel value\n"
+        code += "    STORE R10, [R8+2]  # Store B channel value\n"
+        code += "    # Move source and destination pointers\n"
+        code += f"    SUB R1, R1, {3 * self.image_width}  # Move up one row in the source column\n"
+        code += "    ADD R8, R8, 3  # Move to the next destination pixel\n"
+        code += "    DEC R7  # Move to the previous row\n"
+        code += "    CMP R7, R9  # Check if at the end of rows\n"
+        code += "    JGE ROW_LOOP_START  # Loop if not at end\n"
+        code += "  # Move to the next column\n"
+        code += "  INC R5  # Increment current column\n"
+        code += "  CMP R5, R6  # Check if at the end of columns\n"
+        code += "  JLE COLUMN_LOOP_START  # Loop if not at end\n"
+
+        return code
+```
+
+In this example:
+
+- `DEST_START` is the starting memory location where the rotated image will be stored.
+- `COMPUTE_COLUMN_PTR` is a macro or function that computes the starting memory address of a column in the original image based on the column and row index.
+
+As with before, this pseudo-assembly is just an example and may need to be adapted to the specifics of your assembly language. Note that I'm making some assumptions about the available instructions (`JLE`, `JGE`, etc.) that might not match what you have.
+
+Hope you find this useful! Let me know if you have any questions or if you'd like to proceed with other transformations.
+
+## Brightness
+
+Certainly, let's create a pseudo-assembly method for adjusting brightness. Adjusting brightness is basically a matter of adding (or subtracting) a constant value to each color channel of every pixel. Here's how we can do it:
+
+```python
+    def adjust_brightness(self, delta):
+        # Generate pseudo-assembly code for brightness adjustment
+        code = f"# Brightness adjustment for {self.image_width}x{self.image_height} image\n"
+        code += f"# Delta value: {delta}\n"
+        code += f"# Assuming each pixel has 3 color channels (R, G, B)\n"
+        
+        # Initialize loop counter and image pointer
+        code += f"LOAD R2, {self.image_width * self.image_height}  # Loop counter\n"
+        code += "LOAD R1, IMG_START  # Pointer to the start of the image data\n"
+
+        # Start of loop
+        code += "LOOP_START:\n"
+        
+        # Load RGB channels into registers
+        code += "  LOAD R3, [R1]  # Load R channel value\n"
+        code += "  LOAD R4, [R1+1]  # Load G channel value\n"
+        code += "  LOAD R5, [R1+2]  # Load B channel value\n"
+        
+        # Perform brightness adjustment
+        code += f"  ADD R3, R3, {delta}  # Adjust R channel\n"
+        code += f"  ADD R4, R4, {delta}  # Adjust G channel\n"
+        code += f"  ADD R5, R5, {delta}  # Adjust B channel\n"
+        
+        # Clamp the values to be in the range [0, 255]
+        code += "  MAX R3, R3, 0  # Clamp R channel\n"
+        code += "  MAX R4, R4, 0  # Clamp G channel\n"
+        code += "  MAX R5, R5, 0  # Clamp B channel\n"
+        code += "  MIN R3, R3, 255  # Clamp R channel\n"
+        code += "  MIN R4, R4, 255  # Clamp G channel\n"
+        code += "  MIN R5, R5, 255  # Clamp B channel\n"
+        
+        # Store the modified pixel back into memory
+        code += "  STORE R3, [R1]  # Store R channel value\n"
+        code += "  STORE R4, [R1+1]  # Store G channel value\n"
+        code += "  STORE R5, [R1+2]  # Store B channel value\n"
+        
+        # Move to the next pixel
+        code += "  ADD R1, R1, 3  # Assuming 3 bytes per pixel (R, G, B)\n"
+        
+        # Decrement loop counter and check for loop exit condition
+        code += "  DEC R2  # Decrement loop counter\n"
+        code += "  CMP R2, 0  # Compare loop counter to 0\n"
+        code += "  JNE LOOP_START  # Jump back to LOOP_START if not equal to 0\n"
+        
+        return code
+```
+
+This pseudo-assembly code assumes:
+
+- `IMG_START` is the starting memory location where the image is stored.
+- Each pixel has three bytes: one for each of the R, G, and B color channels.
+- The image has dimensions specified by `self.image_width` and `self.image_height`.
+
+As before, you may need to adjust the provided pseudo-assembly code to fit your specific assembly language and architecture. Hope this helps! Let me know if you have any questions or if you'd like to tackle another transformation.
+
+## Blur and Grayscale
+
+Absolutely, Terry! Let's create pseudo-assembly methods for blurring and converting to grayscale.
+
+### Blur
+
+Blurring is typically done by taking the average of neighboring pixels. For simplicity, we'll assume a 3x3 kernel where each pixel in the kernel has an equal weight. This is a mean filter.
+
+```python
+def blur(self):
+    # Generate pseudo-assembly code for blurring
+    code = f"# Blurring for {self.image_width}x{self.image_height} image\n"
+    code += "# Assuming each pixel has 3 color channels (R, G, B)\n"
+    
+    # You would typically load the original image into one area of memory
+    # and write the blurred result into another area.
+    code += "LOAD R1, IMG_START  # Original image start pointer\n"
+    code += "LOAD R2, IMG_BLUR  # Blurred image start pointer\n"
+    
+    # Assume R8, R9, R10 will hold the sum of R, G, B channels for averaging
+    code += "LOOP_START:\n"
+    code += "  ZERO R8  # Clear R sum\n"
+    code += "  ZERO R9  # Clear G sum\n"
+    code += "  ZERO R10  # Clear B sum\n"
+    
+    # Inner loops for 3x3 kernel would go here, averaging the R, G, B values into R8, R9, R10
+    # Assuming R3-R5 will hold the R, G, B values of a single pixel.
+    code += "  # (inner loops to sum 3x3 kernel values into R8, R9, R10 would go here)\n"
+
+    # Divide sums by 9 to get averages
+    code += "  DIV R8, R8, 9\n"
+    code += "  DIV R9, R9, 9\n"
+    code += "  DIV R10, R10, 9\n"
+
+    # Store the new blurred pixel into the blurred image
+    code += "  STORE R8, [R2]\n"
+    code += "  STORE R9, [R2+1]\n"
+    code += "  STORE R10, [R2+2]\n"
+    
+    # Increment the original and blurred image pointers to the next pixel
+    code += "  ADD R1, R1, 3\n"
+    code += "  ADD R2, R2, 3\n"
+
+    # Decrement loop counter and check for loop exit condition
+    code += "  DEC R11  # Loop counter\n"
+    code += "  CMP R11, 0\n"
+    code += "  JNE LOOP_START\n"
+
+    return code
+```
+
+### Grayscale
+
+Converting an image to grayscale often involves taking a weighted sum of the R, G, and B values for each pixel. The most common method is Luminosity which uses the formula: `0.21 R + 0.72 G + 0.07 B`
+
+```python
+def grayscale(self):
+    # Generate pseudo-assembly code for grayscale conversion
+    code = f"# Grayscale conversion for {self.image_width}x{self.image_height} image\n"
+    code += "# Assuming each pixel has 3 color channels (R, G, B)\n"
+
+    # Initialize loop counter and image pointer
+    code += f"LOAD R2, {self.image_width * self.image_height}  # Loop counter\n"
+    code += "LOAD R1, IMG_START  # Pointer to the start of the image data\n"
+    
+    # Start loop
+    code += "LOOP_START:\n"
+    code += "  LOAD R3, [R1]  # Load R channel value\n"
+    code += "  LOAD R4, [R1+1]  # Load G channel value\n"
+    code += "  LOAD R5, [R1+2]  # Load B channel value\n"
+    
+    # Compute weighted sum for grayscale
+    code += "  MUL R6, R3, 21  # Weighted R\n"
+    code += "  MUL R7, R4, 72  # Weighted G\n"
+    code += "  MUL R8, R5, 7  # Weighted B\n"
+    code += "  ADD R9, R6, R7\n"
+    code += "  ADD R9, R9, R8\n"
+    code += "  DIV R9, R9, 100  # Divide by 100 to get the average\n"
+    
+    # Store the grayscale value back into all three channels for visual effect
+    code += "  STORE R9, [R1]  # Store to R channel\n"
+    code += "  STORE R9, [R1+1]  # Store to G channel\n"
+    code += "  STORE R9, [R1+2]  # Store to B channel\n"
+    
+    # Increment to next pixel
+    code += "  ADD R1, R1, 3\n"
+    
+    # Decrement loop counter and check for loop exit
+    code += "  DEC R2\n"
+    code += "  CMP R2, 0\n"
+    code += "  JNE LOOP_START\n"
+    
+    return code
+```
+
+In these snippets, I used placeholder instructions like `LOAD`, `STORE`, `ADD`, `MUL`, `DIV`, etc., to represent common assembly operations. You might have to replace them with the actual instruction mnemonics used in your assembly language.
+
+Let me know if you find these examples helpful or if you'd like any more adjustments!

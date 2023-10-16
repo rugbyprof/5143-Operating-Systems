@@ -239,6 +239,7 @@ conn.close()
 
 - If you haven't presented your shell yet and have opted to wait, then the [checklist](../P01/command_checklist.md) in `P02` applies to this assignment. 
 - Meaning you will present just as all the others did, but using sqlite as a backend.
+- Remember to look at the [P01 general checklist](../P01/general_checklist.md) as well for P02.
 
 ### Those That Have Presented 
 
@@ -267,6 +268,7 @@ conn.close()
 - This should have a delay between commands so it can be seen running.
 - Using python rich, you can have fun with it and format the output however you want, as long as you stay within the spirit of the command. 
 - I've provided a mocked up example walkthrough [here](./walkthrough.py).
+- Lastly, showing changes in your sql database would be helpful as part of your walkthrough.
 
 
 

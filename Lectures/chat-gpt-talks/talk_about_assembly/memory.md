@@ -1,4 +1,10 @@
-Certainly! Here's a basic `Memory` class that you can use as a starting point for your pseudo-assembly interpreter. This class allows you to create and manage a simulated memory space where you can store and retrieve data by memory addresses:
+## Memory Module
+
+This is the result of a chat gpt conversation where I'm asking it to generate a memory class. The overall goal has been for this project to manipulate simple BMP images as if they were memory for the simple reason that we can visually verify that our pseudo assembly code is running correctly. I asked chat gpt to help me create a memory class that would represent a "flattened" BMP image where the 2D array of colors gets mapped to a 1D array of colors. 
+
+
+
+Basic `Memory` class that you can use as a starting point for your pseudo-assembly interpreter. This class allows you to create and manage a simulated memory space where you can store and retrieve data by memory addresses:
 
 ```python
 class Memory:
