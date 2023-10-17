@@ -31,7 +31,7 @@
 |         | Similar to (but open for me to choose):                |         |        |
 |         | *cat file1 file2 > file0*                              |    ▢    |        |
 | ***4*** | ***General***                                          | **50**  |        |
-|         | Prompt line acts correct (cleans command etc.)         |         |        |
+|         | Prompt line acts correct (cleans command etc.)         |    ▢    |        |
 |         | Arrow keys work                                        |    ▢    |        |
 |         | Items were not printed to the screen unnecessarily     |    ▢    |        |
 |         | Too many messages (like successful .....) weren't used |    ▢    |        |

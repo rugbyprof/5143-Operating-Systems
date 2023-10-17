@@ -15,6 +15,7 @@
 |   1.1   | `assignments` folder exists in Repo                                                                    |    ▢    |        |
 |   1.2   | `P02` folder exists in `assignments` with appropriate README.md                                        |    ▢    |        |
 |         | along with all of the python code.                                                                     |         |        |
+|         |                                                                                                        |         |        |
 | ***2*** | ***General Code and Comments***                                                                        | **25**  |        |
 |   2.1   | README.md file exists and describes everything as instructed per [this](../../Resources/03-Readmees/). |    ▢    |        |
 |   2.2   | There is a main comment block at the top of every code file.                                           |    ▢    |        |
@@ -34,7 +35,9 @@
 |         |                                                                                                        |         |        |
 |         |                                                                                                        |         |        |
 | ***5*** | ***Checklist***                                                                                        | **100** |        |
-|   5.1   | The command checklist below was followed                                                               |    ▢    |        |
+|   5.1   | - Follow the [this](./commands_list.md) checklist, but run variations of the commands.                 |    ▢    |        |
+|         | - You should show the same type of commands but add parameters                                         |         |        |
+|         | and flags in order to show how all commands work.                                                      |         |        |
 |         |                                                                                                        |         |        |
 | ***6*** | ***General***                                                                                          | **50**  |        |
 |         | Prompt line acts correct (cleans command etc.)                                                         |    ▢    |        |
@@ -42,6 +45,7 @@
 |         | Items were not printed to the screen unnecessarily                                                     |    ▢    |        |
 |         | Too many messages (like successful .....) weren't used                                                 |    ▢    |        |
 |         | Program did not crash or need restarted                                                                |    ▢    |        |
+|         | Continuously did long listings between commands to show changes.                                       |    ▢    |        |
 |         | **Total:**                                                                                             | **250** |        |
 
 

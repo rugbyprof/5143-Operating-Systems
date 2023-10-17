@@ -4,15 +4,30 @@
 
 ## Files 
 
-|   #   | Name                             | Description                        |
-| :---: | :------------------------------- | :--------------------------------- |
-|   1   | [data_types.md](data_types.md)   | Sqlite - Data Types                |
-|   2   | [fileSystem.py](fileSystem.py)   | Filesystem Starter Class           |
-|   3   | [files](files)                   | Python Scripts to Build Fake Files |
-|   4   | [my_database.db](my_database.db) |                                    |
-|   5   | [permissions.md](permissions.md) | Linux Permissions String Convert   |
-|   6   | [sqliteCRUD.py](sqliteCRUD.py)   | Crud Class for Sqlite              |
-|   7   | [timestamps.md](timestamps.md)   | Sqlite - Timestamp functions       |
+|   #   | Name                                                                   | Description                                                           |
+| :---: | :--------------------------------------------------------------------- | :-------------------------------------------------------------------- |
+|   1   | [__pycache__](__pycache__)                                             |                                                                       |
+|   2   | [commands_list.md](commands_list.md)                                   | Commands List to help with presentation.                              |
+|   3   | [commands_list.pdf](commands_list.pdf)                                 |                                                                       |
+|   4   | [data_formatting.md](data_formatting.md)                               | Formatting the data when output from your database tables.            |
+|   5   | [data_types.md](data_types.md)                                         | Sqlite - Data Types                                                   |
+|   6   | [file-sys-primer-data.csv](file-sys-primer-data.csv)                   | Test data                                                             |
+|   7   | [fileSystem.py](fileSystem.py)                                         | Filesystem class helper file                                          |
+|   8   | [files](files)                                                         | Python Scripts to Build Fake Files                                    |
+|   9   | [filesystem.sqlite](filesystem.sqlite)                                 | Example db                                                            |
+|  10   | [general_checklist_all.md](general_checklist_all.md)                   | File System Assignment General Checklist for All (Both Presentations) |
+|  11   | [general_checklist_all.pdf](general_checklist_all.pdf)                 |                                                                       |
+|  12   | [general_checklist_walkthrough.md](general_checklist_walkthrough.md)   | File System Assignment General Checklist for a Walkthrough            |
+|  13   | [general_checklist_walkthrough.pdf](general_checklist_walkthrough.pdf) |                                                                       |
+|  14   | [my_database.sqlite](my_database.sqlite)                               | Another test db                                                       |
+|  15   | [panels.py](panels.py)                                                 | Python rich panels example for walkthrough                            |
+|  16   | [permissions.md](permissions.md)                                       | Linux Permissions String Convert                                      |
+|  17   | [requirements.txt](requirements.txt)                                   | Python requirements for py code                                       |
+|  18   | [sqliteCRUD.py](sqliteCRUD.py)                                         | CRUD class for sqlite                                                 |
+|  19   | [students.sqlite](students.sqlite)                                     | Yet another test db                                                   |
+|  20   | [testfilesystem.sqlite](testfilesystem.sqlite)                         | Holy moly another test db                                             |
+|  21   | [timestamps.md](timestamps.md)                                         | Sqlite - Timestamp functions                                          |
+|  22   | [walkthrough.py](walkthrough.py)                                       | Example walkthrough presentation                                      |
 
 ## Overview
 
