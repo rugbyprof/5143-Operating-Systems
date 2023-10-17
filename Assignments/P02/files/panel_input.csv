@@ -1,0 +1,16 @@
+permissions, block,owner,group,size,date,name
+-rw-r--r--@,1,griffin,staff, 3.0K, Nov 17 2022,cartridge.sql
+-rw-r--r--, 1,griffin,staff, 173B, Oct 18 2022,catlan.py
+-rw-r--r--@,1,griffin,staff,18M, Nov 17 2022,cp_three.pdf
+-rw-r--r--@,1,griffin,staff,11K, Jul 10 2023,github.css
+drwxr-xr-x, 7,griffin,staff, 224B, Oct 3 2023,go/
+-rw-r--r--@,1,griffin,staff, 4.9K, Nov 3 2022,griffin.zsh-theme
+-rwxr-xr-x, 1,griffin,staff, 430B, Nov 12 2022,hashtest.py
+-rw-------, 1,griffin,staff,10M, Nov 23 2022,logfile
+-rw-r--r--@,1,griffin,staff, 162B, Oct 10 2022,missile
+-rw-r--r--, 1,griffin,staff, 303B, Nov 13 2022,officeStuff.txy
+-rw-r--r--@,1,griffin,staff, 1.4K, Nov 29 2022,ship
+-rw-r--r--@,1,griffin,staff, 6.0K, Nov 24 2022,stats.csv
+drwxr-xr-x, 4,griffin,staff, 128B, Sep 25 2023, tmp/
+-rw-r--r--@,1,griffin,staff, 1.7K, Nov 17 2022,torpedo.sql
+drwxr-xr-x, 3,griffin,staff,96B, Sep 5 2023, ztemp/
