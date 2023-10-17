@@ -2,7 +2,6 @@
 
 This is not an exhaustive list. It is up to you to execute variations of commands to show that your shell works properly. 
 
-|    #    | Item                                                   |       |
 | :-----: | ------------------------------------------------------ | :---: |
 | ***1*** | ***Commands***                                         |       |
 |    1    | *ls -lah*                                              |   ▢   |
@@ -25,11 +24,9 @@ This is not an exhaustive list. It is up to you to execute variations of command
 |   18    | *chmod 777 somefile.txt*                               |   ▢   |
 |   19    | *sort bacon.txt*                                       |   ▢   |
 |   20    | *Command of your choice*                               |   ▢   |
-|         |                                                        |       |
 | ***2*** | ***Piping***                                           |       |
 |         | Similar to (but show variations as well):        |       |
 |         | *grep bacon bacon.txt \| wc -l*                        |   ▢   |
-|         |                                                        |       |
 | ***3*** | ***Redirection***                                      |       |
 |         | Similar to (but show variations as well):                |       |
 |         | *cat file1 file2 > file0*                              |   ▢   |

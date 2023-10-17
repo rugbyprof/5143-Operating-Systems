@@ -6,6 +6,6 @@
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">ShellProject</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">|  #  |Name                           |Description                  |</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">chat-gpt-talks</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">None</a>*** |  |
 
-<sup>Last Updated: 2023-10-17 (Tue @ 13:10)</sup> 
+<sup>Last Updated: 2023-10-17 (Tue @ 13:26)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
