@@ -1,32 +1,13 @@
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
-from rich.style import Style
+from rich.text import Text
 
-highlighted_style = "on yellow"
+Console().clear()
 
-# Function to execute a Linux command and return the output
-def execute_linux_command(command):
-    import subprocess
-    try:
-        output = subprocess.check_output(command, shell=True, text=True)
-        return output
-    except subprocess.CalledProcessError as e:
-        return str(e)
-
-# # Create a table for fake listing data
-# table = Table(show_header=True, header_style="bold cyan")
-# table.add_column("Name", style="bold")
-# table.add_column("Size", style="bold")
-# table.add_column("Modified", style="bold")
-
-# # Add fake listing data rows to the table
-# table.add_row("file1.txt", "100KB", "2023-10-16 10:30 AM")
-# table.add_row("file2.txt", "50KB", "2023-10-15 02:45 PM")
-# table.add_row("dir1", "-", "2023-10-14 11:15 AM")
-# table.add_row("file3.txt", "75KB", "2023-10-14 09:00 AM")
-# table.add_row("dir2", "-", "2023-10-13 03:20 PM")
-
+"""
+COULD BE DONE PROGRAMATICALLY AFTER SELECTING FROM TABLE IN SqlIte
+"""
 table = Table(show_header=True, header_style="bold cyan")
 table.add_column("permissions", style="bold")
 table.add_column("block", style="bold")
@@ -53,17 +34,19 @@ table.add_row("-rw-r--r--@","1","griffin","staff","1.7K","Nov 17 2022","torpedo.
 table.add_row("drwxr-xr-x","3","griffin","staff","96B","Sep 5 2023","ztemp/")
 
 
-
+text = Text()
+text.append("$: ", style="bold green")
+text.append("chmod 000 logfile", style="bold white")
 
 
 # Create a top panel for the Linux command output
-top_panel = Panel("$: chmod 000 logfile", title="Linux Command", border_style="blue", style="bold")
+top_panel = Panel(text, title="Linux Command", border_style="blue", style="bold",title_align="left")
 
 # Create a bottom panel for the fake listing data
-bottom_panel = Panel(table, title="Output:", border_style="green", style="bold", highlight="red")
+bottom_panel = Panel(table, title="Output:", border_style="green", style="bold", highlight="red",title_align="left")
 
 # Create a console and specify the screen height
-console = Console(height=30)  # Adjust the height as needed
+console = Console(height=50)  # Adjust the height as needed
 
 # Print the top panel with a divider and the bottom panel
 console.print(top_panel)
