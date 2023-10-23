@@ -13,5 +13,5 @@ for process in data:
         priority = parts[2]
         bursts = parts[3:]
 
-        print(f"{arrival}, {pid}, {priority} {bursts}")
+        print(f"{arrival}, {pid}, {priority} {len(bursts)}{bursts}")
 
