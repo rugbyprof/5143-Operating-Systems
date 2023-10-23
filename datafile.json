@@ -1,0 +1,57 @@
+{
+    "kwargs": {
+        "nj": "5",
+        "maxCpuBT": "5",
+        "maxIOBT": "3",
+        "minIOBT": "2",
+        "minCpuBT": "2"
+    },
+    "jobs": [
+        {
+            "arrivalTime": 0,
+            "process_id": 1,
+            "priority": 5,
+            "cpuBursts": [
+                5,
+                4,
+                4,
+                2,
+                3
+            ],
+            "ioBursts": [
+                2,
+                2,
+                3,
+                3
+            ]
+        },
+        {
+            "arrivalTime": 1,
+            "process_id": 4,
+            "priority": 2,
+            "cpuBursts": [
+                4,
+                3,
+                2,
+                2,
+                4,
+                4,
+                4,
+                4,
+                3,
+                3
+            ],
+            "ioBursts": [
+                2,
+                2,
+                3,
+                3,
+                2,
+                3,
+                2,
+                3,
+                2
+            ]
+        }
+    ]
+}
