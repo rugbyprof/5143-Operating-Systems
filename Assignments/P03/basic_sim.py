@@ -4,6 +4,9 @@ class Queue:
     def __init__(self):
         self.queue = []
 
+    def __str__(self):
+        return ",".join(self.queue)
+
     def addPCB(self,pcb):
         self.queue.append(pcb)
     
@@ -94,6 +97,14 @@ class Simulator:
         self.terminated = Queue()
         self.readData()
 
+    def __str__(self):
+        s = ""
+        s += "datfile: "+self.datfile +"\n"
+        s += "new queue: "+",".join(self.new)  +"\n"
+        s += "wait: "+",".join*(self.wait)  +"\n"
+        return s
+
+
     def readData(self):
         with open(self.datfile) as f:
             self.data = f.read().split("\n")
@@ -110,4 +121,5 @@ class Simulator:
 
 
 if __name__=='__main__':
-    pass
+    sim = Simulator("datafile.dat")
+    print(sim)
