@@ -84,13 +84,13 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 ## Grading
 
-| Categories                            |       |  \|   | Grade |          |
-| :------------------------------------ | :---: | :---: | :---: | :------: |
-| Projects                              |  80%  |  \|   |   A   |  89-100  |
-| Final<sup>**1**</sup><sup>**2**</sup> |  20%  |  \|   |   B   |  79-88   |
-|                                       |       |  \|   |   C   |  69-78   |
-|                                       |       |  \|   |   D   |  59-68   |
-|                                       |       |  \|   |   F   | below 59 |
+| Categories                              |       |  \|   | Grade |          |
+| :-------------------------------------- | :---: | :---: | :---: | :------: |
+| Projects                                |  80%  |  \|   |   A   |  89-100  |
+| Final<sup>**1**</sup>, <sup>**2**</sup> |  20%  |  \|   |   B   |  79-88   |
+|                                         |       |  \|   |   C   |  69-78   |
+|                                         |       |  \|   |   D   |  59-68   |
+|                                         |       |  \|   |   F   | below 59 |
 
 >**1**. If there is no final exam, then obviously 100% of the course will be all projects. 
 
