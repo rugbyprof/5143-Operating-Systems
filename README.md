@@ -84,64 +84,18 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 ## Grading
 
-| Categories            |       |  \|   | Grade |          |
-| :-------------------- | :---: | :---: | :---: | :------: |
-| Midterm               |  20%  |  \|   |   A   |  89-100  |
-| Projects              |  45%  |  \|   |   B   |  79-88   |
-| Presentations         |  15%  |  \|   |   C   |  69-78   |
-| Final<sup>**1**</sup> |  20%  |  \|   |   D   |  59-68   |
-|                       |       |  \|   |   F   | below 59 |
->**1**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
+| Categories                            |       |  \|   | Grade |          |
+| :------------------------------------ | :---: | :---: | :---: | :------: |
+| Projects                              |  80%  |  \|   |   A   |  89-100  |
+| Final<sup>**1**</sup><sup>**2**</sup> |  20%  |  \|   |   B   |  79-88   |
+|                                       |       |  \|   |   C   |  69-78   |
+|                                       |       |  \|   |   D   |  59-68   |
+|                                       |       |  \|   |   F   | below 59 |
 
-# 4883 Programming Techniques
+>**1**. If there is no final exam, then obviously 100% of the course will be all projects. 
 
-<!-- ### Roster
-<a href="https://docs.google.com/spreadsheets/d/1Ul2tjl74iJoQRd6qQ6leq0M5kmy-lEUSc5PQD91JK6c/edit?usp=sharing"><img src="https://images2.imgbox.com/35/7c/I0dU5rrM_o.png" width="30">Class Roster</a> -->
+>**2**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
 
-
-### General Course Info
-- __Days:__ Mw 2:00 p.m. - 3:20 p.m. 
-- __Location:__ BO 103
-- [__Semester:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2224.pdf) Monday August 28<sup>nd</sup> - Friday December 8<sup>th</sup>
-- [__Holidays:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2224.pdf)
-  - __Labor Day__ Monday September 4<sup>th</sup>
-  - __Thanksgiving__ Wednesday November 22<sup>nd</sup> - Sunday November 26<sup>th</sup> 
-- [__Last Day for “W”:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2224.pdf)  Monday October 30<sup>th</sup>
-- [__Last Day of Class:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal2224.pdf) Friday December 8<sup>th</sup>
-- [__Final Exam:__](https://msutexas.edu/registrar/_assets/files/pdfs/finalexamschedulespringfall2023.pdf) Monday December 11<sup>th</sup> from 10:30 pm - 12:30 pm
-
-## Course Topics
-
-- [ ] Math
-  - [ ] Combinatorics
-  - [ ] Basic number theory
-- [ ] Standard libraries and data structures
-- [ ] Optimizations:
-  - [ ] Complete Search, Backtracking, Pruning
-  - [ ] Divide & Conquer
-  - [ ] Greedy Algorithms
-  - [ ] Dynamic programming
-- [ ] Graph algorithms:
-  - [ ] Graph Traversal
-  - [ ] Topological Sorting
-  - [ ] Connectivity
-  - [ ] Minimum Spanning Trees
-  - [ ] Shortest Paths
-- [ ] String algorithms
-- [ ] Others given time
-
-## Grading
-
-Will be based on number of problems solved. Full credit for on time solutions. Half credit for late submissions. Some credit for accepted solutions with issues (e.g. presentation errors),
-
-| Categories      | Portion of Course | \|\| | Letter Grade | Grade Range |
-| :-------------- | :---------------: | ---- | :----------: | :---------: |
-| Solved Problems |        65%        | \|\| |      A       |   89-100    |
-| Github          |        10%        | \|\| |      B       |    79-88    |
-| Participation   |        5%         | \|\| |      C       |    69-78    |
-| Presentation    |        10%        | \|\| |      D       |    59-68    |
-| Project         |        10%        | \|\| |      F       |  below 59   |
-|                 |                   | \|\| |              |             |
 
 ## Teaching Philosophy
 
