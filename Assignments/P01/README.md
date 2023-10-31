@@ -1,5 +1,5 @@
 ## Shell Project - Implementation of a basic shell.
-#### Due: 09-25-2023 (Wednesday @ 2:30 p.m.)
+#### Due: 09-25-2023 (Week of 25<sup>th</sup>)
 
 ### Parts Due Dates
 
