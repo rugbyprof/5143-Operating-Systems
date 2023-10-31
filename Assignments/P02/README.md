@@ -1,5 +1,5 @@
 ## Filesystem - Implementation of a virtual file system.
-#### Due: 10-16-2023 (Week of the 26<sup>th</sup>)
+#### Due: 10-16-2023 (Week of Oct 26<sup>th</sup>)
 
 
 ## Files 
