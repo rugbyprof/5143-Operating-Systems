@@ -46,11 +46,11 @@ class Comms(object):
             The following example shows you how to init an instance of this class.
         Example:
             {
-                "exchange": "2dgame",
+                "exchange": "test1",
                 "port": "5672",
                 "host": "crappy2d.us",
-                "user": "yourteamname",
-                "password": "yourpassword",
+                "user": "user1",
+                "password": "",
             }
         """
         self.exchange = kwargs.get("exchange", None)
@@ -251,9 +251,9 @@ def usage(msg):
     print(
         """
     Usage: python CommsClass direction=<send,listen>  
-                             player=<playerId> 
-                             game=<gameId> 
-                             target=<playerId> 
+                             user=<userId> 
+                             queue=<queueId> 
+                             target=<userId> 
                              message=['your message']{default='This is a message.'} 
                              rounds=[n]{default = 3,-1 = continue sending until ctrl-c to quit}
                              
@@ -290,11 +290,12 @@ if __name__ == "__main__":
     args, kwargs = mykwargs(sys.argv)
 
     direction = kwargs.get("direction", None)
-    player = kwargs.get("player", None)
-    game = kwargs.get("game", None)
-    target = kwargs.get("target", None)
+    user = kwargs.get("user", None)
+    exchange = kwargs.get("exchange", None)
+    target = kwargs.get("target", None) # other user
     message = kwargs.get("message", "This is a message.")
     rounds = int(kwargs.get("rounds", 3))
+    password = kwargs.get("password",None)
     sleepTime = float(kwargs.get("sleepTime", 0.5))
 
     if int(rounds) < 0:
@@ -304,34 +305,34 @@ if __name__ == "__main__":
         usage("`direction` needed in command params.")
     elif direction == "sender":
         #if None in [game, player, target]:
-        if None in [game, player]:
+        if None in [exchange, user]:
             usage(
-                "`game`, `target` and `player` needed in command params to send a message."
+                "`exchange`, `target` and `user` needed in command params to send a message."
             )
     elif direction == "listen":
-        if None in [game, player]:
+        if None in [exchange, user]:
             usage(
-                "`game` and `player` needed in command params to listen for messages."
+                "`exchange` and `user` needed in command params to listen for messages."
             )
 
     queues = []
-    for i in range(10):
+    for i in range(3):
         i += 1
         if i < 10:
             q = "0" + str(i)
-        queues.append("game-" + q)
+        queues.append("node" + q)
     users = []
     for i in range(25):
         if i < 10:
             p = "0" + str(i)
-        queues.append("player-" + p)
+        queues.append("node" + p)
 
     creds = {
-        "exchange": game,
+        "exchange": exchange,
         "port": "5672",
-        "host": "terrywgriffin.com",
-        "user": player,
-        "password": player + "2023!!!!!",  # user.capitalize() * 3,
+        "host": "164.90.134.137/",
+        "user": user,
+        "password": password,  # user.capitalize() * 3,
     }
 
     if direction == "sender":

@@ -101,19 +101,19 @@ def generate_file(**kwargs):
 
     # default values
     nj = int(kwargs.get("nj", 100))
-    minCpuBT = kwargs.get("minCpuBT", random.randint(5, 10))
-    maxCpuBT = kwargs.get(
-        "maxCpuBT", random.randint(int(minCpuBT) + 3, int(minCpuBT) + 8)
+    minCpuBT = int(kwargs.get("minCpuBT", random.randint(5, 10)))
+    maxCpuBT = int(kwargs.get(
+        "maxCpuBT", random.randint(int(minCpuBT) + 3, int(minCpuBT) + 8))
     )
-    minIOBT = kwargs.get("minIOBT", random.randint(10, 15))
-    maxIOBT = kwargs.get("maxIOBT", random.randint(int(minIOBT), int(minIOBT) + 5))
-    minNumBursts = kwargs.get("minNumBursts", random.randint(5, 8))
-    maxNumBursts = kwargs.get(
+    minIOBT = int(kwargs.get("minIOBT", random.randint(10, 15)))
+    maxIOBT = int(kwargs.get("maxIOBT", random.randint(int(minIOBT), int(minIOBT) + 5)))
+    minNumBursts = int(kwargs.get("minNumBursts", random.randint(5, 8)))
+    maxNumBursts = int(kwargs.get(
         "maxNumBursts", random.randint(int(minNumBursts) + 3, int(minNumBursts) + 8)
-    )
+    ))
 
-    minat = kwargs.get("minat", 1)
-    maxat = kwargs.get("maxat", 3)
+    minat = int(kwargs.get("minat", 1))
+    maxat = int(kwargs.get("maxat", 3))
     # minp = kwargs.get("minp", 1)
     # maxp = kwargs.get("maxp", 5)
     prioWeights = kwargs.get("prioWeights", "even")  # even , high, low
