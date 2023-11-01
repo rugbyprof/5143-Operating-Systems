@@ -24,15 +24,14 @@ As I mentioned, the scheduler moves processes around through a series of states,
 
 ### Job State
 <center>
-<img src="https://images2.imgbox.com/0e/ee/Ip7dYsgz_o.png" width="500">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/job_state_diagram.png" width="700">
 </center>
 
 1. NEW - The process is being created, and has not yet begun executing.
-2. READY - The process is ready to execute, and is waiting to be scheduled on a CPU. 
+2. READY - The process is ready to execute, and is waiting to be scheduled on a CPU in the "ready queue".
 3. RUNNING - The process is currently executing on a CPU.
-4. WAITING (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request (peripheral device to come open).
-5. IO - Process has gained access to one of the peripheral devices. 
-6. TERMINATED - The process has completed.
+4. WAITING (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request to complete.
+5. TERMINATED - The process has completed.
 
 Each state is represented as a queue that holds each process that is currently in that state. The success or failure of scheduling boils down to moving each process from queue to queue in an efficient and consistent manner. Efficiency depends on multiple factors, the main one being the actual scheduling algorithm choosing which process gets cpu time or resource time. The next section discusses the algorithms your simulation needs to implement.  
 
@@ -44,22 +43,20 @@ Each state is represented as a queue that holds each process that is currently i
 - This is the simplest scheduling algorithm. 
 - This is a **non-preemptive** scheduling algorithm.
 - Context switches only occur upon cpu burst termination.
-- **Example**:
-  - *P<sub>n</sub>* is first to arrive and has a 35 time unit cpu burst.
-  - Once it is in the `Running` state it will stay there until its burst is complete and it moves to the `Wait` queue.
-  - After it finishes its `IO` burst, it comes back to the `Ready` queue at the end of the line and waits for the next open cpu.
 
-#### Round-Robin, RR
+#### Shortest-Job-First, SJF
 
-- The scheduler assigns a fixed time unit per process known as a time-slice or time-quantum, and cycles through each process equally. 
-- If the process completes within that time-slice it gets terminated otherwise it is rescheduled after giving a chance to all other processes.
-- This is a **preemptive scheduling** algorithm.
-- **Example**:
-  - *P<sub>n</sub>* is first to arrive and has a 35 time unit cpu burst.
-  - Once it is in the `Running` state it will stay there until its `time-slice` is up, in which it will be interrupted and sent to the end of the `Ready` queue. 
-  - It will continue this circular cycle until it finishes its cpu burst. So if the `time-slice` is 5, then it will have five rounds of `Running`->`Ready` before it can finally go to the `Wait` queue and start its `IO` burst.
-  - The `Wait` queue has no `time-slice` so once it gains an `IO` device it keeps it until the burst is over and then back to the `Ready` queue``
+- Shortest job first (SJF) also known as Shortest job next (SJN) or shortest process next (SPN), is a scheduling policy that selects for execution the waiting process with the smallest execution time.
+- SJF is a **non-preemptive** algorithm
+- A disadvantage of using shortest job next is that the total execution time of a job must be known before execution. But we know, so we can implement it.
+- Total Execution Time = Sum(cpuBurst<sub>**1**</sub>+cpuBurst<sub>**2**</sub>+cpuBurst<sub>**3**</sub>+...+cpuBurst<sub>**n**</sub>)
 
+#### Shortest-Remaining-Time, SRT
+
+- Shortest remaining time, also known as shortest remaining time first (SRTF), is a scheduling method that is a **preemptive version** of shortest job next scheduling. 
+- In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. 
+- Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, the process will either run until it completes or get preempted if a new process is added that requires a smaller amount of time.
+- Execution Time Remaining = Sum of remaining cpuBursts. 
 
 #### Priority-Based, PB
 
@@ -67,41 +64,22 @@ Each state is represented as a queue that holds each process that is currently i
 - Lower-priority processes get interrupted by incoming higher-priority processes.
 - This is a **preemptive scheduling** algorithm.
 - Runs into possibility of starving processes with low priorities.
-- I think we can postulate what would happen if we do not implement some kind of `promotion` for low priority processes.
-- I will leave it up to you how you handle it. It does not have to be something complicated, it could be based on total time in system (which is tracked per process anyway) or even some random promotion event. Use your imagination. 
-- **Example1**:
-  - *P<sub>n</sub>* is first to arrive and has a 35 time unit cpu burst and the highest priority.
-  - Next however many processes to arrive get a big so what and have to wait.
-- **Example2**:
-  - *P<sub>n</sub>* is first to arrive and has a 35 time unit cpu burst and the lowest priority.
-  - *P<sub>n+1</sub>* is next to arrive and has a 10 time unit cpu burst and a medium priority, it interrupts *P<sub>n</sub>* sending to the place in the ready queue equivalent to its priority and takes over the cpu.
-  - *P<sub>n+2</sub>* is next to arrive and has a 100 time unit cpu burst and the highest priority, it interrupts *P<sub>n+1</sub>* sending it to the place in the ready queue equivalent to its priority and takes over the cpu. And stays since it cannot be preempted via priority. 
 
+#### Round-Robin, RR
 
-#### Shortest-Job-First, SJF (Do Not Implement)
-
-- Shortest job first (SJF) also known as Shortest job next (SJN) or shortest process next (SPN), is a scheduling policy that selects for execution the waiting process with the smallest execution time.
-- SJF is a **non-preemptive** algorithm
-- A disadvantage of using shortest job next is that the total execution time of a job must be known before execution. But we know, so we can implement it.
-- Total Execution Time = Sum(cpuBurst<sub>**1**</sub>+cpuBurst<sub>**2**</sub>+cpuBurst<sub>**3**</sub>+...+cpuBurst<sub>**n**</sub>)
-
-#### Shortest-Remaining-Time, SRT (Do Not Implement)
-
-- Shortest remaining time, also known as shortest remaining time first (SRTF), is a scheduling method that is a **preemptive version** of shortest job next scheduling. 
-- In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. 
-- Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, the process will either run until it completes or get preempted if a new process is added that requires a smaller amount of time.
-- Execution Time Remaining = Sum of remaining cpuBursts. 
+- The scheduler assigns a fixed time unit per process known as a time-slice or time-quantum, and cycles through each process equally. 
+- If the process completes within that time-slice it gets terminated otherwise it is rescheduled after giving a chance to all other processes.
+- This is a **preemptive scheduling** algorithm.
 
 ## Resources
 
-The goal of each process is to gain access to a resource at the time it needs it, so that it can complete its lifecycle. In class we discussed implementing queues for each state. All of them unbounded with the exception of a single cpu. Well, now I would like a little more control over the amount of available resources. In the table below, you can see all the queues are `unbounded` but now we are adding a bounded size on the `IO` queue. 
+Our simulation is implementing the simplest process state diagram, one that has five states. Two of those states represent processes that are waiting for resources (ready queue, and wait queue). One of those states represents a process that is running (gained access to cpu). It does not have a state in which a process has been assigned an IO device. So, lets add the "state" just to make sure we will treat IO similar to cpu. We know the cpu gets processes from the ready queue and that we can have multiple cpu's, allowing more than one process to run concurrently. The same goes for IO devices. The wait queue will give IO devices to a process as they become available. 
 
 <center>
-<img src="https://images2.imgbox.com/51/6c/ju18lbUX_o.png" width="250">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/job_state_diagram_with_IO.png" width="700">
 </center>
 
-
- To emphasize the resource issue again, I need to mention that the number of resources heavily influences throughput. Resources go up, throughput gets better. We are making each IO device generic for ease of implementation, but if many process were waiting for a specific device, no matter how many total IO devices there are, then through put could suffer. For ease of implementing this simulation, all resources will be categorized as one of two things: a `CPU`, or an `IO` device.
+ To emphasize the resource issue again, I need to mention that the number of resources heavily influences throughput. Resources go up, throughput gets better. We are making each IO device generic for ease of implementation, but if many process were waiting for a specific device, no matter how many total IO devices there are, then through put could suffer. For ease of implementing this simulation, all resources will be categorized as one of two things: a CPU, or an IO device.
 
 ### Processors
 In fact, all CPU's (processors) are assumed to be the same. This means we do not need to worry about **heterogeneous** or **homogenous** processors. 
@@ -109,11 +87,11 @@ In fact, all CPU's (processors) are assumed to be the same. This means we do not
 >- **heterogeneous**: different processor types. Usually meaning one would run kernel code and others everything else, or one cpu being the "cpu in charge" delegating to others.
 >- **homogenous**: all cpu's the same type. But could still mimic above strategy regardless. 
 
-In our simulation a cpu is available to any and all processes, and we will have the ability to change the number of cpu's based on the current simulation run. I will say that `1-4 cpu's` is what we will go with.
+In our simulation a cpu is available to any and all processes.
 
 ### IO Devices
 
-Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. `In this case I think 3 - ?? devices?` We should discuss more in class to determine a good number to run our sims. 
+Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. 
 
 ## Input Files
 
@@ -136,48 +114,22 @@ Use the program `generate_input.py` to make different types of input files. The 
 
 >AT<sub>t</sub> PID<sub>i</sub> P<sub>p</sub> cpub<sub>1</sub> iob<sub>1</sub> cpub<sub>2</sub> iob<sub>2</sub> ... cpub<sub>n</sub> 
 
-### No Pressure
+### Comments
 
 - Remember this is a simulation, where the system clock (aka timer) is simply an integer variable incremented in some loop construct.
 - We will read the the processes that will run in our simulation from multiple files, where each file will emphasize a different type of load (see previous).
 - This program is not a true system program, it is just a typical user application that requires no spawning of processes, no timer interrupt handling, no I/O interrupt handling, etc. It is a **simulation**
 
-#### Basic High Level Algorith
 
-1. Jobs arrive at time `N`, and enter the `New` queue.
-2. Any jobs already in the `New` queue go to the `Ready` queue.
-3. Decrement burst times on Cpu(s), if any are zero, move to `Wait` queue.
-4. Decrement burst times on Peripheral(s), if any are zero, move to `Ready` queue.
-5. If any Cpu(s) are free, take next from `Ready` queue.
-6. If any Periphal(s) are free, take next from `Wait` queue.
-7. Do accounting for each process in the appropriate queues when appropriate (basically if it hasn't just been moved).
+### Requirements
 
-
-## Requirements
-
-
-#### Visualization 
-- Your program must use some form of "visual presentation" to show:
-  - Each of the 6 queues [New, Ready, Running, Waiting, IO, Exit] and which processes are in them 
-- Your choice of "visual presentation" can be either a text-mode "ASCII art" using something NCurses or a GUI program with something like [DearPyGui](https://github.com/hoffstadt/DearPyGui) or my [Rich Example](../../Resources/06-Rich_Example/)
-- Specific messages at some time throughout the simulation. Obviously for presentation purposes we will do short runs with small files. If you were to use my Python Rich table example, you could print messages below the table in a panel or similar.
-
-#### Presentation
-
-- You should have 6 runs ready to present, 2 of each scheduling type. 
-- Depending on the scheduling algorithm, you should be able to choose the specs from the command line.
-  - Example: 
-    - `python sim.py sched=RR timeslice=3 cpus=4 ios=6 input=filename.dat`
-    - `python sim.py sched=FCFS cpus=2 ios=2 input=otherfile.dat`
-    - `python sim.py sched=PB cpus=2 ios=2 input=highpriorityfile.dat`
-
+- Your program must use some form of "visual presentation" to show, at least, the following four components:
+  - A CPU
+  - A ready queue showing all the processes waiting to be dispatched to use the CPU
+  - An I/O device
+  - An I/O queue showing all the processes waiting to use the I/O device
+- Your choice of "visual presentation" can be either a text-mode "ASCII art" using something NCurses or a GUI program with something like [DearPyGui](https://github.com/hoffstadt/DearPyGui)
   
-
-
-# REDONE UP TO HERE
-
-**I will clean up or delete much of rest of this do tomorrow**
-
 
 - A Time quantum (integer) used in the Round Robin simulation is given as the second command-line parameter.
 - The simulator shall print an appropriate message when a simulated process changes its state. 
