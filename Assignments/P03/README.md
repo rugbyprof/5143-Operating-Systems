@@ -171,55 +171,41 @@ Use the program `generate_input.py` to make different types of input files. The 
     - `python sim.py sched=FCFS cpus=2 ios=2 input=otherfile.dat`
     - `python sim.py sched=PB cpus=2 ios=2 input=highpriorityfile.dat`
 
-  
 
+- The messages that should print as your presentation runs are listed below.
+- Coloring times, process's, cpu's, and device's would be preferred.
+- Messages:
+  - At t<sub>n</sub> job *p<sub>n</sub>* entered new queue.
+    - Ex: At t:31 job p12 entered new queue
+  - At t<sub>n</sub> job *p<sub>n</sub>* obtained *cpu<sub>n</sub>*
+    - Ex: At t:35 job p12 obtained cpu:0
+  - At t<sub>n</sub> job *p<sub>n</sub>* obtained *device<sub>n</sub>*
+    - Ex: At t:44 job p15 obtained device:2
 
-# REDONE UP TO HERE
+- When a process terminates, the output should give that jobs stats. The stat acronyms are as follows:
+  - ST = Time entered system
+  - TAT = Turn Around Time (time exited system - time entered)
+  - RWT = Time spent in ready queue
+  - IWT = Time spent in wait queue
+- Example:
+  - Job *p<sub>n</sub>* TAT = *t<sub>n</sub>*, RWT = *t<sub>n</sub>*, IWT = *t<sub>n</sub>*
+  - Job p:23 ST = 101 TAT = 545, RWT = 121, IWT = 211
 
-**I will clean up or delete much of rest of this do tomorrow**
+- At the end of simulation, the simulator should display the percentage of CPU utilization, average TAT, average ready wait time, and average I/O wait time.
 
+### Complete Runs And Output
 
-- A Time quantum (integer) used in the Round Robin simulation is given as the second command-line parameter.
-- The simulator shall print an appropriate message when a simulated process changes its state. 
-- For instance, it shall print a message when it performs one of the following actions:
-  - Starts a new process
-  - Schedules a process to run
-  - Moves a process to the I/O Waiting (Blocked) State
-  - Preempts a process from the Running State
-  - Moves a process back into the Ready State (due to I/O completion)
-  - Starts servicing a process' I/O request
-- Each message shall be prefixed with the current simulation time.
-- When a simulated process is interrupted (because its current CPU burst is longer than the quantum) the process is preempted and re-enters the ready queue
-- When a simulated process completes its current CPU burst, it will then use its I/O burst, the simulator change the process' state to Blocked. At this point, the CPU becomes idle and the dispatcher may select another process from the ready queues.
-- The simulated system can have more than one CPU and more than one I/O device (we will discuss this in class). The I/O request of a process will be performed only if the I/O device is available. Otherwise, the process requesting the I/O operation will have to wait until the device is available. I/O is handled by the simulated device on first-come-first-serve basis.
-- Upon completion of its I/O burst, a process will change from Blocked state to Ready and join the Ready Queue again.
-- A process entering the ready queue can be one of the following:
-  - a new process,
-  - a process returning from Blocked state, or
-  - a process preempted from the CPU
-- When these three events happen at the same time, the new process will enter the Ready Q first, followed by process returning from Blocked state, and finally by the preempted process.
-- When a simulated process terminates, the simulator then outputs a statement of the form:
-  - Job %d terminated: TAT = %d, Wait time = %d, I/O wait = %d
-- where 
-  - "TAT" is Turn Around Time, 
-  - "Wait time" is the total time spent by a process in the Ready Queue, 
-  - "I/O wait" is the total amount of time the process had to wait for the I/O device.
-- At the end of simulation, the simulator shall display the percentage of CPU utilization, average TAT, average wait time, and average I/O wait time.
+- You need aggregate data for jobs consisting of:
+  - Scheduling Algorithms: [FCFS, RR, PB]
+  - Cpus: [1,2,3,4]
+  - Devices: [2,4,6]
+>Note: For Round Robin you need to change the time quantum: [3,5,7,9]
 
-### Parameterized Runs
-- Each run will require 3 inputs:
-   - Scheduling algorithm
-   - Num Cpus
-   - Num IO Devices 
-- Or one config file:
-   - {}
-
-- Sources:
-  - https://en.wikipedia.org/wiki/Scheduling_(computing)
+- We can discuss how to output this in a csv in class.
 
 ## Deliverables
 
 - Place code on github with a write up describing the process of writing your project and members of your group. 
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
-- Present your results in class last week of April.
-- Look at requirements for how to visualize your code.
+- Present your results in class when specified
+- Ensure your presentation follows guidelines above``
