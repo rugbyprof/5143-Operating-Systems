@@ -73,6 +73,10 @@ biltong filet mignon. Shoulder chislic ground round pork burgdoggen hamburger.
 
 ```
 
-The above markdown will produce a README that looks like:
+| The above markdown will produce a README that looks like:               |
+| :---------------------------------------------------------------------- |
+| <img src="https://images2.imgbox.com/ed/f3/nok7S9Nk_o.png" width="600"> |
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/assignmet_readme_example_2020.png" width="600">
+### Lastly 
+
+If there are additional instructions in the assignment, like to include images or summarize data, then just add those items in an organized way. 
