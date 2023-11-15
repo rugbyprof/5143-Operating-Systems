@@ -1,5 +1,5 @@
 ## Cpu Scheduling - Simulation
-#### Due: 11-13-2023 (Week of Nov 13<sup>th</sup>)
+#### Due: 11-06-2023 (Week of Nov 6<sup>th</sup>)
 
 
 Cpu scheduling is a classic and contemporary computer science problem that started when early computers had processors that remained idle much of the time. The goal initially was to get multiple programs loaded into memory, so they could run back to back. This was still inefficient and needed improvement.  That soon evolved into multiple programs loaded into memory and when one process blocked itself, the cpu would work on another available process (multi-programming). This, of course, kept evolving into our multi-threaded / multi-processor world. Yet, we still need to be cognizant of keeping the cpu(s) busy! So what does a scheduler do?
@@ -209,8 +209,3 @@ Use the program `generate_input.py` to make different types of input files. The 
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present your results in class when specified
 - Ensure your presentation follows guidelines above``
-
-
-
-
-

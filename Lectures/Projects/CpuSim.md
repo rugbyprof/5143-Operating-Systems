@@ -75,7 +75,7 @@ LOAD R2, 10          ; Load the value 10 into register R2
 ; Arithmetic Operations
 ADD R3, R1, R2       ; Add the values in R1 and R2, and store the result in R3
 SUB R4, R2, R1       ; Subtract the value in R1 from the value in R2, and store the result in R4
-MULT R5, R1, R2      ; Multiply the values in R1 and R2, and store the result in R5
+MUL R5, R1, R2      ; Multiply the values in R1 and R2, and store the result in R5
 DIV R6, R2, R1       ; Divide the value in R2 by the value in R1, and store the result in R6
 MOD R7, R2, R1       ; Calculate the modulus of the value in R2 divided by the value in R1, and store the result in R7
 
