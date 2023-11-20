@@ -1,0 +1,8 @@
+{
+  "host": "164.90.134.137",
+  "user": "user1",
+  "pword": "123456789",
+  "port": 5672,
+  "exchange": "cpuproject",
+  "routing_keys": "hex"
+}

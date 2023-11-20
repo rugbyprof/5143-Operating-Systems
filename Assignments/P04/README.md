@@ -65,8 +65,9 @@ cpu.execute_instruction(...)
 
 Regarding singletons like the system clock: yes, they can be suitable for elements that are truly singular in a system (like a clock). However, for components that can have multiple instances in different contexts (like CPUs in a multi-core system), it's better to use regular instances.
 
-This structure provides a balanced approach, aligning with real-world CPU architecture while maintaining educational clarity. It's adaptable, so you can add more complexity or strip it down as needed for your teaching objectives.
----
+
+### Hex To Instruction
+
 To streamline an arithmetic expression into pseudo-assembly, and then into binary for processing by the ALU, we can approach this in a few steps. Here's an outline of the process:
 
 1. **Parse the Arithmetic Expression**: Break down the arithmetic expression into its constituent parts (operands and operators).
@@ -150,12 +151,7 @@ print("\n".join(binary))
 # This binary code can be then processed by the CPU class, going through RAM and cache, and executed by the ALU.
 ```
 
-### Notes:
-- **Simplification**: This example simplifies the parsing and conversion process for clarity and educational purposes.
-- **Flexibility**: You can extend this process to handle more complex expressions and a wider range of operations.
-- **Teaching Focus**: This approach allows students to see the step-by-step transformation from a high-level arithmetic expression to low-level binary code, mirroring real-world CPU operations.
 
-By walking through these steps, students can gain a deeper understanding of how high-level operations are translated into machine-level instructions and executed by a computer's hardware.
 
 -----
 
