@@ -1,3 +1,8 @@
+## Cpu Scheduling - Simulation
+#### Due: 12-11-2023 (Week of Dec 11<sup>th</sup>)
+
+# Rewriting this again (see the 3 readme files)
+
 Designing a CPU class that's composed of registers, an ALU (Arithmetic Logic Unit), and a cache instance is an interesting challenge, especially in the context of teaching operating system concepts. The key here is to reflect the real-world architecture of a CPU while keeping the simulation manageable and educational. 
 
 Here's a possible design approach:
