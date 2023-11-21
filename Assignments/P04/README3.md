@@ -1,5 +1,24 @@
+## P04 - Distributed Instructions Simulation
+#### Due: 12-11-2023 (Week of Dec 11<sup>th</sup>)
 
 
+
+## Overview
+
+This project has to do with you or your group writing a slave node that will run instructions received from a main or master node. We can picture the setup as a cluster of nodes all working on the same instructions as delivered by the message server. I have mentioned many times that I wanted to keep this simple by not implememting `cache` or `ram`, but I think it would actually make the division of labor easier by adding these two items. 
+
+<img src="https://images2.imgbox.com/5a/1c/wlHSXkEv_o.png" width="600">
+
+If you look at the graphic above, you can see what I perceive, visually, as the data flow. Let me list it out in laymens terms.
+
+1. Message Server sends messages to your "node".
+2. The `Node` class will be in charge of listening for incoming messages, will place them on an `unbounded queue`.
+3. If they fit into Ram, then a block of messages (instructions) will get copied into ram. No real addressing, just serial address locations.
+4. The `Cpu` class, which is in charge of `fetching`, `decoding`, and `executing` instructions will do so. 
+   - A `Fetch` copies a block of instructions in cache.
+   - `Decode` turns it from `Hex` into `Binary`.
+   - `Execute` does just that with the `ALU`
+5. After an instruction is executed, we need to 
 ### CPU Class
 The `CPU` class will be the central orchestrator. It should handle the following:
 
