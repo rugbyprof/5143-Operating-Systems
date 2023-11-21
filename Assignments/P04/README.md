@@ -1,4 +1,4 @@
-## Cpu Scheduling - Simulation
+## P04 - Distributed Instructions Simulation
 #### Due: 12-11-2023 (Week of Dec 11<sup>th</sup>)
 
 # Rewriting this again (see the 3 readme files)
