@@ -9,12 +9,19 @@ with open("commsConfig.json") as f:
 
 
 def compress(string_to_compress):
-    """Compress a string using gzip compression."""
+    """ Compress a string using gzip compression.
+    Params: string_to_compress (str)
+    Returns: compressed_data (bytes)
+    """
     compressed_data = gzip.compress(string_to_compress.encode())
     return compressed_data
 
 
 def decompress(string_to_decompress):
+    """ Decompress a string using gzip compression.
+    Params: string_to_decompress (bytes)
+    Returns: decompressed_string (str)
+    """
     # Decompress the string
     decompressed_data = gzip.decompress(string_to_decompress)
 
@@ -25,9 +32,10 @@ def decompress(string_to_decompress):
 
 
 def mykwargs(argv):
-    """
-    Processes argv list into plain args and kwargs.
-    Just easier than using a library like argparse for small things.
+    """ Processes argv list into plain args and kwargs.
+        Just easier than using a library like argparse for small things.
+    Params:
+        argv (list<str>): list of command line arguments to process
     Example:
         python file.py arg1 arg2 arg3=val1 arg4=val2 -arg5 -arg6 --arg7
         Would create:
@@ -53,13 +61,26 @@ def mykwargs(argv):
 
 
 class BaseConnection:
+    """ Base class for a RabbitMQ connection.
+        host=host, port=int(port), exchange=exch, user=user, pword=pword, routing_keys=keys
+    """
     def __init__(self, **kwargs):
+        """ Constructor for BaseConnection class.
+        Params:
+            host (str): IP address of the RabbitMQ server
+            port (int): Port number of the RabbitMQ server
+            exchange (str): Name of the exchange to connect to
+            user (str): Username for the RabbitMQ server
+            pword (str): Password for the RabbitMQ server
+            routing_keys (list<str>): List of routing keys to bind to
+        """
         self.host = kwargs.get("host", config["host"])
         self.port = kwargs.get("port", config["port"])
         self.exchange = kwargs.get("exchange", config["exchange"])
         self.user = kwargs.get("user", config["user"])
         self.pword = kwargs.get("pword", config["pword"])
         self.routing_keys = kwargs.get("routing_keys", config["routing_keys"])
+        
         if not isinstance(self.routing_keys, list):
             self.routing_keys = self.routing_keys.split(",")
 
@@ -71,6 +92,8 @@ class BaseConnection:
             sys.exit()
 
     def connect(self):
+        """_summary_
+        """
         credentials = pika.PlainCredentials(self.user, self.pword)
         parameters = pika.ConnectionParameters(self.host, self.port, "/", credentials)
         self.connection = pika.BlockingConnection(parameters)
@@ -79,15 +102,27 @@ class BaseConnection:
 
 
 class Receiver(BaseConnection):
+    """_summary_
+
+    Args:
+        BaseConnection (_type_): _description_
+    """
     def __init__(self, **kwargs):
+        """
+        Params:
+            host (str): IP address of the RabbitMQ server
+            port (int): Port number of the RabbitMQ server
+            exchange (str): Name of the exchange to connect to
+            user (str): Username for the RabbitMQ server
+            pword (str): Password for the RabbitMQ server
+            routing_keys (list<str>): List of routing keys to bind to
+        """
         super().__init__(**kwargs)
-        # host = kwargs.get("host", config["host"])
-        # port = kwargs.get("port", config["port"])
-        # exchange = kwargs.get("exchange", config["exchange"])
-        # user = kwargs.get("user", config["user"])
-        # pword = kwargs.get("pword", config["pword"])
-        # routing_keys = kwargs.get("routing_keys", config["routing_keys"])
-        # self.binding_keys = binding_keys
+        
+        if 'callback' in kwargs:
+            self.callback = kwargs['callback']  # callback function to call when a message is received
+        else:
+            self.callback = self.on_message
 
     def on_message(self, ch, method, properties, body):
         print(f"Received message: {body.decode()} on topic: {method.routing_key}")
@@ -98,7 +133,7 @@ class Receiver(BaseConnection):
         for key in self.routing_keys:
             self.channel.queue_bind(exchange=self.exchange, queue="", routing_key=key)
         self.channel.basic_consume(
-            queue="", on_message_callback=self.on_message, auto_ack=True
+            queue="", on_message_callback=self.callback, auto_ack=True
         )
         print("Waiting for messages. To exit press CTRL+C")
         self.channel.start_consuming()
@@ -106,49 +141,73 @@ class Receiver(BaseConnection):
 
 class Sender(BaseConnection):
     def __init__(self, **kwargs):
+        """
+        host=host, port=int(port), exchange=exch, user=user, pword=pword, routing_keys=keys
+        """
         super().__init__(**kwargs)
+        
 
     def send_message(self, **kwargs):
-        routing_key = kwargs.get("routing_key", "#")
+        routing_keys = kwargs.get("routing_keys", "#")
         message = kwargs.get("message", "Oops")
         self.connect()
         self.channel.basic_publish(
-            exchange=self.exchange, routing_key=routing_key, body=message
+            exchange=self.exchange, routing_keys=routing_keys, body=message
         )
-        print(f"Sent message: {message} on topic: {routing_key}")
+        print(f"Sent message: {message} on topic: {routing_keys}")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 5:
-        print("Usage: sender.py <host> <port> <exchange> <routing_key> <message>")
+    """
+    host=host, port=int(port), exchange=exch, user=user, pword=pword, routing_keys=keys
+    """
+    if len(sys.argv) < 6:
+        print("Usage: comms.py <host> <port> <sender/receiver> <user> <pass> <exchange> <routing_key> <message>")
+        host = "164.90.134.137"  # change as needed
+        port = 5672
+        sendrec = "sender"
+        user = "Poka"  # change to your admin username
+        pword = "SlipperyDragon149!!!"  # change to your admin password
+        exch = "cpuproject"
+        keys = "data"
+        message = "{address: 0x0000, value: 0x0000, type: 'read'}"
+        print(f"Example values: host={host} port={port} sendrec={sendrec} user={user} pword={pword} exchange={exch} keys={keys} message={message}")
+        sys.exit()
     else:
-        host, port, exchange, routing_key, message = sys.argv[1:6]
-        sender = Sender(
-            host, int(port), exchange, "guest", "guest"
-        )  # Assuming default guest credentials
-        sender.send_message(routing_key, message)
+        host, port, sendrec, user, pword, exch, keys, message = sys.argv[1:7]
+        keys = keys.split(",")
+        if sendrec == "sender":
+            sender = Sender(
+                host=host, port=int(port), exchange=exch, user=user, pword=pword,keys=keys
+            ) 
+            sender.send_message(keys, message)
+        else: # receiver
+            receiver = Receiver(
+                host=host, port=int(port), exchange=exch, user=user, pword=pword, keys=keys
+            )
+            receiver.start_consuming()
 
     # Sending a message to the 'sports' channel
-    sender = Sender("localhost", 5672, "my_exchange", "guest", "guest")
-    sender.send_message("sports", "Great match today!")
+    # sender = Sender(host, port, exch, user, pwrd)
+    # sender.send_message("sports", "Great match today!")
 
-    # Broadcasting a message
-    sender.send_message("broadcast", "This is a broadcast message.")
+    # # Broadcasting a message
+    # sender.send_message("broadcast", "This is a broadcast message.")
 
-    #### Receiver Code Example
+    # #### Receiver Code Example
 
-    # Receiver for sports news
-    sports_receiver = Receiver(
-        "localhost", 5672, "my_exchange", "guest", "guest", ["sports"]
-    )
-    sports_receiver.start_consuming()
+    # # Receiver for sports news
+    # sports_receiver = Receiver(
+    #     "localhost", 5672, "my_exchange", "guest", "guest", ["sports"]
+    # )
+    # sports_receiver.start_consuming()
 
-    # Receiver for both sports and news
-    news_and_sports_receiver = Receiver(
-        "localhost", 5672, "my_exchange", "guest", "guest", ["sports", "news"]
-    )
-    news_and_sports_receiver.start_consuming()
+    # # Receiver for both sports and news
+    # news_and_sports_receiver = Receiver(
+    #     "localhost", 5672, "my_exchange", "guest", "guest", ["sports", "news"]
+    # )
+    # news_and_sports_receiver.start_consuming()
 
-    # Receiver for all messages
-    all_receiver = Receiver("localhost", 5672, "my_exchange", "guest", "guest", ["#"])
-    all_receiver.start_consuming()
+    # # Receiver for all messages
+    # all_receiver = Receiver("localhost", 5672, "my_exchange", "guest", "guest", ["#"])
+    # all_receiver.start_consuming()
