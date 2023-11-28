@@ -35,7 +35,7 @@ This code is the assembly code that you will receive from the the "head node". T
     'sub r4 r3',
     'sub r5 r3',
     'sub r6 r3',
-    'store (r4,r5,r6) (r1,r2)',
+    'store (r4,r5,r6) (r1,r2)'
 ]
 ```
 Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[182,137,220],"xy":[814,591]}`
@@ -55,7 +55,7 @@ Here is an example assembly instruction for gray scaling a pixel.
     'add r3 r4',
     'add r3 r5',
     'div r3 r6',
-    'store (r3,r3,r3),(r1,r2)',
+    'store (r3,r3,r3) (r1,r2)'
 ]
 ```
 Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[100,100,100],"xy":[406,230]}`
@@ -73,12 +73,28 @@ Where:
 - x = x coordinate
 - y = y coordinate
 
-Basically I should be able to send you any `pseudo assembly` instruction in the above format, and you will send back an answer in the form of a new RGB value, and which XY coordinate to store it. 
+#### Format
+
+- load 
+  - e.g. load `R1` `value` # load register 1 with value
+- sub
+  - e.g. `sub R1 R2` # subtract `R2` from `R1`, and store result in `R1`
+- add
+  - e.g. `add R1 R2` # add `R2` to `R1`, and store result in `R1`
+- mul
+  - e.g. `mul R1 R2` # multiply `R2` to `R1`, and store result in `R1`
+- div
+  - e.g. `div R1 R2` # divide `R1` BY `R2`, and store result in `R1` (Integer Divide)
+- store
+  - e.g. `store (r1,r2,r3) (r4,r5)` # send message to head node in format: `{"store":[r1,r2,r3],"xy":[r4,r5]}`
+
+
+Basically I should be able to send you any `pseudo assembly` instruction in the above format, and you will send back an answer in the form of a new RGB value, and which XY coordinate to store it in. 
 
 
 ## Old Design Approach
 
-You don't need to implement all of these classes, but some of them actually may help you organize your implementation. 
+Previously I wanted you to implement all of the below classes, but at this point, I will be OK with you decoding hex into assembly and calculating a value in any fashion that is understandable by you. It still needs to be organized and object oriented, but I won't be strict on looking for all of the class instances we have discussed.
 
 ### 1. ~~CPU Class~~
 The CPU class is the central class that composes the other components. It should manage the overall operation, like executing instructions, managing data flow between components, etc.
