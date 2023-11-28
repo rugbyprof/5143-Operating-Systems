@@ -16,33 +16,69 @@ This last version of P04 will not require the use of a complex class structure f
 
 This shows a couple of examples of my "distributed instruction execution" idea. Imagine that each of these 100x100 blocks are being `grayscaled` or `inverted` by different nodes on a computer network. By using rabbitmq for message passing, each group can work on a different portion of the image. 
 
-### Example Code Chunk
+## Example Code Chunks
 
-This code is what you will receive from the the "head node". The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
+Below are examples of the assembly code you will receive and must "execute" (evaluate) to obtain a value in which to send back to the "head node". The instructions will be in hexadecimal format, but it shouldn't be hard to convert between hex -> binary -> assembly :) 
+
+#### Inverting a Pixel
+This code is the assembly code that you will receive from the the "head node". The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
+
 
 ```ass
 [
-    'load r1 196',
-    'load r2 122',
-    'load r3 17',
-    'load r4 3',
-    'add r1 r2',
-    'add r1 r3',
-    'div r1 r4',
-    'store (r1,r1,r1) (1036, 335)'
+    'load r1 814',
+    'load r2 591',
+    'load r3 255',
+    'load r4 73',
+    'load r5 118',
+    'load r6 35',
+    'sub r4 r3',
+    'sub r5 r3',
+    'sub r6 r3',
+    'store (r4,r5,r6) (r1,r2)',
 ]
 ```
+Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[182,137,220],"xy":[814,591]}`
 
-Whenever you see a "store" instruction, you will message the "head" node with this exact syntax no matter the image manipulation function we are working with (assuming the above instruction and `grayscaling`): 
+
+
+#### Grayscaling a Pixel
+Here is an example assembly instruction for gray scaling a pixel.
+```
+[
+    'load r1 406',
+    'load r2 230',
+    'load r3 220',
+    'load r4 72',
+    'load r5 10',
+    'load r6 3',
+    'add r3 r4',
+    'add r3 r5',
+    'div r3 r6',
+    'store (r3,r3,r3),(r1,r2)',
+]
+```
+Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[100,100,100],"xy":[406,230]}`
+
+Basically, whenever you see a "store" instruction, you will message the "head" node with this exact syntax no matter the image manipulation function we are working with: 
 
 ```
-{"x": 1036, "y":335, "rgb":[111,111,111]}
+{"store":[r,g,b],"xy":[x,y]}
 ```
 
+Where:
+- r = red channel 
+- g = green channel 
+- b = blue channel 
+- x = x coordinate
+- y = y coordinate
 
-### Old Design Approach
+Basically I should be able to send you any `pseudo assembly` instruction in the above format, and you will send back an answer in the form of a new RGB value, and which XY coordinate to store it. 
 
-You don't need to implement all of these classes, but some of them actually may help 
+
+## Old Design Approach
+
+You don't need to implement all of these classes, but some of them actually may help you organize your implementation. 
 
 ### 1. ~~CPU Class~~
 The CPU class is the central class that composes the other components. It should manage the overall operation, like executing instructions, managing data flow between components, etc.
