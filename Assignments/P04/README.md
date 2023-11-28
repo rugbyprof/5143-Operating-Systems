@@ -16,24 +16,24 @@ Below are examples of the assembly code you will receive and must "execute" (eva
 
 <img src="https://images2.imgbox.com/11/7a/CMidzv13_o.gif" width="400">
 
-This code is the assembly code that you will receive from the the "head node". The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
+This code is the assembly code that you will receive from the the "head node" (`rabbitmq`). The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
 
 
 ```ass
 [
-    'load r1 814',
-    'load r2 591',
-    'load r3 255',
-    'load r4 73',
-    'load r5 118',
-    'load r6 35',
-    'sub r4 r3',
-    'sub r5 r3',
-    'sub r6 r3',
-    'store (r4,r5,r6) (r1,r2)'
+    'LOAD R1 814',
+    'LOAD R2 591',
+    'LOAD R3 255',
+    'LOAD R4 73',
+    'LOAD R5 118',
+    'LOAD R6 35',
+    'SUB  R4 R3',
+    'SUB  R5 R3',
+    'SUB  R6 R3',
+    'STORE (R4,R5,R6) (R1,R2)'
 ]
 ```
-Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[182,137,220],"xy":[814,591]}`
+Where the last STORE command will be converted to a message and sent to rabbitmq with (in this instance) `{"STORE":[182,137,220],"xy":[814,591]}`
 
 
 
@@ -44,24 +44,26 @@ Where the last store command will be converted to a message and sent to rabbitmq
 Here is an example assembly instruction for gray scaling a pixel.
 ```
 [
-    'load r1 406',
-    'load r2 230',
-    'load r3 220',
-    'load r4 72',
-    'load r5 10',
-    'load r6 3',
-    'add r3 r4',
-    'add r3 r5',
-    'div r3 r6',
-    'store (r3,r3,r3) (r1,r2)'
+    'LOAD R1 406',
+    'LOAD R2 230',
+    'LOAD R3 220',
+    'LOAD R4 72',
+    'LOAD R5 10',
+    'LOAD R6 3',
+    'ADD R3 R4',
+    'ADD R3 R5',
+    'DIV R3 R6',
+    'STORE (R3,R3,R3) (R1,R2)'
 ]
 ```
-Where the last store command will be converted to a message and sent to rabbitmq with (in this instance) `{"store":[100,100,100],"xy":[406,230]}`
+Where the last STORE command will be converted to a message and sent to rabbitmq with (in this instance) `{"STORE":[100,100,100],"xy":[406,230]}`
 
-Basically, whenever you see a "store" instruction, you will message the "head" node with this exact syntax no matter the image manipulation function we are working with: 
+### Returning Answers
+
+Basically, whenever you see a "STORE" instruction, you will message the "head" node (`rabbitmq`) with this exact syntax no matter the image manipulation function we are working with: 
 
 ```
-{"store":[r,g,b],"xy":[x,y]}
+{"STORE":[r,g,b],"xy":[x,y]}
 ```
 
 Where:
@@ -71,140 +73,90 @@ Where:
 - x = x coordinate
 - y = y coordinate
 
-#### Format
+Do not let the idea of image manipulation and using RGB values over complicate things. Your program will have a listener running with a callback method that will receive  messages from the head node (`rabbitmq`). When it receives a message (a list of hex values), your callback function should:
 
-- load 
-  - e.g. load `R1` `value` # load register 1 with value
-- sub
-  - e.g. `sub R1 R2` # subtract `R2` from `R1`, and store result in `R1`
-- add
-  - e.g. `add R1 R2` # add `R2` to `R1`, and store result in `R1`
-- mul
-  - e.g. `mul R1 R2` # multiply `R2` to `R1`, and store result in `R1`
-- div
-  - e.g. `div R1 R2` # divide `R1` BY `R2`, and store result in `R1` (Integer Divide)
-- store
-  - e.g. `store (r1,r2,r3) (r4,r5)` # send message to head node in format: `{"store":[r1,r2,r3],"xy":[r4,r5]}`
+1. Convert the hex to binary
+2. Convert the binary to assembly
+3. Run the provided instructions
+4. Return the calculated answer
+
+#### Instruction Format
+
+- LOAD 
+  - Example: 
+    - `LOAD REGISTER-NUM VALUE`
+    - `LOAD R1 value` # load register 1 with value
+- SUB 
+  - Example:
+    - `SUB REGISTER-NUM REGISTER-NUM`
+    - `SUB R1 R2` # subtract `R2` from `R1`, and store result in `R1`
+- ADD 
+  - Example:
+    - `ADD REGISTER-NUM REGISTER-NUM`
+    - `ADD R1 R2` # add `R2` to `R1`, and store result in `R1`
+- MUL 
+  - Example:
+    - `MUL REGISTER-NUM REGISTER-NUM`
+    - `MUL R1 R2` # multiply `R2` with `R1`, and store result in `R1`
+- DIV 
+  - Example:
+    - `DIV REGISTER-NUM REGISTER-NUM`
+    - `DIV R1 R2` # divide `R1` with `R2`, and store result in `R1` (integer portion only)
+- STORE
+  - Example:
+  - `STORE RED BLUE GREEN Xcoord Ycoord`
+  - `STORE R1 R2 R3 R4 R5` # grab values from R1, R2, R3 as the RGB values, and R4,R5 as the XY values and send a message to head node in format: `{"STORE":[R1,R2,R3],"xy":[R4,R5]}` replacing `Rn` values with the actual values.
 
 
-Basically I should be able to send you any `pseudo assembly` instruction in the above format, and you will send back an answer in the form of a new RGB value, and which XY coordinate to store it in. 
+Basically I should be able to send you any `pseudo assembly` instruction in the above format, and you will send back an answer in the form of a new RGB value along with the XY coordinate to STORE it in. 
 
-
-## Old Design Approach
-
-Previously I wanted you to implement all of the below classes, but at this point, I will be OK with you decoding hex into assembly and calculating a value in any fashion that is understandable by you. It still needs to be organized and object oriented, but I won't be strict on looking for all of the class instances we have discussed.
-
-### 1. ~~CPU Class~~
-The CPU class is the central class that composes the other components. It should manage the overall operation, like executing instructions, managing data flow between components, etc.
-
-### 2. ~~Registers Class~~
-This class represents the CPU's register set. Each register can hold a value and has a unique identifier. The number of registers can be a fixed size, depending on the complexity you want to simulate.
-
-### 3. ~~ALU Class~~
-The ALU is responsible for arithmetic and logical operations. It takes inputs from the registers, performs operations, and writes the results back to the registers or memory.
-
-### 4. ~~Cache Class~~
-The cache simulates the CPU's internal cache, storing data that's frequently accessed or recently used. This can be a simplified version to demonstrate the concept of caching.
-
-### Example Implementation
-Here's a skeleton implementation in Python:
-
-```python
-class RegisterSet:
-    def __init__(self, size=8):
-        self.registers = [0] * size
-
-    def read(self, reg_num):
-        return self.registers[reg_num]
-
-    def write(self, reg_num, value):
-        self.registers[reg_num] = value
-
-class ALU:
-    def execute(self, operation, operand1, operand2):
-        # Implement basic operations like add, subtract, etc.
-        if operation == "add":
-            return operand1 + operand2
-        # ... other operations ...
-
-class Cache:
-    def __init__(self, size=64):
-        self.cache = [None] * size
-        # Simple cache implementation
-
-class CPU:
-    def __init__(self):
-        self.registers = RegisterSet()
-        self.alu = ALU()
-        self.cache = Cache()
-
-    def execute_instruction(self, instruction):
-        # Decode instruction and perform actions
-        # For example, an instruction to add two numbers
-        operand1 = self.registers.read(1)  # Example
-        operand2 = self.registers.read(2)  # Example
-        result = self.alu.execute("add", operand1, operand2)
-        self.registers.write(3, result)  # Store result in a register
-
-# Example usage
-cpu = CPU()
-cpu.execute_instruction(...)
-```
-
-### Notes
-- **Modularity**: Each component is a separate class, promoting modularity and separation of concerns.
-- **Scalability**: This basic structure allows you to scale the complexity of each component according to the educational goals.
-
-Regarding singletons like the system clock: yes, they can be suitable for elements that are truly singular in a system (like a clock). However, for components that can have multiple instances in different contexts (like CPUs in a multi-core system), it's better to use regular instances.
-
+However to compress the info being sent to you, we will turn it into a hexadecimal format which you will need to decode. 
 
 ### Hex To Instruction
 
-To streamline an arithmetic expression into pseudo-assembly, and then into binary for processing by the ALU, we can approach this in a few steps. Here's an outline of the process:
+On the backend (the head node on rabbitmq) will do the following.
 
 1. **Parse the Arithmetic Expression**: Break down the arithmetic expression into its constituent parts (operands and operators).
 
-2. **Convert to Pseudo-Assembly**: Translate the parsed expression into a series of pseudo-assembly instructions.
+2. **Convert to Pseudo-Assembly**: Translate the parsed expression into a series of pseudo-assembly instructions (described above).
 
-3. **Convert to Binary**: Transform the pseudo-assembly into binary code based on your specified opcodes and register binary representations.
+3. **Convert to Binary**: Transform the pseudo-assembly into binary code based on the specified opcodes.
 
-4. **Load and Execute in CPU**: The CPU will then process these binary instructions, using the cache and registers, and the ALU will perform the necessary arithmetic operations.
+4. **Convert to Hex**: The hexadecimal is what will be sent to you in a message format.
 
-### Example Implementation
+### Example:
 
-Let's create a few helper classes and functions to demonstrate this process:
+Given the following single instruction for gray scaling one pixel: 
+[
+    'LOAD R1 406',
+    'LOAD R2 230',
+    'LOAD R3 220',
+    'LOAD R4 72',
+    'LOAD R5 10',
+    'LOAD R6 3',
+    'ADD R3 R4',
+    'ADD R3 R5',
+    'DIV R3 R6',
+    'STORE R3 R3 R3 R1 R2'
+]
 
-1. **Expression Parser**:
+We know the opcodes for each instruction: 
 
-```python
-def parse_expression(expression):
-    # This function will parse the expression '3 + 4 - 7' into ['3', '+', '4', '-', '7']
-    return [part.strip() for part in expression.split()]
+```
+opcodes = {
+    "LOAD": "1010",
+    "ADD": "1011",
+    "SUB": "1100",
+    "MUL": "1101",
+    "DIV": "1110",
+    "STORE": "1111",
+}
 ```
 
-2. **Pseudo-Assembly Converter**:
+We also know the format for each instruction as described above.
 
-```python
-def expression_to_assembly(expression):
-    operators = {"+": "ADD", "-": "SUB", "*": "MUL", "/": "DIV", "%": "MOD"}
-    parsed_expression = parse_expression(expression)
-    assembly_code = []
-    register_counter = 1
 
-    for i, part in enumerate(parsed_expression):
-        if part.isdigit():
-            assembly_code.append(f'LOAD R{register_counter} {part}')
-            register_counter += 1
-        elif part in operators:
-            op1 = f'R{register_counter-2}'
-            op2 = f'R{register_counter-1}'
-            assembly_code.append(f'{operators[part]} R{register_counter} {op1} {op2}')
-            register_counter += 1
 
-    return assembly_code
-```
-
-3. **Binary Converter**:
 
 ```python
 def assembly_to_binary(assembly_code):
@@ -214,7 +166,7 @@ def assembly_to_binary(assembly_code):
         "SUB": "1100",
         "MUL": "1101",
         "DIV": "1110",
-        "MOD": "1111",
+        "STORE": "1111",
     }
     binary_code = []
 
@@ -227,25 +179,10 @@ def assembly_to_binary(assembly_code):
     return binary_code
 ```
 
-4. **Putting It All Together**:
-
-```python
-expression = "3 + 4 - 7"
-assembly = expression_to_assembly(expression)
-binary = assembly_to_binary(assembly)
-
-print("Pseudo-Assembly:")
-print("\n".join(assembly))
-
-print("\nBinary Code:")
-print("\n".join(binary))
-
-# This binary code can be then processed by the CPU class, going through RAM and cache, and executed by the ALU.
-```
-
-
 
 -----
+
+# Anything Below is Not Needed
 
 Determining the number of operands and operators in an arithmetic expression, especially when dealing with varying lengths and complexities, requires a more robust parsing strategy. In the context of converting an expression to pseudo-assembly and then to binary, accurately identifying operands (numbers) and operators (+, -, *, etc.) is crucial for correct instruction generation.
 
@@ -361,4 +298,160 @@ This script will parse each 4-bit chunk of the binary string into its correspond
 
 - **Mapping Accuracy**: The `binary_to_instruction` function must accurately map each 4-bit chunk to the correct instruction, operator, or operand. This mapping depends on your specific instruction set.
 - **Error Handling**: You might want to include error handling for cases where a 4-bit chunk doesn't match any known instruction or operand.
-- **Expression Complexity**: This method works well for linear expressions without nested or complex operations. For more complex instruction sets or operations, additional parsing logic may be needed.
+- **Expression Complexity**: This method works well for linear expressions without nested or complex operations. For more complex instruction sets or operations, ADDitional parsing logic may be needed.
+
+
+
+## Optional Design Suggestions
+
+This section is optional design methodology for you to use or not use. We can discuss more in class, but (again) I won't enforce the usage of this class structure. 
+
+### 1. CPU Class 
+The CPU class is the central class that composes the other components. It should manage the overall operation, like executing instructions, managing data flow between components, etc.
+
+### 2. Registers Class
+This class represents the CPU's register set. Each register can hold a value and has a unique identifier. The number of registers can be a fixed size, depending on the complexity you want to simulate.
+
+### 3. ALU Class
+The ALU is responsible for arithmetic and logical operations. It takes inputs from the registers, performs operations, and writes the results back to the registers or memory.
+
+### 4. Cache Class
+The cache simulates the CPU's internal cache, storing data that's frequently accessed or recently used. This can be a simplified version to demonstrate the concept of caching.
+
+### Example Implementation
+Here's a skeleton implementation in Python:
+
+```python
+class RegisterSet:
+    def __init__(self, size=8):
+        self.registers = [0] * size
+
+    def read(self, reg_num):
+        return self.registers[reg_num]
+
+    def write(self, reg_num, value):
+        self.registers[reg_num] = value
+
+class ALU:
+    def execute(self, operation, operand1, operand2):
+        # Implement basic operations like ADD, SUB tract, etc.
+        if operation == "ADD":
+            return operand1 + operand2
+        # ... other operations ...
+
+class Cache:
+    def __init__(self, size=64):
+        self.cache = [None] * size
+        # Simple cache implementation
+
+class CPU:
+    def __init__(self):
+        self.registers = RegisterSet()
+        self.alu = ALU()
+        self.cache = Cache()
+
+    def execute_instruction(self, instruction):
+        # Decode instruction and perform actions
+        # For example, an instruction to ADD two numbers
+        operand1 = self.registers.read(1)  # Example
+        operand2 = self.registers.read(2)  # Example
+        result = self.alu.execute("ADD", operand1, operand2)
+        self.registers.write(3, result)  # Store result in a register
+
+# Example usage
+cpu = CPU()
+cpu.execute_instruction(...)
+```
+
+### Notes
+- **Modularity**: Each component is a separate class, promoting modularity and separation of concerns.
+- **Scalability**: This basic structure allows you to scale the complexity of each component according to the educational goals.
+
+Regarding singletons like the system clock: yes, they can be suitable for elements that are truly singular in a system (like a clock). However, for components that can have multiple instances in different contexts (like CPUs in a multi-core system), it's better to use regular instances.
+
+
+### Example Implementation
+
+Let's create a few helper classes and functions to demonstrate this process:
+
+**(NOT NEEDED)**
+1. **Expression Parser**:
+
+```python
+def parse_expression(expression):
+    # This function will parse the expression '3 + 4 - 7' into ['3', '+', '4', '-', '7']
+    return [part.strip() for part in expression.split()]
+```
+
+**(NOT NEEDED)**
+2. **Pseudo-Assembly Converter**:
+
+```python
+def expression_to_assembly(expression):
+    operators = {"+": "ADD", "-": "SUB", "*": "MUL", "/": "DIV", "%": "MOD"}
+    parsed_expression = parse_expression(expression)
+    assembly_code = []
+    register_counter = 1
+
+    for i, part in enumerate(parsed_expression):
+        if part.isdigit():
+            assembly_code.append(f'LOAD R{register_counter} {part}')
+            register_counter += 1
+        elif part in operators:
+            op1 = f'R{register_counter-2}'
+            op2 = f'R{register_counter-1}'
+            assembly_code.append(f'{operators[part]} R{register_counter} {op1} {op2}')
+            register_counter += 1
+
+    return assembly_code
+```
+
+3. **Binary Converter**:
+
+```python
+def assembly_to_binary(assembly_code):
+    opcodes = {
+        "LOAD": "1010",
+        "ADD": "1011",
+        "SUB": "1100",
+        "MUL": "1101",
+        "DIV": "1110",
+        "MOD": "1111",
+    }
+    binary_code = []
+
+    for line in assembly_code:
+        parts = line.split()
+        opcode = opcodes[parts[0]]
+        operands = ' '.join(format(int(x[1:]), '04b') for x in parts[1:])
+        binary_code.append(f'{opcode} {operands}')
+
+    return binary_code
+```
+
+4. **Putting It All Together**:
+
+```python
+expression = "3 + 4 - 7"
+assembly = expression_to_assembly(expression)
+binary = assembly_to_binary(assembly)
+
+print("Pseudo-Assembly:")
+print("\n".join(assembly))
+
+print("\nBinary Code:")
+print("\n".join(binary))
+
+# This binary code can be then processed by the CPU class, going through RAM and cache, and executed by the ALU.
+```
+
+
+## Old Design Approach
+
+Previously I wanted you to implement all of the below classes, but at this point, I will be OK with you decoding hex into assembly and calculating a value in any fashion that is understandable by you. It still needs to be organized and object oriented, but I won't be strict on looking for all of the class instances we have discussed.
+
+So as far as the following classes go, I will leave the design decisions up to each group.
+
+## Not Optional
+
+Below I get back to necessary info to make your programs work.
