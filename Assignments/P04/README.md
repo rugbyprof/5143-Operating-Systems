@@ -6,21 +6,16 @@
 
 ## Overview
 
-This last version of P04 will not require the use of a complex class structure for you to implement. That doesn't mean that you cannot implement these classes to solve the overall problem, but I will not require it. So let me summarize what the problem will be. Look at the animated gif below: 
-
-### Grayscale
-<img src="https://images2.imgbox.com/02/d5/l6AecCY1_o.gif" width="400">
-
-### Invert
-<img src="https://images2.imgbox.com/11/7a/CMidzv13_o.gif" width="400">
-
-This shows a couple of examples of my "distributed instruction execution" idea. Imagine that each of these 100x100 blocks are being `grayscaled` or `inverted` by different nodes on a computer network. By using rabbitmq for message passing, each group can work on a different portion of the image. 
+This last version of P04 will not require the use of a complex class structure for you to implement. That doesn't mean that you cannot implement these classes to solve the overall problem, but I will not require it. So let me summarize what the problem will be. Below shows a couple of examples of my "distributed instruction execution" idea. Imagine that each of these 100x100 blocks are being `grayscaled` or `inverted` by different nodes on a computer network. By using rabbitmq for message passing, each group can work on a different portion of the image. 
 
 ## Example Code Chunks
 
 Below are examples of the assembly code you will receive and must "execute" (evaluate) to obtain a value in which to send back to the "head node". The instructions will be in hexadecimal format, but it shouldn't be hard to convert between hex -> binary -> assembly :) 
 
 #### Inverting a Pixel
+
+<img src="https://images2.imgbox.com/11/7a/CMidzv13_o.gif" width="400">
+
 This code is the assembly code that you will receive from the the "head node". The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
 
 
@@ -43,6 +38,9 @@ Where the last store command will be converted to a message and sent to rabbitmq
 
 
 #### Grayscaling a Pixel
+
+<img src="https://images2.imgbox.com/02/d5/l6AecCY1_o.gif" width="400">
+
 Here is an example assembly instruction for gray scaling a pixel.
 ```
 [
