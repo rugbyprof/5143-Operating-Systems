@@ -1,22 +1,58 @@
 ## P04 - Distributed Instructions Simulation
 #### Due: 12-11-2023 (Week of Dec 11<sup>th</sup>)
 
-# Rewriting this again (see the 3 readme files)
+# Last Rewrite
 
-Designing a CPU class that's composed of registers, an ALU (Arithmetic Logic Unit), and a cache instance is an interesting challenge, especially in the context of teaching operating system concepts. The key here is to reflect the real-world architecture of a CPU while keeping the simulation manageable and educational. 
+## Overview
 
-Here's a possible design approach:
+This last version of P04 will not require the use of a complex class structure for you to implement. That doesn't mean that you cannot implement these classes to solve the overall problem, but I will not require it. So let me summarize what the problem will be. Look at the animated gif below: 
 
-### 1. CPU Class
+### Grayscale
+<img src="https://images2.imgbox.com/02/d5/l6AecCY1_o.gif" width="400">
+
+### Invert
+<img src="https://images2.imgbox.com/11/7a/CMidzv13_o.gif" width="400">
+
+This shows a couple of examples of my "distributed instruction execution" idea. Imagine that each of these 100x100 blocks are being `grayscaled` or `inverted` by different nodes on a computer network. By using rabbitmq for message passing, each group can work on a different portion of the image. 
+
+### Example Code Chunk
+
+This code is what you will receive from the the "head node". The example below is equivalent to a single instruction, however, you will get many times this number (100x100 for example) of instructions. 
+
+```ass
+[
+    'load r1 196',
+    'load r2 122',
+    'load r3 17',
+    'load r4 3',
+    'add r1 r2',
+    'add r1 r3',
+    'div r1 r4',
+    'store (r1,r1,r1) (1036, 335)'
+]
+```
+
+Whenever you see a "store" instruction, you will message the "head" node with this exact syntax no matter the image manipulation function we are working with (assuming the above instruction and `grayscaling`): 
+
+```
+{"x": 1036, "y":335, "rgb":[111,111,111]}
+```
+
+
+### Old Design Approach
+
+You don't need to implement all of these classes, but some of them actually may help 
+
+### 1. ~~CPU Class~~
 The CPU class is the central class that composes the other components. It should manage the overall operation, like executing instructions, managing data flow between components, etc.
 
-### 2. Registers Class
+### 2. ~~Registers Class~~
 This class represents the CPU's register set. Each register can hold a value and has a unique identifier. The number of registers can be a fixed size, depending on the complexity you want to simulate.
 
-### 3. ALU Class
+### 3. ~~ALU Class~~
 The ALU is responsible for arithmetic and logical operations. It takes inputs from the registers, performs operations, and writes the results back to the registers or memory.
 
-### 4. Cache Class
+### 4. ~~Cache Class~~
 The cache simulates the CPU's internal cache, storing data that's frequently accessed or recently used. This can be a simplified version to demonstrate the concept of caching.
 
 ### Example Implementation

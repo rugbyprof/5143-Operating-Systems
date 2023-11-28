@@ -211,3 +211,5 @@ if __name__ == "__main__":
     # # Receiver for all messages
     # all_receiver = Receiver("localhost", 5672, "my_exchange", "guest", "guest", ["#"])
     # all_receiver.start_consuming()
+
+
