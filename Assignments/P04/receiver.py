@@ -10,6 +10,23 @@ def usage():
     sys.exit()
 
 
+def processMessage(ch, method, properties, body):
+    print(f"I will not beat off any more")
+    data = json.loads(body.decode())
+    for instructions in data:
+        for i in instructions:
+            print(i)
+
+        # print(instructions)
+
+
+class Decoder:
+    def __init__(self, config="commsConfig.json", callback=processMessage):
+        print(processMessage)
+        self.receiver = Receiver(config=config, callback=processMessage)
+        self.receiver.start_consuming()
+
+
 if __name__ == "__main__":
     with open("commsConfig.json") as f:
         config = json.load(f)
@@ -33,12 +50,14 @@ if __name__ == "__main__":
 
         #### Receiver Code Example
 
-    receiver = Receiver(
-        host=host,
-        port=port,
-        exchange=exchange,
-        user=user,
-        pword=pword,
-        routing_keys="hex2",
-    )
-    receiver.start_consuming()
+    # receiver = Receiver(
+    #     host=host,
+    #     port=port,
+    #     exchange=exchange,
+    #     user=user,
+    #     pword=pword,
+    #     routing_keys="hex2",
+    # )
+    # receiver=Receiver(config="commsConfig.json")
+    # receiver.start_consuming()
+    decoder = Decoder(config="commsConfig.json", callback=processMessage)

@@ -3,6 +3,6 @@
   "user": "user1",
   "pword": "123456789",
   "port": 5672,
-  "exchange": "cpuproject",
-  "routing_keys": "hex"
+  "exchange": "instructions",
+  "routing_keys": "group1.#"
 }
