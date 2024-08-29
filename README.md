@@ -22,10 +22,6 @@ https://msutexas-edu.zoom.us/j/9403974439
 - [**Last Day of Class:**](https://msutexas.edu/registrar/calendars.php) Fri Dec 6<sup>th</sup>
 - [**Final Exam:**](https://msutexas.edu/registrar/_assets/files/pdfs/finalexamschedulefall2024.pdf) Tue Dec 10<sup>th</sup> 3:30 p.m. - 5:30 p.m.
 
-## Office Hours
-
-<a href="https://imgbox.com/9i30YeA1" target="_blank"><img src="https://thumbs2.imgbox.com/18/75/9i30YeA1_t.png" alt="image host"/></a>
-
 ### Resources
 
 Here is an open source book for the course. I hope you guys appreciate the amount of effort it takes to put material together and then put it on the internet for free.
