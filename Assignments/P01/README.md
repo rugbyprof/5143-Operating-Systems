@@ -140,11 +140,11 @@ The above implementation of the `ls` command with the `-l` flag, is NOT an imple
 
 ## Deliverables
 
-**_Part 1 - Group Selection_**
+<!-- **_Part 1 - Group Selection_** -->
 
-- Update the class roster spread sheet with your group names.
+<!-- - Update the class roster spread sheet with your group names.
 - **Sections 101:** https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing#gid=1518668959
-- **Sections 102:** https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing#gid=1820215471
+- **Sections 102:** https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing#gid=1820215471 -->
 
 > Group Members
 >
