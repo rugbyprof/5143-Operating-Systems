@@ -9,98 +9,94 @@ import os
 import sys
 from time import sleep
 
-from cmd_pkg import *
-
-cmdHelper = CommandsHelper()
+from getch import Getch
 
 ##################################################################################
 ##################################################################################
 
-getch = Getch()                             # create instance of our getch class
+getch = Getch()  # create instance of our getch class
 
-prompt = "$"                               # set default prompt
+prompt = "$"  # set default prompt
 
 
 def print_cmd(cmd):
-    """ This function "cleans" off the command line, then prints
-        whatever cmd that is passed to it to the bottom of the terminal.
+    """This function "cleans" off the command line, then prints
+    whatever cmd that is passed to it to the bottom of the terminal.
     """
     padding = " " * 80
-    sys.stdout.write("\r"+padding)
-    sys.stdout.write("\r"+prompt+cmd)
+    sys.stdout.write("\r" + padding)
+    sys.stdout.write("\r" + prompt + cmd)
     sys.stdout.flush()
 
 
-if __name__ == '__main__':
-    cmd = ""                                # empty cmd variable
+if __name__ == "__main__":
+    cmd = ""  # empty cmd variable
 
-    print_cmd(cmd)                          # print to terminal
-    
-    while True:                             # loop forever
+    print_cmd(cmd)  # print to terminal
 
-        char = getch()                      # read a character (but don't print)
+    while True:  # loop forever
 
-        if char == '\x03' or cmd == 'exit': # ctrl-c
+        char = getch()  # read a character (but don't print)
+
+        if char == "\x03" or cmd == "exit":  # ctrl-c
             raise SystemExit("Bye.")
-        
-        elif char == '\x7f':                # back space pressed
+
+        elif char == "\x7f":  # back space pressed
             cmd = cmd[:-1]
             print_cmd(cmd)
-            
-        elif char in '\x1b':                # arrow key pressed
-            null = getch()                  # waste a character
-            direction = getch()             # grab the direction
-            
-            if direction in 'A':            # up arrow pressed
+
+        elif char in "\x1b":  # arrow key pressed
+            null = getch()  # waste a character
+            direction = getch()  # grab the direction
+
+            if direction in "A":  # up arrow pressed
                 # get the PREVIOUS command from your history (if there is one)
                 # prints out 'up' then erases it (just to show something)
-                cmd += u"\u2191"
+                cmd += "\u2191"
                 print_cmd(cmd)
                 sleep(0.3)
-                #cmd = cmd[:-1]
-                
-            if direction in 'B':            # down arrow pressed
+                # cmd = cmd[:-1]
+
+            if direction in "B":  # down arrow pressed
                 # get the NEXT command from history (if there is one)
                 # prints out 'down' then erases it (just to show something)
-                cmd += u"\u2193"
+                cmd += "\u2193"
                 print_cmd(cmd)
                 sleep(0.3)
-                #cmd = cmd[:-1]
-            
-            if direction in 'C':            # right arrow pressed    
+                # cmd = cmd[:-1]
+
+            if direction in "C":  # right arrow pressed
                 # move the cursor to the right on your command prompt line
                 # prints out 'right' then erases it (just to show something)
-                cmd += u"\u2192"
+                cmd += "\u2192"
                 print_cmd(cmd)
                 sleep(0.3)
-                #cmd = cmd[:-1]
+                # cmd = cmd[:-1]
 
-            if direction in 'D':            # left arrow pressed
+            if direction in "D":  # left arrow pressed
                 # moves the cursor to the left on your command prompt line
                 # prints out 'left' then erases it (just to show something)
-                cmd += u"\u2190"
+                cmd += "\u2190"
                 print_cmd(cmd)
                 sleep(0.3)
-                #cmd = cmd[:-1]
-            
-            print_cmd(cmd)                  # print the command (again)
+                # cmd = cmd[:-1]
 
-        elif char in '\r':                  # return pressed 
-            
+            print_cmd(cmd)  # print the command (again)
+
+        elif char in "\r":  # return pressed
+
             # This 'elif' simulates something "happening" after pressing return
-            cmd = "Executing command...."   # 
-            print_cmd(cmd)                  
-            sleep(1)    
+            cmd = "Executing command...."  #
+            print_cmd(cmd)
+            sleep(1)
 
             ## YOUR CODE HERE
             ## Parse the command
             ## Figure out what your executing like finding pipes and redirects
 
-            cmd = ""                        # reset command to nothing (since we just executed it)
+            cmd = ""  # reset command to nothing (since we just executed it)
 
-
-
-            print_cmd(cmd)                  # now print empty cmd prompt
+            print_cmd(cmd)  # now print empty cmd prompt
         else:
-            cmd += char                     # add typed character to our "cmd"
-            print_cmd(cmd)                  # print the cmd out
+            cmd += char  # add typed character to our "cmd"
+            print_cmd(cmd)  # print the cmd out
