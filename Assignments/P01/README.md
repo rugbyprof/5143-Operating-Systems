@@ -1,230 +1,306 @@
-## Shell Project - Implementation of a basic shell.
+# Filesystem Project - Implementation of a Virtual Filesystem
 
-#### Due: 09-19-2024 (Week of Sep 19<sup>th</sup>)
-
-### Parts Due Dates
-
-(dates to be changed as discussed in class)
-
-- Part 1 - Group Selection (posted on class roster) - Due: Sep 11<sup>th</sup>
-- Part 2 - Repository Creation (link posted on class roster) - Due: Sep 13<sup>th</sup>
-  - This project will be in a folder called `P01` (that goes into your assignments folder eventuall)
-- Part 3 - Small Working Example - Due: Sep 18<sup>th</sup>
-- Part 4 - Final Product - Due: Sep 25 <sup>th</sup>
-- Part 5 - Project Presentations - Sep 25<sup>th</sup>
+### Due Date: TBD (Will be discussed in class)
 
 ## Overview
 
-You will be implementing a "shell". We use a shell quite often and should have a grasp on expected shell behavior. Below is a brief overview of top level shell behavior:
+In this project, you will implement a virtual filesystem using **SQLite** as the storage backend. While we won't be working with massive files or thousands of entries, the design should be flexible enough to handle typical filesystem operations. If the need arises, the project could be adapted to a more robust database system like PostgreSQL.
 
-- After start-up processing, your program repeatedly should perform these actions:
-  - Print to stdout a prompt consisting of a percent sign followed by a space.
-  - Read a line from stdin.
-  - Lexically analyze the line and create an array of command parts (tokens).
-  - Syntactically analyze (i.e. parse) the token array to form a command.
-  - Once identified, the proper command is executed:
-    - It creates a child process by duplicating itself.
-    - The overloaded process receives all the remaining strings given from a keyboard input (if necessary), and starts a command execution.
+### Goal
 
-### Requirements
+The goal is to mimic a simple Unix-like filesystem. You will design a database that represents directories and files, supports basic operations such as reading, writing, and navigating the filesystem, and enforces permissions.
 
-- Your language of implementation will be Python or C++.
 
-- Threads (optional)
-  - use threads to execute each command.
-  - You should wait for the thread to complete, before returning control to the main process (unless specified to run in background via the ampersand (&)).
-- Each command returns a string
-- Each command should have the ability to accept input from another command
-- Your shell must support the following types of commands:
+## Schema Discussion 
 
-> 1.  The internal shell command "exit" which terminates the shell.
+- When implementing a filesystem using **SQLite**, using only one table like we started out with last class may limit the design's flexibility and efficiency.
+- To improve the old schema (one table 😂), we could create multiple tables with the goal of trying to spread out the responsibility?
+- Think about a file systems main purposes:
+  - **directories** (to give that hierarchical structure)
+  - **files** (the item that is really what were interested in)
+  - **security** (stay away from my files)
+- Security would include:
+  - users
+  - groups
+  - permissions
 
-    - **Concepts**: shell commands, exiting the shell
-    - **System calls**: `exit()`
+### 1. **Files Table**
 
-1. A command with no arguments
-   - **Example**: `ls`
-   - **Details**: Your shell must block until the command completes and, if the return code is abnormal, print out a message to that effect.
-   - **Concepts**: Forking a child process, waiting for it to complete, synchronous execution
-2. A command with arguments
-   - **Example**: `ls -l`
-   - **Details**: Requires parsing string into components. We will discuss multiple ways of capturing input (ex Getch, sys.argv)
-   - **Concepts**: Command-line parameters
-3. A command, with or without arguments, executed in the background using `&`.
-   - For simplicity, assume that if present the `&` is always the last thing on the line.
-   - **Example**: `any-command &`
-   - **Details**: In this case, your shell must execute the command and return immediately, not blocking until the command finishes.
-   - **Concepts**: Background execution, signals, signal handlers, processes, asynchronous execution
-4. A command, with or without arguments, whose output is redirected to a file
-   - **Example**: `ls -l > foo`
-   - **Details**: This takes the output of the command and put it in the named file
-   - **Concepts**: File operations, output redirection
-5. A command, with or without arguments, whose input is redirected from a file
-   - **Example**: `sort < testfile`
-   - **Details**: This takes the named file as input to the command
-   - **Concepts**: Input redirection, more file operations
-6. A command, with or without arguments, whose output is piped to the input of another command.
-   - **Example**: `ls -l | more`
-   - **Details**: This takes the output of the first command and makes it the input to the second command
-   - **Concepts**: Pipes, synchronous operation
+This table stores metadata about each file (e.g., name, type, size, timestamps).
 
-> Note: You must check and correctly handle all return values. This means that you need to read the man pages for each function to figure out what the possible return values are, what errors they indicate, and what you must do when you get that error
-
-Additionally, and I shouldn't have to point this out, but implementing a command must be done without making a call to
-the existing shell:
-
-```python
-from subprocess import call
-
-call(["ls", "-l"])
-
+```sql
+CREATE TABLE files (
+    file_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    parent_id INTEGER,
+    is_directory BOOLEAN NOT NULL,
+    size INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (parent_id) REFERENCES directories(dir_id)
+);
 ```
 
-The above implementation of the `ls` command with the `-l` flag, is NOT an implementation. It is a "system" call to the existing shell. I also do not expect your python implementation of the `ls` command to be as extensive as this: http://www.pixelbeat.org/talks/python/ls.py.html . Your implementations should be somewhere in between.
+### 2. **Directories Table**
 
-### Commands To Implement
+This table represents directories, with each directory able to contain other directories or files.
 
-| Command | Flag / Param | Meaning                                   |
-| ------- | ------------ | ----------------------------------------- |
-| `ls	`    |              | list files and directories                |
-|         | `-a`         | list all show hidden files                |
-|         | `-l`         | long listing                              |
-|         | `-h`         | human readable sizes                      |
-| `mkdir` |              | make a directory                          |
-| `cd`    | `directory`  | change to named directory                 |
-| `cd`    |              | change to home-directory                  |
-|         | `~	`          | change to home-directory                  |
-|         | `..`         | change to parent directory                |
-| `pwd`   |              | display the path of the current directory |
+```sql
+CREATE TABLE directories (
+    dir_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    parent_id INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (parent_id) REFERENCES directories(dir_id) -- Self-referencing for subdirectories
+);
+```
 
-| Command | Params/Flags                  | Meaning                                                                    |
-| ------- | ----------------------------- | -------------------------------------------------------------------------- |
-| `cp `   | `file1 file2`                 | copy file1 and call it file2                                               |
-| `mv`    | `file1 file2`                 | move or rename file1 to file2                                              |
-| `rm`    | `file`                        | remove a file                                                              |
-|         | `-r`                          | recurse into non-empty folder to delete all                                |
-|         | `fil*e` or `*file` or `file\* | removes files that match a wildcard                                        |
-| `rmdir` | `directory`                   | remove a directory                                                         |
-| `cat`   | `file`                        | display a file                                                             |
-|         | `file1`,`file2`,`fileN`       | display each of the files as if they were concatenated                     |
-| `less`  | `file`                        | display a file a page at a time                                            |
-| `head`  | `file`                        | display the first few lines of a file                                      |
-|         | `-n`                          | how many lines to display                                                  |
-| `tail`  | `file`                        | display the last few lines of a file                                       |
-|         | `-n`                          | how many lines to display                                                  |
-| `grep`  | `'keyword' file`              | search a file(s) files for keywords and print lines where pattern is found |
-|         | `-l`                          | only return file names where the word or pattern is found                  |
-| `wc`    | `file`                        | count number of lines/words/characters in file                             |
-|         | `-l`                          | count number of lines in file                                              |
-|         | `-m`                          | count number of characters in file                                         |
-|         | `-w`                          | count number of words in file                                              |
+### 3. **File Contents Table**
 
-| Command                   | Meaning                                              |
-| ------------------------- | ---------------------------------------------------- |
-| `command > file`          | redirect standard output to a file                   |
-| `command >> file`         | append standard output to a file                     |
-| `command < file`          | redirect standard input from a file                  |
-| `command1`                | `command2`                                           |
-| `command1 \| command2`    | pipe the output of command1 to the input of command2 |
-| `cat file1 file2 > file0` | concatenate file1 and file2 to file0                 |
-| `sort`                    | sort data                                            |
-| `who`                     | list users currently logged in                       |
+This table stores the actual content of each file, which allows larger files to be managed in chunks.
 
-| Command     | Meaning                                                          |
-| ----------- | ---------------------------------------------------------------- |
-| `history`   | show a history of all your commands                              |
-| `!x`        | this loads command `x` from your history so you can run it again |
-| `chmod xxx` | change modify permission                                         |
+```sql
+CREATE TABLE file_contents (
+    content_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    file_id INTEGER NOT NULL,
+    chunk BLOB, -- Each file's content is split into chunks for efficient storage
+    chunk_index INTEGER,
+    FOREIGN KEY (file_id) REFERENCES files(file_id)
+);
+```
 
-> Note: Every command should print out help for the command if the user enters `command --help`. Look at [docstrings](https://realpython.com/documenting-python-code/) as one possible solution.
+### 4. **Permissions Table**
 
-## Deliverables
+This table manages file and directory permissions (e.g., read, write, execute) for different users or groups.
 
-<!-- **_Part 1 - Group Selection_** -->
+```sql
+CREATE TABLE permissions (
+    perm_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    file_id INTEGER,
+    dir_id INTEGER,
+    user_id INTEGER,
+    read_permission BOOLEAN DEFAULT 0,
+    write_permission BOOLEAN DEFAULT 0,
+    execute_permission BOOLEAN DEFAULT 0,
+    FOREIGN KEY (file_id) REFERENCES files(file_id),
+    FOREIGN KEY (dir_id) REFERENCES directories(dir_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+```
 
-<!-- - Update the class roster spread sheet with your group names.
-- **Sections 101:** https://docs.google.com/spreadsheets/d/1BQd54B5ROkXxd0QA9keMOFl5iev9BVzYPaPTdKIwZ4s/edit?usp=sharing#gid=1518668959
-- **Sections 102:** https://docs.google.com/spreadsheets/d/1fj4kxRc3PV5O_S3b6NjwIHQuC8tHzCN1370h5aI-MeE/edit?usp=sharing#gid=1820215471 -->
+### 5. **Users Table**
 
-> Group Members
->
-> | Name   | Email       | Github Username |
-> | ------ | ----------- | --------------- |
-> | Name 1 | Email.One   | username_one    |
-> | Name 2 | Email.Two   | username_two    |
-> | Name 3 | Email.Three | username_three  |
+This table manages user information, which helps in implementing multi-user systems with permission handling.
 
-**_Part 2_**
+```sql
+CREATE TABLE users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 
-- Create a private repository on github.
-- Invite rugbyprof to be a collaborator.
-- Place your group names on the README.md along with a description (see below).
-- Even though your shell will have its own private repo, each member must (by the final due date) have a copy on their course repo:
-  - In your `assignments/p01` folder from Part 1.
-  - Create a file called `shell.py` in the `P01` folder.
-  - Create a file called `README.md` in your `P01` folder.
-  - Additional files are ok, for example if you want to place each "command" in a separate file for organizational purposes, that would be not only acceptable, but encouraged.
+### Key Takeaways:
 
-**_Part 3 and Part 4_**
+1. **Separation of Concerns**: Dividing files and directories into separate tables makes it easier to manage metadata and relationships (e.g., parent-child relationships between directories).
 
-#### `shell.py`
+2. **Efficient Content Management**: Splitting file content into chunks in the `file_contents` table ensures that large files can be handled in parts rather than being loaded all at once which could "feel" like your system froze.
 
-- This file is where your shell code will exist and be executed from.
-- You should code in a modular format with comments that are commensurate with graduate work.
+3. **Self-Referencing for Directories**: Directories can reference themselves through the `parent_id`, allowing for hierarchical structures like a real filesystem.
 
-#### `README.md`
+4. **Permissions**: Implementing permissions helps mimic a true multi-user filesystem, where users may have different levels of access to files and directories.
 
-- This file will list pertinent information to include (at a minimum):
-- Date
-- Project Title
-- Project description
-  - With a list of all commands implemented
-  - Indicate who in the group wrote the specific command.
-  - Make a note of any commands that do not work or are not implemented.
-  - The documentation of non-working portions of the shell will be viewed favorably by me.
-  - Passing off portions of the shell as working when they don't will affect your grade considerably.
-- A references section that cites any sources used to assist your group in creating the shell.
-  - Using some external code is ok as long as you follow the following guidelines:
-    - Cite the source of the code in the `README.md` and in the comments of the `shell.py` file.
-    - Only use small portions of external code.
-  - I reserve the right to make any final decisions on whether your group is obtaining too much external help. If your not sure, ask.
-- Group Members
-- Any instructions necessary to ensure I run your code correctly.
+- This is a tiny bit more robust than the awesome single table schema discussed in last class.
+- It improves scalability and functionality, giving us a better chance of getting good file system behavior, in fact we may find that we get pretty damn close to an actual operating system's file system.
+- It looks a lot more daunting, but overall, it should make running many query's easier. Not all queries, but most.
 
-### Example Readme
+### 1. **Directories Table** (Root and Subdirectories)
+
+```sql
+INSERT INTO directories (name, parent_id) VALUES
+    ('root', NULL),
+    ('home', 1), -- Subdirectory under root
+    ('usr', 1),
+    ('documents', 2), -- Subdirectory under home
+    ('photos', 2); -- Subdirectory under home
+```
+
+### 2. **Files Table** (Files within the Directories)
+
+```sql
+INSERT INTO files (name, parent_id, is_directory, size, created_at, modified_at) VALUES
+    ('file1.txt', 2, 0, 1024, '2024-09-24 10:00:00', '2024-09-24 10:00:00'), -- File in home
+    ('file2.txt', 4, 0, 2048, '2024-09-24 11:00:00', '2024-09-24 11:00:00'), -- File in documents
+    ('file3.txt', 5, 0, 4096, '2024-09-24 12:00:00', '2024-09-24 12:00:00'), -- File in photos
+    ('script.sh', 3, 0, 512, '2024-09-24 09:00:00', '2024-09-24 09:00:00');  -- File in usr
+```
+
+### 3. **File Contents Table** (Content Chunks for Large Files)
+
+```sql
+INSERT INTO file_contents (file_id, chunk, chunk_index) VALUES
+    (1, 'This is the first chunk of file1.txt.', 1),
+    (1, 'This is the second chunk of file1.txt.', 2),
+    (2, 'This is the content of file2.txt.', 1),
+    (3, 'This is the first part of file3.txt.', 1),
+    (3, 'This is the second part of file3.txt.', 2);
+```
+
+### 4. **Users Table** (User Information)
+
+```sql
+INSERT INTO users (username, password) VALUES
+    ('user1', 'password123'),
+    ('user2', 'securepassword'),
+    ('admin', 'adminpass');
+```
+
+### 5. **Permissions Table** (Permissions for Files and Directories)
+
+```sql
+INSERT INTO permissions (file_id, dir_id, user_id, read_permission, write_permission, execute_permission) VALUES
+    (NULL, 1, 3, 1, 1, 1),  -- Admin has full access to root
+    (NULL, 2, 1, 1, 1, 0),  -- User1 has read/write access to home directory
+    (1, NULL, 1, 1, 1, 0),  -- User1 has read/write access to file1.txt
+    (2, NULL, 2, 1, 0, 0),  -- User2 has read access to file2.txt
+    (NULL, 4, 2, 1, 0, 0),  -- User2 has read access to documents directory
+    (4, NULL, 3, 1, 1, 1);  -- Admin has full access to script.sh
+```
+
+### Data Explanation:
+
+1. **Directories**:
+   - Created a root directory with subdirectories for `/home`, `/usr`, `/documents`, and `/photos`.
+2. **Files**:
+
+   - Placed files within various directories (`home`, `documents`, `photos`, and `usr`). Each file has a size and timestamp for when it was created and last modified.
+
+3. **File Contents**:
+
+   - Files are split into chunks, mimicking how large files are often managed in blocks.
+
+4. **Users**:
+
+   - Created three users: `user1`, `user2`, and `admin`.
+
+5. **Permissions**:
+   - Set up various permissions to control access to files and directories. For example, `admin` has full access to the `root` directory and the script file, while `user1` has access to their `home` directory and a file within it.
+
+### Additional Notes:
+
+- You can further adjust the `size` of the files or `chunk` contents based on actual data needs.
+- User permissions can be expanded to more complex scenarios (e.g., group-based permissions).
+
+
+Explanation of Data Insertion:
+
+- Users: Inserting users `bob`, `mia`, and `raj`.
+- Directories: Each directory is inserted with a reference to its `parent_id` (null if its a root directory).
+- Files: Files are linked to their corresponding directories through `parent_id` and have specific timestamps and sizes.
+- Permissions: Each permission entry determines the access level for users on specific files and directories, following the `rwx` pattern.
+
+
+
+## Required Operations
+
+Here are some essential operations you will implement in Python, interfacing with your SQLite database.
+
+### 1. **Create File**
+
+Create a new file in the filesystem, specifying the parent directory and metadata (e.g., name, owner, permissions).
+
+```python
+def create_file(pid, filename, owner, group, size, permissions):
+    cursor.execute("""
+        INSERT INTO files (parent_id, name, is_directory, size, owner, group, permissions, created_at, modified_at)
+        VALUES (?, ?, 0, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+    """, (pid, filename, size, owner, group, permissions))
+```
+
+### 2. **Create Directory**
+
+Similar to creating a file, but for directories.
+
+```python
+def create_directory(pid, dirname, owner, group, permissions):
+    cursor.execute("""
+        INSERT INTO directories (parent_id, name, owner, group, permissions, created_at, modified_at)
+        VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+    """, (pid, dirname, owner, group, permissions))
+```
+
+### 3. **Delete File**
+
+Delete a file by its unique ID.
+
+```python
+def delete_file(file_id):
+    cursor.execute("DELETE FROM files WHERE file_id = ?", (file_id,))
+```
+
+### 4. **Delete Directory**
+
+Delete a directory and recursively delete its contents.
+
+```python
+def delete_directory(dir_id):
+    cursor.execute("SELECT file_id FROM files WHERE parent_id = ?", (dir_id,))
+    for file_id in cursor.fetchall():
+        delete_file(file_id)
+    cursor.execute("DELETE FROM directories WHERE dir_id = ?", (dir_id,))
+```
+
+### 5. **List Directory Contents**
+
+List all files and subdirectories within a specific directory.
+
+```python
+def list_directory(dir_id):
+    cursor.execute("SELECT * FROM files WHERE parent_id = ?", (dir_id,))
+    return cursor.fetchall()
+```
+
+### 6. **Change Permissions**
+
+Update the permissions for a file or directory.
+
+```python
+def change_permissions(file_id, new_permissions):
+    cursor.execute("UPDATE files SET permissions = ? WHERE file_id = ?", (new_permissions, file_id))
+```
 
 ---
 
-#### 28 Sep 2023
+## Additional Features (Optional)
 
-#### 5143 Shell Project
+Consider implementing these additional features if time permits:
 
-#### Group Members
+- **Search for files**: Search based on name, owner, or permissions.
+- **Move or Copy files**: Transfer files between directories.
+- **Version control**: Implement basic versioning for files.
+- **File metadata management**: Allow users to add descriptions or tags to files.
 
-- Person 1
-- Person 2
+---
 
-#### Overview:
+## Submission Guidelines
 
-This is a project written in python that implements a basic shell ......
+1. **Repository**:
 
-#### Instructions
+   - Create a private GitHub repository.
+   - Ensure your team members have access and invite `rugbyprof` as a collaborator.
 
-Only give instructions for the general running of your shell and anything you feel is pertinent
+2. **Required Files**:
 
-- To run `ls` ...
+   - `filesystem.py`: Your Python code implementing the filesystem.
+   - `README.md`: Instructions on how to set up and run your filesystem, including a list of commands implemented.
+   - `filesystem.sqlite`: The SQLite database with the filesystem structure.
 
-**_Commands_**:
+3. **Deliverables**:
+   - A functioning virtual filesystem with the ability to create, read, delete, and manage files and directories.
+   - Proper documentation in the README.
 
-| command |    description    | Author | Notes |
-| :-----: | :---------------: | :----: | :---: |
-|   ls    | directory listing | Anusha |       |
-|   pwd   | working directory |  Raj   |       |
-|  etc.   |        etc        |  etc   |       |
+---
 
-**_Non Working Components_**
-
-**_References_**
-
-- site1
-- site2
+By organizing the project with multiple tables (files, directories, users, permissions), you’ll get a better structure for your filesystem, allowing it to more closely resemble a real-world implementation. Let me know if you need further refinements or additional help!

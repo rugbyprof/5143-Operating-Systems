@@ -1,6 +1,7 @@
 import importlib
 import pkgutil
 import cmd_pkg
+from rich import print
 
 # Dictionary to store the commands
 cmds = {}
@@ -24,6 +25,13 @@ def load_commands():
 
 # Get the docstring of a function
 def get_docstring(func_name):
+    """
+    Get the docstring of a function.
+
+    :param func_name: The name of the function
+    :return: The docstring of the function
+    """
+
     if func_name in cmds:
         return cmds[func_name].__doc__
     else:
@@ -45,3 +53,6 @@ if __name__ == "__main__":
         print(result)
     else:
         print(f"Command '{cmd}' not found.")
+
+    # help = cmds["cat"].__doc__.split("DOCSTRING")[1]
+    # print(help)

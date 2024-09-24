@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 from subprocess import call
 
+
 def cat(**kwargs):
-    """   
+    """
+    params (list) : list of parameters
+
+    DOCSTRING
     NAME
         cat - concatenate files and print on the standard output
     SYNOPSIS
@@ -42,10 +46,9 @@ def cat(**kwargs):
 
         cat    Copy standard input to standard output.
     """
-    if 'params' in kwargs:
-        params = kwargs['params']
-    if 'flags' in kwargs:
-        flags = kwargs['flags']
+
+    params = kwargs.get("params", [])
+    flags = kwargs.get("flags", [])
     command = ["cat"]
 
     for f in params:
@@ -53,6 +56,5 @@ def cat(**kwargs):
 
     call(command)
 
-    if __name__=='__main__':
-        cat(files=['somefile','otherfile'])
-        
+    if __name__ == "__main__":
+        cat(files=["somefile", "otherfile"])
