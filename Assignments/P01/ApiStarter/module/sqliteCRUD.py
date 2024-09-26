@@ -14,6 +14,7 @@ for you. You can modify this code to match the schema discussed in the main read
 import sqlite3
 from prettytable import PrettyTable
 
+
 class SqliteCRUD:
     """
     Comment
@@ -151,6 +152,7 @@ class SqliteCRUD:
         Args:
             table_name (str): Name of the table.
         """
+        response = []
         try:
             # Retrieve all data from the table
             select_query = f"SELECT * FROM {table_name};"
@@ -158,11 +160,12 @@ class SqliteCRUD:
             result = self.cursor.fetchall()
             if result:
                 for row in result:
-                    print(row)
+                    response.append(row)
             else:
                 print("No data found in the table.")
         except sqlite3.Error as e:
             print(f"Error reading data: {e}")
+        return response
 
     def update_data(
         self, table_name, column, new_value, condition_column, condition_value

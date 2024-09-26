@@ -3,6 +3,8 @@
 
 SQLite supports a variety of column types that you can use to define the structure of your database tables. Here's a list of the most commonly used column types in SQLite:
 
+ 
+
 ### Available
 1. **INTEGER**: Used for whole numbers (integers). You can specify the number of bytes, but SQLite will adjust storage as needed.
 2. **REAL**: Used for floating-point numbers. It can store both integers and decimal numbers.
