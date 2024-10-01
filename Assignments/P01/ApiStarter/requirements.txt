@@ -6,3 +6,4 @@ rich
 uvicorn
 prettytable
 rich
+datetime

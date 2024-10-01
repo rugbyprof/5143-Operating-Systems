@@ -3,16 +3,19 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from datetime import datetime
 
 # Builtin libraries
 import os
 
 from random import shuffle
+from random import choice
 
 # Classes from my module
 # from module import SqliteCRUD
 from module import *
 
+CURRENT_TIMESTAMP = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # """
 #            _____ _____   _____ _   _ ______ ____
@@ -135,15 +138,26 @@ async def getFiles(did=None):
         return {"Error": "Files list was empty or None."}
 
 
-@app.post("/newFile")
-def create_file(filepath):
+@app.post("/touch")
+def create_file(name: str):
     """
     Creates a new file in the filesystem and records the action in the database.
     :param filepath: The path where the file is to be created.
+    - need to know current location id
+    - need to know the name of the file
+    - use current time to set created_at and modified_at
+    - size will be 0
     """
     # TODO: Check if file already exists, then create the file.
     # db.insert_file(filepath, "created")
-    pass
+
+    parent = choice([3, 4, 5, 6, 7])
+    """INSERT INTO files (name, parent_id, is_directory, size, created_at, modified_at) VALUES
+    ('global.c', 3, 0, 1024, '2020-02-20 10:42:37', '2021-05-26 23:26:11')"""
+    fsDB.insert_data(
+        "files", (None, name, parent, 0, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+    )
+    print(("files", (None, name, parent, 0, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)))
 
 
 ### 2. **File Deletion**

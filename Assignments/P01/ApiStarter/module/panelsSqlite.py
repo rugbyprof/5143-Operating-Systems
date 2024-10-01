@@ -5,7 +5,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
-
+from shell import runShell
 
 # Connect to the SQLite database
 def get_filesystem_data(db_path):
@@ -23,9 +23,10 @@ def get_filesystem_data(db_path):
 
     return [fields] + data
 
+#style="bold green on blue",
 
 # Function to display file system using Rich
-def display_filesystem(data):
+def display_filesystem(data,idx=0):
     # Initialize the Rich table
     table = Table(show_header=True, header_style="bold cyan")
     
@@ -35,10 +36,14 @@ def display_filesystem(data):
     data = data[1:]
 
     # Populate the table with data from the database
+    i = 0
     for row in data:
         row = [str(cell) for cell in row]
-
-        table.add_row(*row)
+        if i == idx:
+            table.add_row(*row, style="bold green on blue")
+        else:
+            table.add_row(*row)
+        i += 1
 
     # Text command at the top (just for demonstration)
     text = Text()
@@ -68,7 +73,7 @@ def display_filesystem(data):
     console = Console(height=50)  # Adjust the height as needed
 
     # Print the panels
-    console.print(top_panel)
+    # console.print(top_panel)
     console.print(bottom_panel)
 
 
@@ -83,3 +88,5 @@ filesystem_data = get_filesystem_data(db_path)
 
 # Display the data in the Rich table
 display_filesystem(filesystem_data)
+
+runShell(display_filesystem,filesystem_data)

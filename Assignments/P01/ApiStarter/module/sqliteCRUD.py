@@ -23,7 +23,7 @@ class SqliteCRUD:
     def __init__(self, db_path):
         """Initialize database connection and cursor."""
         self.db_path = db_path
-        self.conn = sqlite3.connect(self.db_path)
+        self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self.cursor = self.conn.cursor()
 
     def __raw_results(self, results):
