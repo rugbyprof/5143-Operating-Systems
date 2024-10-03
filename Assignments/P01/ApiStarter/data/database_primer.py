@@ -1,3 +1,5 @@
+import os
+
 querys = [
     """
 CREATE TABLE files (
@@ -21,7 +23,7 @@ CREATE TABLE files (
     """CREATE TABLE file_contents (
     content_id INTEGER PRIMARY KEY AUTOINCREMENT,
     file_id INTEGER NOT NULL,
-    chunk BLOB, -- Each file's content is split into chunks for efficient storage
+    chunk TEXT, -- Each file's content is split into chunks for efficient storage
     chunk_index INTEGER,
     FOREIGN KEY (file_id) REFERENCES files(file_id)
 );""",
@@ -43,11 +45,6 @@ CREATE TABLE files (
     password TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );""",
-    """INSERT INTO users (username, password) VALUES
-    ('bob', 'password1'),
-    ('mia', 'password2'),
-    ('raj', 'password3');
-""",
     """INSERT INTO directories (name, parent_id, created_at, modified_at) VALUES
     ('linux', NULL, '2018-06-23 19:15:35', '2018-08-18 09:05:02'),
     ('drivers', 1, '2017-06-27 01:02:44', '2017-10-05 06:02:11'),
@@ -60,7 +57,8 @@ CREATE TABLE files (
     ('papiex', 8, '2017-08-28 01:25:12', '2018-08-16 21:59:00'),
     ('src', 9, '2019-04-26 20:57:26', '2020-06-23 04:33:27'),
     ('tests', 8, '2022-11-16 14:46:10', '2023-10-07 20:57:47'),
-    ('trapper', 8, '2015-02-14 20:25:29', '2016-02-06 19:51:11');
+    ('trapper', 8, '2015-02-14 20:25:29', '2016-02-06 19:51:11'),
+    ('books', 1, '2024-02-14 20:25:29', '2024-02-06 19:51:11');
 """,
     """INSERT INTO files (name, parent_id, is_directory, size, created_at, modified_at) VALUES
     ('global.c', 3, 0, 1024, '2020-02-20 10:42:37', '2021-05-26 23:26:11'),
@@ -77,7 +75,11 @@ CREATE TABLE files (
     ('win32.c', 6, 0, 2048, '2016-03-20 22:36:50', '2017-07-13 05:11:46'),
     ('pmclib.c', 7, 0, 1024, '2020-04-09 16:57:35', '2020-08-09 10:52:07'),
     ('pmc_x86.c', 7, 0, 2048, '2023-03-25 17:19:41', '2024-05-17 04:13:35'),
-    ('WinPMC.c', 7, 0, 4096, '2016-10-28 07:42:59', '2017-11-03 16:28:42');
+    ('WinPMC.c', 7, 0, 4096, '2016-10-28 07:42:59', '2017-11-03 16:28:42'),
+    ('beowulf.txt', 13, 0, 300506, '2016-10-28 07:42:59', '2017-11-03 16:28:42'),
+    ('frakenstein.txt', 13, 0, 448937, '2016-10-28 07:42:59', '2017-11-03 16:28:42'),
+    ('moby_dick.txt', 13, 0, 1276290, '2016-10-28 07:42:59', '2017-11-03 16:28:42'),
+    ('odyssy.txt', 13, 0, 717826, '2016-10-28 07:42:59', '2017-11-03 16:28:42');
 """,
     """INSERT INTO permissions (file_id, dir_id, user_id, read_permission, write_permission, execute_permission) VALUES
     (NULL, 1, 1, 1, 1, 1),  -- Full access to 'linux' directory
@@ -96,9 +98,45 @@ INSERT INTO permissions (file_id, dir_id, user_id, read_permission, write_permis
     (NULL, 7, 3, 1, 1, 1),  -- Full access to 'winpmc' directory
     (44, NULL, 3, 1, 1, 0); -- Read/write access to 'pmclib.c'
 """,
+    """INSERT INTO users (username, password) VALUES
+    ('bob', 'password1'),
+    ('mia', 'password2'),
+    ('raj', 'password3');
+""",
 ]
+
+
+def split_binary_file_to_chunks(file_path, chunk_size=1024):
+    chunks = []
+
+    with open(file_path, "rb") as file:
+        while True:
+            # Read a chunk of size `chunk_size`
+            chunk = file.read(chunk_size)
+            if not chunk:
+                break  # End of file
+            chunks.append(chunk)
+
+    return chunks
+
+
+def split_file_to_chunks(file_path, chunk_size=1024, encoding="utf-8"):
+    chunks = []
+
+    with open(file_path, "r", encoding=encoding) as file:
+        while True:
+            chunk = file.read(chunk_size)
+            if not chunk:
+                break  # End of file
+            chunks.append(chunk)
+
+    return chunks
+
+
 if __name__ == "__main__":
     import sqlite3
+
+    os.remove("filesystem.db")
 
     # Connect to the SQLite database
     conn = sqlite3.connect("filesystem.db")
@@ -107,7 +145,28 @@ if __name__ == "__main__":
     cursor = conn.cursor()
 
     for query in querys:
+        table = query.split("(")[0].split(" ")[2]
+        if "INSERT" in query:
+            print(f"inserting data into table: {table}...")
+        else:
+            print(f"creating table: {table}...")
         cursor.execute(query)
+
+        books = ["beowulf.txt", "frankenstein.txt", "moby_dick.txt", "odyssy.txt"]
+
+    id = 13
+    # Example usage:
+    for book in books:
+        file_path = book  # Path to your file
+        chunks = split_file_to_chunks(file_path)
+
+        # Optionally, save the chunks to separate files
+        for i, chunk in enumerate(chunks):
+            query = (
+                f"INSERT INTO file_contents (file_id,chunk,chunk_index) VALUES(?,?,?)"
+            )
+            cursor.execute(query, (id, chunk, i))
+        id += 1
 
     # # Example table creation
     # cursor.execute('''
