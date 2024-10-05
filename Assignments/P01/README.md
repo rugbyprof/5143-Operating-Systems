@@ -145,7 +145,9 @@ Create a new file in the filesystem, specifying the parent directory and metadat
 
 # MORE TO COME ... ITS LATE AND I'M DONE TILL LATER TONIGHT
 
-I will add sql queries to basic shell commands, but the hardest is processing paths and determine where you are and where the path is trying to take you.
+I will add sql queries to basic shell commands, but the hardest is processing paths and determining where you are and where the path is trying to take you. So work on the new filesystem schema and I'll post more help tonight.
+
+Also I will move the due date ...
 
 <!-- ## Additional Features (Optional)
 
