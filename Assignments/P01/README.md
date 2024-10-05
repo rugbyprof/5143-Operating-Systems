@@ -10,8 +10,7 @@ In this project, you will implement a virtual filesystem using **SQLite** as the
 
 The goal is to mimic a simple Unix-like filesystem. You will design a database that represents directories and files, supports basic operations such as reading, writing, and navigating the filesystem, and enforces permissions.
 
-
-## Schema Discussion 
+## Schema Discussion
 
 - When implementing a filesystem using **SQLite**, using only one table like we started out with last class may limit the design's flexibility and efficiency.
 - To improve the old schema (one table 😂), we could create multiple tables with the goal of trying to spread out the responsibility?
@@ -21,24 +20,43 @@ The goal is to mimic a simple Unix-like filesystem. You will design a database t
   - **security** (stay away from my files)
 - Security would include:
   - users
-  - groups
   - permissions
 
 ### 1. **Files Table**
 
-This table stores metadata about each file (e.g., name, type, size, timestamps).
-
 ```sql
-CREATE TABLE files (
-    file_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    parent_id INTEGER,
-    is_directory BOOLEAN NOT NULL,
+CREATE TABLE IF NOT EXISTS files (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    pid INTEGER,
+    oid INTEGER,
+    name TEXT,
     size INTEGER DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (parent_id) REFERENCES directories(dir_id)
+    creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    contents BLOB,
+    read_permission INTEGER DEFAULT 1,
+    write_permission INTEGER DEFAULT 0,
+    execute_permission INTEGER DEFAULT 1,
+    world_read INTEGER DEFAULT 1,
+    world_write INTEGER DEFAULT 0,
+    world_execute INTEGER DEFAULT 1
 );
+```
+
+This table stores file data. Everything about the file, even the contents. Notice the contents column is a BLOB
+data type. I decided to `base64` encode the files so I don't have to deal with escaping characters.
+
+```python
+
+
+# Read file and base 64 encode it.
+with open(file_path, "rb") as binary_file:
+    binary_file_data = binary_file.read()
+    base64_encoded_data = base64.b64encode(binary_file_data)
+
+
+# Later on you can use the following to turn it back into something readable (depending on the filetype).
+base64_output = base64_encoded_data.decode('utf-8')
 ```
 
 ### 2. **Directories Table**
@@ -46,55 +64,27 @@ CREATE TABLE files (
 This table represents directories, with each directory able to contain other directories or files.
 
 ```sql
-CREATE TABLE directories (
-    dir_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    parent_id INTEGER,
+CREATE TABLE IF NOT EXISTS directories (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,   -- directory id
+    pid INTEGER,                            -- parent directory id
+    oid INTEGER,                            -- owner id
+    name TEXT NOT NULL,                     -- directory name
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (parent_id) REFERENCES directories(dir_id) -- Self-referencing for subdirectories
-);
+    read_permission INTEGER DEFAULT 1,
+    write_permission INTEGER DEFAULT 0,
+    execute_permission INTEGER DEFAULT 1,
+    world_read INTEGER DEFAULT 1,
+    world_write INTEGER DEFAULT 0,
+    world_execute INTEGER DEFAULT 1;
 ```
 
-### 3. **File Contents Table**
-
-This table stores the actual content of each file, which allows larger files to be managed in chunks.
-
-```sql
-CREATE TABLE file_contents (
-    content_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    file_id INTEGER NOT NULL,
-    chunk BLOB, -- Each file's content is split into chunks for efficient storage
-    chunk_index INTEGER,
-    FOREIGN KEY (file_id) REFERENCES files(file_id)
-);
-```
-
-### 4. **Permissions Table**
-
-This table manages file and directory permissions (e.g., read, write, execute) for different users or groups.
-
-```sql
-CREATE TABLE permissions (
-    perm_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    file_id INTEGER,
-    dir_id INTEGER,
-    user_id INTEGER,
-    read_permission BOOLEAN DEFAULT 0,
-    write_permission BOOLEAN DEFAULT 0,
-    execute_permission BOOLEAN DEFAULT 0,
-    FOREIGN KEY (file_id) REFERENCES files(file_id),
-    FOREIGN KEY (dir_id) REFERENCES directories(dir_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-```
-
-### 5. **Users Table**
+### 3. **Users Table**
 
 This table manages user information, which helps in implementing multi-user systems with permission handling.
 
 ```sql
-CREATE TABLE users (
+CREATE TABLE  IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
@@ -106,174 +96,56 @@ CREATE TABLE users (
 
 1. **Separation of Concerns**: Dividing files and directories into separate tables makes it easier to manage metadata and relationships (e.g., parent-child relationships between directories).
 
-2. **Efficient Content Management**: Splitting file content into chunks in the `file_contents` table ensures that large files can be handled in parts rather than being loaded all at once which could "feel" like your system froze.
+2. **Efficient Content Management**: ~~Splitting file content into chunks in the `file_contents` table ensures that large files can be handled in parts rather than being loaded all at once which could "feel" like your system froze~~. Is a better overall solution, but we are simulating a small file system in which we are guaranteed to have files no larger than 1GB (and even that is way to large).
 
-3. **Self-Referencing for Directories**: Directories can reference themselves through the `parent_id`, allowing for hierarchical structures like a real filesystem.
+3. **Self-Referencing for Directories**: Directories can reference themselves through the `pid`, allowing for hierarchical structures like a real filesystem.
 
-4. **Permissions**: Implementing permissions helps mimic a true multi-user filesystem, where users may have different levels of access to files and directories.
+4. **Permissions**: ~~Implementing permissions helps mimic a true multi-user filesystem, where users may have different levels of access to files and directories~~. Permissions are stored directly in each table for files and directories. And then only the owners and the worlds permissions are stored (no groups).
 
-- This is a tiny bit more robust than the awesome single table schema discussed in last class.
-- It improves scalability and functionality, giving us a better chance of getting good file system behavior, in fact we may find that we get pretty damn close to an actual operating system's file system.
-- It looks a lot more daunting, but overall, it should make running many query's easier. Not all queries, but most.
+## Getting Started
 
-### 1. **Directories Table** (Root and Subdirectories)
+I wrote a new database creation and loading script: [`create_and_load_db.py`](./create_and_load_db.py). This script does:
 
-```sql
-INSERT INTO directories (name, parent_id) VALUES
-    ('root', NULL),
-    ('home', 1), -- Subdirectory under root
-    ('usr', 1),
-    ('documents', 2), -- Subdirectory under home
-    ('photos', 2); -- Subdirectory under home
+1. creates all the tables as described above.
+2. traverses a given directory and processes the files and directories inserting the info into `sqlite`.
+
+Don't run it on a root folder, as it will process all files from a given directory recursively and you could end up with thousands of entries. Usage is printed below. You should provide the path to the folder you want processed, and the name of your db file.
+
+```python
+    print("Usage: python create_and_load_db.py <root_dir> <db_name>")
+    print("Example: python create_and_load_db.py /home/user1/files/ files.db")
 ```
 
-### 2. **Files Table** (Files within the Directories)
+## Basics Of Your Filesystem
 
-```sql
-INSERT INTO files (name, parent_id, is_directory, size, created_at, modified_at) VALUES
-    ('file1.txt', 2, 0, 1024, '2024-09-24 10:00:00', '2024-09-24 10:00:00'), -- File in home
-    ('file2.txt', 4, 0, 2048, '2024-09-24 11:00:00', '2024-09-24 11:00:00'), -- File in documents
-    ('file3.txt', 5, 0, 4096, '2024-09-24 12:00:00', '2024-09-24 12:00:00'), -- File in photos
-    ('script.sh', 3, 0, 512, '2024-09-24 09:00:00', '2024-09-24 09:00:00');  -- File in usr
-```
+In the [`create_and_load_db.py`](./create_and_load_db.py) there are examples if inserting files and directories. But lets focus on what your filesystem should do in regards to the shell you will be running.
 
-### 3. **File Contents Table** (Content Chunks for Large Files)
+### Dealing with Directories
 
-```sql
-INSERT INTO file_contents (file_id, chunk, chunk_index) VALUES
-    (1, 'This is the first chunk of file1.txt.', 1),
-    (1, 'This is the second chunk of file1.txt.', 2),
-    (2, 'This is the content of file2.txt.', 1),
-    (3, 'This is the first part of file3.txt.', 1),
-    (3, 'This is the second part of file3.txt.', 2);
-```
+1. Starting your shell will take you to your home directory, whatever that may be. That entry will obviously exist in your database, but it is important to note that you must always know the directory ID of your current location. Many actions will based on "where you currently are".
+2. Directory listings are simply selecting all the files of a directory. Right?
+   1. So `ls -l` is simple enough. `SELECT * FROM files WHERE pid = currentDirID`
+   2. However, what about `ls -l /home/yolanda/programs/data/`? How does that change things? You cannot just select all the files from the table that have the data's directory id. Which data? You will have to split that path and progressively find data's id by starting with /home's id, then progressing into each directory and getting its id.
+3. The change directory would be easy as well, unless you provide a path like above. So:
+   1. `cd ..` or `cd folderName` would be pretty easy as they are one level away. `cd ..` would be change to my parent directory. And the `cd folderName` would be getting the id for folderName, then making that my location.
+   2. But: `cd /home/yolanda/programs/data/` is the same problem as above.
+   3. OR: `cd ../../someDir/anotherDir/` ?
+   4. AND: `cd programs/data/otherSubData/`?
 
-### 4. **Users Table** (User Information)
+Any path that starts with a "/" starts at the "root" folder. That id will be 1 or 0, whateveer you make your root folder id be. All the other path types are based on where you are. Number 3 backs up two directories from my current location. And number 4 is looking for a directory id : `SELECT id FROM files WHERE name = 'program' AND pid = currDirId;`
 
-```sql
-INSERT INTO users (username, password) VALUES
-    ('user1', 'password123'),
-    ('user2', 'securepassword'),
-    ('admin', 'adminpass');
-```
+### 1. **Touch** command:
 
-### 5. **Permissions Table** (Permissions for Files and Directories)
+The `touch` command does these 2 things (for our project). For example the command: `touch someFile.txt` would do one of the following:
 
-```sql
-INSERT INTO permissions (file_id, dir_id, user_id, read_permission, write_permission, execute_permission) VALUES
-    (NULL, 1, 3, 1, 1, 1),  -- Admin has full access to root
-    (NULL, 2, 1, 1, 1, 0),  -- User1 has read/write access to home directory
-    (1, NULL, 1, 1, 1, 0),  -- User1 has read/write access to file1.txt
-    (2, NULL, 2, 1, 0, 0),  -- User2 has read access to file2.txt
-    (NULL, 4, 2, 1, 0, 0),  -- User2 has read access to documents directory
-    (4, NULL, 3, 1, 1, 1);  -- Admin has full access to script.sh
-```
-
-### Data Explanation:
-
-1. **Directories**:
-   - Created a root directory with subdirectories for `/home`, `/usr`, `/documents`, and `/photos`.
-2. **Files**:
-
-   - Placed files within various directories (`home`, `documents`, `photos`, and `usr`). Each file has a size and timestamp for when it was created and last modified.
-
-3. **File Contents**:
-
-   - Files are split into chunks, mimicking how large files are often managed in blocks.
-
-4. **Users**:
-
-   - Created three users: `user1`, `user2`, and `admin`.
-
-5. **Permissions**:
-   - Set up various permissions to control access to files and directories. For example, `admin` has full access to the `root` directory and the script file, while `user1` has access to their `home` directory and a file within it.
-
-### Additional Notes:
-
-- You can further adjust the `size` of the files or `chunk` contents based on actual data needs.
-- User permissions can be expanded to more complex scenarios (e.g., group-based permissions).
-
-
-Explanation of Data Insertion:
-
-- Users: Inserting users `bob`, `mia`, and `raj`.
-- Directories: Each directory is inserted with a reference to its `parent_id` (null if its a root directory).
-- Files: Files are linked to their corresponding directories through `parent_id` and have specific timestamps and sizes.
-- Permissions: Each permission entry determines the access level for users on specific files and directories, following the `rwx` pattern.
-
-
-
-## Required Operations
-
-Here are some essential operations you will implement in Python, interfacing with your SQLite database.
-
-### 1. **Create File**
+1. create a new file with 0 bytes with the name someFile.txt
+2. update a files modified_at date time to now if someFile.txt already exists
 
 Create a new file in the filesystem, specifying the parent directory and metadata (e.g., name, owner, permissions).
 
-```python
-def create_file(pid, filename, owner, group, size, permissions):
-    cursor.execute("""
-        INSERT INTO files (parent_id, name, is_directory, size, owner, group, permissions, created_at, modified_at)
-        VALUES (?, ?, 0, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
-    """, (pid, filename, size, owner, group, permissions))
-```
+# MORE TO COME ITS LATE AND I'M DONE TILL LATE SATURDAY
 
-### 2. **Create Directory**
-
-Similar to creating a file, but for directories.
-
-```python
-def create_directory(pid, dirname, owner, group, permissions):
-    cursor.execute("""
-        INSERT INTO directories (parent_id, name, owner, group, permissions, created_at, modified_at)
-        VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
-    """, (pid, dirname, owner, group, permissions))
-```
-
-### 3. **Delete File**
-
-Delete a file by its unique ID.
-
-```python
-def delete_file(file_id):
-    cursor.execute("DELETE FROM files WHERE file_id = ?", (file_id,))
-```
-
-### 4. **Delete Directory**
-
-Delete a directory and recursively delete its contents.
-
-```python
-def delete_directory(dir_id):
-    cursor.execute("SELECT file_id FROM files WHERE parent_id = ?", (dir_id,))
-    for file_id in cursor.fetchall():
-        delete_file(file_id)
-    cursor.execute("DELETE FROM directories WHERE dir_id = ?", (dir_id,))
-```
-
-### 5. **List Directory Contents**
-
-List all files and subdirectories within a specific directory.
-
-```python
-def list_directory(dir_id):
-    cursor.execute("SELECT * FROM files WHERE parent_id = ?", (dir_id,))
-    return cursor.fetchall()
-```
-
-### 6. **Change Permissions**
-
-Update the permissions for a file or directory.
-
-```python
-def change_permissions(file_id, new_permissions):
-    cursor.execute("UPDATE files SET permissions = ? WHERE file_id = ?", (new_permissions, file_id))
-```
-
----
-
-## Additional Features (Optional)
+<!-- ## Additional Features (Optional)
 
 Consider implementing these additional features if time permits:
 
@@ -303,4 +175,4 @@ Consider implementing these additional features if time permits:
 
 ---
 
-By organizing the project with multiple tables (files, directories, users, permissions), you’ll get a better structure for your filesystem, allowing it to more closely resemble a real-world implementation. Let me know if you need further refinements or additional help!
+By organizing the project with multiple tables (files, directories, users, permissions), you’ll get a better structure for your filesystem, allowing it to more closely resemble a real-world implementation. Let me know if you need further refinements or additional help! -->

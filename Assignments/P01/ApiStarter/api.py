@@ -90,6 +90,33 @@ else:
 # """
 
 
+def split_binary_file_to_chunks(file_path, chunk_size=1024):
+    chunks = []
+
+    with open(file_path, "rb") as file:
+        while True:
+            # Read a chunk of size `chunk_size`
+            chunk = file.read(chunk_size)
+            if not chunk:
+                break  # End of file
+            chunks.append(chunk)
+
+    return chunks
+
+
+def split_file_to_chunks(file_path, chunk_size=1024, encoding="utf-8"):
+    chunks = []
+
+    with open(file_path, "r", encoding=encoding) as file:
+        while True:
+            chunk = file.read(chunk_size)
+            if not chunk:
+                break  # End of file
+            chunks.append(chunk)
+
+    return chunks
+
+
 # """
 #   _____   ____  _    _ _______ ______  _____
 #  |  __ \ / __ \| |  | |__   __|  ____|/ ____|
@@ -133,6 +160,13 @@ async def getFiles(did=None):
     """
     files = fsDB.read_data("files")
     if files:
+        if did:
+            filtered = []
+            for row in files:
+                print(row)
+                if str(row[2]) == str(did):
+                    filtered.append(row)
+            files = filtered
         return files
     else:
         return {"Error": "Files list was empty or None."}
