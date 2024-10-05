@@ -143,7 +143,9 @@ The `touch` command does these 2 things (for our project). For example the comma
 
 Create a new file in the filesystem, specifying the parent directory and metadata (e.g., name, owner, permissions).
 
-# MORE TO COME ITS LATE AND I'M DONE TILL LATE SATURDAY
+# MORE TO COME ... ITS LATE AND I'M DONE TILL LATER TONIGHT
+
+I will add sql queries to basic shell commands, but the hardest is processing paths and determine where you are and where the path is trying to take you.
 
 <!-- ## Additional Features (Optional)
 
