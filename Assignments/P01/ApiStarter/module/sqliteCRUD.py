@@ -6,6 +6,7 @@ Last Updated: 5 October 2024
 
 import sqlite3
 from prettytable import PrettyTable
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 class SqliteCRUD:
@@ -18,7 +19,7 @@ class SqliteCRUD:
         Initialize database connection and cursor.
         """
         self.db_path = db_path
-        self.conn = sqlite3.connect(self.db_path)
+        self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self.cursor = self.conn.cursor()
 
     def __buildResponse(
@@ -76,6 +77,26 @@ class SqliteCRUD:
             return self.__buildResponse(
                 query, False, f"Error executing query: {e}", None, []
             )
+
+    def run_query_in_thread(self, queries, qtype="all"):
+        results = []
+        # Using ThreadPoolExecutor to execute the queries in parallel
+        with ThreadPoolExecutor() as executor:
+            # Submit each query to be run in a separate thread
+            future_to_query = {
+                executor.submit(self.__runQuery, query): query for query in queries
+            }
+
+            # As each thread completes, retrieve the result
+            for future in as_completed(future_to_query):
+                query = future_to_query[future]
+                try:
+                    result = future.result()
+                    results.append(result)
+                except Exception as exc:
+                    print(f"Query {query} generated an exception: {exc}")
+
+        return results
 
     def __rawResults(self, results):
         """

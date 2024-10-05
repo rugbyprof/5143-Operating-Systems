@@ -194,6 +194,46 @@ def create_file(name: str):
     print(("files", (None, name, parent, 0, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)))
 
 
+@app.get("/dirId")
+def getDirId(dir: str, pid: int = 1):
+    """
+    Get the directory id by name
+    @args:
+        dir: str - the name of the directory
+        pid: int - the parent id of the directory
+    @returns:
+        int - the id of the directory or response with error
+    """
+    dirs = dir.strip().rstrip("/").split("/")
+
+    query = f"SELECT id FROM directories WHERE name = '{dirs[0]}' and pid = '{pid}'"
+
+    res = fsDB.run_query_in_thread([query])[0]
+
+    if res["success"]:
+        if len(res["data"]) > 0:
+            pid = res["data"][0][0]
+        else:
+            res["message"] = f"Directory {dirs[0]} not found."
+            return res
+    else:
+        return res
+    if len(dirs) > 1:
+        for dir in dirs[1:]:
+            print(f"dir: {dir}")
+            query = f"SELECT id FROM directories WHERE name = '{dir}' and pid = '{pid}'"
+            res = fsDB.run_query_in_thread([query])[0]
+            if res["success"]:
+                if len(res["data"]) > 0:
+                    pid = res["data"][0][0]
+                else:
+                    res["message"] = f"Directory {dir} not found."
+                    return res
+            else:
+                return res
+    return pid
+
+
 ### 2. **File Deletion**
 @app.delete("/rm")
 def delete_file(filepath):
