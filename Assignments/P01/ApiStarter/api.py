@@ -368,7 +368,7 @@ def get_file_permissions(filepath):
     pass
 
 
-@app.post("/perm")
+@app.put("/chmod")
 def set_file_permissions(filepath, permissions):
     """
     Sets the permissions of a file and logs the action in the database.
