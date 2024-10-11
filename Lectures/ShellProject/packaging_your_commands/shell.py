@@ -3,6 +3,7 @@ import pkgutil
 import cmd_pkg
 from rich import print
 
+
 # Dictionary to store the commands
 cmds = {}
 

@@ -161,7 +161,9 @@ def load_directory(directory_path, oid=1):
 
     for root, dirs, files in os.walk(directory_path):
         path = root.split("/")
-        path = path[5:]
+        path = path[
+            5:
+        ]  # TODO: GRIFFIN HARDCODED THE 5 TO REMOVE THE FIRST 5 DIRECTORIES
         curr_dir = path[-1]
         if len(path) > 1:
             parent_dir = path[-2]
