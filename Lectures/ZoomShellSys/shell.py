@@ -91,6 +91,7 @@ def parse(cmd):
 
     """
     redirect = None
+    allCmds = []
 
     if ">" in cmd:
         cmd, redirect = cmd.split(">")
@@ -99,17 +100,26 @@ def parse(cmd):
     else:
         sub_cmds = [cmd]
 
-    for i in range(len(sub_cmds)):
-        cmd = sub_cmds[i].strip()
-        cmd = cmd.split(" ")
+    for currCmd in sub_cmds:
+        currCmd = currCmd.strip()
+        currCmd = currCmd.split()
 
-        cmdDict = {
-            "cmd": cmd[0],
-            "flags": get_flags(cmd),
-            "params": get_params(cmd[1:]),
-        }
-
-    return cmdDict
+        allCmds.append(
+            {
+                "cmd": currCmd[0],
+                "flags": get_flags(currCmd[1:]),
+                "params": get_params(currCmd[1:]),
+            }
+        )
+    if redirect:
+        allCmds.append(
+            {
+                "cmd": ">",
+                "flags": [],
+                "params": [redirect.strip()],
+            }
+        )
+    return allCmds
 
 
 def print_cmd(cmd):
@@ -186,20 +196,15 @@ if __name__ == "__main__":
         elif char in "\r":  # return pressed
             print_cmd("")
             # This 'elif' simulates something "happening" after pressing return
-            parsed_cmd = parse(cmd)
-            print(parsed_cmd)
+            parsed_cmds = parse(cmd)
+            print(parsed_cmds)
             sleep(1)
 
-            if parsed_cmd["cmd"] == "ls":
-                print("Running ls command")
-                DbApi.run_ls(parsed_cmd)
-            elif parsed_cmd["cmd"] == "pwd":
-                DbApi.run_pwd(parsed_cmd)
-
-            ## YOUR CODE HERE
-            ## API CALLS TO OUR DB FILESYTEM OR LOCAL METHODS TO HANDLE COMMANDS
-            ## Parse the command
-            ## Figure out what your executing like finding pipes and redirects
+            # if parsed_cmd["cmd"] == "ls":
+            #     print("Running ls command")
+            #     DbApi.run_ls(parsed_cmd)
+            # elif parsed_cmd["cmd"] == "pwd":
+            #     DbApi.run_pwd(parsed_cmd)
 
             cmd = ""  # reset command to nothing (since we just executed it)
 

@@ -6,3 +6,4 @@ Pygments
 requests
 rich
 uvicorn
+prettytable
