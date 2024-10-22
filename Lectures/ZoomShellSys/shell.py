@@ -12,7 +12,9 @@ from sqliteCRUD import SqliteCRUD
 
 from getch import Getch
 import requests
+from rich import print
 
+# ls -lah /home/user/griffin /www/html /root ../../banana/hammock | grep 'student gpa' 'test.txt' '23,43,12' | wc -l > output.txt
 
 class DbApi:
     def __init__(self):
@@ -86,9 +88,8 @@ def get_params(cmd):
 
 def parse(cmd):
     """This function takes a command and parses it into a list of tokens
-    1. Explode on redeirects
+    1. Explode on redirects
     2. Explode on pipes
-
     """
     redirect = None
     allCmds = []
@@ -98,7 +99,7 @@ def parse(cmd):
     if "|" in cmd:
         sub_cmds = cmd.split("|")
     else:
-        sub_cmds = [cmd]
+        sub_cmds = [cmd] # if no pipes, then just one command as a list so that we can iterate over it
 
     for currCmd in sub_cmds:
         currCmd = currCmd.strip()
@@ -212,3 +213,20 @@ if __name__ == "__main__":
         else:
             cmd += char  # add typed character to our "cmd"
             print_cmd(cmd)  # print the cmd out
+
+
+
+
+source = "/home/user/griffin"
+destination = "/www/html"
+
+# if it start with / then it is an absolute path
+# if it does not start with / then it is a relative path
+# if it ends with / then it is a directory
+# if it does not end with / then it may or may not be a file or directory
+
+# find both ids of the folders at the end of the path
+# UPDATE directories SET parent_id = 2 WHERE id = 3
+
+# mv /home/user/griffin /www/html (move griffin to html) 
+# cp /home/user/griffin /www/html (copy griffin to html) would fail with the -r flag
