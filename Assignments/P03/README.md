@@ -91,6 +91,14 @@ Each state is represented as a queue that holds each process that is currently i
 - Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, the process will either run until it completes or get preempted if a new process is added that requires a smaller amount of time.
 - Execution Time Remaining = Sum of remaining cpuBursts.
 
+### MLFQ (Multi Level Feedback Queue)
+
+- Coming soon
+
+#### CFS (Completely Fair Scheduler)
+
+- Coming soon
+
 ## Resources
 
 The goal of each process is to gain access to a resource at the time it needs it, so that it can complete its lifecycle. In class we discussed implementing queues for each state. All of them unbounded with the exception of a single cpu. Well, now I would like a little more control over the amount of available resources. In the table below, you can see all the queues are `unbounded` but now we are adding a bounded size on the `IO` queue.
