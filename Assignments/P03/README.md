@@ -93,7 +93,32 @@ Each state is represented as a queue that holds each process that is currently i
 
 ### MLFQ (Multi Level Feedback Queue)
 
-- Coming soon
+A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to manage tasks of varying priorities dynamically. It improves efficiency by adjusting a process’s priority level based on its observed behavior, adapting to both I/O-bound and CPU-bound processes. 
+
+#### Key Characteristics:
+
+- Multiple Queues: The system has multiple queues, each with a different priority level. Processes in higher-priority queues are scheduled before those in lower-priority queues.
+- Time Quantum Variation: Each queue can have a different time quantum (the amount of time a process is allowed to run). Higher-priority queues often have shorter time quanta, favoring interactive or short tasks, while lower-priority queues have longer time quanta.
+- Dynamic Priority Adjustment: A process’s priority changes based on its CPU usage pattern. For example:
+- If a process consumes its entire time quantum, it is demoted to a lower-priority queue.
+- If a process yields the CPU before its time quantum expires (indicating I/O-bound behavior), it may stay in the same queue or even be promoted to a higher-priority queue.
+
+#### Algorithmic Steps:
+
+1. Initialization: Define multiple queues, each with its priority level and time quantum.
+2. Scheduling:
+
+- Start with the highest-priority queue. Select the process at the head of the queue and allocate CPU time based on the queue’s time quantum.
+- If the process completes within its time quantum, remove it from the queue.
+- If the process exhausts its time quantum without completing, demote it to a lower-priority queue.
+
+3. Feedback Mechanism:
+
+- Adjust the priority of processes based on behavior. For example, processes that yield the CPU frequently may be promoted back to higher-priority queues.
+
+4. Aging (Optional): To prevent starvation of low-priority processes, periodically promote them to higher-priority queues, ensuring they receive CPU time.
+
+MLFQ is adaptive and responsive to varying process behaviors, making it suitable for systems with a mix of interactive and batch processes. However, its complexity and tuning requirements (e.g., number of queues, time quanta, and feedback policies) are critical to achieving optimal performance.
 
 #### CFS (Completely Fair Scheduler)
 
