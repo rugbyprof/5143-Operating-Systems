@@ -14,12 +14,15 @@ class SqliteCRUD:
     Comment
     """
 
-    def __init__(self, db_path):
+    def __init__(self, db_path, returnDicts=False):
         """
         Initialize database connection and cursor.
         """
         self.db_path = db_path
+
         self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
+        if returnDicts:
+            self.conn.row_factory = sqlite3.Row
         self.cursor = self.conn.cursor()
 
     def __buildResponse(
@@ -72,7 +75,14 @@ class SqliteCRUD:
             if not affected_rows:
                 affected_rows = len(rows)
 
-            return self.__buildResponse(query, True, f"None", int(affected_rows), rows)
+            try:
+                results = [dict(row) for row in rows]
+            except:
+                results = rows
+
+            return self.__buildResponse(
+                query, True, f"None", int(affected_rows), results
+            )
         except sqlite3.Error as e:
             return self.__buildResponse(
                 query, False, f"Error executing query: {e}", None, []
@@ -344,7 +354,12 @@ class SqliteCRUD:
 if __name__ == "__main__":
 
     db_name = "filesystem.db"
-    conn = SqliteCRUD(db_name)
+    conn = SqliteCRUD(db_name, True)
+
+    res = conn.runQuery(
+        "SELECT id, pid, oid, name, size, creation_date, modified_date, read_permission, write_permission, execute_permission, world_read, world_write, world_execute FROM files"
+    )
+    print(res)
 
     # res = conn.readFileData("file_contents", "13")
 
@@ -359,10 +374,10 @@ if __name__ == "__main__":
     # res = conn.updateData("files", "modified_at", CURRENT_TIMESTAMP, "file_id", "13")
     # print(res)
 
-    res = conn.runQuery(
-        'UPDATE "files" SET "creation_date" = CURRENT_TIMESTAMP WHERE "id" = "16";'
-    )
-    print(res)
+    # res = conn.runQuery(
+    #     'UPDATE "files" SET "creation_date" = CURRENT_TIMESTAMP WHERE "id" = "16";'
+    # )
+    # print(res)
 
     # # Define table schema
     # table_name = "students"
