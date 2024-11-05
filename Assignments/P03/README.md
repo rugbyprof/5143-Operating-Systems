@@ -272,4 +272,16 @@ def burst_generator(job_id, max_cpu_bursts=15):
     # Final completion yield to signal the job is finished
     yield ("COMPLETED", 0)
 
+if __name__ == "__main__":
+
+    # Example usage
+    job_id = 1
+    job_gen = burst_generator(job_id)
+
+    for burst_type, burst_time in job_gen:
+        if burst_type == "COMPLETED":
+            print(f"Job {job_id} is complete.")
+        else:
+            print(f"Job {job_id} - {burst_type} burst: {burst_time} ms")
+
 ```
