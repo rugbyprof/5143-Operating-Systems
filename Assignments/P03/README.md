@@ -93,7 +93,7 @@ Each state is represented as a queue that holds each process that is currently i
 
 ### MLFQ (Multi Level Feedback Queue)
 
-A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to manage tasks of varying priorities dynamically. It improves efficiency by adjusting a process’s priority level based on its observed behavior, adapting to both I/O-bound and CPU-bound processes. 
+A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to manage tasks of varying priorities dynamically. It improves efficiency by adjusting a process’s priority level based on its observed behavior, adapting to both I/O-bound and CPU-bound processes.
 
 #### Key Characteristics:
 
@@ -243,3 +243,33 @@ Use the program `generate_input.py` to make different types of input files. The 
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present your results in class when specified
 - Ensure your presentation follows guidelines above``
+
+```python
+def burst_generator(job_id, max_cpu_bursts=15):
+    """
+    Simulates a CPU job with alternating CPU and I/O bursts.
+    - job_id: Unique identifier for the job.
+    - max_cpu_bursts: Maximum number of CPU bursts before job completion.
+    Yields a tuple of ('CPU' or 'IO', burst_time) for each burst.
+    """
+    bursts_completed = 0
+    while bursts_completed < max_cpu_bursts:
+        # Determine burst type: 80% chance for CPU burst, 20% chance for I/O burst
+        burst_type = "CPU" if random.random() < 0.7 else "IO"
+
+        # Generate a burst time: shorter for CPU, longer for I/O
+        if burst_type == "CPU":
+            burst_time = random.randint(5, 40)  # CPU burst time between 5ms and 50ms
+            bursts_completed += 1
+        else:
+            burst_time = random.randint(
+                30, 100
+            )  # I/O burst time between 30ms and 100ms
+
+        # Yield the burst type and burst time
+        yield (burst_type, burst_time)
+
+    # Final completion yield to signal the job is finished
+    yield ("COMPLETED", 0)
+
+```
