@@ -1,6 +1,6 @@
 ## Not Exam - Terms and Topics Relevant to Operations
 
-## Due: 10-Dec-2024 - Final Exam Days
+## Due: 11-10-2024 - Final Exam Days
 
 ## Overview
 
