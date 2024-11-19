@@ -2,6 +2,8 @@
 
 ### 1. Operating System Basics
 
+(high level definitions)
+
 - Kernel
 - System Calls
 - User Mode vs. Kernel Mode
@@ -20,9 +22,9 @@
 - Process States (New, Ready, Running, Waiting, Terminated)
 - Process Control Block (PCB)
 - Context Switch
-- Multitasking
-- Multiprocessing
-- Multithreading
+- **Multitasking**
+- **Multiprocessing**
+- **Multithreading**
 - Process Synchronization
 - Inter-Process Communication (IPC)
   - Pipes
@@ -133,7 +135,7 @@
 - Disk Structure
 - Disk Scheduling Algorithms (see File Systems)
 
-### 9. Security and Protection
+### 9. ~Security and Protection~
 
 - Authentication
 - Authorization
@@ -155,7 +157,7 @@
   - Firewalls
   - Intrusion Detection Systems (IDS)
 
-### 10. Advanced Topics and Algorithms
+### 10. Advanced Topics and Algorithms (optional)
 
 - Virtualization
 - Hypervisors
@@ -175,7 +177,7 @@
   - Bully Election Algorithm
   - Ring Election Algorithm
 
-### 11. Networking Concepts
+### 11. Networking Concepts (optional)
 
 - Network Protocols (TCP/IP)
 - Socket Programming
