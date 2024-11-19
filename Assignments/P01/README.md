@@ -1,6 +1,6 @@
 # Filesystem Project - Implementation of a Virtual Filesystem
 
-### Due Date: TBD (Will be discussed in class)
+#### Due: 12-10-2024 (Final Exam Day)
 
 ## Overview
 

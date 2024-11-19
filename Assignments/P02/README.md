@@ -1,6 +1,6 @@
 ## Shell Project - Implementation of a Basic Shell
 
-### Due Date: TBD (Will be discussed in class)
+#### Due: 12-10-2024 (Final Exam Day)
 
 **Parts Due Dates**: Dates will be specified as we proceed.
 
