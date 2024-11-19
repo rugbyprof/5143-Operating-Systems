@@ -75,13 +75,13 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 
 ## Grading
 
-| Categories                                |     | \|  | Grade |          |
-| :---------------------------------------- | :-: | :-: | :---: | :------: |
-| Projects & Presentations                  | 60% | \|  |   A   |  90-100  |
-| Midterm<sup>**1**</sup>, <sup>**2**</sup> | 20% | \|  |   B   |  80-89   |
-| Final<sup>**1**</sup>, <sup>**2**</sup>   | 20% | \|  |   C   |  70-79   |
-|                                           |     | \|  |   D   |  60-69   |
-|                                           |     | \|  |   F   | below 60 |
+| Categories               |      | \|  | Grade |          |
+| :----------------------- | :--: | :-: | :---: | :------: |
+| Projects & Presentations | 100% | \|  |   A   |  90-100  |
+|                          |      | \|  |   B   |  80-89   |
+|                          |      | \|  |   C   |  70-79   |
+|                          |      | \|  |   D   |  60-69   |
+|                          |      | \|  |   F   | below 60 |
 
 > **1**. If there is no final exam, then obviously 100% of the course will be all projects.
 

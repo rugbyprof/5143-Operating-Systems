@@ -8,6 +8,6 @@
 | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">P03</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03"> Cpu Scheduling </a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03"> Simulation</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">Nov 12th</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">Week of Nov 12<sup>th</sup></a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">T01</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01"> Not Exam </a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01"> Terms and Topics Relevant to Operations</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">Nov 10th</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">- Final Exam Days</a>~ | ---- |
 
-<sup>Last Updated: 2024-11-19 (Tue @ 15:04)</sup> 
+<sup>Last Updated: 2024-11-19 (Tue @ 15:06)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
