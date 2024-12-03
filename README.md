@@ -78,7 +78,7 @@ Here is an open source book for the course. I hope you guys appreciate the amoun
 | Categories               |      | \|  | Grade |          |
 | :----------------------- | :--: | :-: | :---: | :------: |
 | Projects & Presentations | 100% | \|  |   A   |  90-100  |
-|                          |      | \|  |   B   |  80-89   |
+| Participation            |  ~   | \|  |   B   |  80-89   |
 |                          |      | \|  |   C   |  70-79   |
 |                          |      | \|  |   D   |  60-69   |
 |                          |      | \|  |   F   | below 60 |
@@ -220,3 +220,66 @@ Senate Bill 11 passed by the 84th Texas Legislature allows licensed handgun hold
 ### Midterm Progress Report
 
 In order to help students keep track of their progress toward course objectives, the instructor for this class will provide a Midterm Progress Report for all students in the course through each student’s MSU Portal account. Midterm grades will not be reported on the students’ transcript; nor will they be calculated in the cumulative GPA. They simply give students an idea of where they stand at the midpoint of the semester. Students earning below a C at the midway point should a) schedule a meeting with the professor and b) Seek out tutoring.
+
+# Graduate Courses
+
+Expectations for Graduate Students in a Computer Science Course
+
+### Classroom Environment
+
+1. Punctuality and Preparation:
+   - Arrive on time and come prepared with pre-assigned readings, coding exercises, or relevant materials.
+   - Bring necessary tools (e.g., laptops, notebooks, or IDEs) to actively participate.
+2. Respect and Professionalism:
+   - Show respect for peers, professors, and guest speakers by refraining from interruptions or distractions (e.g., side conversations, phones).
+   - Maintain a professional demeanor in all classroom interactions.
+3. Engagement:
+   - Actively follow the lecture content, taking notes and tracking key concepts, especially in technical discussions or demonstrations.
+
+### Communication with the Professor
+
+1. Active Listening:
+   - Listen attentively to the professor’s explanations and directions, seeking clarification only when necessary to avoid misunderstandings.
+2. Constructive Questions:
+   - Ask thoughtful and concise questions that clarify ambiguities or deepen understanding of complex topics.
+   - Avoid questions solely for attention or that derail the lecture topic unnecessarily.
+3. Office Hours and Feedback:
+   - Utilize office hours effectively by preparing specific questions or topics in advance.
+   - Provide constructive feedback on course material or delivery when solicited.
+
+### Participation in Discussions
+
+1. Critical Thinking Contributions:
+   - Participate in discussions by offering well-thought-out perspectives or insights based on personal experiences, prior research, or assigned material.
+2. Respectful Debate:
+   - Engage in academic debates respectfully, challenging ideas with evidence rather than dismissing or criticizing peers.
+3. Relevance:
+   - Ensure contributions align with the topic being discussed, avoiding tangents or unrelated anecdotes.
+
+### Constructive Questions to Enhance Lecture
+
+1. Depth and Application:
+   - Ask questions that explore real-world applications or practical implications of theoretical concepts.
+   - For example, inquire how a specific algorithm might be applied in industry or how a framework compares to alternatives.
+2. Peer Engagement:
+   - Use questions to invite peers’ perspectives, fostering a collaborative discussion (e.g., “How might this approach work in machine learning projects you’ve encountered?”).
+
+### Group Learning and Collaboration
+
+1. Peer Support:
+   - Actively assist group members with understanding difficult concepts or debugging code during group activities, without dominating or solving problems for them.
+2. Shared Responsibility:
+   - Share the workload equitably in group projects and ensure all members understand the solution or approach being developed.
+3. Constructive Feedback:
+   - Provide feedback to peers in a supportive and actionable manner, avoiding dismissive or overly critical comments.
+4. Team Dynamics:
+   - Respect diversity in technical skills or knowledge and encourage quieter group members to share their ideas.
+
+### General Professionalism
+
+1. Preparation for Lectures:
+   - Review course material or topics beforehand to maximize understanding and contribute meaningfully.
+2. Constructive Adaptability:
+   - Adapt to evolving course expectations (e.g., flipped classrooms, peer-reviewed activities) with a constructive mindset.
+
+This list sets clear expectations to promote a respectful, engaging, and collaborative learning environment, which is essential for graduate-level computer science courses. 🚀
