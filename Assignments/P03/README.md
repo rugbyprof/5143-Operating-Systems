@@ -120,9 +120,9 @@ A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to ma
 
 MLFQ is adaptive and responsive to varying process behaviors, making it suitable for systems with a mix of interactive and batch processes. However, its complexity and tuning requirements (e.g., number of queues, time quanta, and feedback policies) are critical to achieving optimal performance.
 
-#### ~CFS (Completely Fair Scheduler)~
+#### CFS (Completely Fair Scheduler)
 
-- ~Coming soon~
+- NOT IMPLEMENTING
 
 ## Resources
 
@@ -293,6 +293,9 @@ This is similar to the simulation loop I describe above, with a little more deta
 - Your choice of "visual presentation" can be NCurses or a GUI program with something like [DearPyGui](https://github.com/hoffstadt/DearPyGui) or my [Rich Example](../../Resources/06-Rich_Example/)
 - Specific messages at some time throughout the simulation. Obviously for presentation purposes we will do short runs with small files. If you were to use my Python Rich table example, you could print messages below the table in a panel or similar.
 - It won't matter how correct your code is if we cannot visually follow along.
+
+[!IMPORTANT]
+
 - **IMPLEMENT A METHOD TO PAUSE YOUR SIM.** Below is an example to pause a visualization:
 
 ```py
