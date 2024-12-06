@@ -11,9 +11,9 @@ A scheduler makes choices in order to minimize or maximize a set of criteria, wh
 #### Goals
 
 1. _`Maximizing Throughput`_ (the total amount of work completed per time unit)
-2. _`Minimizing Wait Time`_ (time from work becoming ready until the first point it begins execution) (We define it slightly differently)
-3. _`Minimizing Latency`_ or response time (time from work becoming ready until it is finished)
-4. _`Maximizing Fairness`_ (equal CPU time to each process, or more generally appropriate times according to the priority and workload of each process).
+1. _`Minimizing Wait Time`_ (time from work becoming ready until the first point it begins execution) (We define it slightly differently)
+1. _`Minimizing Latency`_ or response time (time from work becoming ready until it is finished)
+1. _`Maximizing Fairness`_ (equal CPU time to each process, or more generally appropriate times according to the priority and workload of each process).
 
 - In practice, these goals often conflict (e.g. throughput versus latency), thus a scheduler will implement a suitable compromise.
 - Preference is measured by any one of the concerns mentioned above, depending upon the user's needs and objectives.
@@ -29,11 +29,11 @@ As I mentioned, the scheduler moves processes around through a series of states,
 </center>
 
 1. **NEW** - The process is being created, and has not yet begun executing.
-2. **READY** - The process is ready to execute, and is waiting to be scheduled on a CPU.
-3. **RUNNING** - The process is currently executing on a CPU.
-4. **WAITING** (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request (peripheral device to come open).
-5. **IO** - Process has gained access to one of the peripheral devices.
-6. **TERMINATED** - The process has completed.
+1. **READY** - The process is ready to execute, and is waiting to be scheduled on a CPU.
+1. **RUNNING** - The process is currently executing on a CPU.
+1. **WAITING** (BLOCKED) - The process has temporarily stopped executing, and is waiting on an I/O request (peripheral device to come open).
+1. **IO** - Process has gained access to one of the peripheral devices.
+1. **TERMINATED** - The process has completed.
 
 Each state is represented as a queue that holds each process that is currently in that state. The success or failure of scheduling boils down to moving each process from queue to queue in an efficient and consistent manner. Efficiency depends on multiple factors, the main one being the actual scheduling algorithm choosing which process gets cpu time or resource time. The next section discusses the algorithms your simulation needs to implement.
 
@@ -59,7 +59,7 @@ Each state is represented as a queue that holds each process that is currently i
   - _P<sub>n</sub>_ is first to arrive and has a 35 time unit cpu burst.
   - Once it is in the `Running` state it will stay there until its `time-slice` is up, in which it will be interrupted and sent to the end of the `Ready` queue.
   - It will continue this circular cycle until it finishes its cpu burst. So if the `time-slice` is 5, then it will have five rounds of `Running`->`Ready` before it can finally go to the `Wait` queue and start its `IO` burst.
-  - The `Wait` queue has no `time-slice` so once it gains an `IO` device it keeps it until the burst is over and then back to the `Ready` queue``
+  - The `Wait` queue has no `time-slice` so once it gains an `IO` device it keeps it until the burst is over and then back to the `Ready` queue\`\`
 
 #### Priority-Based, PB
 
@@ -106,7 +106,7 @@ A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to ma
 #### Algorithmic Steps:
 
 1. Initialization: Define multiple queues, each with its priority level and time quantum.
-2. Scheduling:
+1. Scheduling:
 
 - Start with the highest-priority queue. Select the process at the head of the queue and allocate CPU time based on the queue’s time quantum.
 - If the process completes within its time quantum, remove it from the queue.
@@ -147,7 +147,7 @@ In our simulation a cpu is available to any and all processes, and we will have 
 
 Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. `3 - 6 devices` We should discuss more in class to determine a good number to run our sims.
 
----
+______________________________________________________________________
 
 ## Getting Jobs
 
@@ -214,7 +214,7 @@ print(f"Job {job_id}, Burst Details: {burst}")
 - For each job, continue calling `/burst`, after that jobs current burst hits zero. This will move it through all the process states until its last `/burst` call for a job returns `EXIT`.
 - To terminate, you must process all jobs. This can be discovered in two ways:
   1. Call `jobs_left` and if it equals zero, you have no more jobs.
-  2. When the `system_clock - latest_jobs_arrival_time` > `max_job_interval` then no more jobs are coming.
+  1. When the `system_clock - latest_jobs_arrival_time` > `max_job_interval` then no more jobs are coming.
 
 ## Complete Workflow Example
 
@@ -259,12 +259,12 @@ clock = start_clock
 This is similar to the simulation loop I describe above, with a little more detail injected.
 
 1. Jobs arrive at time `N`, and enter the `New` queue.
-2. Any jobs already in the `New` queue go to the `Ready` queue.
-3. Decrement burst times on Cpu(s), if any are zero, move to `Wait` queue.
-4. Decrement burst times on Peripheral(s), if any are zero, move to `Ready` queue.
-5. If any Cpu(s) are free, take next from `Ready` queue.
-6. If any Periphal(s) are free, take next from `Wait` queue.
-7. Do accounting (e.g. increment ready queue wait time) for each process in the appropriate queues when appropriate (basically if it hasn't just been moved).
+1. Any jobs already in the `New` queue go to the `Ready` queue.
+1. Decrement burst times on Cpu(s), if any are zero, move to `Wait` queue.
+1. Decrement burst times on Peripheral(s), if any are zero, move to `Ready` queue.
+1. If any Cpu(s) are free, take next from `Ready` queue.
+1. If any Periphal(s) are free, take next from `Wait` queue.
+1. Do accounting (e.g. increment ready queue wait time) for each process in the appropriate queues when appropriate (basically if it hasn't just been moved).
 
 ## API Reference
 
@@ -276,7 +276,7 @@ This is similar to the simulation loop I describe above, with a little more deta
 | `/burstsLeft` | Get remaining bursts for a job               | client_id, session_id, job_id     | Integer count of bursts left                     |
 | `/jobsLeft`   | Get number of jobs left in the session       | client_id, session_id             | Integer count of jobs left                       |
 
----
+______________________________________________________________________
 
 ### No Pressure
 
@@ -294,7 +294,7 @@ This is similar to the simulation loop I describe above, with a little more deta
 - Specific messages at some time throughout the simulation. Obviously for presentation purposes we will do short runs with small files. If you were to use my Python Rich table example, you could print messages below the table in a panel or similar.
 - It won't matter how correct your code is if we cannot visually follow along.
 
-[!IMPORTANT]
+> [!IMPORTANT]
 
 - **IMPLEMENT A METHOD TO PAUSE YOUR SIM.** Below is an example to pause a visualization:
 
@@ -336,7 +336,9 @@ while(looping):
 #### Presentation
 
 - You will show 6 runs, 2 of each scheduling type.
+
 - I will provide an `srand` seed for each of the 6 jobs ensureing everyone gets the same values generated for their presentations.
+
 - You should be able to enter this seed and the scheduling algorithm from the command line (`sys.argv`)
 
   - Example:
@@ -345,7 +347,9 @@ while(looping):
     - `python sim.py sched=MLFQ seed=32000 cpus=4 ios=7`
 
 - The types of messages that should print as your presentation runs are listed below.
+
 - Coloring times, process's, cpu's, and device's would be preferred.
+
 - Messages:
 
   - At t<sub>n</sub> job _p<sub>n</sub>_ entered new queue.
@@ -356,10 +360,12 @@ while(looping):
     - Ex: At t:44 job p15 obtained device:2
 
 - When a process terminates, the output should give that jobs stats. The stat acronyms are as follows:
+
   - ST = Time entered system
   - TAT = Turn Around Time (time exited system - time entered)
   - RWT = Time spent in ready queue
   - IWT = Time spent in wait queue
+
 - Example:
 
   - Job _p<sub>n</sub>_ TAT = _t<sub>n</sub>_, RWT = _t<sub>n</sub>_, IWT = _t<sub>n</sub>_
