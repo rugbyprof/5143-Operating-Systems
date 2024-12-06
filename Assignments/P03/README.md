@@ -120,9 +120,9 @@ A Multi-Level Feedback Queue (MLFQ) is a CPU scheduling algorithm designed to ma
 
 MLFQ is adaptive and responsive to varying process behaviors, making it suitable for systems with a mix of interactive and batch processes. However, its complexity and tuning requirements (e.g., number of queues, time quanta, and feedback policies) are critical to achieving optimal performance.
 
-#### CFS (Completely Fair Scheduler)
+#### ~CFS (Completely Fair Scheduler)~
 
-- Coming soon
+- ~Coming soon~
 
 ## Resources
 
@@ -145,36 +145,118 @@ In our simulation a cpu is available to any and all processes, and we will have 
 
 ### IO Devices
 
-Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. `In this case I think 3 - ?? devices?` We should discuss more in class to determine a good number to run our sims.
+Likewise, we will not distinguish between different types of IO devices (like printers, network cards, disks, etc.). So, again, when you write code to implement an IO device, you can simply create duplicate instances to increase the number of devices for processes to use during their IO bursts. `3 - 6 devices` We should discuss more in class to determine a good number to run our sims.
 
-## Input Files
+---
 
-Use the program `generate_input.py` to make different types of input files. The default values in the program are helpful, but you should run the script with a minimum of three file types:
+## Getting Jobs
 
-- Cpu Intensive Process (Lots of cpu time vs little IO time)
-- IO Intensive Process (Lots of IO time vs little cpu time)
-- Prioritized with lots of high priority (few low priorities)
+**Instructions to Fetch CPU Jobs from the API**
 
-- A process always begins and ends with a CPU burst.
-- All the numbers are integers.
+This is a simple guide to interact with the CPU jobs API. The Python script provided [HERE](./cpu_jobs.py) gives you a very succinct example showing you which parameters to use and the order in wich to call end points so your simulation can run.
 
-- The description of a simulated process includes the following information:
-  - Arrival time (AT<sub>t</sub>) of the process
-  - Process ID (PID<sub>i</sub>)
-  - Priority (P<sub>p</sub>)
-  - CPU burst durations (cpub<sub>i</sub>, i = 1, 2, ..., N),
-  - I/O burst durations (iob<sub>j</sub>, j = 1, 2, ..., N-1)
-- This will all be written in one line of the input file (the name of the input file will be passed as the first command-line argument to your program) in the following order:
+### Step 1: Initialize the Session
 
-> AT<sub>t</sub> PID<sub>i</sub> P<sub>p</sub> cpub<sub>1</sub> iob<sub>1</sub> cpub<sub>2</sub> iob<sub>2</sub> ... cpub<sub>n</sub>
+- Call the `/init` endpoint to start a session and have the jobs generated for your simulation.
+- **Input**: A configuration dictionary (generated using getConfig).
+- **Output**: session_id (unique to the session) and start_clock (initial clock time).
 
-### No Pressure
+#### Code Example
 
-- Remember this is a simulation, where the system clock (aka timer) is simply an integer variable incremented in some loop construct.
-- We will read the the processes that will run in our simulation from multiple files, where each file will emphasize a different type of load (see previous).
-- This program is not a true system program, it is just a typical user application that requires no spawning of processes, no timer interrupt handling, no I/O interrupt handling, etc. It is a **simulation**
+```py
+config = getConfig(client_id="your_client_id")
+response = init(config)
+start_clock = response['start_clock']
+session_id = response['session_id']
+```
 
-#### Basic High Level Algorith
+- The `start_clock` will be an integer value from 1-4 digits. The chances of your clock starting at zero are `1/1000`. Once you receive the start clock value, initialize your simulation clock to that value, then increment by 1 for every iteration of your simulation.
+- The `session_id` identifys each `client_id`'s unique runs. It starts at zero and adds one every time you restart (by calling init).
+
+### Step 2: Fetch Jobs at a Given Clock Time
+
+You have your system start clock time (and your session id), so you will loop and increment your system clock calling the `/job` endpoint every clock tick to check if any jobs have arrived.
+
+- Use the `/job` endpoint to fetch jobs available at the current clock time. This means you will loop, and call `/job` every clock tick to see if new jobs arrive. Mostly it will be none, but depending on the configuration file, you could have many jobs show up at the same time.
+- **Input**: `client_id`, `session_id`, and `clock_time`.
+- **Output**: A list of jobs that arrived at the specified clock time.
+
+#### Code Example
+
+```py
+response = getJob(client_id="your_client_id", session_id=session_id, clock_time=start_clock)
+if response and response['success']:
+jobs = response['data']
+print(f"Jobs at clock {start_clock}: {jobs}")
+```
+
+### Step 3: Process Each Job’s Bursts
+
+- For each job fetched, call `/burst` to retrieve that jobs next burst details. This is the end point that will get called the most since everytime a job finishes a "burst", you need to call `/burst` again until you get a burst type of `Exit`.
+- **Input**: `client_id`, `session_id`, and `job_id`.
+- **Output**: Details of the current burst:
+  - burst_id (int)
+  - burst_type (str) [CPU, IO, EXIT]
+  - duration (int)
+
+#### Code Example
+
+```py
+for job in jobs:
+job_id = job['job_id']
+burst = getBurst(client_id="your_client_id", session_id=session_id, job_id=job_id)
+print(f"Job {job_id}, Burst Details: {burst}")
+```
+
+### Simulation Loop
+
+- Keep incrementing the clock and calling the `/job` endpoint while jobs are still in your system.
+- For each job, continue calling `/burst`, after that jobs current burst hits zero. This will move it through all the process states until its last `/burst` call for a job returns `EXIT`.
+- To terminate, you must process all jobs. This can be discovered in two ways:
+  1. Call `jobs_left` and if it equals zero, you have no more jobs.
+  2. When the `system_clock - latest_jobs_arrival_time` > `max_job_interval` then no more jobs are coming.
+
+## Complete Workflow Example
+
+Here’s a minimal example that ties everything together:
+
+```py
+client_id = "your_client_id"
+config = getConfig(client_id)
+response = init(config)
+
+if response:
+start_clock = response['start_clock']
+session_id = response['session_id']
+clock = start_clock
+
+    while True:
+        # Check remaining jobs
+        jobs_left = getJobsLeft(client_id, session_id)
+        if not jobs_left:
+            print("No more jobs left. Ending session.")
+            break
+
+        # Fetch jobs for the current clock time
+        response = getJob(client_id, session_id, clock)
+        if response and response['success']:
+            for job in response['data']:
+                job_id = job['job_id']
+                print(f"Processing Job {job_id} at Clock {clock}")
+
+                # Check bursts for the job
+                bursts_left = getBurstsLeft(client_id, session_id, job_id)
+                if bursts_left:
+                    burst = getBurst(client_id, session_id, job_id)
+                    print(f"Burst Details for Job {job_id}: {burst}")
+
+        # Increment clock
+        clock += 1
+```
+
+#### Basic High Level Algorithm
+
+This is similar to the simulation loop I describe above, with a little more detail injected.
 
 1. Jobs arrive at time `N`, and enter the `New` queue.
 2. Any jobs already in the `New` queue go to the `Ready` queue.
@@ -182,7 +264,25 @@ Use the program `generate_input.py` to make different types of input files. The 
 4. Decrement burst times on Peripheral(s), if any are zero, move to `Ready` queue.
 5. If any Cpu(s) are free, take next from `Ready` queue.
 6. If any Periphal(s) are free, take next from `Wait` queue.
-7. Do accounting for each process in the appropriate queues when appropriate (basically if it hasn't just been moved).
+7. Do accounting (e.g. increment ready queue wait time) for each process in the appropriate queues when appropriate (basically if it hasn't just been moved).
+
+## API Reference
+
+| Endpoint      | Purpose                                      | Example Input                     | Example Output                                   |
+| ------------- | -------------------------------------------- | --------------------------------- | ------------------------------------------------ |
+| `/init`       | Start a new session Config dictionary        |                                   | { "session_id": 13, "start_clock": 0 }           |
+| `/job`        | Get jobs available at the current clock time | client_id, session_id, clock_time | List of jobs arriving at the clock time          |
+| `/burst`      | Get details of a burst for a specific job    | client_id, session_id, job_id     | { "burst_id": 1, "type": "CPU", "duration": 10 } |
+| `/burstsLeft` | Get remaining bursts for a job               | client_id, session_id, job_id     | Integer count of bursts left                     |
+| `/jobsLeft`   | Get number of jobs left in the session       | client_id, session_id             | Integer count of jobs left                       |
+
+---
+
+### No Pressure
+
+- Remember this is a simulation, where the system clock (aka timer) is simply an integer variable incremented in some loop construct.
+- We will read the the processes that will run in our simulation from multiple files, where each file will emphasize a different type of load (see previous).
+- This program is not a true system program, it is just a typical user application that requires no spawning of processes, no timer interrupt handling, no I/O interrupt handling, etc. It is a **simulation**
 
 ## Requirements
 
@@ -192,18 +292,56 @@ Use the program `generate_input.py` to make different types of input files. The 
   - Each of the 6 queues [New, Ready, Running, Waiting, IO, Exit] and which processes are in them
 - Your choice of "visual presentation" can be NCurses or a GUI program with something like [DearPyGui](https://github.com/hoffstadt/DearPyGui) or my [Rich Example](../../Resources/06-Rich_Example/)
 - Specific messages at some time throughout the simulation. Obviously for presentation purposes we will do short runs with small files. If you were to use my Python Rich table example, you could print messages below the table in a panel or similar.
+- It won't matter how correct your code is if we cannot visually follow along.
+- **IMPLEMENT A METHOD TO PAUSE YOUR SIM.** Below is an example to pause a visualization:
+
+```py
+## Imports for rich or whatever
+import time
+import keyboard  # Install via `pip install keyboard`
+
+# code
+# code
+#  .
+#  .
+#  .
+
+paused = False
+
+def toggle_pause():
+    global paused
+    paused = not paused
+    console.print("Simulation Paused!" if paused else "Resuming Simulation...")
+
+keyboard.add_hotkey("space", toggle_pause)
+
+while(looping):
+  while paused:  # Pause the simulation loop
+      time.sleep(0.1)
+  # do stuff show stuff
+  # pretty colors
+  # I think someone took acid
+
+# code
+# code
+#  .
+#  .
+#  .
+
+```
 
 #### Presentation
 
-- You should have 6 runs ready to present, 2 of each scheduling type.
-- Depending on the scheduling algorithm, you should be able to choose the specs from the command line.
+- You will show 6 runs, 2 of each scheduling type.
+- I will provide an `srand` seed for each of the 6 jobs ensureing everyone gets the same values generated for their presentations.
+- You should be able to enter this seed and the scheduling algorithm from the command line (`sys.argv`)
 
   - Example:
-    - `python sim.py sched=RR timeslice=3 cpus=4 ios=6 input=filename.dat`
-    - `python sim.py sched=FCFS cpus=2 ios=2 input=otherfile.dat`
-    - `python sim.py sched=PB cpus=2 ios=2 input=highpriorityfile.dat`
+    - `python sim.py sched=RR seed=32134 cpus=4 ios=3`
+    - `python sim.py sched=FCFS seed=666 cpus=2 ios=2`
+    - `python sim.py sched=MLFQ seed=32000 cpus=4 ios=7`
 
-- The messages that should print as your presentation runs are listed below.
+- The types of messages that should print as your presentation runs are listed below.
 - Coloring times, process's, cpu's, and device's would be preferred.
 - Messages:
 
@@ -242,46 +380,4 @@ Use the program `generate_input.py` to make different types of input files. The 
 - Place code on github with a write up describing the process of writing your project and members of your group.
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present your results in class when specified
-- Ensure your presentation follows guidelines above``
-
-```python
-def burst_generator(job_id, max_cpu_bursts=15):
-    """
-    Simulates a CPU job with alternating CPU and I/O bursts.
-    - job_id: Unique identifier for the job.
-    - max_cpu_bursts: Maximum number of CPU bursts before job completion.
-    Yields a tuple of ('CPU' or 'IO', burst_time) for each burst.
-    """
-    bursts_completed = 0
-    while bursts_completed < max_cpu_bursts:
-        # Determine burst type: 80% chance for CPU burst, 20% chance for I/O burst
-        burst_type = "CPU" if random.random() < 0.7 else "IO"
-
-        # Generate a burst time: shorter for CPU, longer for I/O
-        if burst_type == "CPU":
-            burst_time = random.randint(5, 40)  # CPU burst time between 5ms and 50ms
-            bursts_completed += 1
-        else:
-            burst_time = random.randint(
-                30, 100
-            )  # I/O burst time between 30ms and 100ms
-
-        # Yield the burst type and burst time
-        yield (burst_type, burst_time)
-
-    # Final completion yield to signal the job is finished
-    yield ("COMPLETED", 0)
-
-if __name__ == "__main__":
-
-    # Example usage
-    job_id = 1
-    job_gen = burst_generator(job_id)
-
-    for burst_type, burst_time in job_gen:
-        if burst_type == "COMPLETED":
-            print(f"Job {job_id} is complete.")
-        else:
-            print(f"Job {job_id} - {burst_type} burst: {burst_time} ms")
-
-```
+- Ensure your presentation follows guidelines above

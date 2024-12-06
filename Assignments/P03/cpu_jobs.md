@@ -1,3 +1,4 @@
+```py
 """
 Core Idea
 
@@ -15,17 +16,17 @@ Start iterating from start_clock and increment the clock by 1:
         - get jobs next burst from the /burst endpoint
     - For jobs in the ready queue (jobs waiting for cpu) increment wait time
 
-    - For jobs using an IO device decrement burst time for that running IO job 
+    - For jobs using an IO device decrement burst time for that running IO job
         - If a jobs burst time gets to 0, move to ready queue
         - get jobs next burst from the /burst endpoint
     - For jobs in the wait queue (waiting for IO device) increment wait time
 
     - if burst is EXIT move job to terminated
- 
+
 """
 
 import requests
-import json 
+import json
 import os
 from rich import print
 import random
@@ -72,7 +73,7 @@ def getJob(client_id,session_id,clock_time):
     """
     Description:
         This function will get the jobs available at the current clock time
-        
+
     Args:
         client_id (str): The client_id
         session_id (int): The session_id
@@ -80,7 +81,7 @@ def getJob(client_id,session_id,clock_time):
     Returns:
         dict: A dictionary containing the jobs available at the current clock time
 
-    Example Response:   
+    Example Response:
         "data": [
             {
             "job_id": 1,
@@ -98,7 +99,7 @@ def getJob(client_id,session_id,clock_time):
     else:
         print(f"Error: {r.status_code}")
         return None
-    
+
 def getBurst(client_id, session_id, job_id):
     """
     Description:
@@ -124,7 +125,7 @@ def getBurst(client_id, session_id, job_id):
     else:
         print(f"Error: {r.status_code}")
         return None
-    
+
 def getBurstsLeft(client_id, session_id, job_id):
     """
     Description:
@@ -199,7 +200,7 @@ if __name__ == '__main__':
                     print(f"Job {job_id} received at {clock}...")
                     if job_id not in jobs:
                         jobs[job_id] = {'data':data,'bursts':{}}
-        
+
         print(jobs)
 
         for job_id in jobs:
@@ -215,5 +216,6 @@ if __name__ == '__main__':
                 print(f"Burst {bid} received ...")
                 jobs[job_id]['bursts'][bid] = burst
 
-      
+
         clock += 1
+```

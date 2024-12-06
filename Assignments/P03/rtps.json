@@ -1,0 +1,71 @@
+{
+  "cpu_vs_io_processes": {
+    "very_cpu_heavy": {
+      "burst_time": [40, 100],
+      "io_frequency": [1, 2],
+      "io_duration": [1, 5]
+    },
+    "moderately_cpu_heavy": {
+      "burst_time": [20, 60],
+      "io_frequency": [2, 4],
+      "io_duration": [2, 8]
+    },
+    "balanced": {
+      "burst_time": [10, 30],
+      "io_frequency": [5, 10],
+      "io_duration": [5, 15]
+    },
+    "moderately_io_heavy": {
+      "burst_time": [5, 15],
+      "io_frequency": [10, 15],
+      "io_duration": [10, 20]
+    },
+    "very_io_heavy": {
+      "burst_time": [1, 5],
+      "io_frequency": [15, 20],
+      "io_duration": [15, 30]
+    }
+  },
+  "round_robin_quantum": {
+    "very_small_quantum": [1, 5],
+    "small_quantum": [5, 10],
+    "moderate_quantum": [10, 20],
+    "large_quantum": [20, 50],
+    "very_large_quantum": [50, 100]
+  },
+  "arrival_times": {
+    "heavy_front_loaded": [0, 1],
+    "medium_front_loaded": [1, 5],
+    "evenly_spaced": [5, 10],
+    "medium_end_loaded": [10, 15],
+    "heavy_end_loaded": [15, 20]
+  },
+  "priority_distribution": {
+    "mostly_high_priority": [1, 3],
+    "balanced_distribution": [1, 10],
+    "mostly_low_priority": [8, 10]
+  },
+  "friend_values": {
+    "aggressive_promotion": [1, 5],
+    "moderate_promotion": [5, 10],
+    "conservative_promotion": [10, 20]
+  },
+  "system_configuration": {
+    "small_system": {
+      "cpus": [2, 4],
+      "io_devices": [2, 4]
+    },
+    "medium_system": {
+      "cpus": [4, 6],
+      "io_devices": [4, 6]
+    },
+    "large_system": {
+      "cpus": [6, 8],
+      "io_devices": [6, 8]
+    }
+  },
+  "preemption": {
+    "enabled": true,
+    "disabled": false
+  }
+}
