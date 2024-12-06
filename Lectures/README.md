@@ -7,6 +7,6 @@
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">ZoomShellSys</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">chat-gpt-talks</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">N/A</a>*** |  |
 
-<sup>Last Updated: 2024-12-06 (Fri @ 02:54)</sup> 
+<sup>Last Updated: 2024-12-06 (Fri @ 03:37)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
