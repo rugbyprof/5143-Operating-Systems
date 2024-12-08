@@ -789,3 +789,7 @@ def grayscale(self):
 In these snippets, I used placeholder instructions like `LOAD`, `STORE`, `ADD`, `MUL`, `DIV`, etc., to represent common assembly operations. You might have to replace them with the actual instruction mnemonics used in your assembly language.
 
 Let me know if you find these examples helpful or if you'd like any more adjustments!
+
+
+
+config=config.json

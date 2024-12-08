@@ -30,6 +30,83 @@ import os
 from rich import print
 import random
 
+
+class Job:
+    def __init__(self, job_id, arrival_time, priority):
+        self.job_id = job_id
+        self.arrival_time = arrival_time
+        self.priority = priority
+        self.bursts = []
+        self.cpu_wait_time = 0
+        self.turnaround_time = 0
+        self.io_wait_time = 0
+
+
+class Queue:
+    def __init__(self):
+        self.jobs = []
+
+    def enqueue(self, item):
+        self.jobs.insert(0, item)
+
+    def empty(self):
+        return self.jobs == []
+
+    def dequeue(self):
+        return self.jobs.pop()
+
+    def peek(self):
+        return self.jobs[-1]
+
+    def is_empty(self):
+        return not self.jobs
+
+    def size(self):
+        return len(self.jobs)
+
+    def __str__(self):
+        return str(self.jobs)
+
+    def __repr__(self):
+        return str(self.jobs)
+    
+    def processJobs(self,queueName):
+        for job in self.jobs:
+            if queueName == 'ready':
+                job.cpu_wait_time += 1
+            elif queueName == 'wait':
+                job.io_wait_time += 1
+
+
+class CPU:
+    def __init__(self,num_cpus=1):
+        self.job = None
+    
+    def loadJob(self,job):
+        self.job = job
+    
+    def processBurst(self):
+        self.job.current_burst -= 1
+
+
+class MultiProcessor:
+    def __init__(self,num_cpus=1):
+        self.cpus = [CPU() for _ in range(num_cpus)]
+
+class Scheduler:
+    def __init__(self):
+        self.ready_queue = Queue()
+        self.wait_queue = Queue()
+        self.terminated_queue = Queue()
+        self.new_queue = Queue()
+        self.clock = 0
+
+class IO:
+    pass
+
+
+
+
 def getConfig(client_id):
     return {
         "client_id": client_id,
@@ -46,10 +123,10 @@ def getConfig(client_id):
         "max_io_burst_interval": 70,
         "min_ts_interval": 5,
         "max_ts_interval": 5,
-        "prioritys": [1,2,3,4,5]
+        "priority_levels": [1,2,3,4,5]
     }
 
-def init(config):
+def init(config,seed=None):
     """
     Description:
         This function will initialize the client and return the `session_id` (next integer used by your client_id) and `clock_start`
@@ -58,7 +135,7 @@ def init(config):
     Returns:
         dict: A dictionary containing the session_id and clock_start
     """
-    route = f"http://profgriffin.com:8000/init"
+    route = f"http://profgriffin.com:8000/init?seed={seed}"
     r = requests.post(route,json=config)
     if r.status_code == 200:
         response = r.json()
