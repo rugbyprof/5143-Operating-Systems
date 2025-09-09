@@ -8,7 +8,7 @@ This file is about capturing the user input so that you can mimic shell behavior
 import os
 import sys
 from time import sleep
-
+from rich import print
 from getch import Getch
 
 ##################################################################################
@@ -17,6 +17,26 @@ from getch import Getch
 getch = Getch()  # create instance of our getch class
 
 prompt = "$"  # set default prompt
+
+def parse_cmd(cmd_input):
+    command_list = []
+    cmds = cmd_input.split("|")
+    for cmd in cmds:
+        d = {"input":None,"cmd":None,"params":[],"flags":None}
+        subparts = cmd.strip().split()
+        d["cmd"]= subparts[0]
+        for item in subparts[1:]:
+            if "-" in item:
+                d["flags"]=item[1:]
+            else:
+                d['params'].append(item)
+            
+        command_list.append(d)
+    return command_list
+    
+
+
+
 
 
 def print_cmd(cmd):
@@ -29,7 +49,11 @@ def print_cmd(cmd):
     sys.stdout.flush()
 
 
+
 if __name__ == "__main__":
+    cmd_list = parse_cmd("ls Assignments -lah | grep '.py' | wc -l > output")
+    print(cmd_list)
+    sys.exit(0)
     cmd = ""  # empty cmd variable
 
     print_cmd(cmd)  # print to terminal
