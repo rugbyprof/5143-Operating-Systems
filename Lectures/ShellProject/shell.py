@@ -48,7 +48,35 @@ def print_cmd(cmd):
     sys.stdout.write("\r" + prompt + cmd)
     sys.stdout.flush()
 
+def ls(parts):
+    '''
+    input: dict: {"input":string,"cmd":string,"params":list,"flags":string}
+    output dict: {"output":string,"error":string}
+    '''
+    input = parts.get("input",None)
+    flags = parts.get("flags",None)
+    params = parts.get("params",None)
 
+    if input:
+        pass
+
+    if len(params) > 0:
+        pass
+        return {"output":None,"error":"Directory doesn't exist"}
+
+    if 'a' in flags:
+        pass
+
+    if 'l' in flags:
+        pass
+
+    if 'h' in flags:
+        pass
+
+    output="something"
+
+
+    return {"output":output,"error":None}
 
 if __name__ == "__main__":
     cmd_list = parse_cmd("ls Assignments -lah | grep '.py' | wc -l > output")
