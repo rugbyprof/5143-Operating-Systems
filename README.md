@@ -1,6 +1,6 @@
 # 5143 - Operating Systems
 
-## Fall 2024
+## Fall 2025
 
 ### ZOOM Link
 
@@ -8,19 +8,19 @@ https://msutexas-edu.zoom.us/j/9403974439
 
 ## Office Hours
 
-<a href="https://images2.imgbox.com/0c/ee/HDIcuw0A_o.png" target="_blank"><img src="https://images2.imgbox.com/0c/ee/HDIcuw0A_o.png" alt="image host"  width="150"/></a>
+<a href="https://images2.imgbox.com/c6/e3/u7y21BbY_o.png" target="_blank"><img src="https://images2.imgbox.com/d1/92/AaHE4YJf_o.png" alt="thumbnail link to larger version of office hours" width="150"/></a>
 
 ### General Course Info
 
 - **Days:** TTR 3:30 p.m. - 4:50 p.m.
-- **Location:** BO 312
+- **Location:** BO 324
 - [**Semester:**](https://msutexas.edu/registrar/calendars.php) Monday August 26<sup>th</sup> - Friday Dec 6<sup>th</sup>
 - [**Holidays:**](https://msutexas.edu/registrar/calendars.php)
-  - **Labor Day** Mon Sep 2<sup>nd</sup>
-  - **Thanksgiving** Wed Nov 27<sup>th</sup> - Fri Nov 29<sup>th</sup>
-- [**Last Day for “W”:**](https://msutexas.edu/registrar/calendars.php) Mon Nov 25<sup>th</sup>
-- [**Last Day of Class:**](https://msutexas.edu/registrar/calendars.php) Fri Dec 6<sup>th</sup>
-- [**Final Exam:**](https://msutexas.edu/registrar/_assets/files/pdfs/finalexamschedulefall2024.pdf) Tue Dec 10<sup>th</sup> 3:30 p.m. - 5:30 p.m.
+  - **Labor Day** Mon Sep 1<sup>st</sup>
+  - **Thanksgiving** Wed Nov 26<sup>th</sup> - Fri Nov 28<sup>th</sup>
+- [**Last Day for “W”:**](https://msutexas.edu/registrar/calendars.php) Mon Nov 24<sup>th</sup>
+- [**Last Day of Class:**](https://msutexas.edu/registrar/calendars.php) Fri Dec 5<sup>th</sup>
+- [**Final Exam:**](https://msutexas.edu/registrar/schedule/fallfinalexamschedule.php) Tue Dec 9<sup>th</sup> 3:30 p.m. - 5:30 p.m.
 
 ### Resources
 
@@ -219,7 +219,7 @@ Senate Bill 11 passed by the 84th Texas Legislature allows licensed handgun hold
 
 ### Midterm Progress Report
 
-In order to help students keep track of their progress toward course objectives, the instructor for this class will provide a Midterm Progress Report for all students in the course through each student’s MSU Portal account. Midterm grades will not be reported on the students’ transcript; nor will they be calculated in the cumulative GPA. They simply give students an idea of where they stand at the midpoint of the semester. Students earning below a C at the midway point should a) schedule a meeting with the professor and b) Seek out tutoring.
+In order to help students keep track of their progress toward course objectives, the instructor for this class will provide a Midterm Progress Report for all students in the course through each student’s MSU Portal account. Midterm grades will not be reported on the students’ transcript; nor will they be calculated in the cumulative GPA. They simply give students an idea of where they stand at the midpoint of the semester. Students earning below a C at the midway point should **a)** schedule a meeting with the professor and **b)** Seek out tutoring.
 
 # Graduate Courses
 

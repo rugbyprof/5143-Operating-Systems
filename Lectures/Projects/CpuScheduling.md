@@ -1,5 +1,84 @@
-## Project X - CPU Scheduling Simulation
+# Project X - CPU Scheduling Simulation
+
 #### Due: TBD
+
+## 🧠 Why CPU Scheduling?
+
+When multiple processes are ready to run, but only one CPU is available, the OS must **choose** which process gets the CPU next. This decision impacts:
+
+- **CPU utilization**
+- **System responsiveness**
+- **Fairness**
+- **Throughput**
+
+---
+
+## 🧮 Types of Scheduling Algorithms
+
+Here's a high-level breakdown of **common CPU scheduling algorithms**:
+
+| Algorithm                                | Preemptive? | Key Feature                  | Good For                       | Drawbacks                                        |
+| ---------------------------------------- | ----------- | ---------------------------- | ------------------------------ | ------------------------------------------------ |
+| **FCFS** (First-Come, First-Served)      | ❌ No       | Runs in arrival order        | Simple, fair                   | Long jobs can block short ones ("convoy effect") |
+| **SJF** (Shortest Job First)             | ❌ No       | Chooses shortest job         | Minimizes average waiting time | Requires knowledge of job length                 |
+| **SRTF** (Shortest Remaining Time First) | ✅ Yes      | Preemptive SJF               | Very efficient                 | Difficult to predict remaining time              |
+| **RR** (Round Robin)                     | ✅ Yes      | Time-sliced (quantum-based)  | Good for time-sharing systems  | Context switching overhead                       |
+| **Priority Scheduling**                  | Can be both | Chooses highest priority     | Useful in real-time systems    | Starvation possible for low-priority processes   |
+| **MLQ** (Multilevel Queue)               | Depends     | Queues based on type         | Organizes jobs by category     | Rigid structure                                  |
+| **MLFQ** (Multilevel Feedback Queue)     | ✅ Yes      | Jobs can move between queues | Adapts to job behavior         | Complex implementation                           |
+
+---
+
+## 🕹️ Key Concepts
+
+### 🟦 Preemptive vs Non-Preemptive
+
+- **Preemptive**: CPU can be taken away from a running process (e.g., RR, SRTF).
+- **Non-preemptive**: Once a process starts, it runs to completion or blocks (e.g., FCFS, SJF).
+
+### 🟧 Context Switching
+
+Every time the OS switches the CPU from one process to another, it incurs overhead (saving/restoring registers, etc.).
+
+### 🟨 Starvation & Aging
+
+- **Starvation**: Low-priority processes never get CPU time.
+- **Aging**: Gradually increasing the priority of waiting processes to prevent starvation.
+
+---
+
+## 📊 Example Metrics
+
+| Metric              | Description                                 |
+| ------------------- | ------------------------------------------- |
+| **Turnaround Time** | Completion time – Arrival time              |
+| **Waiting Time**    | Turnaround time – Burst time                |
+| **Response Time**   | First run time – Arrival time               |
+| **Throughput**      | Number of processes completed per unit time |
+
+---
+
+## 🧩 How to Choose a Scheduling Algorithm?
+
+| System Type                     | Likely Algorithm                              |
+| ------------------------------- | --------------------------------------------- |
+| Batch system                    | SJF, FCFS                                     |
+| Time-sharing (e.g., desktop OS) | Round Robin                                   |
+| Real-time systems               | Priority-based, EDF (Earliest Deadline First) |
+| Mixed workloads                 | Multilevel Feedback Queue                     |
+
+---
+
+## 🧠 TL;DR Summary
+
+- **FCFS**: Simple but can lead to long wait times.
+- **SJF/SRTF**: Efficient but requires knowing burst times.
+- **Round Robin**: Fair and responsive, great for users.
+- **Priority Scheduling**: Flexible but can cause starvation.
+- **Multilevel Queues**: Good for organizing workloads.
+- **MLFQ**: Smart, adaptive, and commonly used in real systems (e.g., Linux).
+
+## Project
 
 **Introduction:**
 In this assignment, you will develop a simulation of CPU scheduling algorithms using a basic machine learning instruction set. You will implement four scheduling algorithms: Shortest Job First (SJF), First Come First Serve (FCFS), Priority Scheduling, and Round Robin. The simulation will be divided into three main components: the machine language breakdown, the scheduling algorithms, and the CPU components: ALU, Cache, and Registers.
@@ -23,6 +102,7 @@ The machine language instructions will form the basis of the processes that need
 These instructions will be executed by the CPU according to the scheduling algorithm.
 
 **Scheduling Algorithm Explanations:**
+
 1. **Shortest Job First (SJF):** This algorithm schedules processes based on their burst time, i.e., the amount of time required to complete the process. The process with the shortest burst time is selected next for execution.
 
 2. **First Come First Serve (FCFS):** FCFS is a non-preemptive scheduling algorithm that executes processes in the order they arrive. The first process that enters the ready queue is the first to be executed.

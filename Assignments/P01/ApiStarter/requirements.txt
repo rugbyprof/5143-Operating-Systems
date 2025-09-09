@@ -1,9 +1,0 @@
-fastapi
-pydantic
-Pygments
-requests
-rich
-uvicorn
-prettytable
-rich
-datetime

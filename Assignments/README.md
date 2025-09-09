@@ -1,13 +1,10 @@
 ## Assignments
 
-| Folder | Title | Description | Due Date | Due | Days Left<sup>*</sup> |
-|:------|:------|:------|:-----:|:-----:|-----|
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P01">P01</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P01"> Filesystem Project </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P01"> Implementation of a Virtual Filesystem</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P01">Dec 10th</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P01">Final Exam Day</a>*** | 3 |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P02">P02</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P02"> Shell Project </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P02"> Implementation of a Basic Shell</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P02">Dec 10th</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P02">Final Exam Day</a>*** | 3 |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">P03</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03"> Cpu Scheduling </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03"> Simulation</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">Dec 10th</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/P03">Final Exam Day</a>*** | 3 |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">T01</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01"> Not Exam </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01"> Terms and Topics Relevant to Operations</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">Dec 10th</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/T01">Final Exam Day</a>*** | 3 |
-| ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A01">A01</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A01"> Assignment 1 </a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A01"> Establishing Comms</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A01">Sep 6th</a>~ | ~<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Assignments/A01">Friday</a>~ | ---- |
+| Title | Description | Due | Days Left | Link | Last Updated |
+|-------|-------------|-----|-----------|------|---------------|
+| Shell Project | Implementation of a Basic Shell | N/A | N/A | [Shell_Project](Shell_Project/) | 2024-12-07 |
+| Cpu Scheduling Project | Implementation and comparison of scheduling | N/A | N/A | [Cpu_Sched_Project](Cpu_Sched_Project/) | 2024-12-07 |
 
-<sup>Last Updated: 2024-12-07 (Sat @ 21:17)</sup> 
+<sup>Last Updated: 2025-09-09 (Tue @ 13:44)</sup>
 
-<sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
+<sup>***Days Left is only accurate if the `Last Updated` date is today. Otherwise, use the due date!***</sup>

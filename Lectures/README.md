@@ -1,12 +1,10 @@
 ## Lectures
 
-| Folder | Title | Description | Due Date | Due |  |
-|:------|:------|:------|:-----:|:-----:|-----|
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">Projects</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/Projects">N/A</a>*** |  |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">ShellProject</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ShellProject">|  #  |Name                           |Description                  |</a>*** |  |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">ZoomShellSys</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/ZoomShellSys">N/A</a>*** |  |
-| ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">chat-gpt-talks</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">None</a>*** | ***<a href="https://github.com/rugbyprof/5143-Operating-Systems/tree/master/Lectures/chat-gpt-talks">N/A</a>*** |  |
+| Title | Description | Due | Days Left | Link | Last Updated |
+|-------|-------------|-----|-----------|------|---------------|
+| Projects | No description | N/A | N/A | [Projects](Projects/) | 2024-12-07 |
+| ShellProject | No description | N/A | N/A | [ShellProject](ShellProject/) | 2024-12-07 |
 
-<sup>Last Updated: 2024-12-07 (Sat @ 21:17)</sup> 
+<sup>Last Updated: 2025-09-09 (Tue @ 13:44)</sup>
 
-<sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
+<sup>***Days Left is only accurate if the `Last Updated` date is today. Otherwise, use the due date!***</sup>
