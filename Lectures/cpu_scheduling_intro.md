@@ -139,3 +139,8 @@ Order = P2 → P1 → P4 → P3
 ---
 
 Would you like me to also make **ready-to-use slides (markdown with diagrams)** so you can just plug them into your lecture, or keep this as a lecture note with walkthrough tables?
+
+
+
+
+
