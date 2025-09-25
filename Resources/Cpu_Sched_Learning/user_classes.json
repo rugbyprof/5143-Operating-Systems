@@ -1,0 +1,66 @@
+[
+  {
+    "class_id": "A",
+    "description": "Disk-heavy users (lots of read/write to storage, moderate CPU)",
+    "cpu_burst_mean": 8,
+    "cpu_burst_stddev": 3,
+    "cpu_budget_mean": 60,
+    "cpu_budget_stddev": 15,
+    "io_profile": {
+      "io_types": ["DISK_READ", "DISK_WRITE"],
+      "io_ratio": 0.6,
+      "io_duration_mean": 20,
+      "io_duration_stddev": 5
+    },
+    "priority_range": [1, 5],
+    "arrival_rate": 0.25
+  },
+  {
+    "class_id": "B",
+    "description": "Interactive console users (keyboard input and screen output dominate)",
+    "cpu_burst_mean": 4,
+    "cpu_burst_stddev": 1,
+    "cpu_budget_mean": 20,
+    "cpu_budget_stddev": 5,
+    "io_profile": {
+      "io_types": ["KEYBOARD_INPUT", "CONSOLE_OUTPUT"],
+      "io_ratio": 0.7,
+      "io_duration_mean": 5,
+      "io_duration_stddev": 2
+    },
+    "priority_range": [3, 8],
+    "arrival_rate": 0.4
+  },
+  {
+    "class_id": "C",
+    "description": "Network socket users (chatty applications, sockets dominate)",
+    "cpu_burst_mean": 6,
+    "cpu_burst_stddev": 2,
+    "cpu_budget_mean": 40,
+    "cpu_budget_stddev": 10,
+    "io_profile": {
+      "io_types": ["SOCKET_READ", "SOCKET_WRITE"],
+      "io_ratio": 0.5,
+      "io_duration_mean": 15,
+      "io_duration_stddev": 4
+    },
+    "priority_range": [2, 7],
+    "arrival_rate": 0.3
+  },
+  {
+    "class_id": "D",
+    "description": "Mixed disk and network traffic users (batch downloads/uploads)",
+    "cpu_burst_mean": 10,
+    "cpu_burst_stddev": 4,
+    "cpu_budget_mean": 80,
+    "cpu_budget_stddev": 20,
+    "io_profile": {
+      "io_types": ["DISK_READ", "NETWORK_RECV"],
+      "io_ratio": 0.4,
+      "io_duration_mean": 18,
+      "io_duration_stddev": 6
+    },
+    "priority_range": [1, 6],
+    "arrival_rate": 0.2
+  }
+]
