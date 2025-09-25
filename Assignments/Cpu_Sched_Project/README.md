@@ -400,3 +400,5 @@ while(looping):
 - Look [HERE](../../Resources/00-Readmees/README.md) for how to write up a readme.
 - Present your results in class when specified
 - Ensure your presentation follows guidelines above
+
+I want to have my students implement a typical cpu scheduling algorithm comparison program like I did way back and compare different algorithms by running cpu heavy vs io heavy and changing time slices etcetera. But, times have changed and I'm pretty sure that every proprietary scheduling algorithm is some hybrid with some learning capabilities. What I am thinking now, is that if I generate lots of processes with burst times (io and cpu) 
