@@ -23,7 +23,7 @@
 |  16   | `history`                                              |    ▢    |        |
 |  17   | `!x`                                                   |    ▢    |        |
 |  18   | `chmod 777 somefile.txt `                              |    ▢    |        |
-|  19   | `sort bacon.txt `                                      |    ▢    |        |
+|  19   | `sort words.txt `                                      |    ▢    |        |
 |  20   | `Command of your choice`                               |    ▢    |        |
 | **2** | **Piping**                                             | **50**  |        |
 |       | Similar to (but open for me to choose command):        |         |        |
