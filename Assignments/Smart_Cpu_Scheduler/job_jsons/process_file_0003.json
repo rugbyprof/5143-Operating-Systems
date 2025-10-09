@@ -1,0 +1,488 @@
+[
+  {
+    "pid": "1",
+    "class_id": "A",
+    "priority": 4,
+    "cpu_budget": 26,
+    "cpu_used": 26,
+    "bursts": [
+      {
+        "cpu": 2
+      },
+      {
+        "cpu": 5
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 21
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "cpu": 3
+      }
+    ]
+  },
+  {
+    "pid": "2",
+    "class_id": "B",
+    "priority": 7,
+    "cpu_budget": 24,
+    "cpu_used": 24,
+    "bursts": [
+      {
+        "cpu": 3
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 6
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 6
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 7
+        }
+      },
+      {
+        "cpu": 2
+      },
+      {
+        "cpu": 1
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 2
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 4
+        }
+      },
+      {
+        "cpu": 3
+      }
+    ]
+  },
+  {
+    "pid": "3",
+    "class_id": "B",
+    "priority": 7,
+    "cpu_budget": 20,
+    "cpu_used": 20,
+    "bursts": [
+      {
+        "cpu": 2
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 1
+        }
+      },
+      {
+        "cpu": 5
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 4
+        }
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 3
+        }
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 5
+        }
+      },
+      {
+        "cpu": 4
+      }
+    ]
+  },
+  {
+    "pid": "4",
+    "class_id": "C",
+    "priority": 6,
+    "cpu_budget": 33,
+    "cpu_used": 33,
+    "bursts": [
+      {
+        "cpu": 1
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "cpu": 7
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "cpu": 5
+      },
+      {
+        "io": {
+          "type": "SOCKET_READ",
+          "duration": 15
+        }
+      },
+      {
+        "cpu": 6
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "SOCKET_READ",
+          "duration": 21
+        }
+      },
+      {
+        "cpu": 3
+      }
+    ]
+  },
+  {
+    "pid": "5",
+    "class_id": "D",
+    "priority": 4,
+    "cpu_budget": 64,
+    "cpu_used": 64,
+    "bursts": [
+      {
+        "cpu": 15
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 14
+        }
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "cpu": 11
+      },
+      {
+        "cpu": 14
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 9
+        }
+      },
+      {
+        "cpu": 10
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 17
+        }
+      },
+      {
+        "cpu": 6
+      }
+    ]
+  },
+  {
+    "pid": "6",
+    "class_id": "D",
+    "priority": 2,
+    "cpu_budget": 78,
+    "cpu_used": 78,
+    "bursts": [
+      {
+        "cpu": 8
+      },
+      {
+        "io": {
+          "type": "NETWORK_RECV",
+          "duration": 26
+        }
+      },
+      {
+        "cpu": 12
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 23
+        }
+      },
+      {
+        "cpu": 10
+      },
+      {
+        "io": {
+          "type": "NETWORK_RECV",
+          "duration": 12
+        }
+      },
+      {
+        "cpu": 10
+      },
+      {
+        "cpu": 6
+      },
+      {
+        "cpu": 11
+      },
+      {
+        "cpu": 2
+      },
+      {
+        "cpu": 10
+      },
+      {
+        "cpu": 9
+      }
+    ]
+  },
+  {
+    "pid": "7",
+    "class_id": "B",
+    "priority": 8,
+    "cpu_budget": 19,
+    "cpu_used": 19,
+    "bursts": [
+      {
+        "cpu": 6
+      },
+      {
+        "io": {
+          "type": "KEYBOARD_INPUT",
+          "duration": 5
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 7
+        }
+      },
+      {
+        "cpu": 4
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 1
+        }
+      },
+      {
+        "cpu": 2
+      }
+    ]
+  },
+  {
+    "pid": "8",
+    "class_id": "D",
+    "priority": 5,
+    "cpu_budget": 103,
+    "cpu_used": 92,
+    "bursts": [
+      {
+        "cpu": 10
+      },
+      {
+        "cpu": 11
+      },
+      {
+        "cpu": 9
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 18
+        }
+      },
+      {
+        "cpu": 12
+      },
+      {
+        "cpu": 2
+      },
+      {
+        "cpu": 11
+      },
+      {
+        "cpu": 14
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 8
+        }
+      },
+      {
+        "cpu": 7
+      },
+      {
+        "cpu": 1
+      },
+      {
+        "io": {
+          "type": "NETWORK_RECV",
+          "duration": 10
+        }
+      },
+      {
+        "cpu": 15
+      }
+    ]
+  },
+  {
+    "pid": "9",
+    "class_id": "B",
+    "priority": 4,
+    "cpu_budget": 13,
+    "cpu_used": 13,
+    "bursts": [
+      {
+        "cpu": 4
+      },
+      {
+        "io": {
+          "type": "CONSOLE_OUTPUT",
+          "duration": 1
+        }
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "cpu": 3
+      },
+      {
+        "cpu": 3
+      }
+    ]
+  },
+  {
+    "pid": "10",
+    "class_id": "A",
+    "priority": 1,
+    "cpu_budget": 74,
+    "cpu_used": 73,
+    "bursts": [
+      {
+        "cpu": 8
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 19
+        }
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "io": {
+          "type": "DISK_READ",
+          "duration": 27
+        }
+      },
+      {
+        "cpu": 7
+      },
+      {
+        "cpu": 2
+      },
+      {
+        "io": {
+          "type": "DISK_WRITE",
+          "duration": 13
+        }
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "io": {
+          "type": "DISK_WRITE",
+          "duration": 19
+        }
+      },
+      {
+        "cpu": 8
+      },
+      {
+        "cpu": 6
+      },
+      {
+        "cpu": 11
+      },
+      {
+        "cpu": 7
+      },
+      {
+        "io": {
+          "type": "DISK_WRITE",
+          "duration": 20
+        }
+      }
+    ]
+  }
+]
