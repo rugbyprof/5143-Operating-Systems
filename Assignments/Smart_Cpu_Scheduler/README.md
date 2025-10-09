@@ -1,21 +1,22 @@
 ---
-
 title: "OS Project: Smarter CPU Scheduler"
 course: "Operating Systems"
 author: "T. Griffin"
 due_date: "TBD"
-learning_objectives:
-
-* Understand CPU and I/O burst patterns
-* Compare classical scheduling algorithms
-* Design and test an adaptive scheduler
-* Analyze scheduling performance metrics
-
 ---
 
 # 🧩 Operating Systems Project: Building a Smarter CPU Scheduler
 
-## 🎯 Objective
+## Basic objectives
+
+These are typical cpu scheduling objectives
+
+- Understand CPU and I/O burst patterns
+- Compare classical scheduling algorithms
+- Design and test an adaptive scheduler
+- Analyze scheduling performance metrics
+
+## 🎯 Main Objective
 
 Simulate CPU scheduling under realistic workloads, then design an adaptive ("learning") scheduler that improves performance compared to traditional algorithms.
 
