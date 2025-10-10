@@ -86,16 +86,24 @@ Optional: train a simple ML classifier (e.g., decision tree) on burst history.
 
 Use the provided **JSON workload generator** to create realistic process sets.
 
-Each process looks like:
+Each process class looks like:
 
 ```json
 {
-  "pid": 17,
-  "cpu_burst_mean": 30,
-  "cpu_burst_stddev": 10,
-  "io_profile": { "io_types": ["DISK_READ"], "io_ratio": 0.5 },
-  "priority": 2,
-  "interactive": false
+  "class_id": "C",
+  "description": "Network socket users (chatty applications, sockets dominate)",
+  "cpu_burst_mean": 6,
+  "cpu_burst_stddev": 2,
+  "cpu_budget_mean": 40,
+  "cpu_budget_stddev": 10,
+  "io_profile": {
+    "io_types": ["SOCKET_READ", "SOCKET_WRITE"],
+    "io_ratio": 0.5,
+    "io_duration_mean": 15,
+    "io_duration_stddev": 4
+  },
+  "priority_range": [2, 7],
+  "arrival_rate": 0.3
 }
 ```
 
@@ -280,6 +288,9 @@ Response time = first run − arrival
 
 ---
 
+<details>
+<summary>Visualization ... But not done</summary>
+
 ## 🎛️ Visualization
 
 | Element                 | Description                   | Visualization                   |
@@ -450,3 +461,5 @@ Each tick, the RL model decides the next process, the Borg clock advances, and q
 Remember:
 
 > _SJF is great if you can predict the future._ > _Round Robin is fair — equally slow for everyone._ > _Your learning scheduler? Maybe the first one that actually learns from its mistakes._
+
+</details>
