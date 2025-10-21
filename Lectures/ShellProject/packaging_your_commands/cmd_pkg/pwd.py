@@ -3,5 +3,5 @@
 import os
 
 
-def pwd():
+def Pwd():
     return os.getcwd()

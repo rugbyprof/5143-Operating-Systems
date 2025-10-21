@@ -3,9 +3,10 @@
 import os
 
 
-def grep(pattern, file):
+def Grep(pattern, file):
     return os.grep(pattern, file)
 
 
 if __name__ == "__main__":
-    grep("*.txt", "somefile.txt")
+    Grep("*.txt", "somefile.txt")
+    Grep("*.py", "otherfile.py")    

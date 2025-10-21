@@ -45,15 +45,15 @@ if __name__ == "__main__":
 
     print(cmds)
     # Example usage:
-    cmd = "ls"
-    params = ["/usr/local/bin"]
+    # cmd = "Ls"
+    # params = ["/usr/local/bin"]
 
-    # Call the function dynamically from the dictionary
-    if cmd in cmds:
-        result = cmds[cmd](params=params)
-        print(result)
-    else:
-        print(f"Command '{cmd}' not found.")
+    # # Call the function dynamically from the dictionary
+    # if cmd in cmds:
+    #     result = cmds[cmd](params=params)
+    #     print(result)
+    # else:
+    #     print(f"Command '{cmd}' not found.")
 
     # help = cmds["cat"].__doc__.split("DOCSTRING")[1]
     # print(help)

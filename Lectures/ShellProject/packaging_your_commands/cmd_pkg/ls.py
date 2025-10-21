@@ -2,7 +2,7 @@
 import subprocess
 
 
-def ls(**kwargs):
+def Ls(**kwargs):
     """This is my manpage entry for the pwd command"""
     folder = kwargs.get("params", [])
     result = subprocess.run(["ls", "-lah", folder[0]], stdout=subprocess.PIPE)

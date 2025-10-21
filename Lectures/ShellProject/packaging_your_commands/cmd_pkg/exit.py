@@ -1,7 +1,7 @@
 import sys
 
 
-def exit(**kwargs):
+def Exit(**kwargs):
     sys.exit()
 
 

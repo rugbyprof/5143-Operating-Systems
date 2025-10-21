@@ -1,7 +1,21 @@
+"""
+TODO: Add an arrival time to the generated processes and only allow entry when the clock == arrival time.
+TODO: Add a quantum (time slice) countdown for Round Robin scheduling.
+"""
+
 import collections
 import csv
 import json
+from multiprocessing import process
 import sys
+from rich import print
+
+
+class ViewAttributes:
+    """Class to hold view attributes for future GUI integration"""
+
+    def __init__(self):
+        self.color = None
 
 
 # ---------------------------------------
@@ -208,6 +222,7 @@ class Scheduler:
         export_csv(filename): export the structured log to a CSV file"""
 
     def __init__(self, num_cpus=1, num_ios=1, verbose=True):
+
         self.clock = Clock()  # shared clock instance for all components Borg pattern
 
         # deque (double ended queue) for efficient pops from left
@@ -226,6 +241,10 @@ class Scheduler:
         self.log = []  # human-readable + snapshots
         self.events = []  # structured log for export
         self.verbose = verbose  # if True, print log entries to console
+
+    def on_state_change(self, callback):
+        """Register a callback for state changes (e.g., for the View)."""
+        self._callback = callback
 
     def add_process(self, process):
         """
@@ -246,6 +265,18 @@ class Scheduler:
             event_type="enqueue",
             proc=process.pid,
         )
+
+    def processes(self):
+        """Return all processes known to the scheduler"""
+        all = (
+            list(self.ready_queue)
+            + list(self.wait_queue)
+            + self.finished
+            + [cpu.current for cpu in self.cpus if cpu.current]
+            + [dev.current for dev in self.io_devices if dev.current]
+        )
+        rdict = {p.pid: p for p in all}
+        return rdict
 
     def _record(self, event, event_type="info", proc=None, device=None):
         """
@@ -307,6 +338,10 @@ class Scheduler:
         if self.verbose:
             print(snap)
 
+    def _callback(self, pid, new_state):
+        """Placeholder for state change callback"""
+        pass
+
     def step(self):
         """
         Advance the scheduler by one time unit
@@ -329,6 +364,8 @@ class Scheduler:
                 if burst and "io" in burst:
                     proc.state = "waiting"
                     self.wait_queue.append(proc)
+                    # if self._callback:
+                    #     self._callback(proc.pid, "waiting")
                     self._record(
                         f"{proc.pid} finished CPU → wait queue",
                         event_type="cpu_to_io",
@@ -339,6 +376,8 @@ class Scheduler:
                 # If the next burst is CPU, move to ready queue
                 elif burst and "cpu" in burst:
                     self.ready_queue.append(proc)
+                    if self._callback:
+                        self._callback(proc.pid, "ready")
 
                     # logs event of moving process to ready queue
                     self._record(
@@ -351,6 +390,9 @@ class Scheduler:
                 else:
                     proc.state = "finished"
                     self.finished.append(proc)
+
+                    if self._callback:
+                        self._callback(proc.pid, "finished")
 
                     # logs event of process finishing all bursts
                     self._record(
@@ -372,6 +414,8 @@ class Scheduler:
                 if burst:
                     proc.state = "ready"
                     self.ready_queue.append(proc)
+                    if self._callback:
+                        self._callback(proc.pid, "ready")
 
                     # logs event of moving process to ready queue
                     self._record(
@@ -384,6 +428,8 @@ class Scheduler:
                 else:
                     proc.state = "finished"
                     self.finished.append(proc)
+                    if self._callback:
+                        self._callback(proc.pid, "finished")
 
                     # logs event of process finishing all bursts
                     self._record(
@@ -596,7 +642,7 @@ if __name__ == "__main__":
     )
 
     # Initialize scheduler and add processes
-    sched = Scheduler(num_cpus=cpus, num_ios=ios, verbose=False)
+    sched = Scheduler(num_cpus=cpus, num_ios=ios, verbose=True)
 
     # Add processes to scheduler
     for p in processes:

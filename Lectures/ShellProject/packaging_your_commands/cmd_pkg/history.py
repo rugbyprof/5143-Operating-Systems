@@ -3,5 +3,5 @@
 import os
 
 
-def history():
+def History():
     return os.history()

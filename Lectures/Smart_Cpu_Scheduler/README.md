@@ -5,7 +5,6 @@ author: "T. Griffin"
 due_date: "TBD"
 ---
 
-
 # 🧩 Operating Systems Project: Building a Smarter CPU Scheduler
 
 ## Basic objectives

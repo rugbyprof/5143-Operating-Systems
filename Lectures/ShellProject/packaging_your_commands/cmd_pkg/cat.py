@@ -2,7 +2,7 @@
 from subprocess import call
 
 
-def cat(**kwargs):
+def Cat(**kwargs):
     """
     params (list) : list of parameters
 

@@ -1,9 +1,9 @@
-from .pwd import pwd
-from .ls import ls
-from .grep import grep
-from .history import history
-from .cat import cat
-from .exit import exit
-from .echo import echo
+from .pwd import Pwd
+from .ls import Ls
+from .grep import Grep
+from .history import History
+from .cat import Cat
+from .exit import Exit
+from .echo import Echo
 
-__all__ = ["pwd", "ls", "echo", "grep", "history", "cat", "exit"]
+__all__ = ["Pwd", "Ls", "Echo", "Grep", "History", "Cat", "Exit"]
