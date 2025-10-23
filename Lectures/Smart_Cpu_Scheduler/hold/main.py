@@ -5,7 +5,7 @@
 # =========================================================
 
 import arcade
-from scheduler import Scheduler
+from Lectures.Smart_Cpu_Scheduler.main import Scheduler
 from Assignments.Smart_Cpu_Scheduler.hold.schedulerView import SchedulerView
 from controller import Controller
 
