@@ -1,0 +1,4 @@
+pygame
+rich
+pandas
+matplotlib
