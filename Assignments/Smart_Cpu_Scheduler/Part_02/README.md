@@ -1,4 +1,5 @@
-# 🧩 Operating Systems – Project Part 02  
+# 🧩 Operating Systems – Project Part 02
+
 ### Visualizing the Scheduler (Model + View + Controller)
 
 ---
@@ -17,15 +18,15 @@ This organization will make your simulator modular, testable, and ready to suppo
 
 You will divide your project into three main components:
 
-| File | Role | Knows About |
-|------|------|-------------|
-| **`scheduler.py`** | Core simulation logic | Jobs, queues, bursts, quantum, arrival times |
-| **`visualizer.py`** | Pygame display layer | Reads scheduler state, draws queues and jobs |
-| **`main.py`** | Glue / controller | Calls `scheduler.step()` and `visualizer.draw()` each tick |
+| File                | Role                  | Knows About                                                |
+| ------------------- | --------------------- | ---------------------------------------------------------- |
+| **`scheduler.py`**  | Core simulation logic | Jobs, queues, bursts, quantum, arrival times               |
+| **`visualizer.py`** | Pygame display layer  | Reads scheduler state, draws queues and jobs               |
+| **`main.py`**       | Glue / controller     | Calls `scheduler.step()` and `visualizer.draw()` each tick |
 
 This structure follows the **Model–View–Controller (MVC)** pattern:
 
-><sup>
+> <sup>[Example Here](../Part_02/Visualization/003_mvc/)</sup>
 
 ```
 +----------------+
@@ -48,6 +49,7 @@ This structure follows the **Model–View–Controller (MVC)** pattern:
 ## 🧩 Assignment Tasks
 
 ### 1️⃣ Refactor your existing scheduler
+
 - Keep **all scheduling logic** in `scheduler.py`.
 - Remove any print or timing code related to display.
 - Add a method `snapshot()` that returns a dictionary of current state:
@@ -68,7 +70,9 @@ This lightweight snapshot will be used by the visualizer.
 ---
 
 ### 2️⃣ Create a visualizer using Pygame
+
 In `visualizer.py`:
+
 - Draw rectangles for each queue (`Ready`, `Wait`, `CPU`, `IO`).
 - Display job IDs (e.g., `P1`, `P2`, …) inside the queues.
 - Update the display each tick by reading the scheduler’s snapshot.
@@ -81,7 +85,9 @@ Different colors for full queues or running jobs.
 ---
 
 ### 3️⃣ Write a main controller
+
 In `main.py`:
+
 - Instantiate your `Scheduler` and `Visualizer`.
 - Run a loop that:
   1. Calls `scheduler.step()`
@@ -115,24 +121,25 @@ Include short written answers (in a Markdown file or as comments):
 
 1. Why is it valuable to separate the scheduler logic from the visualization layer?
 2. How could this design be extended to run two schedulers at once (for comparison)?
-3. What information should the visualizer *not* have access to, and why?
+3. What information should the visualizer _not_ have access to, and why?
 
 ---
 
 ## 📦 Deliverables
 
-| File | Description |
-|------|--------------|
-| `scheduler.py` | Pure simulation logic with `step()` and `snapshot()` |
-| `visualizer.py` | Pygame renderer that draws queues and jobs |
-| `main.py` | Control loop that ties everything together |
-| `README.md` | Brief explanation of your architecture and how to run it |
+| File            | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `scheduler.py`  | Pure simulation logic with `step()` and `snapshot()`     |
+| `visualizer.py` | Pygame renderer that draws queues and jobs               |
+| `main.py`       | Control loop that ties everything together               |
+| `README.md`     | Brief explanation of your architecture and how to run it |
 
 ---
 
 ## 🏁 Run Instructions
 
 From your project folder:
+
 ```bash
 python main.py
 ```
@@ -151,5 +158,3 @@ and visualize how each behaves under different arrival and burst patterns.
 
 > “A scheduler without a visualization is like an OS without a user —  
 > you know it works, but it’s way more fun to watch it think.”
-
-
