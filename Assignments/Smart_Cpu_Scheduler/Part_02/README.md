@@ -26,7 +26,7 @@ You will divide your project into three main components:
 
 This structure follows the **Model–View–Controller (MVC)** pattern:
 
-> <sup>[Example Here](../Part_02/Visualization/003_mvc/)</sup>
+> 👉[Example Code Here](../Part_02/Visualization/003_mvc/) 👈
 
 ```
 +----------------+
