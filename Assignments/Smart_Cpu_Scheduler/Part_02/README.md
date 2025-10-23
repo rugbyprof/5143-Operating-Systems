@@ -154,7 +154,94 @@ In the next part, you’ll begin adding multiple scheduling algorithms
 (FCFS, SJF, Priority, Round Robin, and Hybrid)  
 and visualize how each behaves under different arrival and burst patterns.
 
+Perfect 😎 — here’s the final version of your **Part 02 README** with a short **Part 03 Preview** block at the end.  
+It flows naturally from your existing project narrative and teases what’s coming next without overloading students yet.
+
+---
+
+````markdown
+# 🧩 Operating Systems – Project Part 02
+
+### Visualizing the Scheduler (Model + View + Controller)
+
+---
+
+## 📘 Overview
+
+In **Part 01**, you extended the scheduler to include **arrival times** and a **time quantum** for Round Robin scheduling.  
+You now have a functioning logical simulator that moves jobs through the CPU, I/O, and ready/wait queues based on time and state.
+
+In **Part 02**, we will **separate** the scheduler logic from the user interface and create a **visualization layer** using `pygame`.  
+This organization will make your simulator modular, testable, and ready to support future scheduling algorithms (FCFS, SJF, RR, Hybrid).
+
+---
+
+## 🧠 Design Goal – Separation of Concerns
+
+You will divide your project into three main components:
+
+| File                | Role                  | Knows About                                                |
+| ------------------- | --------------------- | ---------------------------------------------------------- |
+| **`scheduler.py`**  | Core simulation logic | Jobs, queues, bursts, quantum, arrival times               |
+| **`visualizer.py`** | Pygame display layer  | Reads scheduler state, draws queues and jobs               |
+| **`main.py`**       | Glue / controller     | Calls `scheduler.step()` and `visualizer.draw()` each tick |
+
+This follows the **Model–View–Controller (MVC)** design pattern.
+
+---
+
+## 🧩 Assignment Tasks
+
+1️⃣ Refactor your existing scheduler  
+2️⃣ Create a Pygame visualizer  
+3️⃣ Write a main controller loop
+
+Detailed instructions and code scaffolding appear above in this file.
+
+---
+
+## 📦 Deliverables
+
+| File            | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `scheduler.py`  | Pure simulation logic with `step()` and `snapshot()`     |
+| `visualizer.py` | Pygame renderer that draws queues and jobs               |
+| `main.py`       | Control loop that ties everything together               |
+| `README.md`     | Brief explanation of your architecture and how to run it |
+
+---
+
+## 🏁 Run Instructions
+
+From your project folder:
+
+```bash
+python main.py
+```
+````
+
+Press **ESC** or close the window to exit.
+
 ---
 
 > “A scheduler without a visualization is like an OS without a user —  
 > you know it works, but it’s way more fun to watch it think.”
+
+---
+
+<!-- ## 🔮 Part 03 Preview
+
+In **Part 03**, you’ll begin adding **multiple scheduling algorithms** to your framework.
+Your visualizer will support switching between modes such as:
+
+| Key / Option | Algorithm                     |
+| ------------ | ----------------------------- |
+| `F`          | First-Come First-Serve (FCFS) |
+| `R`          | Round Robin (RR)              |
+| `S`          | Shortest Job First (SJF)      |
+| `H`          | Hybrid / Adaptive             |
+
+The same visualization layer will let you **compare algorithms in real time**, showing how each handles arrival bursts, quantum expiration, and waiting queues.
+This will complete your transition from a simple simulator to an interactive **OS-level scheduling lab**.
+
+--- -->
