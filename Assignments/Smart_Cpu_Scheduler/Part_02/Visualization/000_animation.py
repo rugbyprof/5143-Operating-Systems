@@ -1,5 +1,6 @@
 import pygame
 import sys
+from time import sleep
 
 # --- Initialize Pygame ---
 pygame.init()
@@ -52,6 +53,9 @@ class TextSprite(pygame.sprite.Sprite):
             if self.rect.x > self.target_x:
                 self.rect.x = self.target_x  # stop exactly at target
 
+    def draw(self, surface):
+        surface.blit(self.image, self.rect)
+
 
 # =========================================================
 # Main Setup
@@ -66,7 +70,23 @@ def main():
         color=YELLOW,
         start_pos=(-100, 120),  # start offscreen to the left
         target_pos=(60, 120),  # stop here
-        speed=5,
+        speed=3,
+    )
+
+    p2 = TextSprite(
+        text="P2",
+        color=RED,
+        start_pos=(-100, 120),  # start offscreen to the left
+        target_pos=(100, 120),  # stop here
+        speed=3,
+    )
+
+    p3 = TextSprite(
+        text="P3",
+        color=GREEN,
+        start_pos=(-100, 120),  # start offscreen to the left
+        target_pos=(140, 120),  # stop here
+        speed=3,
     )
 
     # Define queue rectangles
@@ -81,12 +101,13 @@ def main():
     # ]
 
     # Define sprite groups
-    ready_queue = pygame.sprite.Group()
-    running_queue = pygame.sprite.Group()
-    waiting_queue = pygame.sprite.Group()
+    # ready_queue = pygame.sprite.Group()
+    # running_queue = pygame.sprite.Group()
+    # waiting_queue = pygame.sprite.Group()
 
     # Group makes updating/drawing multiple sprites easy
     sprites = pygame.sprite.Group(p1)
+    sprites.add(p2)
 
     # Main loop
     while running:
@@ -97,16 +118,20 @@ def main():
         # --- Update ---
         sprites.update()
 
+        p3.update()
+
         # --- Draw ---
         screen.fill(BLACK)
         sprites.draw(screen)
-        pygame.draw.rect(screen, RED, ready_box, 2)
-        pygame.draw.rect(screen, GREEN, running_box, 2)
-        pygame.draw.rect(screen, BLUE, waiting_box, 2)
+        pygame.draw.rect(screen, RED, ready_box, 1)
+        pygame.draw.rect(screen, GREEN, running_box, 0)
+        pygame.draw.rect(screen, BLUE, waiting_box, 1)
 
-        ready_queue.draw(screen)
-        running_queue.draw(screen)
-        waiting_queue.draw(screen)
+        p3.draw(screen)
+
+        # ready_queue.draw(screen)
+        # running_queue.draw(screen)
+        # waiting_queue.draw(screen)
         pygame.display.flip()
 
         # --- Frame rate ---

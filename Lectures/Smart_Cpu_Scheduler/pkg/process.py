@@ -21,6 +21,21 @@ class Process:
         self.priority = priority
         self.state = "new"
 
+        self.wait_time = 0  # Total time spent waiting in wait queue or ready queue
+        self.turnaround_time = 0  # Total time from arrival to completion
+        self.runtime = 0  # Total CPU time used
+        self.io_time = 0  # Total I/O time used
+        self.start_time = 0  # Time when the process started execution
+        self.end_time = 0  # Time when the process finished execution
+        self.init_cpu_bursts = 0
+        self.init_io_bursts = 0
+        for burst in bursts:
+            if "cpu" in burst:
+                self.init_cpu_bursts += burst["cpu"]
+            elif "io" in burst:
+                self.init_io_bursts += burst["io"]["duration"]
+        self.TotalBursts = self.init_cpu_bursts + self.init_io_bursts
+
     def current_burst(self):
         """Get the current burst"""
         # Return the first burst if it exists, else None
@@ -38,5 +53,8 @@ class Process:
         return f"{self.pid}"
 
     def __str__(self):
-        # return f"Process(pid={self.pid}, priority={self.priority}, state={self.state}, bursts={self.bursts})"
-        return self.__repr__()
+        return f"Process[pid:{self.pid}, priority:{self.priority}, runtime:{self.runtime}, io_time:{self.io_time}, start_time:{self.start_time}]"
+        # return self.__repr__()
+
+
+# ---------------------------------------

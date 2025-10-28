@@ -26,7 +26,7 @@ class QueueSprite:
         self.jobs = job_ids
 
     def draw(self, surface):
-        pygame.draw.rect(surface, BOX_COLOR, self.rect, width=2)
+        pygame.draw.rect(surface, BOX_COLOR, self.rect, width=1)
         label = FONT.render(self.name.upper(), True, BOX_COLOR)
         surface.blit(label, (self.rect.x + 5, self.rect.y + 5))
         for i, jid in enumerate(self.jobs):

@@ -152,3 +152,5 @@ if __name__ == "__main__":
     sched.export_json(f"./timelines/timeline{str(file_num).zfill(4)}.json")
     sched.export_csv(f"./timelines/timeline{str(file_num).zfill(4)}.csv")
     clock.reset()
+    # Print process statistics
+    sched.print_stats()

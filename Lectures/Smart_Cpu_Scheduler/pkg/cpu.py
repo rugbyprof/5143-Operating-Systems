@@ -40,6 +40,7 @@ class CPU:
         # If it's a CPU burst, decrement its time
         if burst and "cpu" in burst:
             burst["cpu"] -= 1
+            self.current.runtime += 1  # Increment runtime
             # If the burst is done, advance to the next one (could be CPU or IO or done)
             if burst["cpu"] == 0:
                 self.current.advance_burst()  # Move to the next burst

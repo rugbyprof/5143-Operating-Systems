@@ -154,6 +154,11 @@ class Scheduler:
         Advance the scheduler by one time unit
         Returns: None
         """
+        for p in self.ready_queue:
+            p.wait_time += 1  # Increment wait time for processes in ready queue
+        for p in self.wait_queue:
+            p.io_time += 1  # Increment I/O time for processes in wait queue
+
         # Iterate over each CPU and tick (decrement burst time) by 1 if not idle
         for cpu in self.cpus:
 
@@ -183,8 +188,8 @@ class Scheduler:
                 # If the next burst is CPU, move to ready queue
                 elif burst and "cpu" in burst:
                     self.ready_queue.append(proc)
-                    if self._callback:
-                        self._callback(proc.pid, "ready")
+                    # if self._callback:
+                    #     self._callback(proc.pid, "ready")
 
                     # logs event of moving process to ready queue
                     self._record(
@@ -196,10 +201,12 @@ class Scheduler:
                 # No more bursts, process is finished
                 else:
                     proc.state = "finished"
+                    proc.end_time = self.clock.now()
+                    proc.turnaround_time = proc.end_time - proc.start_time
                     self.finished.append(proc)
 
-                    if self._callback:
-                        self._callback(proc.pid, "finished")
+                    # if self._callback:
+                    #     self._callback(proc.pid, "finished")
 
                     # logs event of process finishing all bursts
                     self._record(
@@ -234,6 +241,9 @@ class Scheduler:
                 # else process is finished
                 else:
                     proc.state = "finished"
+
+                    proc.end_time = self.clock.now()
+                    proc.turnaround_time = proc.end_time - proc.start_time
                     self.finished.append(proc)
                     if self._callback:
                         self._callback(proc.pid, "finished")
@@ -329,3 +339,46 @@ class Scheduler:
             writer.writerows(self.events)
         if self.verbose:
             print(f"✅ Timeline exported to {filename}")
+
+    def print_stats(self):
+        """Print statistics for all finished processes"""
+        print("\n--- Process Statistics ---")
+        raw_data = []
+        for p in self.finished:
+            turnaround_time = p.end_time - p.start_time
+            raw_data.append(
+                f"[{p.pid}: Start={p.start_time} Wait={p.wait_time}, Turnaround={turnaround_time}, Run={p.runtime}, I/O={p.io_time}, InitCpuBurst={p.init_cpu_bursts}, InitIoBurst={p.init_io_bursts}, TotalBursts={p.TotalBursts}]"
+            )
+        from rich.console import Console
+        from rich.table import Table
+        import re
+
+        # # Raw input as strings
+        # raw_data = [
+        #     "[2: Start=0 Wait=14, Turnaround=107, Run=24, I/O=70, InitCpuBurst=24, InitIoBurst=35, TotalBursts=59]",
+        #     "[1: Start=0 Wait=21, Turnaround=123, Run=19, I/O=84, InitCpuBurst=19, InitIoBurst=23, TotalBursts=42]",
+        #     "[3: Start=0 Wait=18, Turnaround=138, Run=33, I/O=88, InitCpuBurst=33, InitIoBurst=61, TotalBursts=94]",
+        # ]
+
+        # Parse function
+        def parse_job(job_str):
+            job_str = job_str.strip("[]")
+            job_id, rest = job_str.split(":", 1)
+            job_id = job_id.strip()
+            pairs = re.findall(r"(\w+/?.*?)=([\d]+)", rest)
+            return {"ID": job_id, **{k: v for k, v in pairs}}
+
+        # Convert to list of dicts
+        jobs = [parse_job(entry) for entry in raw_data]
+
+        # Build Rich table
+        table = Table(title="Job Summary")
+        for col in jobs[0].keys():
+            table.add_column(col, justify="center")
+
+        for job in jobs:
+            table.add_row(*[str(job[col]) for col in job])
+
+        # Print it
+        console = Console()
+        console.print(table)

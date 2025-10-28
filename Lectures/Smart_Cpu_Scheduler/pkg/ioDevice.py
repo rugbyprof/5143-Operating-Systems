@@ -38,6 +38,7 @@ class IODevice:
         # If it's an I/O burst, decrement its duration
         if burst and "io" in burst:
             burst["io"]["duration"] -= 1
+            self.current.io_time += 1  # Increment I/O time
             # If the burst is done, advance to the next one (could be CPU or IO or done)
             if burst["io"]["duration"] == 0:
                 self.current.advance_burst()  # Move to the next burst
