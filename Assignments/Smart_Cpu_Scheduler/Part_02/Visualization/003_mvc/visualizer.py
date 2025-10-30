@@ -15,18 +15,19 @@ FONT = pygame.font.SysFont("Consolas", 20)
 class QueueSprite:
     """Visual representation of a single queue (horizontal layout)."""
 
-    def __init__(self, name, x, y, width, height, max_size=None):
+    def __init__(self, name, x, y, width, height, color=BOX_COLOR, max_size=None):
         self.name = name
         self.rect = pygame.Rect(x, y, width, height)
         self.jobs = []
         self.max_size = max_size
+        self.color = color
 
     def set_jobs(self, job_ids):
         """Replace current job display with IDs from scheduler."""
         self.jobs = job_ids
 
     def draw(self, surface):
-        pygame.draw.rect(surface, BOX_COLOR, self.rect, width=1)
+        pygame.draw.rect(surface, self.color, self.rect, width=1)
         label = FONT.render(self.name.upper(), True, BOX_COLOR)
         surface.blit(label, (self.rect.x + 5, self.rect.y + 5))
         for i, jid in enumerate(self.jobs):
@@ -42,23 +43,36 @@ class Visualizer:
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pygame.display.set_caption("Scheduler Visualizer")
         self.clock = pygame.time.Clock()
+        self.last_snapshot = None
+        self.snap = None
+        self.current_clock = 0
 
         # Layout (stacked vertically)
-        w, h, x, spacing = 300, 100, 20, 20
-        self.ready_q = QueueSprite("ready", x, 20, w, h)
-        self.wait_q = QueueSprite("wait", x, 20 + (h + spacing), w, h)
-        self.cpu_q = QueueSprite("cpu", x, 20 + 2 * (h + spacing), w, h, max_size=2)
-        self.io_q = QueueSprite("io", x, 20 + 3 * (h + spacing), w, h, max_size=2)
+        w, h, x, spacing = 300, 75, 100, 50
+        self.ready_q = QueueSprite("ready", x, 20, w, h, (0, 255, 0))
+        self.wait_q = QueueSprite("wait", x, 20 + (h + spacing), w, h, (0, 255, 255))
+        self.wait_q = QueueSprite("wait", x, 20 + (h + spacing), w, h, (0, 0, 255))
+        self.cpu_q = QueueSprite(
+            "cpu", x, 20 + 2 * (h + spacing), w, h, (255, 0, 255), max_size=2
+        )
+        self.io_q = QueueSprite(
+            "io", x, 20 + 3 * (h + spacing), w, h, (200, 200, 200), max_size=2
+        )
         self.queues = [self.ready_q, self.wait_q, self.cpu_q, self.io_q]
 
     # -----------------------------------------------------
     def update_from_scheduler(self):
-        snap = self.scheduler.snapshot()
-        self.ready_q.set_jobs(snap["ready"])
-        self.wait_q.set_jobs(snap["wait"])
-        self.cpu_q.set_jobs(snap["cpu"])
-        self.io_q.set_jobs(snap["io"])
-        self.current_clock = snap["clock"]
+        self.last_snapshot = self.snap
+        self.snap = self.scheduler.snapshot()
+
+        print(f"Last snapshot: {self.last_snapshot}")
+        print(f"Current snapshot: {self.snap}")
+
+        self.ready_q.set_jobs(self.snap["ready"])
+        self.wait_q.set_jobs(self.snap["wait"])
+        self.cpu_q.set_jobs(self.snap["cpu"])
+        self.io_q.set_jobs(self.snap["io"])
+        self.current_clock = self.snap["clock"]
 
     # -----------------------------------------------------
     def draw(self):

@@ -21,6 +21,13 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.KEYDOWN:
+                if (
+                    event.key == pygame.K_ESCAPE
+                    or event.key == pygame.K_q
+                    or event.key == pygame.K_SPACE
+                ):
+                    running = False
 
         scheduler.step()  # advance logic
         visualizer.update_from_scheduler()  # sync display
