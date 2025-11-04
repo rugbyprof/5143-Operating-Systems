@@ -1,11 +1,14 @@
-```yaml
-title: "Threads, Deadlocks, and Docker: Tales from the OS Trenches – Week 3"
+<!-- ```yaml
+title: "The World Beneath the GUI – Week 1"
 course: "Operating Systems"
 module: "OS Foundations "
 duration: "1 week"
 author: "T. Griffin / ChatGPT"
-credit: "Conceptual structure and content collaboration with ChatGPT (OpenAI, GPT-5)"
-```
+marp: true
+theme: default
+paginate: true
+footer: "T. Griffin — Scheduling & Context Switching (scaffolding with OpenAI GPT-5)"
+``` -->
 
 # 🧠 Week 1: The World Beneath the GUI
 
@@ -54,6 +57,15 @@ By the end of Week 1, you should be able to:
    - `read()`, `write()`, `fork()`, `exec()`, `wait()`.
    - Why we can’t just “call the hardware” directly.
 
+### Summary Table
+
+| File No. | Subtopic Title                            | Core Focus                                                            | Natural Deliverable                                        |
+| -------- | ----------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **001**  | **What is an OS Really Doing?**           | OS as resource manager, abstraction layer, protector                  | Intro lecture + context setting slides                     |
+| **002**  | **Processes and Threads**                 | Processes vs threads, states, system calls, `fork`/`exec`             | Slide deck + small lab (“Process Zoo”)                     |
+| **003**  | **Scheduling and Context Switching**      | Scheduling algorithms, fairness, pre-emption, context switch overhead | Slide deck + scheduler visualization                       |
+| **004**  | **System Calls & User/Kernel Boundaries** | Interface between user space and kernel, traps, modes, security rings | Brief lecture + demo showing `strace` or `syscall` tracing |
+
 ---
 
 ### 🧰 Helpful Sources
@@ -98,5 +110,13 @@ Write a Python (or C++) program that:
 - “When in doubt, fork yourself.”
 
 ---
+
+## 📚 References & Credits
+
+> **topic:** "Operating Systems Week 1 Lecture Slides"
+> **focus:** "System Calls & User/Kernel Boundaries"
+> **format:** "Markdown-based slide content"
+> **author:** "T. Griffin and OpenAI GPT-5"
+> **credit:** "Concept scaffolding with ChatGPT (OpenAI GPT-5)"
 
 [Week 02: Concurrency & Synchronization ▶️](../Week_02/README.md)

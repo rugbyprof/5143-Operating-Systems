@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------
+   MSU Pandoc Theme
+   Maroon-Gold header bar, title/subtitle support, safe logo layout
+   ------------------------------------------------------------ */
+
+/* Reset and layout basics */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+header {
+  background: linear-gradient(to right, #500000, #ffcc00);
+  color: white;
+  padding: 1.2em 1.5em;
+  border-bottom: 4px solid #caa500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Main and subtitle text in header */
+header .maintitle {
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+header .subtitle {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #ffe680;
+  margin-top: 0.2em;
+}
+
+/* MSU logo */
+header img.logo {
+  height: 60px;
+  width: auto;
+  margin-left: 1em;
+  object-fit: contain;
+}
+
+/* Body and content area */
+main {
+  padding: 2em 3em;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Footer with page numbers and safe logo spacing */
+footer {
+  text-align: right;
+  font-size: 0.8em;
+  color: #555;
+  border-top: 2px solid #ddd;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  position: relative;
+}
+
+@media print {
+  header img.logo {
+    position: absolute;
+    right: 1.5em;
+    top: 0.8em;
+  }
+  footer {
+    page-break-after: always;
+  }
+  footer::after {
+    content: counter(page);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/* Optional: slide-style h1 banners */
+h1 {
+  border-bottom: 3px solid #500000;
+  padding-bottom: 0.3em;
+  color: #500000;
+}
