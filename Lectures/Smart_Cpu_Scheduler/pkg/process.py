@@ -36,6 +36,7 @@ class Process:
                 self.init_io_bursts += burst["io"]["duration"]
         self.TotalBursts = self.init_cpu_bursts + self.init_io_bursts
 
+
     def current_burst(self):
         """Get the current burst"""
         # Return the first burst if it exists, else None
