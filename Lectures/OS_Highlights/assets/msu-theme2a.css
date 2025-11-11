@@ -1,0 +1,112 @@
+/* =========================================================
+   MSU Texas Theme for Marp Slides
+   Author: T. Griffin
+   Inspired by MSU colors: Maroon (#660000), Gold (#FFCC33)
+   ========================================================= */
+
+section {
+  font-family: "Helvetica Neue", "Segoe UI", sans-serif;
+  color: #222;
+  background-color: #faf9f8;
+  padding: 40px;
+}
+
+/* Accent colors */
+h1,
+h2,
+h3 {
+  color: #660000; /* MSU Maroon */
+}
+
+strong,
+b {
+  color: #660000;
+}
+
+/* Links */
+a,
+a:visited {
+  color: #b30000;
+  text-decoration: none;
+  border-bottom: 2px solid #ffcc33;
+}
+a:hover {
+  color: #660000;
+  border-bottom-color: #660000;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  margin: 1em auto;
+  font-size: 90%;
+}
+th {
+  background-color: #660000;
+  color: #fff;
+  padding: 0.4em 0.6em;
+}
+td {
+  border: 1px solid #ddd;
+  padding: 0.4em 0.6em;
+}
+tr:nth-child(even) td {
+  background-color: #f5f1ef;
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: #fdf7f3;
+  color: #2a2a2a;
+  border-left: 4px solid #ffcc33;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+}
+
+/* Slide footer */
+footer {
+  color: #444;
+  font-size: 0.8em;
+  border-top: 2px solid #ffcc33;
+  padding-top: 5px;
+}
+
+/* Add a subtle gold bar at top */
+section::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #660000, #ffcc33);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Bottom-right MSU logo on every slide */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 80px;
+  height: 40px;
+  background-image: url("https://images2.imgbox.com/fe/71/a3ejsoiP_o.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.25; /* Subtle, not distracting */
+}
+
+section.title-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  width: 160px;
+  height: 80px;
+  background-image: url("https://images2.imgbox.com/fe/71/a3ejsoiP_o.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+}
