@@ -77,7 +77,7 @@ threads = [
 
 for t in threads:
     t.start()
-    t.join()
+    t.join(0.01)
 
 
 try:
