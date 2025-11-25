@@ -6,7 +6,9 @@ source: "ChatGPT"
 format: "Step-by-step Lab Manual"
 ```
 
-# 🧪 **Lab Manual — Containerized Student Grades API (FastAPI + Database + Docker)**
+# 🧪 **Lab Manual — Containerized Student Grades API**
+
+### **(FastAPI + Database + Docker)**
 
 ---
 
