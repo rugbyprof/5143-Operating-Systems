@@ -336,3 +336,186 @@ This little stack hits a bunch of the things you’ve been walking through:
 - **Namespaces & cgroups (under the hood)**
   - Each container has its own network + mount namespaces
   - Mongo and FastAPI are just groups of processes with isolation
+
+---
+
+## 📎 **Appendix / Command Summary**
+
+---
+
+## 🐳 **Docker Compose (Mongo Version)**
+
+### **Start the API + MongoDB stack**
+
+```bash
+docker compose up --build
+```
+
+### **Stop containers but keep persistent data**
+
+```bash
+docker compose down
+```
+
+### **Stop containers AND delete all data volumes**
+
+```bash
+docker compose down -v
+```
+
+---
+
+## 📦 **Image + Container Management**
+
+### **List running containers**
+
+```bash
+docker ps
+```
+
+### **List all containers (including stopped)**
+
+```bash
+docker ps -a
+```
+
+### **Stop a specific container**
+
+```bash
+docker stop <container-id-or-name>
+```
+
+### **Remove a container**
+
+```bash
+docker rm <container-id-or-name>
+```
+
+---
+
+## 🗂️ **MongoDB Volume Operations**
+
+### **List Docker volumes**
+
+```bash
+docker volume ls
+```
+
+### **Inspect the MongoDB volume**
+
+_(Name may vary depending on folder name; often `fastapi-grades_mongo_data`)_
+
+```bash
+docker volume inspect fastapi-grades_mongo_data
+```
+
+### **Manually delete a specific volume**
+
+```bash
+docker volume rm fastapi-grades_mongo_data
+```
+
+---
+
+## 🕸️ **Docker Network Operations**
+
+### **List networks**
+
+```bash
+docker network ls
+```
+
+### **Inspect your app network**
+
+(Replace with your actual Compose project/network name.)
+
+```bash
+docker network inspect fastapi-grades_backend
+```
+
+### **See which containers are on a network**
+
+Inside the inspect output:
+
+- Look under `"Containers"`.
+
+---
+
+## 🛢️ **Inspecting Logs**
+
+### **View FastAPI logs**
+
+```bash
+docker logs grades-api
+```
+
+### **View MongoDB logs**
+
+```bash
+docker logs grades-mongo
+```
+
+### **Follow logs (live output)**
+
+```bash
+docker logs -f grades-api
+```
+
+---
+
+## 🧪 **Testing the API (curl)**
+
+### **Create a grade**
+
+```bash
+curl -X POST "http://localhost:8000/grades/" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "student_id": "s12345",
+        "course_code": "CS-5303",
+        "assignment": "HW1",
+        "score": 95.0,
+        "max_score": 100.0
+      }'
+```
+
+### **Fetch grades for a student**
+
+```bash
+curl "http://localhost:8000/grades/s12345"
+```
+
+### **Delete grades for a student**
+
+```bash
+curl -X DELETE "http://localhost:8000/grades/s12345"
+```
+
+---
+
+## 💾 **Persistence Verification Checklist**
+
+1. **Start stack**, add some data:
+
+   ```bash
+   docker compose up
+   ```
+
+2. **Stop stack**:
+
+   ```bash
+   docker compose down
+   ```
+
+3. **Start again**:
+
+   ```bash
+   docker compose up
+   ```
+
+4. **Check data**:
+   ```bash
+   curl "http://localhost:8000/grades/s12345"
+   ```
+
+If the MongoDB volume was not removed, data should still be present.

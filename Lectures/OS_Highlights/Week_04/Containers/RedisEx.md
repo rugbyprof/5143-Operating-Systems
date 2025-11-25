@@ -371,9 +371,7 @@ This tiny stack is a nice OS/container teaching bridge:
 
 ---
 
-## 11. Optional: Quick Command Summary (Redis Version)
-
-Good slide/handout appendix:
+## 11. Quick Command Summary (Redis Version)
 
 ```bash
 # Build and run the FastAPI + Redis stack
@@ -396,3 +394,186 @@ docker compose down
 # Remove stack + volumes (wipe data)
 docker compose down -v
 ```
+
+```yaml
+section: "Appendix — Redis Version: Command Summary"
+format: "Slide/PDF-ready"
+tone: "neutral, concise"
+source: "ChatGPT"
+```
+
+## 📎 **Appendix / Command Summary**
+
+A compact, slide-ready reference for managing the **FastAPI + Redis** stack, inspecting networks/volumes, verifying persistence, and running tests.
+
+---
+
+## 🐳 **Docker Compose (Redis Version)**
+
+### **Start the API + Redis stack**
+
+```bash
+docker compose up --build
+```
+
+### **Stop containers but keep the persistent Redis data**
+
+```bash
+docker compose down
+```
+
+### **Stop containers AND delete the Redis data volume**
+
+```bash
+docker compose down -v
+```
+
+---
+
+## 📦 **Container & Image Management**
+
+### **List running containers**
+
+```bash
+docker ps
+```
+
+### **List all containers (including stopped)**
+
+```bash
+docker ps -a
+```
+
+### **Stop a specific container**
+
+```bash
+docker stop <container-id-or-name>
+```
+
+### **Remove a specific container**
+
+```bash
+docker rm <container-id-or-name>
+```
+
+---
+
+## 🗂️ **Redis Volume Operations**
+
+### **List Docker volumes**
+
+```bash
+docker volume ls
+```
+
+### **Inspect the Redis data volume**
+
+_(The name typically follows the pattern `<folder>_redis_data`)_
+
+```bash
+docker volume inspect fastapi-redis-grades_redis_data
+```
+
+### **Delete a specific volume**
+
+```bash
+docker volume rm fastapi-redis-grades_redis_data
+```
+
+---
+
+## 🕸️ **Docker Network Operations**
+
+### **List networks**
+
+```bash
+docker network ls
+```
+
+### **Inspect the app’s network**
+
+(Replace `fastapi-redis-grades_backend` with the actual name.)
+
+```bash
+docker network inspect fastapi-redis-grades_backend
+```
+
+### **Determine which containers are attached**
+
+Look under the `"Containers"` section in the inspect output.
+
+---
+
+## 🧾 **Logging Commands**
+
+### **View FastAPI logs**
+
+```bash
+docker logs redis-grades-api
+```
+
+### **View Redis server logs**
+
+```bash
+docker logs redis-grades-db
+```
+
+### **Follow logs (streaming mode)**
+
+```bash
+docker logs -f redis-grades-api
+```
+
+---
+
+# 🧪 **Testing the API (curl)**
+
+### **Create or update a grade**
+
+```bash
+curl -X POST "http://localhost:8001/grades/" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "student_id": "s12345",
+        "course_code": "CS-5303",
+        "assignment": "HW1",
+        "score": 90.5,
+        "max_score": 100.0
+      }'
+```
+
+### **Fetch the latest grade**
+
+```bash
+curl "http://localhost:8001/grades/s12345"
+```
+
+### **Delete a grade**
+
+```bash
+curl -X DELETE "http://localhost:8001/grades/s12345"
+```
+
+---
+
+## 💾 **Persistence Verification Checklist**
+
+1. Start the stack:
+   ```bash
+   docker compose up
+   ```
+2. POST a grade record.
+3. Stop the stack (data should remain):
+   ```bash
+   docker compose down
+   ```
+4. Restart it:
+   ```bash
+   docker compose up
+   ```
+5. Confirm data still exists:
+   ```bash
+   curl "http://localhost:8001/grades/s12345"
+   ```
+
+If Redis’s persistence rules (`--save 60 1`, etc.) were met, the `dump.rdb` file is stored in the `redis_data` volume and survives restarts.
